@@ -1,0 +1,319 @@
+{
+  "schema": "agimem-causal-selfhit/1",
+  "question": "hit@1=0.000 是因为检索 top-1 恒为「题面点名的那个节点自身」（gold 不含自身）吗？",
+  "full": {
+    "n_chain_questions": 68,
+    "self_excluded_hit_at_1": 0.3088235294117647,
+    "self_excluded_hit_at_5": 0.47058823529411764,
+    "self_excluded_hit_at_1_k": 21,
+    "self_excluded_hit_at_5_k": 32,
+    "self_excluded_hit_at_1_ci": {
+      "point": 0.3088235294117647,
+      "lo": 0.21172386467551985,
+      "hi": 0.42636811693509546,
+      "n": 68,
+      "k": 21,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "self_excluded_hit_at_5_ci": {
+      "point": 0.47058823529411764,
+      "lo": 0.35673106421198947,
+      "hi": 0.5875907791127207,
+      "n": 68,
+      "k": 32,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject_ci": {
+      "point": 0.9852941176470589,
+      "lo": 0.9212902687183916,
+      "hi": 0.9973993164238933,
+      "n": 68,
+      "k": 67,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject": 67,
+    "top1_is_subject_rate": 0.9852941176470589,
+    "subject_in_top5_rate": 1.0,
+    "subject_mean_rank": 0.014705882352941176,
+    "examples": [
+      {
+        "qid": "q001",
+        "subject": "sntJ0013",
+        "top1": "sntJ0013",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q002",
+        "subject": "sntE0013",
+        "top1": "sntE0013",
+        "hit": true,
+        "gold_first_rank": 1
+      },
+      {
+        "qid": "q003",
+        "subject": "sntF0012",
+        "top1": "sntF0012",
+        "hit": true,
+        "gold_first_rank": 1
+      }
+    ]
+  },
+  "full_t15": {
+    "n_chain_questions": 68,
+    "self_excluded_hit_at_1": 0.3088235294117647,
+    "self_excluded_hit_at_5": 0.47058823529411764,
+    "self_excluded_hit_at_1_k": 21,
+    "self_excluded_hit_at_5_k": 32,
+    "self_excluded_hit_at_1_ci": {
+      "point": 0.3088235294117647,
+      "lo": 0.21172386467551985,
+      "hi": 0.42636811693509546,
+      "n": 68,
+      "k": 21,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "self_excluded_hit_at_5_ci": {
+      "point": 0.47058823529411764,
+      "lo": 0.35673106421198947,
+      "hi": 0.5875907791127207,
+      "n": 68,
+      "k": 32,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject_ci": {
+      "point": 0.9852941176470589,
+      "lo": 0.9212902687183916,
+      "hi": 0.9973993164238933,
+      "n": 68,
+      "k": 67,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject": 67,
+    "top1_is_subject_rate": 0.9852941176470589,
+    "subject_in_top5_rate": 1.0,
+    "subject_mean_rank": 0.014705882352941176,
+    "examples": [
+      {
+        "qid": "q001",
+        "subject": "sntJ0013",
+        "top1": "sntJ0013",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q002",
+        "subject": "sntE0013",
+        "top1": "sntE0013",
+        "hit": true,
+        "gold_first_rank": 1
+      },
+      {
+        "qid": "q003",
+        "subject": "sntF0012",
+        "top1": "sntF0012",
+        "hit": true,
+        "gold_first_rank": 1
+      }
+    ]
+  },
+  "leaves": {
+    "n_chain_questions": 68,
+    "self_excluded_hit_at_1": 0.25,
+    "self_excluded_hit_at_5": 0.3382352941176471,
+    "self_excluded_hit_at_1_k": 17,
+    "self_excluded_hit_at_5_k": 23,
+    "self_excluded_hit_at_1_ci": {
+      "point": 0.25,
+      "lo": 0.16235013970552148,
+      "hi": 0.3643855285545139,
+      "n": 68,
+      "k": 17,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "self_excluded_hit_at_5_ci": {
+      "point": 0.3382352941176471,
+      "lo": 0.23714253215255424,
+      "hi": 0.45662760613335107,
+      "n": 68,
+      "k": 23,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject_ci": {
+      "point": 0.45588235294117646,
+      "lo": 0.34304882927391533,
+      "hi": 0.5734339357131498,
+      "n": 68,
+      "k": 31,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject": 31,
+    "top1_is_subject_rate": 0.45588235294117646,
+    "subject_in_top5_rate": 0.47058823529411764,
+    "subject_mean_rank": 0.03125,
+    "examples": [
+      {
+        "qid": "q001",
+        "subject": "sntJ0013",
+        "top1": "sntJ0013",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q002",
+        "subject": "sntE0013",
+        "top1": "sntE0013",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q003",
+        "subject": "sntF0012",
+        "top1": "sntF0012",
+        "hit": false,
+        "gold_first_rank": null
+      }
+    ]
+  },
+  "half": {
+    "n_chain_questions": 68,
+    "self_excluded_hit_at_1": 0.22058823529411764,
+    "self_excluded_hit_at_5": 0.39705882352941174,
+    "self_excluded_hit_at_1_k": 15,
+    "self_excluded_hit_at_5_k": 27,
+    "self_excluded_hit_at_1_ci": {
+      "point": 0.22058823529411764,
+      "lo": 0.13849012387325205,
+      "hi": 0.33256738771149325,
+      "n": 68,
+      "k": 15,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "self_excluded_hit_at_5_ci": {
+      "point": 0.39705882352941174,
+      "lo": 0.28928700180280637,
+      "hi": 0.5158394498336787,
+      "n": 68,
+      "k": 27,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject_ci": {
+      "point": 0.5882352941176471,
+      "lo": 0.46961466753105385,
+      "hi": 0.697419802494816,
+      "n": 68,
+      "k": 40,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject": 40,
+    "top1_is_subject_rate": 0.5882352941176471,
+    "subject_in_top5_rate": 0.5882352941176471,
+    "subject_mean_rank": 0.0,
+    "examples": [
+      {
+        "qid": "q001",
+        "subject": "sntJ0013",
+        "top1": "sntJ0009",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q002",
+        "subject": "sntE0013",
+        "top1": "sntE0013",
+        "hit": true,
+        "gold_first_rank": 3
+      },
+      {
+        "qid": "q003",
+        "subject": "sntF0012",
+        "top1": "sntF0012",
+        "hit": true,
+        "gold_first_rank": 1
+      }
+    ]
+  },
+  "full_anon": {
+    "metrics": {
+      "chain_hit_at_k": 0.14705882352941177,
+      "chain_cov": 0.03407670760611937,
+      "intervention_acc": 0.8,
+      "false_alarm_rate": 0.4,
+      "supersession_acc": 0.1,
+      "negative_noise_rate": 0.25
+    },
+    "chain_hit_at_1": 0.014705882352941176,
+    "n_chain_questions": 68,
+    "self_excluded_hit_at_1": 0.014705882352941176,
+    "self_excluded_hit_at_5": 0.14705882352941177,
+    "self_excluded_hit_at_1_k": 1,
+    "self_excluded_hit_at_5_k": 10,
+    "self_excluded_hit_at_1_ci": {
+      "point": 0.014705882352941176,
+      "lo": 0.0026006835761068076,
+      "hi": 0.07870973128160871,
+      "n": 68,
+      "k": 1,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "self_excluded_hit_at_5_ci": {
+      "point": 0.14705882352941177,
+      "lo": 0.08188817736343271,
+      "hi": 0.24997394253308772,
+      "n": 68,
+      "k": 10,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject_ci": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.053471336520070537,
+      "n": 68,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "top1_is_subject": 0,
+    "top1_is_subject_rate": 0.0,
+    "subject_in_top5_rate": 0.029411764705882353,
+    "subject_mean_rank": 3.5,
+    "examples": [
+      {
+        "qid": "q001",
+        "subject": "sntJ0013",
+        "top1": "sntH0010",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q002",
+        "subject": "sntE0013",
+        "top1": "sntH0010",
+        "hit": false,
+        "gold_first_rank": null
+      },
+      {
+        "qid": "q003",
+        "subject": "sntF0012",
+        "top1": "sntH0010",
+        "hit": false,
+        "gold_first_rank": null
+      }
+    ]
+  },
+  "anon_note": "full_anon 臂把链题题面里的「<节点标题>」改写成「这一步」，去掉点名线索后重跑同一套题。"
+}

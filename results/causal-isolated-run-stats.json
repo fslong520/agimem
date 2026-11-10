@@ -1,0 +1,896 @@
+{
+  "arm": "isolated-rsrs-causal",
+  "data_dir": "/tmp/agimem-causal-iso/causal",
+  "port": 16301,
+  "n_nodes": 143,
+  "n_imported": 142,
+  "n_remembered": 1,
+  "import_summary": {
+    "duplicates": 0,
+    "imported": 142,
+    "orphaned": 0,
+    "reattached": 0,
+    "skipped": 0
+  },
+  "index": {
+    "state": "ready",
+    "local_total": 143,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 67.2
+  },
+  "n_questions": 122,
+  "limit": 5,
+  "n_hits": 505,
+  "n_details": 505,
+  "n_details_with_superseded_by_key": 505,
+  "n_details_with_superseded_by_value": 0,
+  "n_questions_with_superseded_by_key": 104,
+  "n_questions_with_superseded_by_value": 0,
+  "first_question_keys_sample": [
+    "ancestors",
+    "entry",
+    "score",
+    "superseded_by"
+  ],
+  "payload": "完整 recall JSON（未带 --titles）",
+  "notes": "隔离库（/tmp 独立 data dir + 端口 + super）；未触碰 ~/.rsrs；命中按标题｜snt id 反解，UUID 不落盘",
+  "per_question": [
+    {
+      "qid": "q001",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q002",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q003",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q004",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q005",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q006",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q007",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q008",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q009",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q010",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q011",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q012",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q013",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q014",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q015",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q016",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q017",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q018",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q019",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q020",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q021",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q022",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q023",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q024",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q025",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q026",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q027",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q028",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q029",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q030",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q031",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q032",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q033",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q034",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q035",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q036",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q037",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q038",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q039",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q040",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q041",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q042",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q043",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q044",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q045",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q046",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q047",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q048",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q049",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q050",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q051",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q052",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q053",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q054",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q055",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q056",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q057",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q058",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q059",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q060",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q061",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q062",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q063",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q064",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q065",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q066",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q067",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q068",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q069",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q070",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q071",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q072",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q073",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q074",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q075",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q076",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q077",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q078",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q079",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q080",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q081",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q082",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q083",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q084",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q085",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q086",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q087",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q088",
+      "type": "intervention",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q089",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q090",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q091",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q092",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q093",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q094",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q095",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q096",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q097",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q098",
+      "type": "supersession",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q099",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q100",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q101",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q102",
+      "type": "negative",
+      "n_hits": 1,
+      "sup_keys": 1,
+      "sup_values": 0
+    },
+    {
+      "qid": "q103",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q104",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q105",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q106",
+      "type": "negative",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q107",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q108",
+      "type": "negative",
+      "n_hits": 5,
+      "sup_keys": 5,
+      "sup_values": 0
+    },
+    {
+      "qid": "q109",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q110",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q111",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q112",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q113",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q114",
+      "type": "negative",
+      "n_hits": 2,
+      "sup_keys": 2,
+      "sup_values": 0
+    },
+    {
+      "qid": "q115",
+      "type": "negative",
+      "n_hits": 1,
+      "sup_keys": 1,
+      "sup_values": 0
+    },
+    {
+      "qid": "q116",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q117",
+      "type": "negative",
+      "n_hits": 1,
+      "sup_keys": 1,
+      "sup_values": 0
+    },
+    {
+      "qid": "q118",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q119",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q120",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q121",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    },
+    {
+      "qid": "q122",
+      "type": "negative",
+      "n_hits": 0,
+      "sup_keys": 0,
+      "sup_values": 0
+    }
+  ],
+  "elapsed_s": 201.8
+}

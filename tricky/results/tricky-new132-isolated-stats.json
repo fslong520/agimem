@@ -1,0 +1,27 @@
+{
+ "arm": "isolated-rsrs-tricky-new132",
+ "data_dir": "/tmp/agimem-tricky-new132/iso",
+ "port": 16332,
+ "n_nodes": 748,
+ "n_questions": 132,
+ "limit": 5,
+ "n_hits": 660,
+ "n_empty": 0,
+ "index_ready": {
+  "state": "ready",
+  "local_total": 748,
+  "worker_active": true,
+  "error": null,
+  "embedding_model": "m3",
+  "waited_s": 613.2
+ },
+ "import_summary": {
+  "duplicates": 0,
+  "imported": 748,
+  "orphaned": 0,
+  "reattached": 0,
+  "skipped": 0
+ },
+ "elapsed_s": 910.2,
+ "notes": "新132段独立库对照（只装新段 748 节点）"
+}

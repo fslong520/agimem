@@ -1,0 +1,3426 @@
+{
+ "schema": "agimem-h8/1",
+ "synthetic": true,
+ "seed": 20261110,
+ "generator": "gen_h8.py",
+ "scenario_whitelist": [
+  "部署上线",
+  "灰度发布",
+  "接口对接",
+  "同事交接",
+  "开会定口径",
+  "线上排障",
+  "数据迁移",
+  "权限审批"
+ ],
+ "nodes": [
+  {
+   "id": "h8A0001",
+   "scenario": "deploy",
+   "title": "观察记录第 1 号：收口一律按发布单上的回滚点走",
+   "content": "【前因】值班时观察到：收口一律按发布单上的回滚点走\n【行为】同批的订单服务都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-01",
+   "created_at": "2026-09-01T10:00:00Z",
+   "insert_rank": 6000,
+   "role": "observe",
+   "topic": "c1-deploy-0",
+   "parent": "",
+   "attrs": {
+    "rule": "收口一律按发布单上的回滚点走",
+    "attr": "回滚点",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0001",
+   "scenario": "canary",
+   "title": "观察记录第 2 号：发版前先看健康检查绿没绿",
+   "content": "【前因】值班时观察到：发版前先看健康检查绿没绿\n【行为】同批的搜索服务都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-02",
+   "created_at": "2026-09-02T10:00:00Z",
+   "insert_rank": 6001,
+   "role": "observe",
+   "topic": "c1-canary-1",
+   "parent": "",
+   "attrs": {
+    "rule": "发版前先看健康检查绿没绿",
+    "attr": "健康检查",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8C0001",
+   "scenario": "api",
+   "title": "观察记录第 3 号：联调先对签名再对字段",
+   "content": "【前因】值班时观察到：联调先对签名再对字段\n【行为】同批的查询接口都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-03",
+   "created_at": "2026-09-03T10:00:00Z",
+   "insert_rank": 6002,
+   "role": "observe",
+   "topic": "c1-api-2",
+   "parent": "",
+   "attrs": {
+    "rule": "联调先对签名再对字段",
+    "attr": "签名",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8D0001",
+   "scenario": "handoff",
+   "title": "观察记录第 4 号：交接先点名当班再看告警",
+   "content": "【前因】值班时观察到：交接先点名当班再看告警\n【行为】同批的值班手册都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-04",
+   "created_at": "2026-09-04T10:00:00Z",
+   "insert_rank": 6003,
+   "role": "observe",
+   "topic": "c1-handoff-3",
+   "parent": "",
+   "attrs": {
+    "rule": "交接先点名当班再看告警",
+    "attr": "当班",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8E0001",
+   "scenario": "meeting",
+   "title": "观察记录第 5 号：统计口径以自然周为准",
+   "content": "【前因】值班时观察到：统计口径以自然周为准\n【行为】同批的统计规范都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-05",
+   "created_at": "2026-09-05T10:00:00Z",
+   "insert_rank": 6004,
+   "role": "observe",
+   "topic": "c1-meeting-4",
+   "parent": "",
+   "attrs": {
+    "rule": "统计口径以自然周为准",
+    "attr": "自然周",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8F0001",
+   "scenario": "ops",
+   "title": "观察记录第 6 号：回灌前先抽样比对",
+   "content": "【前因】值班时观察到：回灌前先抽样比对\n【行为】同批的数据库主库都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-06",
+   "created_at": "2026-09-06T10:00:00Z",
+   "insert_rank": 6005,
+   "role": "observe",
+   "topic": "c1-ops-5",
+   "parent": "",
+   "attrs": {
+    "rule": "回灌前先抽样比对",
+    "attr": "抽样比对",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8G0001",
+   "scenario": "migration",
+   "title": "观察记录第 7 号：授权到期前 2 天续",
+   "content": "【前因】值班时观察到：授权到期前 2 天续\n【行为】同批的历史订单表都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-07",
+   "created_at": "2026-09-07T10:00:00Z",
+   "insert_rank": 6006,
+   "role": "observe",
+   "topic": "c1-migration-6",
+   "parent": "",
+   "attrs": {
+    "rule": "授权到期前 2 天续",
+    "attr": "续期",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8H0001",
+   "scenario": "approval",
+   "title": "观察记录第 8 号：回滚到上一个稳定版本",
+   "content": "【前因】值班时观察到：回滚到上一个稳定版本\n【行为】同批的发布平台都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-08",
+   "created_at": "2026-09-08T10:00:00Z",
+   "insert_rank": 6007,
+   "role": "observe",
+   "topic": "c1-approval-7",
+   "parent": "",
+   "attrs": {
+    "rule": "回滚到上一个稳定版本",
+    "attr": "稳定版本",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8A0002",
+   "scenario": "deploy",
+   "title": "观察记录第 9 号：收口一律按发布单上的回滚点走",
+   "content": "【前因】值班时观察到：收口一律按发布单上的回滚点走\n【行为】同批的订单服务都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-09",
+   "created_at": "2026-09-09T10:00:00Z",
+   "insert_rank": 6008,
+   "role": "observe",
+   "topic": "c1-deploy-8",
+   "parent": "",
+   "attrs": {
+    "rule": "收口一律按发布单上的回滚点走",
+    "attr": "回滚点",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0002",
+   "scenario": "canary",
+   "title": "观察记录第 10 号：发版前先看健康检查绿没绿",
+   "content": "【前因】值班时观察到：发版前先看健康检查绿没绿\n【行为】同批的推荐服务都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-10",
+   "created_at": "2026-09-10T10:00:00Z",
+   "insert_rank": 6009,
+   "role": "observe",
+   "topic": "c1-canary-9",
+   "parent": "",
+   "attrs": {
+    "rule": "发版前先看健康检查绿没绿",
+    "attr": "健康检查",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8C0002",
+   "scenario": "api",
+   "title": "观察记录第 11 号：联调先对签名再对字段",
+   "content": "【前因】值班时观察到：联调先对签名再对字段\n【行为】同批的回调接口都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-11",
+   "created_at": "2026-09-11T10:00:00Z",
+   "insert_rank": 6010,
+   "role": "observe",
+   "topic": "c1-api-10",
+   "parent": "",
+   "attrs": {
+    "rule": "联调先对签名再对字段",
+    "attr": "签名",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8D0002",
+   "scenario": "handoff",
+   "title": "观察记录第 12 号：交接先点名当班再看告警",
+   "content": "【前因】值班时观察到：交接先点名当班再看告警\n【行为】同批的监控看板都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-12",
+   "created_at": "2026-09-12T10:00:00Z",
+   "insert_rank": 6011,
+   "role": "observe",
+   "topic": "c1-handoff-11",
+   "parent": "",
+   "attrs": {
+    "rule": "交接先点名当班再看告警",
+    "attr": "当班",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8E0002",
+   "scenario": "meeting",
+   "title": "观察记录第 13 号：统计口径以自然周为准",
+   "content": "【前因】值班时观察到：统计口径以自然周为准\n【行为】同批的指标口径都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-13",
+   "created_at": "2026-09-13T10:00:00Z",
+   "insert_rank": 6012,
+   "role": "observe",
+   "topic": "c1-meeting-12",
+   "parent": "",
+   "attrs": {
+    "rule": "统计口径以自然周为准",
+    "attr": "自然周",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8F0002",
+   "scenario": "ops",
+   "title": "观察记录第 14 号：回灌前先抽样比对",
+   "content": "【前因】值班时观察到：回灌前先抽样比对\n【行为】同批的消息队列都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-14",
+   "created_at": "2026-09-14T10:00:00Z",
+   "insert_rank": 6013,
+   "role": "observe",
+   "topic": "c1-ops-13",
+   "parent": "",
+   "attrs": {
+    "rule": "回灌前先抽样比对",
+    "attr": "抽样比对",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8G0002",
+   "scenario": "migration",
+   "title": "观察记录第 15 号：授权到期前 2 天续",
+   "content": "【前因】值班时观察到：授权到期前 2 天续\n【行为】同批的日志索引都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-15",
+   "created_at": "2026-09-15T10:00:00Z",
+   "insert_rank": 6014,
+   "role": "observe",
+   "topic": "c1-migration-14",
+   "parent": "",
+   "attrs": {
+    "rule": "授权到期前 2 天续",
+    "attr": "续期",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8H0002",
+   "scenario": "approval",
+   "title": "观察记录第 16 号：回滚到上一个稳定版本",
+   "content": "【前因】值班时观察到：回滚到上一个稳定版本\n【行为】同批的生产库账号都照这条处理\n【后果】沉淀成一条可复用的规矩",
+   "ts": "2026-09-16",
+   "created_at": "2026-09-16T10:00:00Z",
+   "insert_rank": 6015,
+   "role": "observe",
+   "topic": "c1-approval-15",
+   "parent": "",
+   "attrs": {
+    "rule": "回滚到上一个稳定版本",
+    "attr": "稳定版本",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8A0003",
+   "scenario": "deploy",
+   "title": "1h前的启动参数约定（订单服务）",
+   "content": "【前因】1h前那次订单服务上，启动参数定为 max-conn=200\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-10",
+   "created_at": "2026-11-10T08:00:00Z",
+   "insert_rank": 7000,
+   "role": "aged",
+   "topic": "c2-deploy-0",
+   "parent": "",
+   "attrs": {
+    "age": "1h",
+    "attr": "启动参数",
+    "value": "max-conn=200",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0003",
+   "scenario": "canary",
+   "title": "1d前的观察窗口约定（搜索服务）",
+   "content": "【前因】1d前那次搜索服务上，观察窗口定为 15 分钟\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-09",
+   "created_at": "2026-11-09T10:00:00Z",
+   "insert_rank": 7001,
+   "role": "aged",
+   "topic": "c2-canary-1",
+   "parent": "",
+   "attrs": {
+    "age": "1d",
+    "attr": "观察窗口",
+    "value": "15 分钟",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8C0003",
+   "scenario": "api",
+   "title": "7d前的签名方式约定（查询接口）",
+   "content": "【前因】7d前那次查询接口上，签名方式定为 HMAC-SHA256\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-03",
+   "created_at": "2026-11-03T10:00:00Z",
+   "insert_rank": 7002,
+   "role": "aged",
+   "topic": "c2-api-2",
+   "parent": "",
+   "attrs": {
+    "age": "7d",
+    "attr": "签名方式",
+    "value": "HMAC-SHA256",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8D0003",
+   "scenario": "handoff",
+   "title": "30d前的脚本路径约定（值班手册）",
+   "content": "【前因】30d前那次值班手册上，脚本路径定为 /opt/ops/run.sh\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-10-11",
+   "created_at": "2026-10-11T10:00:00Z",
+   "insert_rank": 7003,
+   "role": "aged",
+   "topic": "c2-handoff-3",
+   "parent": "",
+   "attrs": {
+    "age": "30d",
+    "attr": "脚本路径",
+    "value": "/opt/ops/run.sh",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8E0003",
+   "scenario": "meeting",
+   "title": "1h前的口径定义约定（统计规范）",
+   "content": "【前因】1h前那次统计规范上，口径定义定为 按下单时间\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-10",
+   "created_at": "2026-11-10T08:00:00Z",
+   "insert_rank": 7004,
+   "role": "aged",
+   "topic": "c2-meeting-4",
+   "parent": "",
+   "attrs": {
+    "age": "1h",
+    "attr": "口径定义",
+    "value": "按下单时间",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8F0003",
+   "scenario": "ops",
+   "title": "1d前的回滚点约定（数据库主库）",
+   "content": "【前因】1d前那次数据库主库上，回滚点定为 上一个稳定版本\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-09",
+   "created_at": "2026-11-09T10:00:00Z",
+   "insert_rank": 7005,
+   "role": "aged",
+   "topic": "c2-ops-5",
+   "parent": "",
+   "attrs": {
+    "age": "1d",
+    "attr": "回滚点",
+    "value": "上一个稳定版本",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8G0003",
+   "scenario": "migration",
+   "title": "7d前的分批大小约定（历史订单表）",
+   "content": "【前因】7d前那次历史订单表上，分批大小定为 5000 行\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-03",
+   "created_at": "2026-11-03T10:00:00Z",
+   "insert_rank": 7006,
+   "role": "aged",
+   "topic": "c2-migration-6",
+   "parent": "",
+   "attrs": {
+    "age": "7d",
+    "attr": "分批大小",
+    "value": "5000 行",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8H0003",
+   "scenario": "approval",
+   "title": "30d前的有效期约定（发布平台）",
+   "content": "【前因】30d前那次发布平台上，有效期定为 7 天\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-10-11",
+   "created_at": "2026-10-11T10:00:00Z",
+   "insert_rank": 7007,
+   "role": "aged",
+   "topic": "c2-approval-7",
+   "parent": "",
+   "attrs": {
+    "age": "30d",
+    "attr": "有效期",
+    "value": "7 天",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8A0004",
+   "scenario": "deploy",
+   "title": "1h前的启动参数约定（订单服务）",
+   "content": "【前因】1h前那次订单服务上，启动参数定为 max-conn=200\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-10",
+   "created_at": "2026-11-10T08:00:00Z",
+   "insert_rank": 7008,
+   "role": "aged",
+   "topic": "c2-deploy-8",
+   "parent": "",
+   "attrs": {
+    "age": "1h",
+    "attr": "启动参数",
+    "value": "max-conn=200",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0004",
+   "scenario": "canary",
+   "title": "1d前的灰度比例约定（推荐服务）",
+   "content": "【前因】1d前那次推荐服务上，灰度比例定为 10%\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-09",
+   "created_at": "2026-11-09T10:00:00Z",
+   "insert_rank": 7009,
+   "role": "aged",
+   "topic": "c2-canary-9",
+   "parent": "",
+   "attrs": {
+    "age": "1d",
+    "attr": "灰度比例",
+    "value": "10%",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8C0004",
+   "scenario": "api",
+   "title": "7d前的重试次数约定（回调接口）",
+   "content": "【前因】7d前那次回调接口上，重试次数定为 2 次\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-03",
+   "created_at": "2026-11-03T10:00:00Z",
+   "insert_rank": 7010,
+   "role": "aged",
+   "topic": "c2-api-10",
+   "parent": "",
+   "attrs": {
+    "age": "7d",
+    "attr": "重试次数",
+    "value": "2 次",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8D0004",
+   "scenario": "handoff",
+   "title": "30d前的日志目录约定（监控看板）",
+   "content": "【前因】30d前那次监控看板上，日志目录定为 /var/log/app\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-10-11",
+   "created_at": "2026-10-11T10:00:00Z",
+   "insert_rank": 7011,
+   "role": "aged",
+   "topic": "c2-handoff-11",
+   "parent": "",
+   "attrs": {
+    "age": "30d",
+    "attr": "日志目录",
+    "value": "/var/log/app",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8E0004",
+   "scenario": "meeting",
+   "title": "1h前的统计周期约定（指标口径）",
+   "content": "【前因】1h前那次指标口径上，统计周期定为 自然周\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-10",
+   "created_at": "2026-11-10T08:00:00Z",
+   "insert_rank": 7012,
+   "role": "aged",
+   "topic": "c2-meeting-12",
+   "parent": "",
+   "attrs": {
+    "age": "1h",
+    "attr": "统计周期",
+    "value": "自然周",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8F0004",
+   "scenario": "ops",
+   "title": "1d前的扩容策略约定（消息队列）",
+   "content": "【前因】1d前那次消息队列上，扩容策略定为 先加两副本\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-09",
+   "created_at": "2026-11-09T10:00:00Z",
+   "insert_rank": 7013,
+   "role": "aged",
+   "topic": "c2-ops-13",
+   "parent": "",
+   "attrs": {
+    "age": "1d",
+    "attr": "扩容策略",
+    "value": "先加两副本",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8G0004",
+   "scenario": "migration",
+   "title": "7d前的切换时点约定（日志索引）",
+   "content": "【前因】7d前那次日志索引上，切换时点定为 凌晨 3 点\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-11-03",
+   "created_at": "2026-11-03T10:00:00Z",
+   "insert_rank": 7014,
+   "role": "aged",
+   "topic": "c2-migration-14",
+   "parent": "",
+   "attrs": {
+    "age": "7d",
+    "attr": "切换时点",
+    "value": "凌晨 3 点",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8H0004",
+   "scenario": "approval",
+   "title": "30d前的审批人约定（生产库账号）",
+   "content": "【前因】30d前那次生产库账号上，审批人定为 组长加 DBA\n【行为】记录已归档\n【后果】当时没改，沿用至今",
+   "ts": "2026-10-11",
+   "created_at": "2026-10-11T10:00:00Z",
+   "insert_rank": 7015,
+   "role": "aged",
+   "topic": "c2-approval-15",
+   "parent": "",
+   "attrs": {
+    "age": "30d",
+    "attr": "审批人",
+    "value": "组长加 DBA",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8A0005",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 1 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8000,
+   "role": "dust",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0006",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 2 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8001,
+   "role": "dust",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0007",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 3 号：订单服务",
+   "content": "【前因】例行记录：例行记录：订单服务 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8002,
+   "role": "dust",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0008",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 4 号：订单服务",
+   "content": "【前因】例行记录：例行记录：订单服务 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8003,
+   "role": "dust",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0009",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 5 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8004,
+   "role": "dust",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0010",
+   "scenario": "deploy",
+   "title": "日常记录：订单服务 每日照常",
+   "content": "【前因】订单服务 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8006,
+   "role": "plain",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0011",
+   "scenario": "deploy",
+   "title": "强化事件：订单服务 那次大变更",
+   "content": "【前因】订单服务 那次大变更：上线后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8007,
+   "role": "salient",
+   "topic": "c3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0005",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 1 号：搜索服务",
+   "content": "【前因】例行记录：例行巡检：搜索服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8010,
+   "role": "dust",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0006",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 2 号：搜索服务",
+   "content": "【前因】例行记录：例行巡检：搜索服务 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8011,
+   "role": "dust",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0007",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 3 号：搜索服务",
+   "content": "【前因】例行记录：例行记录：搜索服务 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8012,
+   "role": "dust",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0008",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 4 号：搜索服务",
+   "content": "【前因】例行记录：例行记录：搜索服务 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8013,
+   "role": "dust",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0009",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 5 号：搜索服务",
+   "content": "【前因】例行记录：例行巡检：搜索服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8014,
+   "role": "dust",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0010",
+   "scenario": "canary",
+   "title": "日常记录：搜索服务 每日照常",
+   "content": "【前因】搜索服务 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8016,
+   "role": "plain",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8B0011",
+   "scenario": "canary",
+   "title": "强化事件：搜索服务 那次大变更",
+   "content": "【前因】搜索服务 那次大变更：灰度后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8017,
+   "role": "salient",
+   "topic": "c3-canary-1",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "搜索服务"
+   }
+  },
+  {
+   "id": "h8C0005",
+   "scenario": "api",
+   "title": "平凡巡检记录第 1 号：查询接口",
+   "content": "【前因】例行记录：例行巡检：查询接口 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8020,
+   "role": "dust",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0006",
+   "scenario": "api",
+   "title": "平凡巡检记录第 2 号：查询接口",
+   "content": "【前因】例行记录：例行巡检：查询接口 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8021,
+   "role": "dust",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0007",
+   "scenario": "api",
+   "title": "平凡巡检记录第 3 号：查询接口",
+   "content": "【前因】例行记录：例行记录：查询接口 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8022,
+   "role": "dust",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0008",
+   "scenario": "api",
+   "title": "平凡巡检记录第 4 号：查询接口",
+   "content": "【前因】例行记录：例行记录：查询接口 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8023,
+   "role": "dust",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0009",
+   "scenario": "api",
+   "title": "平凡巡检记录第 5 号：查询接口",
+   "content": "【前因】例行记录：例行巡检：查询接口 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8024,
+   "role": "dust",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0010",
+   "scenario": "api",
+   "title": "日常记录：查询接口 每日照常",
+   "content": "【前因】查询接口 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8026,
+   "role": "plain",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8C0011",
+   "scenario": "api",
+   "title": "强化事件：查询接口 那次大变更",
+   "content": "【前因】查询接口 那次大变更：接口后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8027,
+   "role": "salient",
+   "topic": "c3-api-2",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "查询接口"
+   }
+  },
+  {
+   "id": "h8D0005",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 1 号：值班手册",
+   "content": "【前因】例行记录：例行巡检：值班手册 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8030,
+   "role": "dust",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0006",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 2 号：值班手册",
+   "content": "【前因】例行记录：例行巡检：值班手册 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8031,
+   "role": "dust",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0007",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 3 号：值班手册",
+   "content": "【前因】例行记录：例行记录：值班手册 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8032,
+   "role": "dust",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0008",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 4 号：值班手册",
+   "content": "【前因】例行记录：例行记录：值班手册 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8033,
+   "role": "dust",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0009",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 5 号：值班手册",
+   "content": "【前因】例行记录：例行巡检：值班手册 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8034,
+   "role": "dust",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0010",
+   "scenario": "handoff",
+   "title": "日常记录：值班手册 每日照常",
+   "content": "【前因】值班手册 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8036,
+   "role": "plain",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8D0011",
+   "scenario": "handoff",
+   "title": "强化事件：值班手册 那次大变更",
+   "content": "【前因】值班手册 那次大变更：交接后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8037,
+   "role": "salient",
+   "topic": "c3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "值班手册"
+   }
+  },
+  {
+   "id": "h8E0005",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 1 号：统计规范",
+   "content": "【前因】例行记录：例行巡检：统计规范 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8040,
+   "role": "dust",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0006",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 2 号：统计规范",
+   "content": "【前因】例行记录：例行巡检：统计规范 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8041,
+   "role": "dust",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0007",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 3 号：统计规范",
+   "content": "【前因】例行记录：例行记录：统计规范 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8042,
+   "role": "dust",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0008",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 4 号：统计规范",
+   "content": "【前因】例行记录：例行记录：统计规范 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8043,
+   "role": "dust",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0009",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 5 号：统计规范",
+   "content": "【前因】例行记录：例行巡检：统计规范 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8044,
+   "role": "dust",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0010",
+   "scenario": "meeting",
+   "title": "日常记录：统计规范 每日照常",
+   "content": "【前因】统计规范 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8046,
+   "role": "plain",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8E0011",
+   "scenario": "meeting",
+   "title": "强化事件：统计规范 那次大变更",
+   "content": "【前因】统计规范 那次大变更：会议后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8047,
+   "role": "salient",
+   "topic": "c3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "统计规范"
+   }
+  },
+  {
+   "id": "h8F0005",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 1 号：数据库主库",
+   "content": "【前因】例行记录：例行巡检：数据库主库 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8050,
+   "role": "dust",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0006",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 2 号：数据库主库",
+   "content": "【前因】例行记录：例行巡检：数据库主库 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8051,
+   "role": "dust",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0007",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 3 号：数据库主库",
+   "content": "【前因】例行记录：例行记录：数据库主库 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8052,
+   "role": "dust",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0008",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 4 号：数据库主库",
+   "content": "【前因】例行记录：例行记录：数据库主库 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8053,
+   "role": "dust",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0009",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 5 号：数据库主库",
+   "content": "【前因】例行记录：例行巡检：数据库主库 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8054,
+   "role": "dust",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0010",
+   "scenario": "ops",
+   "title": "日常记录：数据库主库 每日照常",
+   "content": "【前因】数据库主库 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8056,
+   "role": "plain",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8F0011",
+   "scenario": "ops",
+   "title": "强化事件：数据库主库 那次大变更",
+   "content": "【前因】数据库主库 那次大变更：故障后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8057,
+   "role": "salient",
+   "topic": "c3-ops-5",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "数据库主库"
+   }
+  },
+  {
+   "id": "h8G0005",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 1 号：历史订单表",
+   "content": "【前因】例行记录：例行巡检：历史订单表 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8060,
+   "role": "dust",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0006",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 2 号：历史订单表",
+   "content": "【前因】例行记录：例行巡检：历史订单表 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8061,
+   "role": "dust",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0007",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 3 号：历史订单表",
+   "content": "【前因】例行记录：例行记录：历史订单表 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8062,
+   "role": "dust",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0008",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 4 号：历史订单表",
+   "content": "【前因】例行记录：例行记录：历史订单表 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8063,
+   "role": "dust",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0009",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 5 号：历史订单表",
+   "content": "【前因】例行记录：例行巡检：历史订单表 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8064,
+   "role": "dust",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0010",
+   "scenario": "migration",
+   "title": "日常记录：历史订单表 每日照常",
+   "content": "【前因】历史订单表 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8066,
+   "role": "plain",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8G0011",
+   "scenario": "migration",
+   "title": "强化事件：历史订单表 那次大变更",
+   "content": "【前因】历史订单表 那次大变更：迁移后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8067,
+   "role": "salient",
+   "topic": "c3-migration-6",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "历史订单表"
+   }
+  },
+  {
+   "id": "h8H0005",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 1 号：发布平台",
+   "content": "【前因】例行记录：例行巡检：发布平台 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8070,
+   "role": "dust",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0006",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 2 号：发布平台",
+   "content": "【前因】例行记录：例行巡检：发布平台 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8071,
+   "role": "dust",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0007",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 3 号：发布平台",
+   "content": "【前因】例行记录：例行记录：发布平台 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8072,
+   "role": "dust",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0008",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 4 号：发布平台",
+   "content": "【前因】例行记录：例行记录：发布平台 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8073,
+   "role": "dust",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0009",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 5 号：发布平台",
+   "content": "【前因】例行记录：例行巡检：发布平台 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8074,
+   "role": "dust",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0010",
+   "scenario": "approval",
+   "title": "日常记录：发布平台 每日照常",
+   "content": "【前因】发布平台 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8076,
+   "role": "plain",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8H0011",
+   "scenario": "approval",
+   "title": "强化事件：发布平台 那次大变更",
+   "content": "【前因】发布平台 那次大变更：审批后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8077,
+   "role": "salient",
+   "topic": "c3-approval-7",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "发布平台"
+   }
+  },
+  {
+   "id": "h8A0012",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 1 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8080,
+   "role": "dust",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0013",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 2 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8081,
+   "role": "dust",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0014",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 3 号：订单服务",
+   "content": "【前因】例行记录：例行记录：订单服务 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8082,
+   "role": "dust",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0015",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 4 号：订单服务",
+   "content": "【前因】例行记录：例行记录：订单服务 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8083,
+   "role": "dust",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0016",
+   "scenario": "deploy",
+   "title": "平凡巡检记录第 5 号：订单服务",
+   "content": "【前因】例行记录：例行巡检：订单服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8084,
+   "role": "dust",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0017",
+   "scenario": "deploy",
+   "title": "日常记录：订单服务 每日照常",
+   "content": "【前因】订单服务 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8086,
+   "role": "plain",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8A0018",
+   "scenario": "deploy",
+   "title": "强化事件：订单服务 那次大变更",
+   "content": "【前因】订单服务 那次大变更：上线后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8087,
+   "role": "salient",
+   "topic": "c3-deploy-8",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "订单服务"
+   }
+  },
+  {
+   "id": "h8B0012",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 1 号：推荐服务",
+   "content": "【前因】例行记录：例行巡检：推荐服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8090,
+   "role": "dust",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0013",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 2 号：推荐服务",
+   "content": "【前因】例行记录：例行巡检：推荐服务 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8091,
+   "role": "dust",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0014",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 3 号：推荐服务",
+   "content": "【前因】例行记录：例行记录：推荐服务 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8092,
+   "role": "dust",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0015",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 4 号：推荐服务",
+   "content": "【前因】例行记录：例行记录：推荐服务 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8093,
+   "role": "dust",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0016",
+   "scenario": "canary",
+   "title": "平凡巡检记录第 5 号：推荐服务",
+   "content": "【前因】例行记录：例行巡检：推荐服务 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8094,
+   "role": "dust",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0017",
+   "scenario": "canary",
+   "title": "日常记录：推荐服务 每日照常",
+   "content": "【前因】推荐服务 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8096,
+   "role": "plain",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8B0018",
+   "scenario": "canary",
+   "title": "强化事件：推荐服务 那次大变更",
+   "content": "【前因】推荐服务 那次大变更：灰度后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8097,
+   "role": "salient",
+   "topic": "c3-canary-9",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "推荐服务"
+   }
+  },
+  {
+   "id": "h8C0012",
+   "scenario": "api",
+   "title": "平凡巡检记录第 1 号：回调接口",
+   "content": "【前因】例行记录：例行巡检：回调接口 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8100,
+   "role": "dust",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0013",
+   "scenario": "api",
+   "title": "平凡巡检记录第 2 号：回调接口",
+   "content": "【前因】例行记录：例行巡检：回调接口 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8101,
+   "role": "dust",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0014",
+   "scenario": "api",
+   "title": "平凡巡检记录第 3 号：回调接口",
+   "content": "【前因】例行记录：例行记录：回调接口 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8102,
+   "role": "dust",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0015",
+   "scenario": "api",
+   "title": "平凡巡检记录第 4 号：回调接口",
+   "content": "【前因】例行记录：例行记录：回调接口 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8103,
+   "role": "dust",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0016",
+   "scenario": "api",
+   "title": "平凡巡检记录第 5 号：回调接口",
+   "content": "【前因】例行记录：例行巡检：回调接口 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8104,
+   "role": "dust",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0017",
+   "scenario": "api",
+   "title": "日常记录：回调接口 每日照常",
+   "content": "【前因】回调接口 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8106,
+   "role": "plain",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8C0018",
+   "scenario": "api",
+   "title": "强化事件：回调接口 那次大变更",
+   "content": "【前因】回调接口 那次大变更：接口后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8107,
+   "role": "salient",
+   "topic": "c3-api-10",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "回调接口"
+   }
+  },
+  {
+   "id": "h8D0012",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 1 号：监控看板",
+   "content": "【前因】例行记录：例行巡检：监控看板 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8110,
+   "role": "dust",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0013",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 2 号：监控看板",
+   "content": "【前因】例行记录：例行巡检：监控看板 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8111,
+   "role": "dust",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0014",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 3 号：监控看板",
+   "content": "【前因】例行记录：例行记录：监控看板 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8112,
+   "role": "dust",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0015",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 4 号：监控看板",
+   "content": "【前因】例行记录：例行记录：监控看板 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8113,
+   "role": "dust",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0016",
+   "scenario": "handoff",
+   "title": "平凡巡检记录第 5 号：监控看板",
+   "content": "【前因】例行记录：例行巡检：监控看板 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8114,
+   "role": "dust",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0017",
+   "scenario": "handoff",
+   "title": "日常记录：监控看板 每日照常",
+   "content": "【前因】监控看板 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8116,
+   "role": "plain",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8D0018",
+   "scenario": "handoff",
+   "title": "强化事件：监控看板 那次大变更",
+   "content": "【前因】监控看板 那次大变更：交接后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8117,
+   "role": "salient",
+   "topic": "c3-handoff-11",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "监控看板"
+   }
+  },
+  {
+   "id": "h8E0012",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 1 号：指标口径",
+   "content": "【前因】例行记录：例行巡检：指标口径 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8120,
+   "role": "dust",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0013",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 2 号：指标口径",
+   "content": "【前因】例行记录：例行巡检：指标口径 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8121,
+   "role": "dust",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0014",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 3 号：指标口径",
+   "content": "【前因】例行记录：例行记录：指标口径 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8122,
+   "role": "dust",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0015",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 4 号：指标口径",
+   "content": "【前因】例行记录：例行记录：指标口径 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8123,
+   "role": "dust",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0016",
+   "scenario": "meeting",
+   "title": "平凡巡检记录第 5 号：指标口径",
+   "content": "【前因】例行记录：例行巡检：指标口径 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8124,
+   "role": "dust",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0017",
+   "scenario": "meeting",
+   "title": "日常记录：指标口径 每日照常",
+   "content": "【前因】指标口径 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8126,
+   "role": "plain",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8E0018",
+   "scenario": "meeting",
+   "title": "强化事件：指标口径 那次大变更",
+   "content": "【前因】指标口径 那次大变更：会议后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8127,
+   "role": "salient",
+   "topic": "c3-meeting-12",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "指标口径"
+   }
+  },
+  {
+   "id": "h8F0012",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 1 号：消息队列",
+   "content": "【前因】例行记录：例行巡检：消息队列 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8130,
+   "role": "dust",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0013",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 2 号：消息队列",
+   "content": "【前因】例行记录：例行巡检：消息队列 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8131,
+   "role": "dust",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0014",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 3 号：消息队列",
+   "content": "【前因】例行记录：例行记录：消息队列 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8132,
+   "role": "dust",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0015",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 4 号：消息队列",
+   "content": "【前因】例行记录：例行记录：消息队列 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8133,
+   "role": "dust",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0016",
+   "scenario": "ops",
+   "title": "平凡巡检记录第 5 号：消息队列",
+   "content": "【前因】例行记录：例行巡检：消息队列 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8134,
+   "role": "dust",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0017",
+   "scenario": "ops",
+   "title": "日常记录：消息队列 每日照常",
+   "content": "【前因】消息队列 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8136,
+   "role": "plain",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8F0018",
+   "scenario": "ops",
+   "title": "强化事件：消息队列 那次大变更",
+   "content": "【前因】消息队列 那次大变更：故障后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8137,
+   "role": "salient",
+   "topic": "c3-ops-13",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "消息队列"
+   }
+  },
+  {
+   "id": "h8G0012",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 1 号：日志索引",
+   "content": "【前因】例行记录：例行巡检：日志索引 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8140,
+   "role": "dust",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0013",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 2 号：日志索引",
+   "content": "【前因】例行记录：例行巡检：日志索引 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8141,
+   "role": "dust",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0014",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 3 号：日志索引",
+   "content": "【前因】例行记录：例行记录：日志索引 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8142,
+   "role": "dust",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0015",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 4 号：日志索引",
+   "content": "【前因】例行记录：例行记录：日志索引 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8143,
+   "role": "dust",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0016",
+   "scenario": "migration",
+   "title": "平凡巡检记录第 5 号：日志索引",
+   "content": "【前因】例行记录：例行巡检：日志索引 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8144,
+   "role": "dust",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0017",
+   "scenario": "migration",
+   "title": "日常记录：日志索引 每日照常",
+   "content": "【前因】日志索引 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8146,
+   "role": "plain",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8G0018",
+   "scenario": "migration",
+   "title": "强化事件：日志索引 那次大变更",
+   "content": "【前因】日志索引 那次大变更：迁移后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8147,
+   "role": "salient",
+   "topic": "c3-migration-14",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "日志索引"
+   }
+  },
+  {
+   "id": "h8H0012",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 1 号：生产库账号",
+   "content": "【前因】例行记录：例行巡检：生产库账号 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8150,
+   "role": "dust",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0013",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 2 号：生产库账号",
+   "content": "【前因】例行记录：例行巡检：生产库账号 无告警\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8151,
+   "role": "dust",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0014",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 3 号：生产库账号",
+   "content": "【前因】例行记录：例行记录：生产库账号 指标平稳\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8152,
+   "role": "dust",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0015",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 4 号：生产库账号",
+   "content": "【前因】例行记录：例行记录：生产库账号 无变更\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8153,
+   "role": "dust",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0016",
+   "scenario": "approval",
+   "title": "平凡巡检记录第 5 号：生产库账号",
+   "content": "【前因】例行记录：例行巡检：生产库账号 状态正常\n【行为】无异常\n【后果】无需处理",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 8154,
+   "role": "dust",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "dust",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0017",
+   "scenario": "approval",
+   "title": "日常记录：生产库账号 每日照常",
+   "content": "【前因】生产库账号 每日照常运行\n【行为】无变更\n【后果】维持现状",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 8156,
+   "role": "plain",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "plain",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8H0018",
+   "scenario": "approval",
+   "title": "强化事件：生产库账号 那次大变更",
+   "content": "【前因】生产库账号 那次大变更：审批后停服 40 分钟\n【行为】影响全量用户\n【后果】定为 P1 故障",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 8157,
+   "role": "salient",
+   "topic": "c3-approval-15",
+   "parent": "",
+   "attrs": {
+    "pool": "salient",
+    "comp": "生产库账号"
+   }
+  },
+  {
+   "id": "h8A0019",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】订单服务 这次上线，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-01",
+   "created_at": "2026-06-01T10:00:00Z",
+   "insert_rank": 9000,
+   "role": "rule_version",
+   "topic": "c4-deploy-0",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": "h8A0020"
+  },
+  {
+   "id": "h8A0020",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】订单服务 这次上线，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-01",
+   "created_at": "2026-07-01T10:00:00Z",
+   "insert_rank": 9001,
+   "role": "rule_version",
+   "topic": "c4-deploy-0",
+   "parent": "h8A0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": "h8A0021"
+  },
+  {
+   "id": "h8A0021",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】订单服务 这次上线，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-01",
+   "created_at": "2026-08-01T10:00:00Z",
+   "insert_rank": 9002,
+   "role": "rule_version",
+   "topic": "c4-deploy-0",
+   "parent": "h8A0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8B0019",
+   "scenario": "canary",
+   "title": "搜索服务灰度口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】搜索服务 这次灰度，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-02",
+   "created_at": "2026-06-02T10:00:00Z",
+   "insert_rank": 9010,
+   "role": "rule_version",
+   "topic": "c4-canary-1",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "搜索服务"
+   },
+   "superseded_by": "h8B0020"
+  },
+  {
+   "id": "h8B0020",
+   "scenario": "canary",
+   "title": "搜索服务灰度口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】搜索服务 这次灰度，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-02",
+   "created_at": "2026-07-02T10:00:00Z",
+   "insert_rank": 9011,
+   "role": "rule_version",
+   "topic": "c4-canary-1",
+   "parent": "h8B0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "搜索服务"
+   },
+   "superseded_by": "h8B0021"
+  },
+  {
+   "id": "h8B0021",
+   "scenario": "canary",
+   "title": "搜索服务灰度口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】搜索服务 这次灰度，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-02",
+   "created_at": "2026-08-02T10:00:00Z",
+   "insert_rank": 9012,
+   "role": "rule_version",
+   "topic": "c4-canary-1",
+   "parent": "h8B0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "搜索服务"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8C0019",
+   "scenario": "api",
+   "title": "查询接口接口口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】查询接口 这次接口，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-03",
+   "created_at": "2026-06-03T10:00:00Z",
+   "insert_rank": 9020,
+   "role": "rule_version",
+   "topic": "c4-api-2",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "查询接口"
+   },
+   "superseded_by": "h8C0020"
+  },
+  {
+   "id": "h8C0020",
+   "scenario": "api",
+   "title": "查询接口接口口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】查询接口 这次接口，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-03",
+   "created_at": "2026-07-03T10:00:00Z",
+   "insert_rank": 9021,
+   "role": "rule_version",
+   "topic": "c4-api-2",
+   "parent": "h8C0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "查询接口"
+   },
+   "superseded_by": "h8C0021"
+  },
+  {
+   "id": "h8C0021",
+   "scenario": "api",
+   "title": "查询接口接口口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】查询接口 这次接口，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-03",
+   "created_at": "2026-08-03T10:00:00Z",
+   "insert_rank": 9022,
+   "role": "rule_version",
+   "topic": "c4-api-2",
+   "parent": "h8C0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "查询接口"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8D0019",
+   "scenario": "handoff",
+   "title": "值班手册交接口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】值班手册 这次交接，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-04",
+   "created_at": "2026-06-04T10:00:00Z",
+   "insert_rank": 9030,
+   "role": "rule_version",
+   "topic": "c4-handoff-3",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "值班手册"
+   },
+   "superseded_by": "h8D0020"
+  },
+  {
+   "id": "h8D0020",
+   "scenario": "handoff",
+   "title": "值班手册交接口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】值班手册 这次交接，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-04",
+   "created_at": "2026-07-04T10:00:00Z",
+   "insert_rank": 9031,
+   "role": "rule_version",
+   "topic": "c4-handoff-3",
+   "parent": "h8D0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "值班手册"
+   },
+   "superseded_by": "h8D0021"
+  },
+  {
+   "id": "h8D0021",
+   "scenario": "handoff",
+   "title": "值班手册交接口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】值班手册 这次交接，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 9032,
+   "role": "rule_version",
+   "topic": "c4-handoff-3",
+   "parent": "h8D0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "值班手册"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8E0019",
+   "scenario": "meeting",
+   "title": "统计规范会议口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】统计规范 这次会议，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-05",
+   "created_at": "2026-06-05T10:00:00Z",
+   "insert_rank": 9040,
+   "role": "rule_version",
+   "topic": "c4-meeting-4",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "统计规范"
+   },
+   "superseded_by": "h8E0020"
+  },
+  {
+   "id": "h8E0020",
+   "scenario": "meeting",
+   "title": "统计规范会议口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】统计规范 这次会议，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-05",
+   "created_at": "2026-07-05T10:00:00Z",
+   "insert_rank": 9041,
+   "role": "rule_version",
+   "topic": "c4-meeting-4",
+   "parent": "h8E0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "统计规范"
+   },
+   "superseded_by": "h8E0021"
+  },
+  {
+   "id": "h8E0021",
+   "scenario": "meeting",
+   "title": "统计规范会议口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】统计规范 这次会议，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-05",
+   "created_at": "2026-08-05T10:00:00Z",
+   "insert_rank": 9042,
+   "role": "rule_version",
+   "topic": "c4-meeting-4",
+   "parent": "h8E0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "统计规范"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8F0019",
+   "scenario": "ops",
+   "title": "数据库主库故障口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】数据库主库 这次故障，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-06",
+   "created_at": "2026-06-06T10:00:00Z",
+   "insert_rank": 9050,
+   "role": "rule_version",
+   "topic": "c4-ops-5",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "数据库主库"
+   },
+   "superseded_by": "h8F0020"
+  },
+  {
+   "id": "h8F0020",
+   "scenario": "ops",
+   "title": "数据库主库故障口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】数据库主库 这次故障，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-06",
+   "created_at": "2026-07-06T10:00:00Z",
+   "insert_rank": 9051,
+   "role": "rule_version",
+   "topic": "c4-ops-5",
+   "parent": "h8F0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "数据库主库"
+   },
+   "superseded_by": "h8F0021"
+  },
+  {
+   "id": "h8F0021",
+   "scenario": "ops",
+   "title": "数据库主库故障口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】数据库主库 这次故障，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-06",
+   "created_at": "2026-08-06T10:00:00Z",
+   "insert_rank": 9052,
+   "role": "rule_version",
+   "topic": "c4-ops-5",
+   "parent": "h8F0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "数据库主库"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8G0019",
+   "scenario": "migration",
+   "title": "历史订单表迁移口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】历史订单表 这次迁移，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-07",
+   "created_at": "2026-06-07T10:00:00Z",
+   "insert_rank": 9060,
+   "role": "rule_version",
+   "topic": "c4-migration-6",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "历史订单表"
+   },
+   "superseded_by": "h8G0020"
+  },
+  {
+   "id": "h8G0020",
+   "scenario": "migration",
+   "title": "历史订单表迁移口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】历史订单表 这次迁移，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-07",
+   "created_at": "2026-07-07T10:00:00Z",
+   "insert_rank": 9061,
+   "role": "rule_version",
+   "topic": "c4-migration-6",
+   "parent": "h8G0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "历史订单表"
+   },
+   "superseded_by": "h8G0021"
+  },
+  {
+   "id": "h8G0021",
+   "scenario": "migration",
+   "title": "历史订单表迁移口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】历史订单表 这次迁移，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-07",
+   "created_at": "2026-08-07T10:00:00Z",
+   "insert_rank": 9062,
+   "role": "rule_version",
+   "topic": "c4-migration-6",
+   "parent": "h8G0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "历史订单表"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8H0019",
+   "scenario": "approval",
+   "title": "发布平台审批口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】发布平台 这次审批，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-08",
+   "created_at": "2026-06-08T10:00:00Z",
+   "insert_rank": 9070,
+   "role": "rule_version",
+   "topic": "c4-approval-7",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "发布平台"
+   },
+   "superseded_by": "h8H0020"
+  },
+  {
+   "id": "h8H0020",
+   "scenario": "approval",
+   "title": "发布平台审批口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】发布平台 这次审批，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-08",
+   "created_at": "2026-07-08T10:00:00Z",
+   "insert_rank": 9071,
+   "role": "rule_version",
+   "topic": "c4-approval-7",
+   "parent": "h8H0019",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "发布平台"
+   },
+   "superseded_by": "h8H0021"
+  },
+  {
+   "id": "h8H0021",
+   "scenario": "approval",
+   "title": "发布平台审批口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】发布平台 这次审批，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 9072,
+   "role": "rule_version",
+   "topic": "c4-approval-7",
+   "parent": "h8H0020",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "发布平台"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8A0022",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】订单服务 这次上线，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-09",
+   "created_at": "2026-06-09T10:00:00Z",
+   "insert_rank": 9080,
+   "role": "rule_version",
+   "topic": "c4-deploy-8",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": "h8A0023"
+  },
+  {
+   "id": "h8A0023",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】订单服务 这次上线，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-09",
+   "created_at": "2026-07-09T10:00:00Z",
+   "insert_rank": 9081,
+   "role": "rule_version",
+   "topic": "c4-deploy-8",
+   "parent": "h8A0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": "h8A0024"
+  },
+  {
+   "id": "h8A0024",
+   "scenario": "deploy",
+   "title": "订单服务上线口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】订单服务 这次上线，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-09",
+   "created_at": "2026-08-09T10:00:00Z",
+   "insert_rank": 9082,
+   "role": "rule_version",
+   "topic": "c4-deploy-8",
+   "parent": "h8A0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "订单服务"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8B0022",
+   "scenario": "canary",
+   "title": "推荐服务灰度口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】推荐服务 这次灰度，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-10",
+   "created_at": "2026-06-10T10:00:00Z",
+   "insert_rank": 9090,
+   "role": "rule_version",
+   "topic": "c4-canary-9",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "推荐服务"
+   },
+   "superseded_by": "h8B0023"
+  },
+  {
+   "id": "h8B0023",
+   "scenario": "canary",
+   "title": "推荐服务灰度口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】推荐服务 这次灰度，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-10",
+   "created_at": "2026-07-10T10:00:00Z",
+   "insert_rank": 9091,
+   "role": "rule_version",
+   "topic": "c4-canary-9",
+   "parent": "h8B0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "推荐服务"
+   },
+   "superseded_by": "h8B0024"
+  },
+  {
+   "id": "h8B0024",
+   "scenario": "canary",
+   "title": "推荐服务灰度口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】推荐服务 这次灰度，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-10",
+   "created_at": "2026-08-10T10:00:00Z",
+   "insert_rank": 9092,
+   "role": "rule_version",
+   "topic": "c4-canary-9",
+   "parent": "h8B0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "推荐服务"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8C0022",
+   "scenario": "api",
+   "title": "回调接口接口口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】回调接口 这次接口，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-11",
+   "created_at": "2026-06-11T10:00:00Z",
+   "insert_rank": 9100,
+   "role": "rule_version",
+   "topic": "c4-api-10",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "回调接口"
+   },
+   "superseded_by": "h8C0023"
+  },
+  {
+   "id": "h8C0023",
+   "scenario": "api",
+   "title": "回调接口接口口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】回调接口 这次接口，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-11",
+   "created_at": "2026-07-11T10:00:00Z",
+   "insert_rank": 9101,
+   "role": "rule_version",
+   "topic": "c4-api-10",
+   "parent": "h8C0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "回调接口"
+   },
+   "superseded_by": "h8C0024"
+  },
+  {
+   "id": "h8C0024",
+   "scenario": "api",
+   "title": "回调接口接口口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】回调接口 这次接口，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-11",
+   "created_at": "2026-08-11T10:00:00Z",
+   "insert_rank": 9102,
+   "role": "rule_version",
+   "topic": "c4-api-10",
+   "parent": "h8C0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "回调接口"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8D0022",
+   "scenario": "handoff",
+   "title": "监控看板交接口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】监控看板 这次交接，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-12",
+   "created_at": "2026-06-12T10:00:00Z",
+   "insert_rank": 9110,
+   "role": "rule_version",
+   "topic": "c4-handoff-11",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "监控看板"
+   },
+   "superseded_by": "h8D0023"
+  },
+  {
+   "id": "h8D0023",
+   "scenario": "handoff",
+   "title": "监控看板交接口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】监控看板 这次交接，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-12",
+   "created_at": "2026-07-12T10:00:00Z",
+   "insert_rank": 9111,
+   "role": "rule_version",
+   "topic": "c4-handoff-11",
+   "parent": "h8D0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "监控看板"
+   },
+   "superseded_by": "h8D0024"
+  },
+  {
+   "id": "h8D0024",
+   "scenario": "handoff",
+   "title": "监控看板交接口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】监控看板 这次交接，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 9112,
+   "role": "rule_version",
+   "topic": "c4-handoff-11",
+   "parent": "h8D0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "监控看板"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8E0022",
+   "scenario": "meeting",
+   "title": "指标口径会议口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】指标口径 这次会议，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-13",
+   "created_at": "2026-06-13T10:00:00Z",
+   "insert_rank": 9120,
+   "role": "rule_version",
+   "topic": "c4-meeting-12",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "指标口径"
+   },
+   "superseded_by": "h8E0023"
+  },
+  {
+   "id": "h8E0023",
+   "scenario": "meeting",
+   "title": "指标口径会议口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】指标口径 这次会议，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-13",
+   "created_at": "2026-07-13T10:00:00Z",
+   "insert_rank": 9121,
+   "role": "rule_version",
+   "topic": "c4-meeting-12",
+   "parent": "h8E0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "指标口径"
+   },
+   "superseded_by": "h8E0024"
+  },
+  {
+   "id": "h8E0024",
+   "scenario": "meeting",
+   "title": "指标口径会议口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】指标口径 这次会议，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-13",
+   "created_at": "2026-08-13T10:00:00Z",
+   "insert_rank": 9122,
+   "role": "rule_version",
+   "topic": "c4-meeting-12",
+   "parent": "h8E0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "指标口径"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8F0022",
+   "scenario": "ops",
+   "title": "消息队列故障口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】消息队列 这次故障，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-14",
+   "created_at": "2026-06-14T10:00:00Z",
+   "insert_rank": 9130,
+   "role": "rule_version",
+   "topic": "c4-ops-13",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "消息队列"
+   },
+   "superseded_by": "h8F0023"
+  },
+  {
+   "id": "h8F0023",
+   "scenario": "ops",
+   "title": "消息队列故障口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】消息队列 这次故障，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-14",
+   "created_at": "2026-07-14T10:00:00Z",
+   "insert_rank": 9131,
+   "role": "rule_version",
+   "topic": "c4-ops-13",
+   "parent": "h8F0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "消息队列"
+   },
+   "superseded_by": "h8F0024"
+  },
+  {
+   "id": "h8F0024",
+   "scenario": "ops",
+   "title": "消息队列故障口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】消息队列 这次故障，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-14",
+   "created_at": "2026-08-14T10:00:00Z",
+   "insert_rank": 9132,
+   "role": "rule_version",
+   "topic": "c4-ops-13",
+   "parent": "h8F0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "消息队列"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8G0022",
+   "scenario": "migration",
+   "title": "日志索引迁移口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】日志索引 这次迁移，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-15",
+   "created_at": "2026-06-15T10:00:00Z",
+   "insert_rank": 9140,
+   "role": "rule_version",
+   "topic": "c4-migration-14",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "日志索引"
+   },
+   "superseded_by": "h8G0023"
+  },
+  {
+   "id": "h8G0023",
+   "scenario": "migration",
+   "title": "日志索引迁移口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】日志索引 这次迁移，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-15",
+   "created_at": "2026-07-15T10:00:00Z",
+   "insert_rank": 9141,
+   "role": "rule_version",
+   "topic": "c4-migration-14",
+   "parent": "h8G0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "日志索引"
+   },
+   "superseded_by": "h8G0024"
+  },
+  {
+   "id": "h8G0024",
+   "scenario": "migration",
+   "title": "日志索引迁移口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】日志索引 这次迁移，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-15",
+   "created_at": "2026-08-15T10:00:00Z",
+   "insert_rank": 9142,
+   "role": "rule_version",
+   "topic": "c4-migration-14",
+   "parent": "h8G0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "日志索引"
+   },
+   "superseded_by": ""
+  },
+  {
+   "id": "h8H0022",
+   "scenario": "approval",
+   "title": "生产库账号审批口径第 1 版：['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']",
+   "content": "【前因】生产库账号 这次审批，['回滚点先看发布单', '健康检查绿了才发', '联调先对签名']（第 1 版）\n【行为】改版由同事乙提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-06-16",
+   "created_at": "2026-06-16T10:00:00Z",
+   "insert_rank": 9150,
+   "role": "rule_version",
+   "topic": "c4-approval-15",
+   "parent": "",
+   "attrs": {
+    "version": 1,
+    "rule": [
+     "回滚点先看发布单",
+     "健康检查绿了才发",
+     "联调先对签名"
+    ],
+    "comp": "生产库账号"
+   },
+   "superseded_by": "h8H0023"
+  },
+  {
+   "id": "h8H0023",
+   "scenario": "approval",
+   "title": "生产库账号审批口径第 2 版：['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']",
+   "content": "【前因】生产库账号 这次审批，['回滚点改看当周值班手册', '健康检查加看错误率', '联调先对字段']（第 2 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-07-16",
+   "created_at": "2026-07-16T10:00:00Z",
+   "insert_rank": 9151,
+   "role": "rule_version",
+   "topic": "c4-approval-15",
+   "parent": "h8H0022",
+   "attrs": {
+    "version": 2,
+    "rule": [
+     "回滚点改看当周值班手册",
+     "健康检查加看错误率",
+     "联调先对字段"
+    ],
+    "comp": "生产库账号"
+   },
+   "superseded_by": "h8H0024"
+  },
+  {
+   "id": "h8H0024",
+   "scenario": "approval",
+   "title": "生产库账号审批口径第 3 版：['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']",
+   "content": "【前因】生产库账号 这次审批，['回滚点只认当周值班手册第 3 条', '健康检查绿且错误率稳', '联调先对字段再对签名']（第 3 版）\n【行为】改版由同事甲提出\n【后果】作为当前生效口径挂起",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 9152,
+   "role": "rule_version",
+   "topic": "c4-approval-15",
+   "parent": "h8H0023",
+   "attrs": {
+    "version": 3,
+    "rule": [
+     "回滚点只认当周值班手册第 3 条",
+     "健康检查绿且错误率稳",
+     "联调先对字段再对签名"
+    ],
+    "comp": "生产库账号"
+   },
+   "superseded_by": ""
+  }
+ ]
+}

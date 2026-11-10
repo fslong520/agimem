@@ -1,0 +1,4853 @@
+{
+  "version": "1.0",
+  "synthetic": true,
+  "seed": 20261109,
+  "generator": "gen_h6.py",
+  "scenario_whitelist": [
+    "部署上线",
+    "灰度发布",
+    "接口对接",
+    "同事交接",
+    "开会定口径",
+    "线上排障",
+    "数据迁移",
+    "权限审批"
+  ],
+  "note": "全合成脱敏的 H6 分水岭语料：仅用于 agimem 「人 vs 数据库」六类评测。八个真实工作场景白名单。无真人姓名、无真库 id、无凭据。P5 的 created_at 与 insert_rank 十字交叉，正文各不相同。",
+  "nodes": [
+    {
+      "id": "hl2A0001",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：P99 延迟超过 2% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 2%，观察 30 分钟后仍未回落，则把 结算服务 的上线停在 生产，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-02",
+      "created_at": "2026-06-02T09:00:00Z",
+      "insert_rank": 10,
+      "role": "intent",
+      "topic": "p1-deploy-1",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 2,
+        "build": 1,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2A0002",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：错误率超过 5% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 错误率 超过 5%，观察 30 分钟后仍未回落，则把 结算服务 的上线停在 生产，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-02",
+      "created_at": "2026-06-02T09:00:00Z",
+      "insert_rank": 11,
+      "role": "intent",
+      "topic": "p1-deploy-1",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 5,
+        "build": 1,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0003",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：连接池占用超过 6% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 6%，观察 30 分钟后仍未回落，则把 结算服务 的上线停在 生产，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-02",
+      "created_at": "2026-06-02T09:00:00Z",
+      "insert_rank": 12,
+      "role": "intent",
+      "topic": "p1-deploy-1",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 6,
+        "build": 1,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0001",
+      "scenario": "canary",
+      "title": "风控服务灰度预案：错误率超过 3% 就把 风控服务",
+      "content": "【前因】灰度组 的 风控服务 这次灰度前约定了一条指向未来的条件\n【行为】若 错误率 超过 3%，观察 24 小时后仍未回落，则把 风控服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-03",
+      "created_at": "2026-06-03T09:00:00Z",
+      "insert_rank": 20,
+      "role": "intent",
+      "topic": "p1-canary-2",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 3,
+        "build": 2,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2B0002",
+      "scenario": "canary",
+      "title": "风控服务灰度预案：连接池占用超过 6% 就把 风控服务",
+      "content": "【前因】灰度组 的 风控服务 这次灰度前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 6%，观察 24 小时后仍未回落，则把 风控服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-03",
+      "created_at": "2026-06-03T09:00:00Z",
+      "insert_rank": 21,
+      "role": "intent",
+      "topic": "p1-canary-2",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 6,
+        "build": 2,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0003",
+      "scenario": "canary",
+      "title": "风控服务灰度预案：队列积压超过 7% 就把 风控服务",
+      "content": "【前因】灰度组 的 风控服务 这次灰度前约定了一条指向未来的条件\n【行为】若 队列积压 超过 7%，观察 24 小时后仍未回落，则把 风控服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-03",
+      "created_at": "2026-06-03T09:00:00Z",
+      "insert_rank": 22,
+      "role": "intent",
+      "topic": "p1-canary-2",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 7,
+        "build": 2,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0001",
+      "scenario": "api",
+      "title": "对账接口接口预案：连接池占用超过 4% 就立即回滚 对",
+      "content": "【前因】正式 的 对账接口 这次接口前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 4%，观察 15 分钟后仍未回落，则立即回滚 对账接口 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-04",
+      "created_at": "2026-06-04T09:00:00Z",
+      "insert_rank": 30,
+      "role": "intent",
+      "topic": "p1-api-3",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 4,
+        "build": 3,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2C0002",
+      "scenario": "api",
+      "title": "对账接口接口预案：队列积压超过 7% 就立即回滚 对",
+      "content": "【前因】正式 的 对账接口 这次接口前约定了一条指向未来的条件\n【行为】若 队列积压 超过 7%，观察 15 分钟后仍未回落，则立即回滚 对账接口 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-04",
+      "created_at": "2026-06-04T09:00:00Z",
+      "insert_rank": 31,
+      "role": "intent",
+      "topic": "p1-api-3",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 7,
+        "build": 3,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0003",
+      "scenario": "api",
+      "title": "对账接口接口预案：磁盘使用率超过 8% 就立即回滚 对",
+      "content": "【前因】正式 的 对账接口 这次接口前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 8%，观察 15 分钟后仍未回落，则立即回滚 对账接口 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-04",
+      "created_at": "2026-06-04T09:00:00Z",
+      "insert_rank": 32,
+      "role": "intent",
+      "topic": "p1-api-3",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 8,
+        "build": 3,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0001",
+      "scenario": "handoff",
+      "title": "定时任务交接预案：队列积压超过 1% 就把 定时任务",
+      "content": "【前因】本机 的 定时任务 这次交接前约定了一条指向未来的条件\n【行为】若 队列积压 超过 1%，观察 30 分钟后仍未回落，则把 定时任务 的交接停在 本机，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-05",
+      "created_at": "2026-06-05T09:00:00Z",
+      "insert_rank": 40,
+      "role": "intent",
+      "topic": "p1-handoff-4",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 1,
+        "build": 4,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2D0002",
+      "scenario": "handoff",
+      "title": "定时任务交接预案：磁盘使用率超过 4% 就把 定时任务",
+      "content": "【前因】本机 的 定时任务 这次交接前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 4%，观察 30 分钟后仍未回落，则把 定时任务 的交接停在 本机，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-05",
+      "created_at": "2026-06-05T09:00:00Z",
+      "insert_rank": 41,
+      "role": "intent",
+      "topic": "p1-handoff-4",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 4,
+        "build": 4,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0003",
+      "scenario": "handoff",
+      "title": "定时任务交接预案：5xx 比例超过 5% 就把 定时任务",
+      "content": "【前因】本机 的 定时任务 这次交接前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 5%，观察 30 分钟后仍未回落，则把 定时任务 的交接停在 本机，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-05",
+      "created_at": "2026-06-05T09:00:00Z",
+      "insert_rank": 42,
+      "role": "intent",
+      "topic": "p1-handoff-4",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 5,
+        "build": 4,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0001",
+      "scenario": "meeting",
+      "title": "命名规范会议预案：磁盘使用率超过 2% 就把 命名规范",
+      "content": "【前因】评审会 的 命名规范 这次会议前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 2%，观察 24 小时后仍未回落，则把 命名规范 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-06",
+      "created_at": "2026-06-06T09:00:00Z",
+      "insert_rank": 50,
+      "role": "intent",
+      "topic": "p1-meeting-5",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 2,
+        "build": 5,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2E0002",
+      "scenario": "meeting",
+      "title": "命名规范会议预案：5xx 比例超过 5% 就把 命名规范",
+      "content": "【前因】评审会 的 命名规范 这次会议前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 5%，观察 24 小时后仍未回落，则把 命名规范 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-06",
+      "created_at": "2026-06-06T09:00:00Z",
+      "insert_rank": 51,
+      "role": "intent",
+      "topic": "p1-meeting-5",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 5,
+        "build": 5,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0003",
+      "scenario": "meeting",
+      "title": "命名规范会议预案：P99 延迟超过 6% 就把 命名规范",
+      "content": "【前因】评审会 的 命名规范 这次会议前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 6%，观察 24 小时后仍未回落，则把 命名规范 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-06",
+      "created_at": "2026-06-06T09:00:00Z",
+      "insert_rank": 52,
+      "role": "intent",
+      "topic": "p1-meeting-5",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 6,
+        "build": 5,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0001",
+      "scenario": "ops",
+      "title": "支付回调故障预案：5xx 比例超过 3% 就立即回滚 支",
+      "content": "【前因】线上 的 支付回调 这次故障前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 3%，观察 15 分钟后仍未回落，则立即回滚 支付回调 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-07",
+      "created_at": "2026-06-07T09:00:00Z",
+      "insert_rank": 60,
+      "role": "intent",
+      "topic": "p1-ops-6",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 3,
+        "build": 6,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2F0002",
+      "scenario": "ops",
+      "title": "支付回调故障预案：P99 延迟超过 6% 就立即回滚 支",
+      "content": "【前因】线上 的 支付回调 这次故障前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 6%，观察 15 分钟后仍未回落，则立即回滚 支付回调 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-07",
+      "created_at": "2026-06-07T09:00:00Z",
+      "insert_rank": 61,
+      "role": "intent",
+      "topic": "p1-ops-6",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 6,
+        "build": 6,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0003",
+      "scenario": "ops",
+      "title": "支付回调故障预案：错误率超过 7% 就立即回滚 支",
+      "content": "【前因】线上 的 支付回调 这次故障前约定了一条指向未来的条件\n【行为】若 错误率 超过 7%，观察 15 分钟后仍未回落，则立即回滚 支付回调 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-07",
+      "created_at": "2026-06-07T09:00:00Z",
+      "insert_rank": 62,
+      "role": "intent",
+      "topic": "p1-ops-6",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 7,
+        "build": 6,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0001",
+      "scenario": "migration",
+      "title": "用户档案迁移预案：P99 延迟超过 4% 就把 用户档案",
+      "content": "【前因】生产库 的 用户档案 这次迁移前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 4%，观察 30 分钟后仍未回落，则把 用户档案 的迁移停在 生产库，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-08",
+      "created_at": "2026-06-08T09:00:00Z",
+      "insert_rank": 70,
+      "role": "intent",
+      "topic": "p1-migration-7",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 4,
+        "build": 7,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2G0002",
+      "scenario": "migration",
+      "title": "用户档案迁移预案：错误率超过 7% 就把 用户档案",
+      "content": "【前因】生产库 的 用户档案 这次迁移前约定了一条指向未来的条件\n【行为】若 错误率 超过 7%，观察 30 分钟后仍未回落，则把 用户档案 的迁移停在 生产库，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-08",
+      "created_at": "2026-06-08T09:00:00Z",
+      "insert_rank": 71,
+      "role": "intent",
+      "topic": "p1-migration-7",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 7,
+        "build": 7,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0003",
+      "scenario": "migration",
+      "title": "用户档案迁移预案：连接池占用超过 8% 就把 用户档案",
+      "content": "【前因】生产库 的 用户档案 这次迁移前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 8%，观察 30 分钟后仍未回落，则把 用户档案 的迁移停在 生产库，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-08",
+      "created_at": "2026-06-08T09:00:00Z",
+      "insert_rank": 72,
+      "role": "intent",
+      "topic": "p1-migration-7",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 8,
+        "build": 7,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0001",
+      "scenario": "approval",
+      "title": "配置中心审批预案：错误率超过 1% 就把 配置中心",
+      "content": "【前因】测试租户 的 配置中心 这次审批前约定了一条指向未来的条件\n【行为】若 错误率 超过 1%，观察 24 小时后仍未回落，则把 配置中心 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-09",
+      "created_at": "2026-06-09T09:00:00Z",
+      "insert_rank": 80,
+      "role": "intent",
+      "topic": "p1-approval-8",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 1,
+        "build": 8,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2H0002",
+      "scenario": "approval",
+      "title": "配置中心审批预案：连接池占用超过 4% 就把 配置中心",
+      "content": "【前因】测试租户 的 配置中心 这次审批前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 4%，观察 24 小时后仍未回落，则把 配置中心 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-09",
+      "created_at": "2026-06-09T09:00:00Z",
+      "insert_rank": 81,
+      "role": "intent",
+      "topic": "p1-approval-8",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 4,
+        "build": 8,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0003",
+      "scenario": "approval",
+      "title": "配置中心审批预案：队列积压超过 5% 就把 配置中心",
+      "content": "【前因】测试租户 的 配置中心 这次审批前约定了一条指向未来的条件\n【行为】若 队列积压 超过 5%，观察 24 小时后仍未回落，则把 配置中心 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-09",
+      "created_at": "2026-06-09T09:00:00Z",
+      "insert_rank": 82,
+      "role": "intent",
+      "topic": "p1-approval-8",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 5,
+        "build": 8,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0004",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：连接池占用超过 2% 就立即回滚 结",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 2%，观察 15 分钟后仍未回落，则立即回滚 结算服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-10",
+      "created_at": "2026-06-10T09:00:00Z",
+      "insert_rank": 90,
+      "role": "intent",
+      "topic": "p1-deploy-9",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 2,
+        "build": 9,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2A0005",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：队列积压超过 5% 就立即回滚 结",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 队列积压 超过 5%，观察 15 分钟后仍未回落，则立即回滚 结算服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-10",
+      "created_at": "2026-06-10T09:00:00Z",
+      "insert_rank": 91,
+      "role": "intent",
+      "topic": "p1-deploy-9",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 5,
+        "build": 9,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0006",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：磁盘使用率超过 6% 就立即回滚 结",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 6%，观察 15 分钟后仍未回落，则立即回滚 结算服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-10",
+      "created_at": "2026-06-10T09:00:00Z",
+      "insert_rank": 92,
+      "role": "intent",
+      "topic": "p1-deploy-9",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 6,
+        "build": 9,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0004",
+      "scenario": "canary",
+      "title": "搜索服务灰度预案：队列积压超过 3% 就把 搜索服务",
+      "content": "【前因】灰度组 的 搜索服务 这次灰度前约定了一条指向未来的条件\n【行为】若 队列积压 超过 3%，观察 30 分钟后仍未回落，则把 搜索服务 的灰度停在 灰度组，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-11",
+      "created_at": "2026-06-11T09:00:00Z",
+      "insert_rank": 100,
+      "role": "intent",
+      "topic": "p1-canary-10",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 3,
+        "build": 10,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2B0005",
+      "scenario": "canary",
+      "title": "搜索服务灰度预案：磁盘使用率超过 6% 就把 搜索服务",
+      "content": "【前因】灰度组 的 搜索服务 这次灰度前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 6%，观察 30 分钟后仍未回落，则把 搜索服务 的灰度停在 灰度组，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-11",
+      "created_at": "2026-06-11T09:00:00Z",
+      "insert_rank": 101,
+      "role": "intent",
+      "topic": "p1-canary-10",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 6,
+        "build": 10,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0006",
+      "scenario": "canary",
+      "title": "搜索服务灰度预案：5xx 比例超过 7% 就把 搜索服务",
+      "content": "【前因】灰度组 的 搜索服务 这次灰度前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 7%，观察 30 分钟后仍未回落，则把 搜索服务 的灰度停在 灰度组，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-11",
+      "created_at": "2026-06-11T09:00:00Z",
+      "insert_rank": 102,
+      "role": "intent",
+      "topic": "p1-canary-10",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 7,
+        "build": 10,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0004",
+      "scenario": "api",
+      "title": "查询接口接口预案：磁盘使用率超过 4% 就把 查询接口",
+      "content": "【前因】正式 的 查询接口 这次接口前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 4%，观察 24 小时后仍未回落，则把 查询接口 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-12",
+      "created_at": "2026-06-12T09:00:00Z",
+      "insert_rank": 110,
+      "role": "intent",
+      "topic": "p1-api-11",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 4,
+        "build": 11,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2C0005",
+      "scenario": "api",
+      "title": "查询接口接口预案：5xx 比例超过 7% 就把 查询接口",
+      "content": "【前因】正式 的 查询接口 这次接口前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 7%，观察 24 小时后仍未回落，则把 查询接口 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-12",
+      "created_at": "2026-06-12T09:00:00Z",
+      "insert_rank": 111,
+      "role": "intent",
+      "topic": "p1-api-11",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 7,
+        "build": 11,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0006",
+      "scenario": "api",
+      "title": "查询接口接口预案：P99 延迟超过 8% 就把 查询接口",
+      "content": "【前因】正式 的 查询接口 这次接口前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 8%，观察 24 小时后仍未回落，则把 查询接口 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-12",
+      "created_at": "2026-06-12T09:00:00Z",
+      "insert_rank": 112,
+      "role": "intent",
+      "topic": "p1-api-11",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 8,
+        "build": 11,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0004",
+      "scenario": "handoff",
+      "title": "值班手册交接预案：5xx 比例超过 1% 就立即回滚 值",
+      "content": "【前因】本机 的 值班手册 这次交接前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 1%，观察 15 分钟后仍未回落，则立即回滚 值班手册 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-13",
+      "created_at": "2026-06-13T09:00:00Z",
+      "insert_rank": 120,
+      "role": "intent",
+      "topic": "p1-handoff-12",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 1,
+        "build": 12,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2D0005",
+      "scenario": "handoff",
+      "title": "值班手册交接预案：P99 延迟超过 4% 就立即回滚 值",
+      "content": "【前因】本机 的 值班手册 这次交接前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 4%，观察 15 分钟后仍未回落，则立即回滚 值班手册 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-13",
+      "created_at": "2026-06-13T09:00:00Z",
+      "insert_rank": 121,
+      "role": "intent",
+      "topic": "p1-handoff-12",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 4,
+        "build": 12,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0006",
+      "scenario": "handoff",
+      "title": "值班手册交接预案：错误率超过 5% 就立即回滚 值",
+      "content": "【前因】本机 的 值班手册 这次交接前约定了一条指向未来的条件\n【行为】若 错误率 超过 5%，观察 15 分钟后仍未回落，则立即回滚 值班手册 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-13",
+      "created_at": "2026-06-13T09:00:00Z",
+      "insert_rank": 122,
+      "role": "intent",
+      "topic": "p1-handoff-12",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 5,
+        "build": 12,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0004",
+      "scenario": "meeting",
+      "title": "统计规范会议预案：P99 延迟超过 2% 就把 统计规范",
+      "content": "【前因】评审会 的 统计规范 这次会议前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 2%，观察 30 分钟后仍未回落，则把 统计规范 的会议停在 评审会，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-14",
+      "created_at": "2026-06-14T09:00:00Z",
+      "insert_rank": 130,
+      "role": "intent",
+      "topic": "p1-meeting-13",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 2,
+        "build": 13,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2E0005",
+      "scenario": "meeting",
+      "title": "统计规范会议预案：错误率超过 5% 就把 统计规范",
+      "content": "【前因】评审会 的 统计规范 这次会议前约定了一条指向未来的条件\n【行为】若 错误率 超过 5%，观察 30 分钟后仍未回落，则把 统计规范 的会议停在 评审会，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-14",
+      "created_at": "2026-06-14T09:00:00Z",
+      "insert_rank": 131,
+      "role": "intent",
+      "topic": "p1-meeting-13",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 5,
+        "build": 13,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0006",
+      "scenario": "meeting",
+      "title": "统计规范会议预案：连接池占用超过 6% 就把 统计规范",
+      "content": "【前因】评审会 的 统计规范 这次会议前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 6%，观察 30 分钟后仍未回落，则把 统计规范 的会议停在 评审会，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-14",
+      "created_at": "2026-06-14T09:00:00Z",
+      "insert_rank": 132,
+      "role": "intent",
+      "topic": "p1-meeting-13",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 6,
+        "build": 13,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0004",
+      "scenario": "ops",
+      "title": "数据库主库故障预案：错误率超过 3% 就把 数据库主",
+      "content": "【前因】线上 的 数据库主库 这次故障前约定了一条指向未来的条件\n【行为】若 错误率 超过 3%，观察 24 小时后仍未回落，则把 数据库主库 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-15",
+      "created_at": "2026-06-15T09:00:00Z",
+      "insert_rank": 140,
+      "role": "intent",
+      "topic": "p1-ops-14",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 3,
+        "build": 14,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2F0005",
+      "scenario": "ops",
+      "title": "数据库主库故障预案：连接池占用超过 6% 就把 数据库主",
+      "content": "【前因】线上 的 数据库主库 这次故障前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 6%，观察 24 小时后仍未回落，则把 数据库主库 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-15",
+      "created_at": "2026-06-15T09:00:00Z",
+      "insert_rank": 141,
+      "role": "intent",
+      "topic": "p1-ops-14",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 6,
+        "build": 14,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0006",
+      "scenario": "ops",
+      "title": "数据库主库故障预案：队列积压超过 7% 就把 数据库主",
+      "content": "【前因】线上 的 数据库主库 这次故障前约定了一条指向未来的条件\n【行为】若 队列积压 超过 7%，观察 24 小时后仍未回落，则把 数据库主库 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-15",
+      "created_at": "2026-06-15T09:00:00Z",
+      "insert_rank": 142,
+      "role": "intent",
+      "topic": "p1-ops-14",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 7,
+        "build": 14,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0004",
+      "scenario": "migration",
+      "title": "历史订单表迁移预案：连接池占用超过 4% 就立即回滚 历",
+      "content": "【前因】生产库 的 历史订单表 这次迁移前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 4%，观察 15 分钟后仍未回落，则立即回滚 历史订单表 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-16",
+      "created_at": "2026-06-16T09:00:00Z",
+      "insert_rank": 150,
+      "role": "intent",
+      "topic": "p1-migration-15",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 4,
+        "build": 15,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2G0005",
+      "scenario": "migration",
+      "title": "历史订单表迁移预案：队列积压超过 7% 就立即回滚 历",
+      "content": "【前因】生产库 的 历史订单表 这次迁移前约定了一条指向未来的条件\n【行为】若 队列积压 超过 7%，观察 15 分钟后仍未回落，则立即回滚 历史订单表 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-16",
+      "created_at": "2026-06-16T09:00:00Z",
+      "insert_rank": 151,
+      "role": "intent",
+      "topic": "p1-migration-15",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 7,
+        "build": 15,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0006",
+      "scenario": "migration",
+      "title": "历史订单表迁移预案：磁盘使用率超过 8% 就立即回滚 历",
+      "content": "【前因】生产库 的 历史订单表 这次迁移前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 8%，观察 15 分钟后仍未回落，则立即回滚 历史订单表 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-16",
+      "created_at": "2026-06-16T09:00:00Z",
+      "insert_rank": 152,
+      "role": "intent",
+      "topic": "p1-migration-15",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 8,
+        "build": 15,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0004",
+      "scenario": "approval",
+      "title": "发布平台审批预案：队列积压超过 1% 就把 发布平台",
+      "content": "【前因】测试租户 的 发布平台 这次审批前约定了一条指向未来的条件\n【行为】若 队列积压 超过 1%，观察 30 分钟后仍未回落，则把 发布平台 的审批停在 测试租户，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-17",
+      "created_at": "2026-06-17T09:00:00Z",
+      "insert_rank": 160,
+      "role": "intent",
+      "topic": "p1-approval-16",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 1,
+        "build": 16,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2H0005",
+      "scenario": "approval",
+      "title": "发布平台审批预案：磁盘使用率超过 4% 就把 发布平台",
+      "content": "【前因】测试租户 的 发布平台 这次审批前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 4%，观察 30 分钟后仍未回落，则把 发布平台 的审批停在 测试租户，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-17",
+      "created_at": "2026-06-17T09:00:00Z",
+      "insert_rank": 161,
+      "role": "intent",
+      "topic": "p1-approval-16",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 4,
+        "build": 16,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0006",
+      "scenario": "approval",
+      "title": "发布平台审批预案：5xx 比例超过 5% 就把 发布平台",
+      "content": "【前因】测试租户 的 发布平台 这次审批前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 5%，观察 30 分钟后仍未回落，则把 发布平台 的审批停在 测试租户，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-17",
+      "created_at": "2026-06-17T09:00:00Z",
+      "insert_rank": 162,
+      "role": "intent",
+      "topic": "p1-approval-16",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 5,
+        "build": 16,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0007",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：磁盘使用率超过 2% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 2%，观察 24 小时后仍未回落，则把 结算服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-18",
+      "created_at": "2026-06-18T09:00:00Z",
+      "insert_rank": 170,
+      "role": "intent",
+      "topic": "p1-deploy-17",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 2,
+        "build": 17,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2A0008",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：5xx 比例超过 5% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 5%，观察 24 小时后仍未回落，则把 结算服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-18",
+      "created_at": "2026-06-18T09:00:00Z",
+      "insert_rank": 171,
+      "role": "intent",
+      "topic": "p1-deploy-17",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 5,
+        "build": 17,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0009",
+      "scenario": "deploy",
+      "title": "结算服务上线预案：P99 延迟超过 6% 就把 结算服务",
+      "content": "【前因】生产 的 结算服务 这次上线前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 6%，观察 24 小时后仍未回落，则把 结算服务 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-18",
+      "created_at": "2026-06-18T09:00:00Z",
+      "insert_rank": 172,
+      "role": "intent",
+      "topic": "p1-deploy-17",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 6,
+        "build": 17,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0007",
+      "scenario": "canary",
+      "title": "推荐服务灰度预案：5xx 比例超过 3% 就立即回滚 推",
+      "content": "【前因】灰度组 的 推荐服务 这次灰度前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 3%，观察 15 分钟后仍未回落，则立即回滚 推荐服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-19",
+      "created_at": "2026-06-19T09:00:00Z",
+      "insert_rank": 180,
+      "role": "intent",
+      "topic": "p1-canary-18",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 3,
+        "build": 18,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2B0008",
+      "scenario": "canary",
+      "title": "推荐服务灰度预案：P99 延迟超过 6% 就立即回滚 推",
+      "content": "【前因】灰度组 的 推荐服务 这次灰度前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 6%，观察 15 分钟后仍未回落，则立即回滚 推荐服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-19",
+      "created_at": "2026-06-19T09:00:00Z",
+      "insert_rank": 181,
+      "role": "intent",
+      "topic": "p1-canary-18",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 6,
+        "build": 18,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0009",
+      "scenario": "canary",
+      "title": "推荐服务灰度预案：错误率超过 7% 就立即回滚 推",
+      "content": "【前因】灰度组 的 推荐服务 这次灰度前约定了一条指向未来的条件\n【行为】若 错误率 超过 7%，观察 15 分钟后仍未回落，则立即回滚 推荐服务 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-19",
+      "created_at": "2026-06-19T09:00:00Z",
+      "insert_rank": 182,
+      "role": "intent",
+      "topic": "p1-canary-18",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 7,
+        "build": 18,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0007",
+      "scenario": "api",
+      "title": "回调接口接口预案：P99 延迟超过 4% 就把 回调接口",
+      "content": "【前因】正式 的 回调接口 这次接口前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 4%，观察 30 分钟后仍未回落，则把 回调接口 的接口停在 正式，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-20",
+      "created_at": "2026-06-20T09:00:00Z",
+      "insert_rank": 190,
+      "role": "intent",
+      "topic": "p1-api-19",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 4,
+        "build": 19,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2C0008",
+      "scenario": "api",
+      "title": "回调接口接口预案：错误率超过 7% 就把 回调接口",
+      "content": "【前因】正式 的 回调接口 这次接口前约定了一条指向未来的条件\n【行为】若 错误率 超过 7%，观察 30 分钟后仍未回落，则把 回调接口 的接口停在 正式，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-20",
+      "created_at": "2026-06-20T09:00:00Z",
+      "insert_rank": 191,
+      "role": "intent",
+      "topic": "p1-api-19",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 7,
+        "build": 19,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0009",
+      "scenario": "api",
+      "title": "回调接口接口预案：连接池占用超过 8% 就把 回调接口",
+      "content": "【前因】正式 的 回调接口 这次接口前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 8%，观察 30 分钟后仍未回落，则把 回调接口 的接口停在 正式，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-20",
+      "created_at": "2026-06-20T09:00:00Z",
+      "insert_rank": 192,
+      "role": "intent",
+      "topic": "p1-api-19",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 8,
+        "build": 19,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0007",
+      "scenario": "handoff",
+      "title": "监控看板交接预案：错误率超过 1% 就把 监控看板",
+      "content": "【前因】本机 的 监控看板 这次交接前约定了一条指向未来的条件\n【行为】若 错误率 超过 1%，观察 24 小时后仍未回落，则把 监控看板 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-21",
+      "created_at": "2026-06-21T09:00:00Z",
+      "insert_rank": 200,
+      "role": "intent",
+      "topic": "p1-handoff-20",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 1,
+        "build": 20,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2D0008",
+      "scenario": "handoff",
+      "title": "监控看板交接预案：连接池占用超过 4% 就把 监控看板",
+      "content": "【前因】本机 的 监控看板 这次交接前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 4%，观察 24 小时后仍未回落，则把 监控看板 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-21",
+      "created_at": "2026-06-21T09:00:00Z",
+      "insert_rank": 201,
+      "role": "intent",
+      "topic": "p1-handoff-20",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 4,
+        "build": 20,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0009",
+      "scenario": "handoff",
+      "title": "监控看板交接预案：队列积压超过 5% 就把 监控看板",
+      "content": "【前因】本机 的 监控看板 这次交接前约定了一条指向未来的条件\n【行为】若 队列积压 超过 5%，观察 24 小时后仍未回落，则把 监控看板 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-21",
+      "created_at": "2026-06-21T09:00:00Z",
+      "insert_rank": 202,
+      "role": "intent",
+      "topic": "p1-handoff-20",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 5,
+        "build": 20,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0007",
+      "scenario": "meeting",
+      "title": "指标口径会议预案：连接池占用超过 2% 就立即回滚 指",
+      "content": "【前因】评审会 的 指标口径 这次会议前约定了一条指向未来的条件\n【行为】若 连接池占用 超过 2%，观察 15 分钟后仍未回落，则立即回滚 指标口径 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-22",
+      "created_at": "2026-06-22T09:00:00Z",
+      "insert_rank": 210,
+      "role": "intent",
+      "topic": "p1-meeting-21",
+      "attrs": {
+        "trigger_key": "conn_pool",
+        "trigger_name": "连接池占用",
+        "threshold": 2,
+        "build": 21,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2E0008",
+      "scenario": "meeting",
+      "title": "指标口径会议预案：队列积压超过 5% 就立即回滚 指",
+      "content": "【前因】评审会 的 指标口径 这次会议前约定了一条指向未来的条件\n【行为】若 队列积压 超过 5%，观察 15 分钟后仍未回落，则立即回滚 指标口径 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-22",
+      "created_at": "2026-06-22T09:00:00Z",
+      "insert_rank": 211,
+      "role": "intent",
+      "topic": "p1-meeting-21",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 5,
+        "build": 21,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0009",
+      "scenario": "meeting",
+      "title": "指标口径会议预案：磁盘使用率超过 6% 就立即回滚 指",
+      "content": "【前因】评审会 的 指标口径 这次会议前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 6%，观察 15 分钟后仍未回落，则立即回滚 指标口径 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-22",
+      "created_at": "2026-06-22T09:00:00Z",
+      "insert_rank": 212,
+      "role": "intent",
+      "topic": "p1-meeting-21",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 6,
+        "build": 21,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0007",
+      "scenario": "ops",
+      "title": "消息队列故障预案：队列积压超过 3% 就把 消息队列",
+      "content": "【前因】线上 的 消息队列 这次故障前约定了一条指向未来的条件\n【行为】若 队列积压 超过 3%，观察 30 分钟后仍未回落，则把 消息队列 的故障停在 线上，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-23",
+      "created_at": "2026-06-23T09:00:00Z",
+      "insert_rank": 220,
+      "role": "intent",
+      "topic": "p1-ops-22",
+      "attrs": {
+        "trigger_key": "queue_lag",
+        "trigger_name": "队列积压",
+        "threshold": 3,
+        "build": 22,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2F0008",
+      "scenario": "ops",
+      "title": "消息队列故障预案：磁盘使用率超过 6% 就把 消息队列",
+      "content": "【前因】线上 的 消息队列 这次故障前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 6%，观察 30 分钟后仍未回落，则把 消息队列 的故障停在 线上，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-23",
+      "created_at": "2026-06-23T09:00:00Z",
+      "insert_rank": 221,
+      "role": "intent",
+      "topic": "p1-ops-22",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 6,
+        "build": 22,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0009",
+      "scenario": "ops",
+      "title": "消息队列故障预案：5xx 比例超过 7% 就把 消息队列",
+      "content": "【前因】线上 的 消息队列 这次故障前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 7%，观察 30 分钟后仍未回落，则把 消息队列 的故障停在 线上，先不放量\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-23",
+      "created_at": "2026-06-23T09:00:00Z",
+      "insert_rank": 222,
+      "role": "intent",
+      "topic": "p1-ops-22",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 7,
+        "build": 22,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0007",
+      "scenario": "migration",
+      "title": "日志索引迁移预案：磁盘使用率超过 4% 就把 日志索引",
+      "content": "【前因】生产库 的 日志索引 这次迁移前约定了一条指向未来的条件\n【行为】若 磁盘使用率 超过 4%，观察 24 小时后仍未回落，则把 日志索引 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-24",
+      "created_at": "2026-06-24T09:00:00Z",
+      "insert_rank": 230,
+      "role": "intent",
+      "topic": "p1-migration-23",
+      "attrs": {
+        "trigger_key": "disk_usage",
+        "trigger_name": "磁盘使用率",
+        "threshold": 4,
+        "build": 23,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2G0008",
+      "scenario": "migration",
+      "title": "日志索引迁移预案：5xx 比例超过 7% 就把 日志索引",
+      "content": "【前因】生产库 的 日志索引 这次迁移前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 7%，观察 24 小时后仍未回落，则把 日志索引 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-24",
+      "created_at": "2026-06-24T09:00:00Z",
+      "insert_rank": 231,
+      "role": "intent",
+      "topic": "p1-migration-23",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 7,
+        "build": 23,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0009",
+      "scenario": "migration",
+      "title": "日志索引迁移预案：P99 延迟超过 8% 就把 日志索引",
+      "content": "【前因】生产库 的 日志索引 这次迁移前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 8%，观察 24 小时后仍未回落，则把 日志索引 的流量切回旧实例并通知当班\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-24",
+      "created_at": "2026-06-24T09:00:00Z",
+      "insert_rank": 232,
+      "role": "intent",
+      "topic": "p1-migration-23",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 8,
+        "build": 23,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0007",
+      "scenario": "approval",
+      "title": "生产库账号审批预案：5xx 比例超过 1% 就立即回滚 生",
+      "content": "【前因】测试租户 的 生产库账号 这次审批前约定了一条指向未来的条件\n【行为】若 5xx 比例 超过 1%，观察 15 分钟后仍未回落，则立即回滚 生产库账号 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-25",
+      "created_at": "2026-06-25T09:00:00Z",
+      "insert_rank": 240,
+      "role": "intent",
+      "topic": "p1-approval-24",
+      "attrs": {
+        "trigger_key": "5xx_rate",
+        "trigger_name": "5xx 比例",
+        "threshold": 1,
+        "build": 24,
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2H0008",
+      "scenario": "approval",
+      "title": "生产库账号审批预案：P99 延迟超过 4% 就立即回滚 生",
+      "content": "【前因】测试租户 的 生产库账号 这次审批前约定了一条指向未来的条件\n【行为】若 P99 延迟 超过 4%，观察 15 分钟后仍未回落，则立即回滚 生产库账号 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-25",
+      "created_at": "2026-06-25T09:00:00Z",
+      "insert_rank": 241,
+      "role": "intent",
+      "topic": "p1-approval-24",
+      "attrs": {
+        "trigger_key": "p99",
+        "trigger_name": "P99 延迟",
+        "threshold": 4,
+        "build": 24,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2H0009",
+      "scenario": "approval",
+      "title": "生产库账号审批预案：错误率超过 5% 就立即回滚 生",
+      "content": "【前因】测试租户 的 生产库账号 这次审批前约定了一条指向未来的条件\n【行为】若 错误率 超过 5%，观察 15 分钟后仍未回落，则立即回滚 生产库账号 到上一个稳定版本\n【后果】该条件未触发前不要提前执行，触发后按这条办",
+      "ts": "2026-06-25",
+      "created_at": "2026-06-25T09:00:00Z",
+      "insert_rank": 242,
+      "role": "intent",
+      "topic": "p1-approval-24",
+      "attrs": {
+        "trigger_key": "error_rate",
+        "trigger_name": "错误率",
+        "threshold": 5,
+        "build": 24,
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2A0010",
+      "scenario": "deploy",
+      "title": "结算服务上线工单：只记了发布人等三项",
+      "content": "【前因】结算服务 这次上线的 工单 只登记了三项，其余没人记\n【行为】记下来的是：发布人是 值班主管，镜像版本是 v3.0.2，发布环境是 沙箱\n【后果】这张 工单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-02",
+      "created_at": "2026-07-02T10:00:00Z",
+      "insert_rank": 1001,
+      "role": "entity",
+      "topic": "p2-deploy-1",
+      "attrs": {
+        "entity_name": "结算服务工单",
+        "recorded": {
+          "发布人": "值班主管"
+        },
+        "lure_attr": "构建号",
+        "ticket": "工单"
+      }
+    },
+    {
+      "id": "hl2B0010",
+      "scenario": "canary",
+      "title": "风控服务灰度变更单：只记了发布环境等三项",
+      "content": "【前因】风控服务 这次灰度的 变更单 只登记了三项，其余没人记\n【行为】记下来的是：发布环境是 沙箱，镜像版本是 v1.9.8，发布人是 值班同学\n【后果】这张 变更单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-03",
+      "created_at": "2026-07-03T10:00:00Z",
+      "insert_rank": 1002,
+      "role": "entity",
+      "topic": "p2-canary-2",
+      "attrs": {
+        "entity_name": "风控服务变更单",
+        "recorded": {
+          "发布环境": "沙箱"
+        },
+        "lure_attr": "回滚点编号",
+        "ticket": "变更单"
+      }
+    },
+    {
+      "id": "hl2C0010",
+      "scenario": "api",
+      "title": "对账接口接口回滚单：只记了镜像版本等三项",
+      "content": "【前因】对账接口 这次接口的 回滚单 只登记了三项，其余没人记\n【行为】记下来的是：镜像版本是 v1.9.8，发布人是 当班发布同学，发布环境是 预发\n【后果】这张 回滚单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-04",
+      "created_at": "2026-07-04T10:00:00Z",
+      "insert_rank": 1003,
+      "role": "entity",
+      "topic": "p2-api-3",
+      "attrs": {
+        "entity_name": "对账接口回滚单",
+        "recorded": {
+          "镜像版本": "v1.9.8"
+        },
+        "lure_attr": "镜像 tag",
+        "ticket": "回滚单"
+      }
+    },
+    {
+      "id": "hl2D0010",
+      "scenario": "handoff",
+      "title": "定时任务交接发布单：只记了发布人等三项",
+      "content": "【前因】定时任务 这次交接的 发布单 只登记了三项，其余没人记\n【行为】记下来的是：发布人是 当班发布同学，镜像版本是 v2.4.0，发布环境是 生产\n【后果】这张 发布单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-05",
+      "created_at": "2026-07-05T10:00:00Z",
+      "insert_rank": 1004,
+      "role": "entity",
+      "topic": "p2-handoff-4",
+      "attrs": {
+        "entity_name": "定时任务发布单",
+        "recorded": {
+          "发布人": "当班发布同学"
+        },
+        "lure_attr": "构建号",
+        "ticket": "发布单"
+      }
+    },
+    {
+      "id": "hl2E0010",
+      "scenario": "meeting",
+      "title": "命名规范会议工单：只记了发布环境等三项",
+      "content": "【前因】命名规范 这次会议的 工单 只登记了三项，其余没人记\n【行为】记下来的是：发布环境是 生产，镜像版本是 v3.0.2，发布人是 发布小组长\n【后果】这张 工单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-06",
+      "created_at": "2026-07-06T10:00:00Z",
+      "insert_rank": 1005,
+      "role": "entity",
+      "topic": "p2-meeting-5",
+      "attrs": {
+        "entity_name": "命名规范工单",
+        "recorded": {
+          "发布环境": "生产"
+        },
+        "lure_attr": "回滚点编号",
+        "ticket": "工单"
+      }
+    },
+    {
+      "id": "hl2F0010",
+      "scenario": "ops",
+      "title": "支付回调故障变更单：只记了镜像版本等三项",
+      "content": "【前因】支付回调 这次故障的 变更单 只登记了三项，其余没人记\n【行为】记下来的是：镜像版本是 v3.0.2，发布人是 值班同学，发布环境是 正式\n【后果】这张 变更单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-07",
+      "created_at": "2026-07-07T10:00:00Z",
+      "insert_rank": 1006,
+      "role": "entity",
+      "topic": "p2-ops-6",
+      "attrs": {
+        "entity_name": "支付回调变更单",
+        "recorded": {
+          "镜像版本": "v3.0.2"
+        },
+        "lure_attr": "镜像 tag",
+        "ticket": "变更单"
+      }
+    },
+    {
+      "id": "hl2G0010",
+      "scenario": "migration",
+      "title": "用户档案迁移回滚单：只记了发布人等三项",
+      "content": "【前因】用户档案 这次迁移的 回滚单 只登记了三项，其余没人记\n【行为】记下来的是：发布人是 值班同学，镜像版本是 v2.3.1，发布环境是 预发\n【后果】这张 回滚单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-08",
+      "created_at": "2026-07-08T10:00:00Z",
+      "insert_rank": 1007,
+      "role": "entity",
+      "topic": "p2-migration-7",
+      "attrs": {
+        "entity_name": "用户档案回滚单",
+        "recorded": {
+          "发布人": "值班同学"
+        },
+        "lure_attr": "构建号",
+        "ticket": "回滚单"
+      }
+    },
+    {
+      "id": "hl2H0010",
+      "scenario": "approval",
+      "title": "配置中心审批发布单：只记了发布环境等三项",
+      "content": "【前因】配置中心 这次审批的 发布单 只登记了三项，其余没人记\n【行为】记下来的是：发布环境是 预发，镜像版本是 v2.4.0，发布人是 值班主管\n【后果】这张 发布单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-09",
+      "created_at": "2026-07-09T10:00:00Z",
+      "insert_rank": 1008,
+      "role": "entity",
+      "topic": "p2-approval-8",
+      "attrs": {
+        "entity_name": "配置中心发布单",
+        "recorded": {
+          "发布环境": "预发"
+        },
+        "lure_attr": "回滚点编号",
+        "ticket": "发布单"
+      }
+    },
+    {
+      "id": "hl2A0011",
+      "scenario": "deploy",
+      "title": "结算服务上线工单：只记了镜像版本等三项",
+      "content": "【前因】结算服务 这次上线的 工单 只登记了三项，其余没人记\n【行为】记下来的是：镜像版本是 v2.4.0，发布人是 发布小组长，发布环境是 沙箱\n【后果】这张 工单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-10",
+      "created_at": "2026-07-10T10:00:00Z",
+      "insert_rank": 1009,
+      "role": "entity",
+      "topic": "p2-deploy-9",
+      "attrs": {
+        "entity_name": "结算服务工单",
+        "recorded": {
+          "镜像版本": "v2.4.0"
+        },
+        "lure_attr": "镜像 tag",
+        "ticket": "工单"
+      }
+    },
+    {
+      "id": "hl2B0011",
+      "scenario": "canary",
+      "title": "搜索服务灰度变更单：只记了发布人等三项",
+      "content": "【前因】搜索服务 这次灰度的 变更单 只登记了三项，其余没人记\n【行为】记下来的是：发布人是 发布小组长，镜像版本是 v1.9.8，发布环境是 正式\n【后果】这张 变更单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-11",
+      "created_at": "2026-07-11T10:00:00Z",
+      "insert_rank": 1010,
+      "role": "entity",
+      "topic": "p2-canary-10",
+      "attrs": {
+        "entity_name": "搜索服务变更单",
+        "recorded": {
+          "发布人": "发布小组长"
+        },
+        "lure_attr": "构建号",
+        "ticket": "变更单"
+      }
+    },
+    {
+      "id": "hl2C0011",
+      "scenario": "api",
+      "title": "查询接口接口回滚单：只记了发布环境等三项",
+      "content": "【前因】查询接口 这次接口的 回滚单 只登记了三项，其余没人记\n【行为】记下来的是：发布环境是 正式，镜像版本是 v2.3.1，发布人是 当班发布同学\n【后果】这张 回滚单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-12",
+      "created_at": "2026-07-12T10:00:00Z",
+      "insert_rank": 1011,
+      "role": "entity",
+      "topic": "p2-api-11",
+      "attrs": {
+        "entity_name": "查询接口回滚单",
+        "recorded": {
+          "发布环境": "正式"
+        },
+        "lure_attr": "回滚点编号",
+        "ticket": "回滚单"
+      }
+    },
+    {
+      "id": "hl2D0011",
+      "scenario": "handoff",
+      "title": "值班手册交接发布单：只记了镜像版本等三项",
+      "content": "【前因】值班手册 这次交接的 发布单 只登记了三项，其余没人记\n【行为】记下来的是：镜像版本是 v2.3.1，发布人是 值班主管，发布环境是 生产\n【后果】这张 发布单 没有别的字段，没写的就是没写",
+      "ts": "2026-07-13",
+      "created_at": "2026-07-13T10:00:00Z",
+      "insert_rank": 1012,
+      "role": "entity",
+      "topic": "p2-handoff-12",
+      "attrs": {
+        "entity_name": "值班手册发布单",
+        "recorded": {
+          "镜像版本": "v2.3.1"
+        },
+        "lure_attr": "镜像 tag",
+        "ticket": "发布单"
+      }
+    },
+    {
+      "id": "hl2A0012",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 A：结算服务 在 生产 的上",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 在 生产 的上线窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-02",
+      "created_at": "2026-05-02T01:00:00Z",
+      "insert_rank": 2010,
+      "role": "forget",
+      "topic": "p3-deploy-1",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "结算服务 在 生产 的上线窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2A0013",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 B：结算服务 临时把上线窗口",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 临时把上线窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-02",
+      "created_at": "2026-05-02T02:00:00Z",
+      "insert_rank": 2011,
+      "role": "forget",
+      "topic": "p3-deploy-1",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "结算服务 临时把上线窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2A0014",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 C：结算服务 的上线回滚点仍",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 的上线回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-02",
+      "created_at": "2026-05-02T03:00:00Z",
+      "insert_rank": 2012,
+      "role": "forget",
+      "topic": "p3-deploy-1",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "结算服务 的上线回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2B0012",
+      "scenario": "canary",
+      "title": "风控服务灰度记事 A：风控服务 在 灰度组 的",
+      "content": "【前因】灰度组 风控服务 的灰度有三件相邻的事\n【行为】风控服务 在 灰度组 的灰度窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-03",
+      "created_at": "2026-05-03T01:00:00Z",
+      "insert_rank": 2020,
+      "role": "forget",
+      "topic": "p3-canary-2",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "风控服务 在 灰度组 的灰度窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2B0013",
+      "scenario": "canary",
+      "title": "风控服务灰度记事 B：风控服务 临时把灰度窗口",
+      "content": "【前因】灰度组 风控服务 的灰度有三件相邻的事\n【行为】风控服务 临时把灰度窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-03",
+      "created_at": "2026-05-03T02:00:00Z",
+      "insert_rank": 2021,
+      "role": "forget",
+      "topic": "p3-canary-2",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "风控服务 临时把灰度窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2B0014",
+      "scenario": "canary",
+      "title": "风控服务灰度记事 C：风控服务 的灰度回滚点仍",
+      "content": "【前因】灰度组 风控服务 的灰度有三件相邻的事\n【行为】风控服务 的灰度回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-03",
+      "created_at": "2026-05-03T03:00:00Z",
+      "insert_rank": 2022,
+      "role": "forget",
+      "topic": "p3-canary-2",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "风控服务 的灰度回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2C0012",
+      "scenario": "api",
+      "title": "对账接口接口记事 A：对账接口 在 正式 的接",
+      "content": "【前因】正式 对账接口 的接口有三件相邻的事\n【行为】对账接口 在 正式 的接口窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-04",
+      "created_at": "2026-05-04T01:00:00Z",
+      "insert_rank": 2030,
+      "role": "forget",
+      "topic": "p3-api-3",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "对账接口 在 正式 的接口窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2C0013",
+      "scenario": "api",
+      "title": "对账接口接口记事 B：对账接口 临时把接口窗口",
+      "content": "【前因】正式 对账接口 的接口有三件相邻的事\n【行为】对账接口 临时把接口窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-04",
+      "created_at": "2026-05-04T02:00:00Z",
+      "insert_rank": 2031,
+      "role": "forget",
+      "topic": "p3-api-3",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "对账接口 临时把接口窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2C0014",
+      "scenario": "api",
+      "title": "对账接口接口记事 C：对账接口 的接口回滚点仍",
+      "content": "【前因】正式 对账接口 的接口有三件相邻的事\n【行为】对账接口 的接口回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-04",
+      "created_at": "2026-05-04T03:00:00Z",
+      "insert_rank": 2032,
+      "role": "forget",
+      "topic": "p3-api-3",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "对账接口 的接口回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2D0012",
+      "scenario": "handoff",
+      "title": "定时任务交接记事 A：定时任务 在 本机 的交",
+      "content": "【前因】本机 定时任务 的交接有三件相邻的事\n【行为】定时任务 在 本机 的交接窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-05",
+      "created_at": "2026-05-05T01:00:00Z",
+      "insert_rank": 2040,
+      "role": "forget",
+      "topic": "p3-handoff-4",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "定时任务 在 本机 的交接窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2D0013",
+      "scenario": "handoff",
+      "title": "定时任务交接记事 B：定时任务 临时把交接窗口",
+      "content": "【前因】本机 定时任务 的交接有三件相邻的事\n【行为】定时任务 临时把交接窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-05",
+      "created_at": "2026-05-05T02:00:00Z",
+      "insert_rank": 2041,
+      "role": "forget",
+      "topic": "p3-handoff-4",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "定时任务 临时把交接窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2D0014",
+      "scenario": "handoff",
+      "title": "定时任务交接记事 C：定时任务 的交接回滚点仍",
+      "content": "【前因】本机 定时任务 的交接有三件相邻的事\n【行为】定时任务 的交接回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-05",
+      "created_at": "2026-05-05T03:00:00Z",
+      "insert_rank": 2042,
+      "role": "forget",
+      "topic": "p3-handoff-4",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "定时任务 的交接回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2E0011",
+      "scenario": "meeting",
+      "title": "命名规范会议记事 A：命名规范 在 评审会 的",
+      "content": "【前因】评审会 命名规范 的会议有三件相邻的事\n【行为】命名规范 在 评审会 的会议窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-06",
+      "created_at": "2026-05-06T01:00:00Z",
+      "insert_rank": 2050,
+      "role": "forget",
+      "topic": "p3-meeting-5",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "命名规范 在 评审会 的会议窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2E0012",
+      "scenario": "meeting",
+      "title": "命名规范会议记事 B：命名规范 临时把会议窗口",
+      "content": "【前因】评审会 命名规范 的会议有三件相邻的事\n【行为】命名规范 临时把会议窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-06",
+      "created_at": "2026-05-06T02:00:00Z",
+      "insert_rank": 2051,
+      "role": "forget",
+      "topic": "p3-meeting-5",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "命名规范 临时把会议窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2E0013",
+      "scenario": "meeting",
+      "title": "命名规范会议记事 C：命名规范 的会议回滚点仍",
+      "content": "【前因】评审会 命名规范 的会议有三件相邻的事\n【行为】命名规范 的会议回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-06",
+      "created_at": "2026-05-06T03:00:00Z",
+      "insert_rank": 2052,
+      "role": "forget",
+      "topic": "p3-meeting-5",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "命名规范 的会议回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2F0011",
+      "scenario": "ops",
+      "title": "支付回调故障记事 A：支付回调 在 线上 的故",
+      "content": "【前因】线上 支付回调 的故障有三件相邻的事\n【行为】支付回调 在 线上 的故障窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-07",
+      "created_at": "2026-05-07T01:00:00Z",
+      "insert_rank": 2060,
+      "role": "forget",
+      "topic": "p3-ops-6",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "支付回调 在 线上 的故障窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2F0012",
+      "scenario": "ops",
+      "title": "支付回调故障记事 B：支付回调 临时把故障窗口",
+      "content": "【前因】线上 支付回调 的故障有三件相邻的事\n【行为】支付回调 临时把故障窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-07",
+      "created_at": "2026-05-07T02:00:00Z",
+      "insert_rank": 2061,
+      "role": "forget",
+      "topic": "p3-ops-6",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "支付回调 临时把故障窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2F0013",
+      "scenario": "ops",
+      "title": "支付回调故障记事 C：支付回调 的故障回滚点仍",
+      "content": "【前因】线上 支付回调 的故障有三件相邻的事\n【行为】支付回调 的故障回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-07",
+      "created_at": "2026-05-07T03:00:00Z",
+      "insert_rank": 2062,
+      "role": "forget",
+      "topic": "p3-ops-6",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "支付回调 的故障回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2G0011",
+      "scenario": "migration",
+      "title": "用户档案迁移记事 A：用户档案 在 生产库 的",
+      "content": "【前因】生产库 用户档案 的迁移有三件相邻的事\n【行为】用户档案 在 生产库 的迁移窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-08",
+      "created_at": "2026-05-08T01:00:00Z",
+      "insert_rank": 2070,
+      "role": "forget",
+      "topic": "p3-migration-7",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "用户档案 在 生产库 的迁移窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2G0012",
+      "scenario": "migration",
+      "title": "用户档案迁移记事 B：用户档案 临时把迁移窗口",
+      "content": "【前因】生产库 用户档案 的迁移有三件相邻的事\n【行为】用户档案 临时把迁移窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-08",
+      "created_at": "2026-05-08T02:00:00Z",
+      "insert_rank": 2071,
+      "role": "forget",
+      "topic": "p3-migration-7",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "用户档案 临时把迁移窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2G0013",
+      "scenario": "migration",
+      "title": "用户档案迁移记事 C：用户档案 的迁移回滚点仍",
+      "content": "【前因】生产库 用户档案 的迁移有三件相邻的事\n【行为】用户档案 的迁移回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-08",
+      "created_at": "2026-05-08T03:00:00Z",
+      "insert_rank": 2072,
+      "role": "forget",
+      "topic": "p3-migration-7",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "用户档案 的迁移回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2H0011",
+      "scenario": "approval",
+      "title": "配置中心审批记事 A：配置中心 在 测试租户 ",
+      "content": "【前因】测试租户 配置中心 的审批有三件相邻的事\n【行为】配置中心 在 测试租户 的审批窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-09",
+      "created_at": "2026-05-09T01:00:00Z",
+      "insert_rank": 2080,
+      "role": "forget",
+      "topic": "p3-approval-8",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "配置中心 在 测试租户 的审批窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2H0012",
+      "scenario": "approval",
+      "title": "配置中心审批记事 B：配置中心 临时把审批窗口",
+      "content": "【前因】测试租户 配置中心 的审批有三件相邻的事\n【行为】配置中心 临时把审批窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-09",
+      "created_at": "2026-05-09T02:00:00Z",
+      "insert_rank": 2081,
+      "role": "forget",
+      "topic": "p3-approval-8",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "配置中心 临时把审批窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2H0013",
+      "scenario": "approval",
+      "title": "配置中心审批记事 C：配置中心 的审批回滚点仍",
+      "content": "【前因】测试租户 配置中心 的审批有三件相邻的事\n【行为】配置中心 的审批回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-09",
+      "created_at": "2026-05-09T03:00:00Z",
+      "insert_rank": 2082,
+      "role": "forget",
+      "topic": "p3-approval-8",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "配置中心 的审批回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2A0015",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 A：结算服务 在 生产 的上",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 在 生产 的上线窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-10",
+      "created_at": "2026-05-10T01:00:00Z",
+      "insert_rank": 2090,
+      "role": "forget",
+      "topic": "p3-deploy-9",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "结算服务 在 生产 的上线窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2A0016",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 B：结算服务 临时把上线窗口",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 临时把上线窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-10",
+      "created_at": "2026-05-10T02:00:00Z",
+      "insert_rank": 2091,
+      "role": "forget",
+      "topic": "p3-deploy-9",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "结算服务 临时把上线窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2A0017",
+      "scenario": "deploy",
+      "title": "结算服务上线记事 C：结算服务 的上线回滚点仍",
+      "content": "【前因】生产 结算服务 的上线有三件相邻的事\n【行为】结算服务 的上线回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-10",
+      "created_at": "2026-05-10T03:00:00Z",
+      "insert_rank": 2092,
+      "role": "forget",
+      "topic": "p3-deploy-9",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "结算服务 的上线回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2B0015",
+      "scenario": "canary",
+      "title": "搜索服务灰度记事 A：搜索服务 在 灰度组 的",
+      "content": "【前因】灰度组 搜索服务 的灰度有三件相邻的事\n【行为】搜索服务 在 灰度组 的灰度窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-11",
+      "created_at": "2026-05-11T01:00:00Z",
+      "insert_rank": 2100,
+      "role": "forget",
+      "topic": "p3-canary-10",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "搜索服务 在 灰度组 的灰度窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2B0016",
+      "scenario": "canary",
+      "title": "搜索服务灰度记事 B：搜索服务 临时把灰度窗口",
+      "content": "【前因】灰度组 搜索服务 的灰度有三件相邻的事\n【行为】搜索服务 临时把灰度窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-11",
+      "created_at": "2026-05-11T02:00:00Z",
+      "insert_rank": 2101,
+      "role": "forget",
+      "topic": "p3-canary-10",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "搜索服务 临时把灰度窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2B0017",
+      "scenario": "canary",
+      "title": "搜索服务灰度记事 C：搜索服务 的灰度回滚点仍",
+      "content": "【前因】灰度组 搜索服务 的灰度有三件相邻的事\n【行为】搜索服务 的灰度回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-11",
+      "created_at": "2026-05-11T03:00:00Z",
+      "insert_rank": 2102,
+      "role": "forget",
+      "topic": "p3-canary-10",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "搜索服务 的灰度回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2C0015",
+      "scenario": "api",
+      "title": "查询接口接口记事 A：查询接口 在 正式 的接",
+      "content": "【前因】正式 查询接口 的接口有三件相邻的事\n【行为】查询接口 在 正式 的接口窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T01:00:00Z",
+      "insert_rank": 2110,
+      "role": "forget",
+      "topic": "p3-api-11",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "查询接口 在 正式 的接口窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2C0016",
+      "scenario": "api",
+      "title": "查询接口接口记事 B：查询接口 临时把接口窗口",
+      "content": "【前因】正式 查询接口 的接口有三件相邻的事\n【行为】查询接口 临时把接口窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 2111,
+      "role": "forget",
+      "topic": "p3-api-11",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "查询接口 临时把接口窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2C0017",
+      "scenario": "api",
+      "title": "查询接口接口记事 C：查询接口 的接口回滚点仍",
+      "content": "【前因】正式 查询接口 的接口有三件相邻的事\n【行为】查询接口 的接口回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T03:00:00Z",
+      "insert_rank": 2112,
+      "role": "forget",
+      "topic": "p3-api-11",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "查询接口 的接口回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2D0015",
+      "scenario": "handoff",
+      "title": "值班手册交接记事 A：值班手册 在 本机 的交",
+      "content": "【前因】本机 值班手册 的交接有三件相邻的事\n【行为】值班手册 在 本机 的交接窗口定在周三凌晨\n【后果】这是其中的第 1 件，与另两件不要混",
+      "ts": "2026-05-13",
+      "created_at": "2026-05-13T01:00:00Z",
+      "insert_rank": 2120,
+      "role": "forget",
+      "topic": "p3-handoff-12",
+      "attrs": {
+        "label": "A",
+        "forget_target": false,
+        "fact": "值班手册 在 本机 的交接窗口定在周三凌晨"
+      }
+    },
+    {
+      "id": "hl2D0016",
+      "scenario": "handoff",
+      "title": "值班手册交接记事 B：值班手册 临时把交接窗口",
+      "content": "【前因】本机 值班手册 的交接有三件相邻的事\n【行为】值班手册 临时把交接窗口改到周五下午，之后说这事作废、不再作数\n【后果】这是其中的第 2 件，与另两件不要混",
+      "ts": "2026-05-13",
+      "created_at": "2026-05-13T02:00:00Z",
+      "insert_rank": 2121,
+      "role": "forget",
+      "topic": "p3-handoff-12",
+      "attrs": {
+        "label": "B",
+        "forget_target": true,
+        "fact": "值班手册 临时把交接窗口改到周五下午，之后说这事作废、不再作数"
+      }
+    },
+    {
+      "id": "hl2D0017",
+      "scenario": "handoff",
+      "title": "值班手册交接记事 C：值班手册 的交接回滚点仍",
+      "content": "【前因】本机 值班手册 的交接有三件相邻的事\n【行为】值班手册 的交接回滚点仍是上一个稳定版本\n【后果】这是其中的第 3 件，与另两件不要混",
+      "ts": "2026-05-13",
+      "created_at": "2026-05-13T03:00:00Z",
+      "insert_rank": 2122,
+      "role": "forget",
+      "topic": "p3-handoff-12",
+      "attrs": {
+        "label": "C",
+        "forget_target": false,
+        "fact": "值班手册 的交接回滚点仍是上一个稳定版本"
+      }
+    },
+    {
+      "id": "hl2A0018",
+      "scenario": "deploy",
+      "title": "同事甲对 结算服务上线的健康检查路径说法：3 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事甲说 健康检查路径 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-02",
+      "created_at": "2026-04-02T01:00:00Z",
+      "insert_rank": 3010,
+      "role": "source",
+      "topic": "p4-deploy-1",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "健康检查路径",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2A0019",
+      "scenario": "deploy",
+      "title": "同事乙对 结算服务上线的健康检查路径说法：5 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事乙说 健康检查路径 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-02",
+      "created_at": "2026-04-02T02:00:00Z",
+      "insert_rank": 3011,
+      "role": "source",
+      "topic": "p4-deploy-1",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "健康检查路径",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2A0020",
+      "scenario": "deploy",
+      "title": "我实测对 结算服务上线的健康检查路径说法：8 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】我实测说 健康检查路径 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-02",
+      "created_at": "2026-04-02T03:00:00Z",
+      "insert_rank": 3012,
+      "role": "source",
+      "topic": "p4-deploy-1",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "健康检查路径",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2A0021",
+      "scenario": "deploy",
+      "title": "交接文档对 结算服务上线的健康检查路径说法：30 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】交接文档说 健康检查路径 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-02",
+      "created_at": "2026-04-02T04:00:00Z",
+      "insert_rank": 3013,
+      "role": "source",
+      "topic": "p4-deploy-1",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "健康检查路径",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2B0018",
+      "scenario": "canary",
+      "title": "同事甲对 风控服务灰度的放量档位说法：3 秒",
+      "content": "【前因】风控服务 的灰度里，放量档位有四种不同来源的说法\n【行为】同事甲说 放量档位 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-03",
+      "created_at": "2026-04-03T01:00:00Z",
+      "insert_rank": 3020,
+      "role": "source",
+      "topic": "p4-canary-2",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "放量档位",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2B0019",
+      "scenario": "canary",
+      "title": "同事乙对 风控服务灰度的放量档位说法：5 秒",
+      "content": "【前因】风控服务 的灰度里，放量档位有四种不同来源的说法\n【行为】同事乙说 放量档位 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-03",
+      "created_at": "2026-04-03T02:00:00Z",
+      "insert_rank": 3021,
+      "role": "source",
+      "topic": "p4-canary-2",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "放量档位",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2B0020",
+      "scenario": "canary",
+      "title": "我实测对 风控服务灰度的放量档位说法：8 秒",
+      "content": "【前因】风控服务 的灰度里，放量档位有四种不同来源的说法\n【行为】我实测说 放量档位 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-03",
+      "created_at": "2026-04-03T03:00:00Z",
+      "insert_rank": 3022,
+      "role": "source",
+      "topic": "p4-canary-2",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "放量档位",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2B0021",
+      "scenario": "canary",
+      "title": "交接文档对 风控服务灰度的放量档位说法：30 秒",
+      "content": "【前因】风控服务 的灰度里，放量档位有四种不同来源的说法\n【行为】交接文档说 放量档位 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-03",
+      "created_at": "2026-04-03T04:00:00Z",
+      "insert_rank": 3023,
+      "role": "source",
+      "topic": "p4-canary-2",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "放量档位",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2C0018",
+      "scenario": "api",
+      "title": "同事甲对 对账接口接口的超时说法：3 秒",
+      "content": "【前因】对账接口 的接口里，超时有四种不同来源的说法\n【行为】同事甲说 超时 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-04",
+      "created_at": "2026-04-04T01:00:00Z",
+      "insert_rank": 3030,
+      "role": "source",
+      "topic": "p4-api-3",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "超时",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2C0019",
+      "scenario": "api",
+      "title": "同事乙对 对账接口接口的超时说法：5 秒",
+      "content": "【前因】对账接口 的接口里，超时有四种不同来源的说法\n【行为】同事乙说 超时 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-04",
+      "created_at": "2026-04-04T02:00:00Z",
+      "insert_rank": 3031,
+      "role": "source",
+      "topic": "p4-api-3",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "超时",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2C0020",
+      "scenario": "api",
+      "title": "我实测对 对账接口接口的超时说法：8 秒",
+      "content": "【前因】对账接口 的接口里，超时有四种不同来源的说法\n【行为】我实测说 超时 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-04",
+      "created_at": "2026-04-04T03:00:00Z",
+      "insert_rank": 3032,
+      "role": "source",
+      "topic": "p4-api-3",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "超时",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2C0021",
+      "scenario": "api",
+      "title": "交接文档对 对账接口接口的超时说法：30 秒",
+      "content": "【前因】对账接口 的接口里，超时有四种不同来源的说法\n【行为】交接文档说 超时 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-04",
+      "created_at": "2026-04-04T04:00:00Z",
+      "insert_rank": 3033,
+      "role": "source",
+      "topic": "p4-api-3",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "超时",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2D0018",
+      "scenario": "handoff",
+      "title": "同事甲对 定时任务交接的告警接收人说法：3 秒",
+      "content": "【前因】定时任务 的交接里，告警接收人有四种不同来源的说法\n【行为】同事甲说 告警接收人 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-05",
+      "created_at": "2026-04-05T01:00:00Z",
+      "insert_rank": 3040,
+      "role": "source",
+      "topic": "p4-handoff-4",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "告警接收人",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2D0019",
+      "scenario": "handoff",
+      "title": "同事乙对 定时任务交接的告警接收人说法：5 秒",
+      "content": "【前因】定时任务 的交接里，告警接收人有四种不同来源的说法\n【行为】同事乙说 告警接收人 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-05",
+      "created_at": "2026-04-05T02:00:00Z",
+      "insert_rank": 3041,
+      "role": "source",
+      "topic": "p4-handoff-4",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "告警接收人",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2D0020",
+      "scenario": "handoff",
+      "title": "我实测对 定时任务交接的告警接收人说法：8 秒",
+      "content": "【前因】定时任务 的交接里，告警接收人有四种不同来源的说法\n【行为】我实测说 告警接收人 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-05",
+      "created_at": "2026-04-05T03:00:00Z",
+      "insert_rank": 3042,
+      "role": "source",
+      "topic": "p4-handoff-4",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "告警接收人",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2D0021",
+      "scenario": "handoff",
+      "title": "交接文档对 定时任务交接的告警接收人说法：30 秒",
+      "content": "【前因】定时任务 的交接里，告警接收人有四种不同来源的说法\n【行为】交接文档说 告警接收人 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-05",
+      "created_at": "2026-04-05T04:00:00Z",
+      "insert_rank": 3043,
+      "role": "source",
+      "topic": "p4-handoff-4",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "告警接收人",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2E0014",
+      "scenario": "meeting",
+      "title": "同事甲对 命名规范会议的生效时间说法：3 秒",
+      "content": "【前因】命名规范 的会议里，生效时间有四种不同来源的说法\n【行为】同事甲说 生效时间 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-06",
+      "created_at": "2026-04-06T01:00:00Z",
+      "insert_rank": 3050,
+      "role": "source",
+      "topic": "p4-meeting-5",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "生效时间",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2E0015",
+      "scenario": "meeting",
+      "title": "同事乙对 命名规范会议的生效时间说法：5 秒",
+      "content": "【前因】命名规范 的会议里，生效时间有四种不同来源的说法\n【行为】同事乙说 生效时间 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-06",
+      "created_at": "2026-04-06T02:00:00Z",
+      "insert_rank": 3051,
+      "role": "source",
+      "topic": "p4-meeting-5",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "生效时间",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2E0016",
+      "scenario": "meeting",
+      "title": "我实测对 命名规范会议的生效时间说法：8 秒",
+      "content": "【前因】命名规范 的会议里，生效时间有四种不同来源的说法\n【行为】我实测说 生效时间 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-06",
+      "created_at": "2026-04-06T03:00:00Z",
+      "insert_rank": 3052,
+      "role": "source",
+      "topic": "p4-meeting-5",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "生效时间",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2E0017",
+      "scenario": "meeting",
+      "title": "交接文档对 命名规范会议的生效时间说法：30 秒",
+      "content": "【前因】命名规范 的会议里，生效时间有四种不同来源的说法\n【行为】交接文档说 生效时间 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-06",
+      "created_at": "2026-04-06T04:00:00Z",
+      "insert_rank": 3053,
+      "role": "source",
+      "topic": "p4-meeting-5",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "生效时间",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2F0014",
+      "scenario": "ops",
+      "title": "同事甲对 支付回调故障的熔断阈值说法：3 秒",
+      "content": "【前因】支付回调 的故障里，熔断阈值有四种不同来源的说法\n【行为】同事甲说 熔断阈值 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-07",
+      "created_at": "2026-04-07T01:00:00Z",
+      "insert_rank": 3060,
+      "role": "source",
+      "topic": "p4-ops-6",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "熔断阈值",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2F0015",
+      "scenario": "ops",
+      "title": "同事乙对 支付回调故障的熔断阈值说法：5 秒",
+      "content": "【前因】支付回调 的故障里，熔断阈值有四种不同来源的说法\n【行为】同事乙说 熔断阈值 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-07",
+      "created_at": "2026-04-07T02:00:00Z",
+      "insert_rank": 3061,
+      "role": "source",
+      "topic": "p4-ops-6",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "熔断阈值",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2F0016",
+      "scenario": "ops",
+      "title": "我实测对 支付回调故障的熔断阈值说法：8 秒",
+      "content": "【前因】支付回调 的故障里，熔断阈值有四种不同来源的说法\n【行为】我实测说 熔断阈值 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-07",
+      "created_at": "2026-04-07T03:00:00Z",
+      "insert_rank": 3062,
+      "role": "source",
+      "topic": "p4-ops-6",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "熔断阈值",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2F0017",
+      "scenario": "ops",
+      "title": "交接文档对 支付回调故障的熔断阈值说法：30 秒",
+      "content": "【前因】支付回调 的故障里，熔断阈值有四种不同来源的说法\n【行为】交接文档说 熔断阈值 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-07",
+      "created_at": "2026-04-07T04:00:00Z",
+      "insert_rank": 3063,
+      "role": "source",
+      "topic": "p4-ops-6",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "熔断阈值",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2G0014",
+      "scenario": "migration",
+      "title": "同事甲对 用户档案迁移的校验方式说法：3 秒",
+      "content": "【前因】用户档案 的迁移里，校验方式有四种不同来源的说法\n【行为】同事甲说 校验方式 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-08",
+      "created_at": "2026-04-08T01:00:00Z",
+      "insert_rank": 3070,
+      "role": "source",
+      "topic": "p4-migration-7",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "校验方式",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2G0015",
+      "scenario": "migration",
+      "title": "同事乙对 用户档案迁移的校验方式说法：5 秒",
+      "content": "【前因】用户档案 的迁移里，校验方式有四种不同来源的说法\n【行为】同事乙说 校验方式 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-08",
+      "created_at": "2026-04-08T02:00:00Z",
+      "insert_rank": 3071,
+      "role": "source",
+      "topic": "p4-migration-7",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "校验方式",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2G0016",
+      "scenario": "migration",
+      "title": "我实测对 用户档案迁移的校验方式说法：8 秒",
+      "content": "【前因】用户档案 的迁移里，校验方式有四种不同来源的说法\n【行为】我实测说 校验方式 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-08",
+      "created_at": "2026-04-08T03:00:00Z",
+      "insert_rank": 3072,
+      "role": "source",
+      "topic": "p4-migration-7",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "校验方式",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2G0017",
+      "scenario": "migration",
+      "title": "交接文档对 用户档案迁移的校验方式说法：30 秒",
+      "content": "【前因】用户档案 的迁移里，校验方式有四种不同来源的说法\n【行为】交接文档说 校验方式 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-08",
+      "created_at": "2026-04-08T04:00:00Z",
+      "insert_rank": 3073,
+      "role": "source",
+      "topic": "p4-migration-7",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "校验方式",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2H0014",
+      "scenario": "approval",
+      "title": "同事甲对 配置中心审批的授权范围说法：3 秒",
+      "content": "【前因】配置中心 的审批里，授权范围有四种不同来源的说法\n【行为】同事甲说 授权范围 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-09",
+      "created_at": "2026-04-09T01:00:00Z",
+      "insert_rank": 3080,
+      "role": "source",
+      "topic": "p4-approval-8",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "授权范围",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2H0015",
+      "scenario": "approval",
+      "title": "同事乙对 配置中心审批的授权范围说法：5 秒",
+      "content": "【前因】配置中心 的审批里，授权范围有四种不同来源的说法\n【行为】同事乙说 授权范围 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-09",
+      "created_at": "2026-04-09T02:00:00Z",
+      "insert_rank": 3081,
+      "role": "source",
+      "topic": "p4-approval-8",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "授权范围",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2H0016",
+      "scenario": "approval",
+      "title": "我实测对 配置中心审批的授权范围说法：8 秒",
+      "content": "【前因】配置中心 的审批里，授权范围有四种不同来源的说法\n【行为】我实测说 授权范围 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-09",
+      "created_at": "2026-04-09T03:00:00Z",
+      "insert_rank": 3082,
+      "role": "source",
+      "topic": "p4-approval-8",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "授权范围",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2H0017",
+      "scenario": "approval",
+      "title": "交接文档对 配置中心审批的授权范围说法：30 秒",
+      "content": "【前因】配置中心 的审批里，授权范围有四种不同来源的说法\n【行为】交接文档说 授权范围 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-09",
+      "created_at": "2026-04-09T04:00:00Z",
+      "insert_rank": 3083,
+      "role": "source",
+      "topic": "p4-approval-8",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "授权范围",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2A0022",
+      "scenario": "deploy",
+      "title": "同事甲对 结算服务上线的健康检查路径说法：3 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事甲说 健康检查路径 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-10",
+      "created_at": "2026-04-10T01:00:00Z",
+      "insert_rank": 3090,
+      "role": "source",
+      "topic": "p4-deploy-9",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "健康检查路径",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2A0023",
+      "scenario": "deploy",
+      "title": "同事乙对 结算服务上线的健康检查路径说法：5 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事乙说 健康检查路径 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-10",
+      "created_at": "2026-04-10T02:00:00Z",
+      "insert_rank": 3091,
+      "role": "source",
+      "topic": "p4-deploy-9",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "健康检查路径",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2A0024",
+      "scenario": "deploy",
+      "title": "我实测对 结算服务上线的健康检查路径说法：8 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】我实测说 健康检查路径 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-10",
+      "created_at": "2026-04-10T03:00:00Z",
+      "insert_rank": 3092,
+      "role": "source",
+      "topic": "p4-deploy-9",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "健康检查路径",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2A0025",
+      "scenario": "deploy",
+      "title": "交接文档对 结算服务上线的健康检查路径说法：30 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】交接文档说 健康检查路径 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-10",
+      "created_at": "2026-04-10T04:00:00Z",
+      "insert_rank": 3093,
+      "role": "source",
+      "topic": "p4-deploy-9",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "健康检查路径",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2B0022",
+      "scenario": "canary",
+      "title": "同事甲对 搜索服务灰度的观察窗口说法：3 秒",
+      "content": "【前因】搜索服务 的灰度里，观察窗口有四种不同来源的说法\n【行为】同事甲说 观察窗口 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-11",
+      "created_at": "2026-04-11T01:00:00Z",
+      "insert_rank": 3100,
+      "role": "source",
+      "topic": "p4-canary-10",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "观察窗口",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2B0023",
+      "scenario": "canary",
+      "title": "同事乙对 搜索服务灰度的观察窗口说法：5 秒",
+      "content": "【前因】搜索服务 的灰度里，观察窗口有四种不同来源的说法\n【行为】同事乙说 观察窗口 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-11",
+      "created_at": "2026-04-11T02:00:00Z",
+      "insert_rank": 3101,
+      "role": "source",
+      "topic": "p4-canary-10",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "观察窗口",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2B0024",
+      "scenario": "canary",
+      "title": "我实测对 搜索服务灰度的观察窗口说法：8 秒",
+      "content": "【前因】搜索服务 的灰度里，观察窗口有四种不同来源的说法\n【行为】我实测说 观察窗口 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-11",
+      "created_at": "2026-04-11T03:00:00Z",
+      "insert_rank": 3102,
+      "role": "source",
+      "topic": "p4-canary-10",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "观察窗口",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2B0025",
+      "scenario": "canary",
+      "title": "交接文档对 搜索服务灰度的观察窗口说法：30 秒",
+      "content": "【前因】搜索服务 的灰度里，观察窗口有四种不同来源的说法\n【行为】交接文档说 观察窗口 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-11",
+      "created_at": "2026-04-11T04:00:00Z",
+      "insert_rank": 3103,
+      "role": "source",
+      "topic": "p4-canary-10",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "观察窗口",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2C0022",
+      "scenario": "api",
+      "title": "同事甲对 查询接口接口的签名方式说法：3 秒",
+      "content": "【前因】查询接口 的接口里，签名方式有四种不同来源的说法\n【行为】同事甲说 签名方式 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-12",
+      "created_at": "2026-04-12T01:00:00Z",
+      "insert_rank": 3110,
+      "role": "source",
+      "topic": "p4-api-11",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "签名方式",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2C0023",
+      "scenario": "api",
+      "title": "同事乙对 查询接口接口的签名方式说法：5 秒",
+      "content": "【前因】查询接口 的接口里，签名方式有四种不同来源的说法\n【行为】同事乙说 签名方式 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-12",
+      "created_at": "2026-04-12T02:00:00Z",
+      "insert_rank": 3111,
+      "role": "source",
+      "topic": "p4-api-11",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "签名方式",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2C0024",
+      "scenario": "api",
+      "title": "我实测对 查询接口接口的签名方式说法：8 秒",
+      "content": "【前因】查询接口 的接口里，签名方式有四种不同来源的说法\n【行为】我实测说 签名方式 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-12",
+      "created_at": "2026-04-12T03:00:00Z",
+      "insert_rank": 3112,
+      "role": "source",
+      "topic": "p4-api-11",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "签名方式",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2C0025",
+      "scenario": "api",
+      "title": "交接文档对 查询接口接口的签名方式说法：30 秒",
+      "content": "【前因】查询接口 的接口里，签名方式有四种不同来源的说法\n【行为】交接文档说 签名方式 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-12",
+      "created_at": "2026-04-12T04:00:00Z",
+      "insert_rank": 3113,
+      "role": "source",
+      "topic": "p4-api-11",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "签名方式",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2D0022",
+      "scenario": "handoff",
+      "title": "同事甲对 值班手册交接的脚本路径说法：3 秒",
+      "content": "【前因】值班手册 的交接里，脚本路径有四种不同来源的说法\n【行为】同事甲说 脚本路径 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-13",
+      "created_at": "2026-04-13T01:00:00Z",
+      "insert_rank": 3120,
+      "role": "source",
+      "topic": "p4-handoff-12",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "脚本路径",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2D0023",
+      "scenario": "handoff",
+      "title": "同事乙对 值班手册交接的脚本路径说法：5 秒",
+      "content": "【前因】值班手册 的交接里，脚本路径有四种不同来源的说法\n【行为】同事乙说 脚本路径 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-13",
+      "created_at": "2026-04-13T02:00:00Z",
+      "insert_rank": 3121,
+      "role": "source",
+      "topic": "p4-handoff-12",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "脚本路径",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2D0024",
+      "scenario": "handoff",
+      "title": "我实测对 值班手册交接的脚本路径说法：8 秒",
+      "content": "【前因】值班手册 的交接里，脚本路径有四种不同来源的说法\n【行为】我实测说 脚本路径 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-13",
+      "created_at": "2026-04-13T03:00:00Z",
+      "insert_rank": 3122,
+      "role": "source",
+      "topic": "p4-handoff-12",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "脚本路径",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2D0025",
+      "scenario": "handoff",
+      "title": "交接文档对 值班手册交接的脚本路径说法：30 秒",
+      "content": "【前因】值班手册 的交接里，脚本路径有四种不同来源的说法\n【行为】交接文档说 脚本路径 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-13",
+      "created_at": "2026-04-13T04:00:00Z",
+      "insert_rank": 3123,
+      "role": "source",
+      "topic": "p4-handoff-12",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "脚本路径",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2E0018",
+      "scenario": "meeting",
+      "title": "同事甲对 统计规范会议的口径定义说法：3 秒",
+      "content": "【前因】统计规范 的会议里，口径定义有四种不同来源的说法\n【行为】同事甲说 口径定义 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-14",
+      "created_at": "2026-04-14T01:00:00Z",
+      "insert_rank": 3130,
+      "role": "source",
+      "topic": "p4-meeting-13",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "口径定义",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2E0019",
+      "scenario": "meeting",
+      "title": "同事乙对 统计规范会议的口径定义说法：5 秒",
+      "content": "【前因】统计规范 的会议里，口径定义有四种不同来源的说法\n【行为】同事乙说 口径定义 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-14",
+      "created_at": "2026-04-14T02:00:00Z",
+      "insert_rank": 3131,
+      "role": "source",
+      "topic": "p4-meeting-13",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "口径定义",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2E0020",
+      "scenario": "meeting",
+      "title": "我实测对 统计规范会议的口径定义说法：8 秒",
+      "content": "【前因】统计规范 的会议里，口径定义有四种不同来源的说法\n【行为】我实测说 口径定义 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-14",
+      "created_at": "2026-04-14T03:00:00Z",
+      "insert_rank": 3132,
+      "role": "source",
+      "topic": "p4-meeting-13",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "口径定义",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2E0021",
+      "scenario": "meeting",
+      "title": "交接文档对 统计规范会议的口径定义说法：30 秒",
+      "content": "【前因】统计规范 的会议里，口径定义有四种不同来源的说法\n【行为】交接文档说 口径定义 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-14",
+      "created_at": "2026-04-14T04:00:00Z",
+      "insert_rank": 3133,
+      "role": "source",
+      "topic": "p4-meeting-13",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "口径定义",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2F0018",
+      "scenario": "ops",
+      "title": "同事甲对 数据库主库故障的回滚点说法：3 秒",
+      "content": "【前因】数据库主库 的故障里，回滚点有四种不同来源的说法\n【行为】同事甲说 回滚点 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-15",
+      "created_at": "2026-04-15T01:00:00Z",
+      "insert_rank": 3140,
+      "role": "source",
+      "topic": "p4-ops-14",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "回滚点",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2F0019",
+      "scenario": "ops",
+      "title": "同事乙对 数据库主库故障的回滚点说法：5 秒",
+      "content": "【前因】数据库主库 的故障里，回滚点有四种不同来源的说法\n【行为】同事乙说 回滚点 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-15",
+      "created_at": "2026-04-15T02:00:00Z",
+      "insert_rank": 3141,
+      "role": "source",
+      "topic": "p4-ops-14",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "回滚点",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2F0020",
+      "scenario": "ops",
+      "title": "我实测对 数据库主库故障的回滚点说法：8 秒",
+      "content": "【前因】数据库主库 的故障里，回滚点有四种不同来源的说法\n【行为】我实测说 回滚点 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-15",
+      "created_at": "2026-04-15T03:00:00Z",
+      "insert_rank": 3142,
+      "role": "source",
+      "topic": "p4-ops-14",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "回滚点",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2F0021",
+      "scenario": "ops",
+      "title": "交接文档对 数据库主库故障的回滚点说法：30 秒",
+      "content": "【前因】数据库主库 的故障里，回滚点有四种不同来源的说法\n【行为】交接文档说 回滚点 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-15",
+      "created_at": "2026-04-15T04:00:00Z",
+      "insert_rank": 3143,
+      "role": "source",
+      "topic": "p4-ops-14",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "回滚点",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2G0018",
+      "scenario": "migration",
+      "title": "同事甲对 历史订单表迁移的分批大小说法：3 秒",
+      "content": "【前因】历史订单表 的迁移里，分批大小有四种不同来源的说法\n【行为】同事甲说 分批大小 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-16",
+      "created_at": "2026-04-16T01:00:00Z",
+      "insert_rank": 3150,
+      "role": "source",
+      "topic": "p4-migration-15",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "分批大小",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2G0019",
+      "scenario": "migration",
+      "title": "同事乙对 历史订单表迁移的分批大小说法：5 秒",
+      "content": "【前因】历史订单表 的迁移里，分批大小有四种不同来源的说法\n【行为】同事乙说 分批大小 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-16",
+      "created_at": "2026-04-16T02:00:00Z",
+      "insert_rank": 3151,
+      "role": "source",
+      "topic": "p4-migration-15",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "分批大小",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2G0020",
+      "scenario": "migration",
+      "title": "我实测对 历史订单表迁移的分批大小说法：8 秒",
+      "content": "【前因】历史订单表 的迁移里，分批大小有四种不同来源的说法\n【行为】我实测说 分批大小 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-16",
+      "created_at": "2026-04-16T03:00:00Z",
+      "insert_rank": 3152,
+      "role": "source",
+      "topic": "p4-migration-15",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "分批大小",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2G0021",
+      "scenario": "migration",
+      "title": "交接文档对 历史订单表迁移的分批大小说法：30 秒",
+      "content": "【前因】历史订单表 的迁移里，分批大小有四种不同来源的说法\n【行为】交接文档说 分批大小 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-16",
+      "created_at": "2026-04-16T04:00:00Z",
+      "insert_rank": 3153,
+      "role": "source",
+      "topic": "p4-migration-15",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "分批大小",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2H0018",
+      "scenario": "approval",
+      "title": "同事甲对 发布平台审批的有效期说法：3 秒",
+      "content": "【前因】发布平台 的审批里，有效期有四种不同来源的说法\n【行为】同事甲说 有效期 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-17",
+      "created_at": "2026-04-17T01:00:00Z",
+      "insert_rank": 3160,
+      "role": "source",
+      "topic": "p4-approval-16",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "有效期",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2H0019",
+      "scenario": "approval",
+      "title": "同事乙对 发布平台审批的有效期说法：5 秒",
+      "content": "【前因】发布平台 的审批里，有效期有四种不同来源的说法\n【行为】同事乙说 有效期 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-17",
+      "created_at": "2026-04-17T02:00:00Z",
+      "insert_rank": 3161,
+      "role": "source",
+      "topic": "p4-approval-16",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "有效期",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2H0020",
+      "scenario": "approval",
+      "title": "我实测对 发布平台审批的有效期说法：8 秒",
+      "content": "【前因】发布平台 的审批里，有效期有四种不同来源的说法\n【行为】我实测说 有效期 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-17",
+      "created_at": "2026-04-17T03:00:00Z",
+      "insert_rank": 3162,
+      "role": "source",
+      "topic": "p4-approval-16",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "有效期",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2H0021",
+      "scenario": "approval",
+      "title": "交接文档对 发布平台审批的有效期说法：30 秒",
+      "content": "【前因】发布平台 的审批里，有效期有四种不同来源的说法\n【行为】交接文档说 有效期 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-17",
+      "created_at": "2026-04-17T04:00:00Z",
+      "insert_rank": 3163,
+      "role": "source",
+      "topic": "p4-approval-16",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "有效期",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2A0026",
+      "scenario": "deploy",
+      "title": "同事甲对 结算服务上线的健康检查路径说法：3 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事甲说 健康检查路径 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-18",
+      "created_at": "2026-04-18T01:00:00Z",
+      "insert_rank": 3170,
+      "role": "source",
+      "topic": "p4-deploy-17",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "健康检查路径",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2A0027",
+      "scenario": "deploy",
+      "title": "同事乙对 结算服务上线的健康检查路径说法：5 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】同事乙说 健康检查路径 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-18",
+      "created_at": "2026-04-18T02:00:00Z",
+      "insert_rank": 3171,
+      "role": "source",
+      "topic": "p4-deploy-17",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "健康检查路径",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2A0028",
+      "scenario": "deploy",
+      "title": "我实测对 结算服务上线的健康检查路径说法：8 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】我实测说 健康检查路径 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-18",
+      "created_at": "2026-04-18T03:00:00Z",
+      "insert_rank": 3172,
+      "role": "source",
+      "topic": "p4-deploy-17",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "健康检查路径",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2A0029",
+      "scenario": "deploy",
+      "title": "交接文档对 结算服务上线的健康检查路径说法：30 秒",
+      "content": "【前因】结算服务 的上线里，健康检查路径有四种不同来源的说法\n【行为】交接文档说 健康检查路径 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-18",
+      "created_at": "2026-04-18T04:00:00Z",
+      "insert_rank": 3173,
+      "role": "source",
+      "topic": "p4-deploy-17",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "健康检查路径",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2B0026",
+      "scenario": "canary",
+      "title": "同事甲对 推荐服务灰度的灰度比例说法：3 秒",
+      "content": "【前因】推荐服务 的灰度里，灰度比例有四种不同来源的说法\n【行为】同事甲说 灰度比例 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-19",
+      "created_at": "2026-04-19T01:00:00Z",
+      "insert_rank": 3180,
+      "role": "source",
+      "topic": "p4-canary-18",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "灰度比例",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2B0027",
+      "scenario": "canary",
+      "title": "同事乙对 推荐服务灰度的灰度比例说法：5 秒",
+      "content": "【前因】推荐服务 的灰度里，灰度比例有四种不同来源的说法\n【行为】同事乙说 灰度比例 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-19",
+      "created_at": "2026-04-19T02:00:00Z",
+      "insert_rank": 3181,
+      "role": "source",
+      "topic": "p4-canary-18",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "灰度比例",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2B0028",
+      "scenario": "canary",
+      "title": "我实测对 推荐服务灰度的灰度比例说法：8 秒",
+      "content": "【前因】推荐服务 的灰度里，灰度比例有四种不同来源的说法\n【行为】我实测说 灰度比例 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-19",
+      "created_at": "2026-04-19T03:00:00Z",
+      "insert_rank": 3182,
+      "role": "source",
+      "topic": "p4-canary-18",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "灰度比例",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2B0029",
+      "scenario": "canary",
+      "title": "交接文档对 推荐服务灰度的灰度比例说法：30 秒",
+      "content": "【前因】推荐服务 的灰度里，灰度比例有四种不同来源的说法\n【行为】交接文档说 灰度比例 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-19",
+      "created_at": "2026-04-19T04:00:00Z",
+      "insert_rank": 3183,
+      "role": "source",
+      "topic": "p4-canary-18",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "灰度比例",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2C0026",
+      "scenario": "api",
+      "title": "同事甲对 回调接口接口的重试次数说法：3 秒",
+      "content": "【前因】回调接口 的接口里，重试次数有四种不同来源的说法\n【行为】同事甲说 重试次数 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-20",
+      "created_at": "2026-04-20T01:00:00Z",
+      "insert_rank": 3190,
+      "role": "source",
+      "topic": "p4-api-19",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "重试次数",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2C0027",
+      "scenario": "api",
+      "title": "同事乙对 回调接口接口的重试次数说法：5 秒",
+      "content": "【前因】回调接口 的接口里，重试次数有四种不同来源的说法\n【行为】同事乙说 重试次数 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-20",
+      "created_at": "2026-04-20T02:00:00Z",
+      "insert_rank": 3191,
+      "role": "source",
+      "topic": "p4-api-19",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "重试次数",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2C0028",
+      "scenario": "api",
+      "title": "我实测对 回调接口接口的重试次数说法：8 秒",
+      "content": "【前因】回调接口 的接口里，重试次数有四种不同来源的说法\n【行为】我实测说 重试次数 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-20",
+      "created_at": "2026-04-20T03:00:00Z",
+      "insert_rank": 3192,
+      "role": "source",
+      "topic": "p4-api-19",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "重试次数",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2C0029",
+      "scenario": "api",
+      "title": "交接文档对 回调接口接口的重试次数说法：30 秒",
+      "content": "【前因】回调接口 的接口里，重试次数有四种不同来源的说法\n【行为】交接文档说 重试次数 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-20",
+      "created_at": "2026-04-20T04:00:00Z",
+      "insert_rank": 3193,
+      "role": "source",
+      "topic": "p4-api-19",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "重试次数",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2D0026",
+      "scenario": "handoff",
+      "title": "同事甲对 监控看板交接的日志目录说法：3 秒",
+      "content": "【前因】监控看板 的交接里，日志目录有四种不同来源的说法\n【行为】同事甲说 日志目录 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-21",
+      "created_at": "2026-04-21T01:00:00Z",
+      "insert_rank": 3200,
+      "role": "source",
+      "topic": "p4-handoff-20",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "日志目录",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2D0027",
+      "scenario": "handoff",
+      "title": "同事乙对 监控看板交接的日志目录说法：5 秒",
+      "content": "【前因】监控看板 的交接里，日志目录有四种不同来源的说法\n【行为】同事乙说 日志目录 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-21",
+      "created_at": "2026-04-21T02:00:00Z",
+      "insert_rank": 3201,
+      "role": "source",
+      "topic": "p4-handoff-20",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "日志目录",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2D0028",
+      "scenario": "handoff",
+      "title": "我实测对 监控看板交接的日志目录说法：8 秒",
+      "content": "【前因】监控看板 的交接里，日志目录有四种不同来源的说法\n【行为】我实测说 日志目录 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-21",
+      "created_at": "2026-04-21T03:00:00Z",
+      "insert_rank": 3202,
+      "role": "source",
+      "topic": "p4-handoff-20",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "日志目录",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2D0029",
+      "scenario": "handoff",
+      "title": "交接文档对 监控看板交接的日志目录说法：30 秒",
+      "content": "【前因】监控看板 的交接里，日志目录有四种不同来源的说法\n【行为】交接文档说 日志目录 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-21",
+      "created_at": "2026-04-21T04:00:00Z",
+      "insert_rank": 3203,
+      "role": "source",
+      "topic": "p4-handoff-20",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "日志目录",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2E0022",
+      "scenario": "meeting",
+      "title": "同事甲对 指标口径会议的统计周期说法：3 秒",
+      "content": "【前因】指标口径 的会议里，统计周期有四种不同来源的说法\n【行为】同事甲说 统计周期 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-22",
+      "created_at": "2026-04-22T01:00:00Z",
+      "insert_rank": 3210,
+      "role": "source",
+      "topic": "p4-meeting-21",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "统计周期",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2E0023",
+      "scenario": "meeting",
+      "title": "同事乙对 指标口径会议的统计周期说法：5 秒",
+      "content": "【前因】指标口径 的会议里，统计周期有四种不同来源的说法\n【行为】同事乙说 统计周期 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-22",
+      "created_at": "2026-04-22T02:00:00Z",
+      "insert_rank": 3211,
+      "role": "source",
+      "topic": "p4-meeting-21",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "统计周期",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2E0024",
+      "scenario": "meeting",
+      "title": "我实测对 指标口径会议的统计周期说法：8 秒",
+      "content": "【前因】指标口径 的会议里，统计周期有四种不同来源的说法\n【行为】我实测说 统计周期 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-22",
+      "created_at": "2026-04-22T03:00:00Z",
+      "insert_rank": 3212,
+      "role": "source",
+      "topic": "p4-meeting-21",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "统计周期",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2E0025",
+      "scenario": "meeting",
+      "title": "交接文档对 指标口径会议的统计周期说法：30 秒",
+      "content": "【前因】指标口径 的会议里，统计周期有四种不同来源的说法\n【行为】交接文档说 统计周期 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-22",
+      "created_at": "2026-04-22T04:00:00Z",
+      "insert_rank": 3213,
+      "role": "source",
+      "topic": "p4-meeting-21",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "统计周期",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2F0022",
+      "scenario": "ops",
+      "title": "同事甲对 消息队列故障的扩容策略说法：3 秒",
+      "content": "【前因】消息队列 的故障里，扩容策略有四种不同来源的说法\n【行为】同事甲说 扩容策略 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-23",
+      "created_at": "2026-04-23T01:00:00Z",
+      "insert_rank": 3220,
+      "role": "source",
+      "topic": "p4-ops-22",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "扩容策略",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2F0023",
+      "scenario": "ops",
+      "title": "同事乙对 消息队列故障的扩容策略说法：5 秒",
+      "content": "【前因】消息队列 的故障里，扩容策略有四种不同来源的说法\n【行为】同事乙说 扩容策略 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-23",
+      "created_at": "2026-04-23T02:00:00Z",
+      "insert_rank": 3221,
+      "role": "source",
+      "topic": "p4-ops-22",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "扩容策略",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2F0024",
+      "scenario": "ops",
+      "title": "我实测对 消息队列故障的扩容策略说法：8 秒",
+      "content": "【前因】消息队列 的故障里，扩容策略有四种不同来源的说法\n【行为】我实测说 扩容策略 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-23",
+      "created_at": "2026-04-23T03:00:00Z",
+      "insert_rank": 3222,
+      "role": "source",
+      "topic": "p4-ops-22",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "扩容策略",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2F0025",
+      "scenario": "ops",
+      "title": "交接文档对 消息队列故障的扩容策略说法：30 秒",
+      "content": "【前因】消息队列 的故障里，扩容策略有四种不同来源的说法\n【行为】交接文档说 扩容策略 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-23",
+      "created_at": "2026-04-23T04:00:00Z",
+      "insert_rank": 3223,
+      "role": "source",
+      "topic": "p4-ops-22",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "扩容策略",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2G0022",
+      "scenario": "migration",
+      "title": "同事甲对 日志索引迁移的切换时点说法：3 秒",
+      "content": "【前因】日志索引 的迁移里，切换时点有四种不同来源的说法\n【行为】同事甲说 切换时点 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-24",
+      "created_at": "2026-04-24T01:00:00Z",
+      "insert_rank": 3230,
+      "role": "source",
+      "topic": "p4-migration-23",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "切换时点",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2G0023",
+      "scenario": "migration",
+      "title": "同事乙对 日志索引迁移的切换时点说法：5 秒",
+      "content": "【前因】日志索引 的迁移里，切换时点有四种不同来源的说法\n【行为】同事乙说 切换时点 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-24",
+      "created_at": "2026-04-24T02:00:00Z",
+      "insert_rank": 3231,
+      "role": "source",
+      "topic": "p4-migration-23",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "切换时点",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2G0024",
+      "scenario": "migration",
+      "title": "我实测对 日志索引迁移的切换时点说法：8 秒",
+      "content": "【前因】日志索引 的迁移里，切换时点有四种不同来源的说法\n【行为】我实测说 切换时点 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-24",
+      "created_at": "2026-04-24T03:00:00Z",
+      "insert_rank": 3232,
+      "role": "source",
+      "topic": "p4-migration-23",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "切换时点",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2G0025",
+      "scenario": "migration",
+      "title": "交接文档对 日志索引迁移的切换时点说法：30 秒",
+      "content": "【前因】日志索引 的迁移里，切换时点有四种不同来源的说法\n【行为】交接文档说 切换时点 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-24",
+      "created_at": "2026-04-24T04:00:00Z",
+      "insert_rank": 3233,
+      "role": "source",
+      "topic": "p4-migration-23",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "切换时点",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2H0022",
+      "scenario": "approval",
+      "title": "同事甲对 生产库账号审批的审批人说法：3 秒",
+      "content": "【前因】生产库账号 的审批里，审批人有四种不同来源的说法\n【行为】同事甲说 审批人 是 3 秒\n【后果】这只代表 同事甲 的说法，不代表其他人",
+      "ts": "2026-04-25",
+      "created_at": "2026-04-25T01:00:00Z",
+      "insert_rank": 3240,
+      "role": "source",
+      "topic": "p4-approval-24",
+      "attrs": {
+        "source": "zhang",
+        "source_name": "同事甲",
+        "param": "审批人",
+        "value": "3 秒"
+      }
+    },
+    {
+      "id": "hl2H0023",
+      "scenario": "approval",
+      "title": "同事乙对 生产库账号审批的审批人说法：5 秒",
+      "content": "【前因】生产库账号 的审批里，审批人有四种不同来源的说法\n【行为】同事乙说 审批人 是 5 秒\n【后果】这只代表 同事乙 的说法，不代表其他人",
+      "ts": "2026-04-25",
+      "created_at": "2026-04-25T02:00:00Z",
+      "insert_rank": 3241,
+      "role": "source",
+      "topic": "p4-approval-24",
+      "attrs": {
+        "source": "li",
+        "source_name": "同事乙",
+        "param": "审批人",
+        "value": "5 秒"
+      }
+    },
+    {
+      "id": "hl2H0024",
+      "scenario": "approval",
+      "title": "我实测对 生产库账号审批的审批人说法：8 秒",
+      "content": "【前因】生产库账号 的审批里，审批人有四种不同来源的说法\n【行为】我实测说 审批人 是 8 秒\n【后果】这只代表 我实测 的说法，不代表其他人",
+      "ts": "2026-04-25",
+      "created_at": "2026-04-25T03:00:00Z",
+      "insert_rank": 3242,
+      "role": "source",
+      "topic": "p4-approval-24",
+      "attrs": {
+        "source": "measured",
+        "source_name": "我实测",
+        "param": "审批人",
+        "value": "8 秒"
+      }
+    },
+    {
+      "id": "hl2H0025",
+      "scenario": "approval",
+      "title": "交接文档对 生产库账号审批的审批人说法：30 秒",
+      "content": "【前因】生产库账号 的审批里，审批人有四种不同来源的说法\n【行为】交接文档说 审批人 是 30 秒\n【后果】这只代表 交接文档 的说法，不代表其他人",
+      "ts": "2026-04-25",
+      "created_at": "2026-04-25T04:00:00Z",
+      "insert_rank": 3243,
+      "role": "source",
+      "topic": "p4-approval-24",
+      "attrs": {
+        "source": "doc",
+        "source_name": "交接文档",
+        "param": "审批人",
+        "value": "30 秒"
+      }
+    },
+    {
+      "id": "hl2A0030",
+      "scenario": "deploy",
+      "title": "结算服务上线第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4010,
+      "role": "order",
+      "topic": "p5-deploy-1",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2A0031",
+      "scenario": "deploy",
+      "title": "结算服务上线第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4011,
+      "role": "order",
+      "topic": "p5-deploy-1",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2A0032",
+      "scenario": "deploy",
+      "title": "结算服务上线第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4012,
+      "role": "order",
+      "topic": "p5-deploy-1",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2A0033",
+      "scenario": "deploy",
+      "title": "结算服务上线第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4013,
+      "role": "order",
+      "topic": "p5-deploy-1",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2B0030",
+      "scenario": "canary",
+      "title": "风控服务灰度第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】灰度组 风控服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4020,
+      "role": "order",
+      "topic": "p5-canary-2",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2B0031",
+      "scenario": "canary",
+      "title": "风控服务灰度第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】灰度组 风控服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4021,
+      "role": "order",
+      "topic": "p5-canary-2",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2B0032",
+      "scenario": "canary",
+      "title": "风控服务灰度第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】灰度组 风控服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4022,
+      "role": "order",
+      "topic": "p5-canary-2",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2B0033",
+      "scenario": "canary",
+      "title": "风控服务灰度第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】灰度组 风控服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4023,
+      "role": "order",
+      "topic": "p5-canary-2",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2C0030",
+      "scenario": "api",
+      "title": "对账接口接口第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】正式 对账接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4030,
+      "role": "order",
+      "topic": "p5-api-3",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2C0031",
+      "scenario": "api",
+      "title": "对账接口接口第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】正式 对账接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4031,
+      "role": "order",
+      "topic": "p5-api-3",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2C0032",
+      "scenario": "api",
+      "title": "对账接口接口第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】正式 对账接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4032,
+      "role": "order",
+      "topic": "p5-api-3",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2C0033",
+      "scenario": "api",
+      "title": "对账接口接口第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】正式 对账接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4033,
+      "role": "order",
+      "topic": "p5-api-3",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2D0030",
+      "scenario": "handoff",
+      "title": "定时任务交接第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】本机 定时任务 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4040,
+      "role": "order",
+      "topic": "p5-handoff-4",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2D0031",
+      "scenario": "handoff",
+      "title": "定时任务交接第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】本机 定时任务 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4041,
+      "role": "order",
+      "topic": "p5-handoff-4",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2D0032",
+      "scenario": "handoff",
+      "title": "定时任务交接第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】本机 定时任务 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4042,
+      "role": "order",
+      "topic": "p5-handoff-4",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2D0033",
+      "scenario": "handoff",
+      "title": "定时任务交接第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】本机 定时任务 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4043,
+      "role": "order",
+      "topic": "p5-handoff-4",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2E0026",
+      "scenario": "meeting",
+      "title": "命名规范会议第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】评审会 命名规范 的会议按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4050,
+      "role": "order",
+      "topic": "p5-meeting-5",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2E0027",
+      "scenario": "meeting",
+      "title": "命名规范会议第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】评审会 命名规范 的会议按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4051,
+      "role": "order",
+      "topic": "p5-meeting-5",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2E0028",
+      "scenario": "meeting",
+      "title": "命名规范会议第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】评审会 命名规范 的会议按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4052,
+      "role": "order",
+      "topic": "p5-meeting-5",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2E0029",
+      "scenario": "meeting",
+      "title": "命名规范会议第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】评审会 命名规范 的会议按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4053,
+      "role": "order",
+      "topic": "p5-meeting-5",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2F0026",
+      "scenario": "ops",
+      "title": "支付回调故障第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】线上 支付回调 的故障按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4060,
+      "role": "order",
+      "topic": "p5-ops-6",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2F0027",
+      "scenario": "ops",
+      "title": "支付回调故障第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】线上 支付回调 的故障按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4061,
+      "role": "order",
+      "topic": "p5-ops-6",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2F0028",
+      "scenario": "ops",
+      "title": "支付回调故障第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】线上 支付回调 的故障按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4062,
+      "role": "order",
+      "topic": "p5-ops-6",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2F0029",
+      "scenario": "ops",
+      "title": "支付回调故障第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】线上 支付回调 的故障按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4063,
+      "role": "order",
+      "topic": "p5-ops-6",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2G0026",
+      "scenario": "migration",
+      "title": "用户档案迁移第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】生产库 用户档案 的迁移按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4070,
+      "role": "order",
+      "topic": "p5-migration-7",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2G0027",
+      "scenario": "migration",
+      "title": "用户档案迁移第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】生产库 用户档案 的迁移按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4071,
+      "role": "order",
+      "topic": "p5-migration-7",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2G0028",
+      "scenario": "migration",
+      "title": "用户档案迁移第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】生产库 用户档案 的迁移按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4072,
+      "role": "order",
+      "topic": "p5-migration-7",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2G0029",
+      "scenario": "migration",
+      "title": "用户档案迁移第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】生产库 用户档案 的迁移按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4073,
+      "role": "order",
+      "topic": "p5-migration-7",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2H0026",
+      "scenario": "approval",
+      "title": "配置中心审批第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】测试租户 配置中心 的审批按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4080,
+      "role": "order",
+      "topic": "p5-approval-8",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2H0027",
+      "scenario": "approval",
+      "title": "配置中心审批第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】测试租户 配置中心 的审批按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4081,
+      "role": "order",
+      "topic": "p5-approval-8",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2H0028",
+      "scenario": "approval",
+      "title": "配置中心审批第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】测试租户 配置中心 的审批按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4082,
+      "role": "order",
+      "topic": "p5-approval-8",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2H0029",
+      "scenario": "approval",
+      "title": "配置中心审批第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】测试租户 配置中心 的审批按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4083,
+      "role": "order",
+      "topic": "p5-approval-8",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2A0034",
+      "scenario": "deploy",
+      "title": "结算服务上线第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4090,
+      "role": "order",
+      "topic": "p5-deploy-9",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2A0035",
+      "scenario": "deploy",
+      "title": "结算服务上线第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4091,
+      "role": "order",
+      "topic": "p5-deploy-9",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2A0036",
+      "scenario": "deploy",
+      "title": "结算服务上线第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4092,
+      "role": "order",
+      "topic": "p5-deploy-9",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2A0037",
+      "scenario": "deploy",
+      "title": "结算服务上线第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】生产 结算服务 的上线按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4093,
+      "role": "order",
+      "topic": "p5-deploy-9",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2B0034",
+      "scenario": "canary",
+      "title": "搜索服务灰度第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】灰度组 搜索服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4100,
+      "role": "order",
+      "topic": "p5-canary-10",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2B0035",
+      "scenario": "canary",
+      "title": "搜索服务灰度第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】灰度组 搜索服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4101,
+      "role": "order",
+      "topic": "p5-canary-10",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2B0036",
+      "scenario": "canary",
+      "title": "搜索服务灰度第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】灰度组 搜索服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4102,
+      "role": "order",
+      "topic": "p5-canary-10",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2B0037",
+      "scenario": "canary",
+      "title": "搜索服务灰度第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】灰度组 搜索服务 的灰度按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4103,
+      "role": "order",
+      "topic": "p5-canary-10",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2C0034",
+      "scenario": "api",
+      "title": "查询接口接口第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】正式 查询接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4110,
+      "role": "order",
+      "topic": "p5-api-11",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2C0035",
+      "scenario": "api",
+      "title": "查询接口接口第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】正式 查询接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4111,
+      "role": "order",
+      "topic": "p5-api-11",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2C0036",
+      "scenario": "api",
+      "title": "查询接口接口第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】正式 查询接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4112,
+      "role": "order",
+      "topic": "p5-api-11",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2C0037",
+      "scenario": "api",
+      "title": "查询接口接口第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】正式 查询接口 的接口按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4113,
+      "role": "order",
+      "topic": "p5-api-11",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2D0034",
+      "scenario": "handoff",
+      "title": "值班手册交接第 1 步（I）：先把旧实例摘掉流量",
+      "content": "【前因】本机 值班手册 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：先把旧实例摘掉流量\n【后果】发生日期是 2026-03-04，与另三步不在同一天",
+      "ts": "2026-03-04",
+      "created_at": "2026-03-04T02:00:00Z",
+      "insert_rank": 4120,
+      "role": "order",
+      "topic": "p5-handoff-12",
+      "attrs": {
+        "quadrant": "I",
+        "created_band": "early",
+        "insert_band": "early",
+        "step": "先把旧实例摘掉流量",
+        "step_no": 1
+      }
+    },
+    {
+      "id": "hl2D0035",
+      "scenario": "handoff",
+      "title": "值班手册交接第 2 步（II）：再把配置中心切到新值",
+      "content": "【前因】本机 值班手册 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：再把配置中心切到新值\n【后果】发生日期是 2026-07-18，与另三步不在同一天",
+      "ts": "2026-07-18",
+      "created_at": "2026-07-18T02:00:00Z",
+      "insert_rank": 4121,
+      "role": "order",
+      "topic": "p5-handoff-12",
+      "attrs": {
+        "quadrant": "II",
+        "created_band": "late",
+        "insert_band": "early",
+        "step": "再把配置中心切到新值",
+        "step_no": 2
+      }
+    },
+    {
+      "id": "hl2D0036",
+      "scenario": "handoff",
+      "title": "值班手册交接第 3 步（III）：然后逐台重启并等健康检查",
+      "content": "【前因】本机 值班手册 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：然后逐台重启并等健康检查\n【后果】发生日期是 2026-05-12，与另三步不在同一天",
+      "ts": "2026-05-12",
+      "created_at": "2026-05-12T02:00:00Z",
+      "insert_rank": 4122,
+      "role": "order",
+      "topic": "p5-handoff-12",
+      "attrs": {
+        "quadrant": "III",
+        "created_band": "early",
+        "insert_band": "late",
+        "step": "然后逐台重启并等健康检查",
+        "step_no": 3
+      }
+    },
+    {
+      "id": "hl2D0037",
+      "scenario": "handoff",
+      "title": "值班手册交接第 4 步（IV）：最后把流量切回来并对账",
+      "content": "【前因】本机 值班手册 的交接按四步走，每一步都单独记了时间\n【行为】这一步是：最后把流量切回来并对账\n【后果】发生日期是 2026-09-28，与另三步不在同一天",
+      "ts": "2026-09-28",
+      "created_at": "2026-09-28T02:00:00Z",
+      "insert_rank": 4123,
+      "role": "order",
+      "topic": "p5-handoff-12",
+      "attrs": {
+        "quadrant": "IV",
+        "created_band": "late",
+        "insert_band": "late",
+        "step": "最后把流量切回来并对账",
+        "step_no": 4
+      }
+    },
+    {
+      "id": "hl2A0038",
+      "scenario": "deploy",
+      "title": "结算服务上线调整健康检查路径：因为上次故障的复盘结",
+      "content": "【前因】生产 结算服务 的上线里要改 健康检查路径，原因是上次故障的复盘结论要求\n【行为】做法是把重试从 0 次调到 2 次\n【后果】改完后 健康检查路径 的现值是 2 次",
+      "ts": "2026-08-02",
+      "created_at": "2026-08-02T08:00:00Z",
+      "insert_rank": 5010,
+      "role": "gist",
+      "topic": "p6-deploy-1",
+      "attrs": {
+        "reason": "上次故障的复盘结论要求",
+        "action": "把重试从 0 次调到",
+        "value": "2 次",
+        "param": "健康检查路径",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2A0039",
+      "scenario": "deploy",
+      "title": "结算服务上线另一次调健康检查路径：因为审计要求留出追溯",
+      "content": "【前因】同一个 结算服务 的上线，另有一次改 健康检查路径，原因是审计要求留出追溯窗口\n【行为】那次是把 健康检查路径 先降一档再观察\n【后果】那次没有把 健康检查路径 定到 2 次",
+      "ts": "2026-02-02",
+      "created_at": "2026-02-02T08:00:00Z",
+      "insert_rank": 5011,
+      "role": "gist",
+      "topic": "p6-deploy-1",
+      "attrs": {
+        "reason": "审计要求留出追溯窗口",
+        "param": "健康检查路径",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2B0038",
+      "scenario": "canary",
+      "title": "风控服务灰度调整放量档位：因为对接方反馈超时偏",
+      "content": "【前因】灰度组 风控服务 的灰度里要改 放量档位，原因是对接方反馈超时偏多\n【行为】做法是把连接池上限从 50 调到 200\n【后果】改完后 放量档位 的现值是 200",
+      "ts": "2026-08-03",
+      "created_at": "2026-08-03T08:00:00Z",
+      "insert_rank": 5020,
+      "role": "gist",
+      "topic": "p6-canary-2",
+      "attrs": {
+        "reason": "对接方反馈超时偏多",
+        "action": "把连接池上限从 50 调到",
+        "value": "200",
+        "param": "放量档位",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2B0039",
+      "scenario": "canary",
+      "title": "风控服务灰度另一次调放量档位：因为迁移演练暴露校验",
+      "content": "【前因】同一个 风控服务 的灰度，另有一次改 放量档位，原因是迁移演练暴露校验缺口\n【行为】那次是把 放量档位 先降一档再观察\n【后果】那次没有把 放量档位 定到 200",
+      "ts": "2026-02-03",
+      "created_at": "2026-02-03T08:00:00Z",
+      "insert_rank": 5021,
+      "role": "gist",
+      "topic": "p6-canary-2",
+      "attrs": {
+        "reason": "迁移演练暴露校验缺口",
+        "param": "放量档位",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2C0038",
+      "scenario": "api",
+      "title": "对账接口接口调整超时：因为容量水位连续三天",
+      "content": "【前因】正式 对账接口 的接口里要改 超时，原因是容量水位连续三天超阈值\n【行为】做法是把灰度比例从 5% 调到 10%\n【后果】改完后 超时 的现值是 10%",
+      "ts": "2026-08-04",
+      "created_at": "2026-08-04T08:00:00Z",
+      "insert_rank": 5030,
+      "role": "gist",
+      "topic": "p6-api-3",
+      "attrs": {
+        "reason": "容量水位连续三天超阈值",
+        "action": "把灰度比例从 5% 调到",
+        "value": "10%",
+        "param": "超时",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2C0039",
+      "scenario": "api",
+      "title": "对账接口接口另一次调超时：因为压测时发现长尾抖",
+      "content": "【前因】同一个 对账接口 的接口，另有一次改 超时，原因是压测时发现长尾抖动\n【行为】那次是把 超时 先降一档再观察\n【后果】那次没有把 超时 定到 10%",
+      "ts": "2026-02-04",
+      "created_at": "2026-02-04T08:00:00Z",
+      "insert_rank": 5031,
+      "role": "gist",
+      "topic": "p6-api-3",
+      "attrs": {
+        "reason": "压测时发现长尾抖动",
+        "param": "超时",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2D0038",
+      "scenario": "handoff",
+      "title": "定时任务交接调整告警接收人：因为审计要求留出追溯",
+      "content": "【前因】本机 定时任务 的交接里要改 告警接收人，原因是审计要求留出追溯窗口\n【行为】做法是把分批大小从 1000 行调到 5000 行\n【后果】改完后 告警接收人 的现值是 5000 行",
+      "ts": "2026-08-05",
+      "created_at": "2026-08-05T08:00:00Z",
+      "insert_rank": 5040,
+      "role": "gist",
+      "topic": "p6-handoff-4",
+      "attrs": {
+        "reason": "审计要求留出追溯窗口",
+        "action": "把分批大小从 1000 行调到",
+        "value": "5000 行",
+        "param": "告警接收人",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2D0039",
+      "scenario": "handoff",
+      "title": "定时任务交接另一次调告警接收人：因为上次故障的复盘结",
+      "content": "【前因】同一个 定时任务 的交接，另有一次改 告警接收人，原因是上次故障的复盘结论要求\n【行为】那次是把 告警接收人 先降一档再观察\n【后果】那次没有把 告警接收人 定到 5000 行",
+      "ts": "2026-02-05",
+      "created_at": "2026-02-05T08:00:00Z",
+      "insert_rank": 5041,
+      "role": "gist",
+      "topic": "p6-handoff-4",
+      "attrs": {
+        "reason": "上次故障的复盘结论要求",
+        "param": "告警接收人",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2E0030",
+      "scenario": "meeting",
+      "title": "命名规范会议调整生效时间：因为迁移演练暴露校验",
+      "content": "【前因】评审会 命名规范 的会议里要改 生效时间，原因是迁移演练暴露校验缺口\n【行为】做法是把观察窗口从 5 分钟调到 15 分钟\n【后果】改完后 生效时间 的现值是 15 分钟",
+      "ts": "2026-08-06",
+      "created_at": "2026-08-06T08:00:00Z",
+      "insert_rank": 5050,
+      "role": "gist",
+      "topic": "p6-meeting-5",
+      "attrs": {
+        "reason": "迁移演练暴露校验缺口",
+        "action": "把观察窗口从 5 分钟调到",
+        "value": "15 分钟",
+        "param": "生效时间",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2E0031",
+      "scenario": "meeting",
+      "title": "命名规范会议另一次调生效时间：因为对接方反馈超时偏",
+      "content": "【前因】同一个 命名规范 的会议，另有一次改 生效时间，原因是对接方反馈超时偏多\n【行为】那次是把 生效时间 先降一档再观察\n【后果】那次没有把 生效时间 定到 15 分钟",
+      "ts": "2026-02-06",
+      "created_at": "2026-02-06T08:00:00Z",
+      "insert_rank": 5051,
+      "role": "gist",
+      "topic": "p6-meeting-5",
+      "attrs": {
+        "reason": "对接方反馈超时偏多",
+        "param": "生效时间",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2F0030",
+      "scenario": "ops",
+      "title": "支付回调故障调整熔断阈值：因为压测时发现长尾抖",
+      "content": "【前因】线上 支付回调 的故障里要改 熔断阈值，原因是压测时发现长尾抖动\n【行为】做法是把超时从 1 秒调到 3 秒\n【后果】改完后 熔断阈值 的现值是 3 秒",
+      "ts": "2026-08-07",
+      "created_at": "2026-08-07T08:00:00Z",
+      "insert_rank": 5060,
+      "role": "gist",
+      "topic": "p6-ops-6",
+      "attrs": {
+        "reason": "压测时发现长尾抖动",
+        "action": "把超时从 1 秒调到",
+        "value": "3 秒",
+        "param": "熔断阈值",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2F0031",
+      "scenario": "ops",
+      "title": "支付回调故障另一次调熔断阈值：因为容量水位连续三天",
+      "content": "【前因】同一个 支付回调 的故障，另有一次改 熔断阈值，原因是容量水位连续三天超阈值\n【行为】那次是把 熔断阈值 先降一档再观察\n【后果】那次没有把 熔断阈值 定到 3 秒",
+      "ts": "2026-02-07",
+      "created_at": "2026-02-07T08:00:00Z",
+      "insert_rank": 5061,
+      "role": "gist",
+      "topic": "p6-ops-6",
+      "attrs": {
+        "reason": "容量水位连续三天超阈值",
+        "param": "熔断阈值",
+        "is_gold": false
+      }
+    },
+    {
+      "id": "hl2G0030",
+      "scenario": "migration",
+      "title": "用户档案迁移调整校验方式：因为上次故障的复盘结",
+      "content": "【前因】生产库 用户档案 的迁移里要改 校验方式，原因是上次故障的复盘结论要求\n【行为】做法是把重试从 0 次调到 2 次\n【后果】改完后 校验方式 的现值是 2 次",
+      "ts": "2026-08-08",
+      "created_at": "2026-08-08T08:00:00Z",
+      "insert_rank": 5070,
+      "role": "gist",
+      "topic": "p6-migration-7",
+      "attrs": {
+        "reason": "上次故障的复盘结论要求",
+        "action": "把重试从 0 次调到",
+        "value": "2 次",
+        "param": "校验方式",
+        "is_gold": true
+      }
+    },
+    {
+      "id": "hl2G0031",
+      "scenario": "migration",
+      "title": "用户档案迁移另一次调校验方式：因为审计要求留出追溯",
+      "content": "【前因】同一个 用户档案 的迁移，另有一次改 校验方式，原因是审计要求留出追溯窗口\n【行为】那次是把 校验方式 先降一档再观察\n【后果】那次没有把 校验方式 定到 2 次",
+      "ts": "2026-02-08",
+      "created_at": "2026-02-08T08:00:00Z",
+      "insert_rank": 5071,
+      "role": "gist",
+      "topic": "p6-migration-7",
+      "attrs": {
+        "reason": "审计要求留出追溯窗口",
+        "param": "校验方式",
+        "is_gold": false
+      }
+    }
+  ]
+}

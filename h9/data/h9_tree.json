@@ -1,0 +1,3692 @@
+{
+  "nodes": [
+    {
+      "attrs": {
+        "bad": "上线前没跑回归",
+        "is_gold": true,
+        "prescription": "发布单必须挂回归门禁，红灯不放行"
+      },
+      "content": "【前因】灰度组 的 推荐服务 这次灰度踩了坑：上线前没跑回归\n【行为】结果上线后核心链路大面积报错\n【后果】后来定下规矩：发布单必须挂回归门禁，红灯不放行",
+      "created_at": "2026-05-01T08:00:00Z",
+      "id": "hl9B0001",
+      "insert_rank": 2000,
+      "role": "rx_cause",
+      "scenario": "canary",
+      "title": "推荐服务灰度踩坑记录：上线前没跑回归",
+      "topic": "r1-canary-0",
+      "ts": "2026-05-01"
+    },
+    {
+      "attrs": {
+        "bad": "回调没做幂等就接了",
+        "is_gold": false,
+        "prescription": "回调入口先查幂等键再落库"
+      },
+      "content": "【前因】全量组 的 搜索服务 有一次灰度也踩了坑：回调没做幂等就接了\n【行为】结果上游重推导致重复入账\n【后果】当时的规矩是：回调入口先查幂等键再落库",
+      "created_at": "2026-02-01T08:00:00Z",
+      "id": "hl9B0002",
+      "insert_rank": 2001,
+      "role": "rx_cause",
+      "scenario": "canary",
+      "title": "搜索服务灰度另一次踩坑：回调没做幂等就接了",
+      "topic": "r1-canary-0",
+      "ts": "2026-02-01"
+    },
+    {
+      "attrs": {
+        "bad": "没设观察窗口就一口气放量",
+        "is_gold": true,
+        "prescription": "每档放量至少观察 15 分钟再进下一档"
+      },
+      "content": "【前因】正式 的 回调接口 这次接口踩了坑：没设观察窗口就一口气放量\n【行为】结果放量后错误率翻倍才发现\n【后果】后来定下规矩：每档放量至少观察 15 分钟再进下一档",
+      "created_at": "2026-05-02T08:00:00Z",
+      "id": "hl9C0001",
+      "insert_rank": 2010,
+      "role": "rx_cause",
+      "scenario": "api",
+      "title": "回调接口接口踩坑记录：没设观察窗口就一口气",
+      "topic": "r1-api-1",
+      "ts": "2026-05-02"
+    },
+    {
+      "attrs": {
+        "bad": "交接只口头说了路径",
+        "is_gold": false,
+        "prescription": "交接单逐项写路径并让接手人复核"
+      },
+      "content": "【前因】沙箱 的 查询接口 有一次接口也踩了坑：交接只口头说了路径\n【行为】结果接手后找不到脚本位置\n【后果】当时的规矩是：交接单逐项写路径并让接手人复核",
+      "created_at": "2026-02-02T08:00:00Z",
+      "id": "hl9C0002",
+      "insert_rank": 2011,
+      "role": "rx_cause",
+      "scenario": "api",
+      "title": "查询接口接口另一次踩坑：交接只口头说了路径",
+      "topic": "r1-api-1",
+      "ts": "2026-02-02"
+    },
+    {
+      "attrs": {
+        "bad": "回滚预案没演练就上线",
+        "is_gold": true,
+        "prescription": "回滚脚本随发布单一并演练留证"
+      },
+      "content": "【前因】本机 的 监控看板 这次交接踩了坑：回滚预案没演练就上线\n【行为】结果出问题时回滚脚本跑不起来\n【后果】后来定下规矩：回滚脚本随发布单一并演练留证",
+      "created_at": "2026-05-03T08:00:00Z",
+      "id": "hl9D0001",
+      "insert_rank": 2020,
+      "role": "rx_cause",
+      "scenario": "handoff",
+      "title": "监控看板交接踩坑记录：回滚预案没演练就上线",
+      "topic": "r1-handoff-2",
+      "ts": "2026-05-03"
+    },
+    {
+      "attrs": {
+        "bad": "值班手册没更新就移交",
+        "is_gold": false,
+        "prescription": "移交前手册变更项必须过一遍"
+      },
+      "content": "【前因】跳板机 的 值班手册 有一次交接也踩了坑：值班手册没更新就移交\n【行为】结果新班组按旧手册误操作\n【后果】当时的规矩是：移交前手册变更项必须过一遍",
+      "created_at": "2026-02-03T08:00:00Z",
+      "id": "hl9D0002",
+      "insert_rank": 2021,
+      "role": "rx_cause",
+      "scenario": "handoff",
+      "title": "值班手册交接另一次踩坑：值班手册没更新就移交",
+      "topic": "r1-handoff-2",
+      "ts": "2026-02-03"
+    },
+    {
+      "attrs": {
+        "bad": "灰度名单直接用了全量用户",
+        "is_gold": true,
+        "prescription": "灰度名单固定 10% 内部用户"
+      },
+      "content": "【前因】评审会 的 指标口径 这次会议踩了坑：灰度名单直接用了全量用户\n【行为】结果灰度验证失去意义\n【后果】后来定下规矩：灰度名单固定 10% 内部用户",
+      "created_at": "2026-05-04T08:00:00Z",
+      "id": "hl9E0001",
+      "insert_rank": 2030,
+      "role": "rx_cause",
+      "scenario": "meeting",
+      "title": "指标口径会议踩坑记录：灰度名单直接用了全量",
+      "topic": "r1-meeting-3",
+      "ts": "2026-05-04"
+    },
+    {
+      "attrs": {
+        "bad": "口径定了没同步给下游",
+        "is_gold": false,
+        "prescription": "口径变更当天发公告并通知所有取数方"
+      },
+      "content": "【前因】周会 的 统计规范 有一次会议也踩了坑：口径定了没同步给下游\n【行为】结果下游按老口径出报表对不上\n【后果】当时的规矩是：口径变更当天发公告并通知所有取数方",
+      "created_at": "2026-02-04T08:00:00Z",
+      "id": "hl9E0002",
+      "insert_rank": 2031,
+      "role": "rx_cause",
+      "scenario": "meeting",
+      "title": "统计规范会议另一次踩坑：口径定了没同步给下游",
+      "topic": "r1-meeting-3",
+      "ts": "2026-02-04"
+    },
+    {
+      "attrs": {
+        "bad": "联调时没对签名时间窗",
+        "is_gold": true,
+        "prescription": "对接文档写明时间窗容差并双向校时"
+      },
+      "content": "【前因】线上 的 消息队列 这次故障踩了坑：联调时没对签名时间窗\n【行为】结果上线后批量验签失败\n【后果】后来定下规矩：对接文档写明时间窗容差并双向校时",
+      "created_at": "2026-05-05T08:00:00Z",
+      "id": "hl9F0001",
+      "insert_rank": 2040,
+      "role": "rx_cause",
+      "scenario": "ops",
+      "title": "消息队列故障踩坑记录：联调时没对签名时间窗",
+      "topic": "r1-ops-4",
+      "ts": "2026-05-05"
+    },
+    {
+      "attrs": {
+        "bad": "纪要里只写了结论没写边界",
+        "is_gold": false,
+        "prescription": "纪要必须含适用范围与排除项"
+      },
+      "content": "【前因】演练环境 的 数据库主库 有一次故障也踩了坑：纪要里只写了结论没写边界\n【行为】结果执行时把边界外的也改了\n【后果】当时的规矩是：纪要必须含适用范围与排除项",
+      "created_at": "2026-02-05T08:00:00Z",
+      "id": "hl9F0002",
+      "insert_rank": 2041,
+      "role": "rx_cause",
+      "scenario": "ops",
+      "title": "数据库主库故障另一次踩坑：纪要里只写了结论没写",
+      "topic": "r1-ops-4",
+      "ts": "2026-02-05"
+    },
+    {
+      "attrs": {
+        "bad": "回调没做幂等就接了",
+        "is_gold": true,
+        "prescription": "回调入口先查幂等键再落库"
+      },
+      "content": "【前因】生产库 的 日志索引 这次迁移踩了坑：回调没做幂等就接了\n【行为】结果上游重推导致重复入账\n【后果】后来定下规矩：回调入口先查幂等键再落库",
+      "created_at": "2026-05-06T08:00:00Z",
+      "id": "hl9G0001",
+      "insert_rank": 2050,
+      "role": "rx_cause",
+      "scenario": "migration",
+      "title": "日志索引迁移踩坑记录：回调没做幂等就接了",
+      "topic": "r1-migration-5",
+      "ts": "2026-05-06"
+    },
+    {
+      "attrs": {
+        "bad": "扩容前没看连接池水位",
+        "is_gold": false,
+        "prescription": "扩容单必查下游连接池余量"
+      },
+      "content": "【前因】迁移库 的 历史订单表 有一次迁移也踩了坑：扩容前没看连接池水位\n【行为】结果扩容后连接池打满照样超时\n【后果】当时的规矩是：扩容单必查下游连接池余量",
+      "created_at": "2026-02-06T08:00:00Z",
+      "id": "hl9G0002",
+      "insert_rank": 2051,
+      "role": "rx_cause",
+      "scenario": "migration",
+      "title": "历史订单表迁移另一次踩坑：扩容前没看连接池水位",
+      "topic": "r1-migration-5",
+      "ts": "2026-02-06"
+    },
+    {
+      "attrs": {
+        "bad": "交接只口头说了路径",
+        "is_gold": true,
+        "prescription": "交接单逐项写路径并让接手人复核"
+      },
+      "content": "【前因】测试租户 的 生产库账号 这次审批踩了坑：交接只口头说了路径\n【行为】结果接手后找不到脚本位置\n【后果】后来定下规矩：交接单逐项写路径并让接手人复核",
+      "created_at": "2026-05-07T08:00:00Z",
+      "id": "hl9H0001",
+      "insert_rank": 2060,
+      "role": "rx_cause",
+      "scenario": "approval",
+      "title": "生产库账号审批踩坑记录：交接只口头说了路径",
+      "topic": "r1-approval-6",
+      "ts": "2026-05-07"
+    },
+    {
+      "attrs": {
+        "bad": "回滚点没验证就标了完成",
+        "is_gold": false,
+        "prescription": "回滚点每 24 小时做一次恢复抽验"
+      },
+      "content": "【前因】生产租户 的 发布平台 有一次审批也踩了坑：回滚点没验证就标了完成\n【行为】结果真回滚时存档损坏\n【后果】当时的规矩是：回滚点每 24 小时做一次恢复抽验",
+      "created_at": "2026-02-07T08:00:00Z",
+      "id": "hl9H0002",
+      "insert_rank": 2061,
+      "role": "rx_cause",
+      "scenario": "approval",
+      "title": "发布平台审批另一次踩坑：回滚点没验证就标了完",
+      "topic": "r1-approval-6",
+      "ts": "2026-02-07"
+    },
+    {
+      "attrs": {
+        "bad": "值班手册没更新就移交",
+        "is_gold": true,
+        "prescription": "移交前手册变更项必须过一遍"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线踩了坑：值班手册没更新就移交\n【行为】结果新班组按旧手册误操作\n【后果】后来定下规矩：移交前手册变更项必须过一遍",
+      "created_at": "2026-05-08T08:00:00Z",
+      "id": "hl9A0001",
+      "insert_rank": 2070,
+      "role": "rx_cause",
+      "scenario": "deploy",
+      "title": "会员服务上线踩坑记录：值班手册没更新就移交",
+      "topic": "r1-deploy-7",
+      "ts": "2026-05-08"
+    },
+    {
+      "attrs": {
+        "bad": "迁移前没抽样比对",
+        "is_gold": false,
+        "prescription": "切换前按百分之一抽样双端比对"
+      },
+      "content": "【前因】预发 的 订单服务 有一次上线也踩了坑：迁移前没抽样比对\n【行为】结果切流后发现字段错位\n【后果】当时的规矩是：切换前按百分之一抽样双端比对",
+      "created_at": "2026-02-08T08:00:00Z",
+      "id": "hl9A0002",
+      "insert_rank": 2071,
+      "role": "rx_cause",
+      "scenario": "deploy",
+      "title": "订单服务上线另一次踩坑：迁移前没抽样比对",
+      "topic": "r1-deploy-7",
+      "ts": "2026-02-08"
+    },
+    {
+      "attrs": {
+        "bad": "口径定了没同步给下游",
+        "is_gold": true,
+        "prescription": "口径变更当天发公告并通知所有取数方"
+      },
+      "content": "【前因】灰度组 的 风控服务 这次灰度踩了坑：口径定了没同步给下游\n【行为】结果下游按老口径出报表对不上\n【后果】后来定下规矩：口径变更当天发公告并通知所有取数方",
+      "created_at": "2026-05-09T08:00:00Z",
+      "id": "hl9B0003",
+      "insert_rank": 2080,
+      "role": "rx_cause",
+      "scenario": "canary",
+      "title": "风控服务灰度踩坑记录：口径定了没同步给下游",
+      "topic": "r1-canary-8",
+      "ts": "2026-05-09"
+    },
+    {
+      "attrs": {
+        "bad": "分批太大一口气迁",
+        "is_gold": false,
+        "prescription": "单批不超 5000 行且批间停顿"
+      },
+      "content": "【前因】全量组 的 推荐服务 有一次灰度也踩了坑：分批太大一口气迁\n【行为】结果锁表超时拖垮业务\n【后果】当时的规矩是：单批不超 5000 行且批间停顿",
+      "created_at": "2026-02-09T08:00:00Z",
+      "id": "hl9B0004",
+      "insert_rank": 2081,
+      "role": "rx_cause",
+      "scenario": "canary",
+      "title": "推荐服务灰度另一次踩坑：分批太大一口气迁",
+      "topic": "r1-canary-8",
+      "ts": "2026-02-09"
+    },
+    {
+      "attrs": {
+        "bad": "纪要里只写了结论没写边界",
+        "is_gold": true,
+        "prescription": "纪要必须含适用范围与排除项"
+      },
+      "content": "【前因】正式 的 对账接口 这次接口踩了坑：纪要里只写了结论没写边界\n【行为】结果执行时把边界外的也改了\n【后果】后来定下规矩：纪要必须含适用范围与排除项",
+      "created_at": "2026-05-10T08:00:00Z",
+      "id": "hl9C0003",
+      "insert_rank": 2090,
+      "role": "rx_cause",
+      "scenario": "api",
+      "title": "对账接口接口踩坑记录：纪要里只写了结论没写",
+      "topic": "r1-api-9",
+      "ts": "2026-05-10"
+    },
+    {
+      "attrs": {
+        "bad": "权限批了没设到期",
+        "is_gold": false,
+        "prescription": "所有临时权限必须带 7 天到期"
+      },
+      "content": "【前因】沙箱 的 回调接口 有一次接口也踩了坑：权限批了没设到期\n【行为】结果人员离岗权限仍有效\n【后果】当时的规矩是：所有临时权限必须带 7 天到期",
+      "created_at": "2026-02-10T08:00:00Z",
+      "id": "hl9C0004",
+      "insert_rank": 2091,
+      "role": "rx_cause",
+      "scenario": "api",
+      "title": "回调接口接口另一次踩坑：权限批了没设到期",
+      "topic": "r1-api-9",
+      "ts": "2026-02-10"
+    },
+    {
+      "attrs": {
+        "bad": "扩容前没看连接池水位",
+        "is_gold": true,
+        "prescription": "扩容单必查下游连接池余量"
+      },
+      "content": "【前因】本机 的 定时任务 这次交接踩了坑：扩容前没看连接池水位\n【行为】结果扩容后连接池打满照样超时\n【后果】后来定下规矩：扩容单必查下游连接池余量",
+      "created_at": "2026-05-11T08:00:00Z",
+      "id": "hl9D0003",
+      "insert_rank": 2100,
+      "role": "rx_cause",
+      "scenario": "handoff",
+      "title": "定时任务交接踩坑记录：扩容前没看连接池水位",
+      "topic": "r1-handoff-10",
+      "ts": "2026-05-11"
+    },
+    {
+      "attrs": {
+        "bad": "审批只看申请不看范围",
+        "is_gold": false,
+        "prescription": "审批按最小权限逐项勾选"
+      },
+      "content": "【前因】跳板机 的 监控看板 有一次交接也踩了坑：审批只看申请不看范围\n【行为】结果申请只读却拿到写权限\n【后果】当时的规矩是：审批按最小权限逐项勾选",
+      "created_at": "2026-02-11T08:00:00Z",
+      "id": "hl9D0004",
+      "insert_rank": 2101,
+      "role": "rx_cause",
+      "scenario": "handoff",
+      "title": "监控看板交接另一次踩坑：审批只看申请不看范围",
+      "topic": "r1-handoff-10",
+      "ts": "2026-02-11"
+    },
+    {
+      "attrs": {
+        "bad": "回滚点没验证就标了完成",
+        "is_gold": true,
+        "prescription": "回滚点每 24 小时做一次恢复抽验"
+      },
+      "content": "【前因】评审会 的 命名规范 这次会议踩了坑：回滚点没验证就标了完成\n【行为】结果真回滚时存档损坏\n【后果】后来定下规矩：回滚点每 24 小时做一次恢复抽验",
+      "created_at": "2026-05-12T08:00:00Z",
+      "id": "hl9E0003",
+      "insert_rank": 2110,
+      "role": "rx_cause",
+      "scenario": "meeting",
+      "title": "命名规范会议踩坑记录：回滚点没验证就标了完",
+      "topic": "r1-meeting-11",
+      "ts": "2026-05-12"
+    },
+    {
+      "attrs": {
+        "bad": "上线前没跑回归",
+        "is_gold": false,
+        "prescription": "发布单必须挂回归门禁，红灯不放行"
+      },
+      "content": "【前因】周会 的 指标口径 有一次会议也踩了坑：上线前没跑回归\n【行为】结果上线后核心链路大面积报错\n【后果】当时的规矩是：发布单必须挂回归门禁，红灯不放行",
+      "created_at": "2026-02-12T08:00:00Z",
+      "id": "hl9E0004",
+      "insert_rank": 2111,
+      "role": "rx_cause",
+      "scenario": "meeting",
+      "title": "指标口径会议另一次踩坑：上线前没跑回归",
+      "topic": "r1-meeting-11",
+      "ts": "2026-02-12"
+    },
+    {
+      "attrs": {
+        "bad": "迁移前没抽样比对",
+        "is_gold": true,
+        "prescription": "切换前按百分之一抽样双端比对"
+      },
+      "content": "【前因】线上 的 支付回调 这次故障踩了坑：迁移前没抽样比对\n【行为】结果切流后发现字段错位\n【后果】后来定下规矩：切换前按百分之一抽样双端比对",
+      "created_at": "2026-05-13T08:00:00Z",
+      "id": "hl9F0003",
+      "insert_rank": 2120,
+      "role": "rx_cause",
+      "scenario": "ops",
+      "title": "支付回调故障踩坑记录：迁移前没抽样比对",
+      "topic": "r1-ops-12",
+      "ts": "2026-05-13"
+    },
+    {
+      "attrs": {
+        "bad": "没设观察窗口就一口气放量",
+        "is_gold": false,
+        "prescription": "每档放量至少观察 15 分钟再进下一档"
+      },
+      "content": "【前因】演练环境 的 消息队列 有一次故障也踩了坑：没设观察窗口就一口气放量\n【行为】结果放量后错误率翻倍才发现\n【后果】当时的规矩是：每档放量至少观察 15 分钟再进下一档",
+      "created_at": "2026-02-13T08:00:00Z",
+      "id": "hl9F0004",
+      "insert_rank": 2121,
+      "role": "rx_cause",
+      "scenario": "ops",
+      "title": "消息队列故障另一次踩坑：没设观察窗口就一口气",
+      "topic": "r1-ops-12",
+      "ts": "2026-02-13"
+    },
+    {
+      "attrs": {
+        "bad": "分批太大一口气迁",
+        "is_gold": true,
+        "prescription": "单批不超 5000 行且批间停顿"
+      },
+      "content": "【前因】生产库 的 用户档案 这次迁移踩了坑：分批太大一口气迁\n【行为】结果锁表超时拖垮业务\n【后果】后来定下规矩：单批不超 5000 行且批间停顿",
+      "created_at": "2026-05-14T08:00:00Z",
+      "id": "hl9G0003",
+      "insert_rank": 2130,
+      "role": "rx_cause",
+      "scenario": "migration",
+      "title": "用户档案迁移踩坑记录：分批太大一口气迁",
+      "topic": "r1-migration-13",
+      "ts": "2026-05-14"
+    },
+    {
+      "attrs": {
+        "bad": "回滚预案没演练就上线",
+        "is_gold": false,
+        "prescription": "回滚脚本随发布单一并演练留证"
+      },
+      "content": "【前因】迁移库 的 日志索引 有一次迁移也踩了坑：回滚预案没演练就上线\n【行为】结果出问题时回滚脚本跑不起来\n【后果】当时的规矩是：回滚脚本随发布单一并演练留证",
+      "created_at": "2026-02-14T08:00:00Z",
+      "id": "hl9G0004",
+      "insert_rank": 2131,
+      "role": "rx_cause",
+      "scenario": "migration",
+      "title": "日志索引迁移另一次踩坑：回滚预案没演练就上线",
+      "topic": "r1-migration-13",
+      "ts": "2026-02-14"
+    },
+    {
+      "attrs": {
+        "bad": "权限批了没设到期",
+        "is_gold": true,
+        "prescription": "所有临时权限必须带 7 天到期"
+      },
+      "content": "【前因】测试租户 的 配置中心 这次审批踩了坑：权限批了没设到期\n【行为】结果人员离岗权限仍有效\n【后果】后来定下规矩：所有临时权限必须带 7 天到期",
+      "created_at": "2026-05-15T08:00:00Z",
+      "id": "hl9H0003",
+      "insert_rank": 2140,
+      "role": "rx_cause",
+      "scenario": "approval",
+      "title": "配置中心审批踩坑记录：权限批了没设到期",
+      "topic": "r1-approval-14",
+      "ts": "2026-05-15"
+    },
+    {
+      "attrs": {
+        "bad": "灰度名单直接用了全量用户",
+        "is_gold": false,
+        "prescription": "灰度名单固定 10% 内部用户"
+      },
+      "content": "【前因】生产租户 的 生产库账号 有一次审批也踩了坑：灰度名单直接用了全量用户\n【行为】结果灰度验证失去意义\n【后果】当时的规矩是：灰度名单固定 10% 内部用户",
+      "created_at": "2026-02-15T08:00:00Z",
+      "id": "hl9H0004",
+      "insert_rank": 2141,
+      "role": "rx_cause",
+      "scenario": "approval",
+      "title": "生产库账号审批另一次踩坑：灰度名单直接用了全量",
+      "topic": "r1-approval-14",
+      "ts": "2026-02-15"
+    },
+    {
+      "attrs": {
+        "bad": "审批只看申请不看范围",
+        "is_gold": true,
+        "prescription": "审批按最小权限逐项勾选"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线踩了坑：审批只看申请不看范围\n【行为】结果申请只读却拿到写权限\n【后果】后来定下规矩：审批按最小权限逐项勾选",
+      "created_at": "2026-05-16T08:00:00Z",
+      "id": "hl9A0003",
+      "insert_rank": 2150,
+      "role": "rx_cause",
+      "scenario": "deploy",
+      "title": "会员服务上线踩坑记录：审批只看申请不看范围",
+      "topic": "r1-deploy-15",
+      "ts": "2026-05-16"
+    },
+    {
+      "attrs": {
+        "bad": "联调时没对签名时间窗",
+        "is_gold": false,
+        "prescription": "对接文档写明时间窗容差并双向校时"
+      },
+      "content": "【前因】预发 的 订单服务 有一次上线也踩了坑：联调时没对签名时间窗\n【行为】结果上线后批量验签失败\n【后果】当时的规矩是：对接文档写明时间窗容差并双向校时",
+      "created_at": "2026-02-16T08:00:00Z",
+      "id": "hl9A0004",
+      "insert_rank": 2151,
+      "role": "rx_cause",
+      "scenario": "deploy",
+      "title": "订单服务上线另一次踩坑：联调时没对签名时间窗",
+      "topic": "r1-deploy-15",
+      "ts": "2026-02-16"
+    },
+    {
+      "attrs": {
+        "action": "把超时从 3 秒改成 1 秒",
+        "is_gold": true,
+        "outcome": "长尾请求被掐断引发告警"
+      },
+      "content": "【前因】灰度组 的 推荐服务 那次灰度\n【行为】做了 把超时从 3 秒改成 1 秒\n【后果】结果长尾请求被掐断引发告警",
+      "created_at": "2026-04-01T08:00:00Z",
+      "id": "hl9B0005",
+      "insert_rank": 3000,
+      "role": "rx_event",
+      "scenario": "canary",
+      "title": "推荐服务灰度事件：把超时从 3 秒改成",
+      "topic": "r2-canary-0",
+      "ts": "2026-04-01"
+    },
+    {
+      "attrs": {
+        "action": "在群里转发了密钥截图",
+        "is_gold": false,
+        "outcome": "截图被二次传播"
+      },
+      "content": "【前因】全量组 的 搜索服务 另一次灰度\n【行为】做了 在群里转发了密钥截图\n【后果】结果截图被二次传播",
+      "created_at": "2026-01-01T08:00:00Z",
+      "id": "hl9B0006",
+      "insert_rank": 3001,
+      "role": "rx_event",
+      "scenario": "canary",
+      "title": "搜索服务灰度另一次：在群里转发了密钥截图",
+      "topic": "r2-canary-0",
+      "ts": "2026-01-01"
+    },
+    {
+      "attrs": {
+        "action": "直接改了生产库索引",
+        "is_gold": true,
+        "outcome": "写入抖动持续两小时"
+      },
+      "content": "【前因】正式 的 回调接口 那次接口\n【行为】做了 直接改了生产库索引\n【后果】结果写入抖动持续两小时",
+      "created_at": "2026-04-02T08:00:00Z",
+      "id": "hl9C0005",
+      "insert_rank": 3010,
+      "role": "rx_event",
+      "scenario": "api",
+      "title": "回调接口接口事件：直接改了生产库索引",
+      "topic": "r2-api-1",
+      "ts": "2026-04-02"
+    },
+    {
+      "attrs": {
+        "action": "口径没试算就上线报表",
+        "is_gold": false,
+        "outcome": "首日数字全线偏差"
+      },
+      "content": "【前因】沙箱 的 查询接口 另一次接口\n【行为】做了 口径没试算就上线报表\n【后果】结果首日数字全线偏差",
+      "created_at": "2026-01-02T08:00:00Z",
+      "id": "hl9C0006",
+      "insert_rank": 3011,
+      "role": "rx_event",
+      "scenario": "api",
+      "title": "查询接口接口另一次：口径没试算就上线报表",
+      "topic": "r2-api-1",
+      "ts": "2026-01-02"
+    },
+    {
+      "attrs": {
+        "action": "灰度比例一步拉到全量",
+        "is_gold": true,
+        "outcome": "全量用户瞬间受影响"
+      },
+      "content": "【前因】本机 的 监控看板 那次交接\n【行为】做了 灰度比例一步拉到全量\n【后果】结果全量用户瞬间受影响",
+      "created_at": "2026-04-03T08:00:00Z",
+      "id": "hl9D0005",
+      "insert_rank": 3020,
+      "role": "rx_event",
+      "scenario": "handoff",
+      "title": "监控看板交接事件：灰度比例一步拉到全量",
+      "topic": "r2-handoff-2",
+      "ts": "2026-04-03"
+    },
+    {
+      "attrs": {
+        "action": "纪要漏发给了数据组",
+        "is_gold": false,
+        "outcome": "第二天又返工重出"
+      },
+      "content": "【前因】跳板机 的 值班手册 另一次交接\n【行为】做了 纪要漏发给了数据组\n【后果】结果第二天又返工重出",
+      "created_at": "2026-01-03T08:00:00Z",
+      "id": "hl9D0006",
+      "insert_rank": 3021,
+      "role": "rx_event",
+      "scenario": "handoff",
+      "title": "值班手册交接另一次：纪要漏发给了数据组",
+      "topic": "r2-handoff-2",
+      "ts": "2026-01-03"
+    },
+    {
+      "attrs": {
+        "action": "回滚时只回了代码没回配置",
+        "is_gold": true,
+        "outcome": "新旧配置混跑报错"
+      },
+      "content": "【前因】评审会 的 指标口径 那次会议\n【行为】做了 回滚时只回了代码没回配置\n【后果】结果新旧配置混跑报错",
+      "created_at": "2026-04-04T08:00:00Z",
+      "id": "hl9E0005",
+      "insert_rank": 3030,
+      "role": "rx_event",
+      "scenario": "meeting",
+      "title": "指标口径会议事件：回滚时只回了代码没回",
+      "topic": "r2-meeting-3",
+      "ts": "2026-04-04"
+    },
+    {
+      "attrs": {
+        "action": "扩容时关了熔断保护",
+        "is_gold": false,
+        "outcome": "下游被瞬时打挂"
+      },
+      "content": "【前因】周会 的 统计规范 另一次会议\n【行为】做了 扩容时关了熔断保护\n【后果】结果下游被瞬时打挂",
+      "created_at": "2026-01-04T08:00:00Z",
+      "id": "hl9E0006",
+      "insert_rank": 3031,
+      "role": "rx_event",
+      "scenario": "meeting",
+      "title": "统计规范会议另一次：扩容时关了熔断保护",
+      "topic": "r2-meeting-3",
+      "ts": "2026-01-04"
+    },
+    {
+      "attrs": {
+        "action": "联调用了假数据没走真链路",
+        "is_gold": true,
+        "outcome": "上线后字段类型对不上"
+      },
+      "content": "【前因】线上 的 消息队列 那次故障\n【行为】做了 联调用了假数据没走真链路\n【后果】结果上线后字段类型对不上",
+      "created_at": "2026-04-05T08:00:00Z",
+      "id": "hl9F0005",
+      "insert_rank": 3040,
+      "role": "rx_event",
+      "scenario": "ops",
+      "title": "消息队列故障事件：联调用了假数据没走真",
+      "topic": "r2-ops-4",
+      "ts": "2026-04-05"
+    },
+    {
+      "attrs": {
+        "action": "回滚没通知业务方",
+        "is_gold": false,
+        "outcome": "业务侧误判为再次故障"
+      },
+      "content": "【前因】演练环境 的 数据库主库 另一次故障\n【行为】做了 回滚没通知业务方\n【后果】结果业务侧误判为再次故障",
+      "created_at": "2026-01-05T08:00:00Z",
+      "id": "hl9F0006",
+      "insert_rank": 3041,
+      "role": "rx_event",
+      "scenario": "ops",
+      "title": "数据库主库故障另一次：回滚没通知业务方",
+      "topic": "r2-ops-4",
+      "ts": "2026-01-05"
+    },
+    {
+      "attrs": {
+        "action": "回调地址填成了测试域名",
+        "is_gold": true,
+        "outcome": "生产事件全部丢弃"
+      },
+      "content": "【前因】生产库 的 日志索引 那次迁移\n【行为】做了 回调地址填成了测试域名\n【后果】结果生产事件全部丢弃",
+      "created_at": "2026-04-06T08:00:00Z",
+      "id": "hl9G0005",
+      "insert_rank": 3050,
+      "role": "rx_event",
+      "scenario": "migration",
+      "title": "日志索引迁移事件：回调地址填成了测试域",
+      "topic": "r2-migration-5",
+      "ts": "2026-04-06"
+    },
+    {
+      "attrs": {
+        "action": "迁移时开了无条件覆盖",
+        "is_gold": false,
+        "outcome": "增量数据被旧值盖掉"
+      },
+      "content": "【前因】迁移库 的 历史订单表 另一次迁移\n【行为】做了 迁移时开了无条件覆盖\n【后果】结果增量数据被旧值盖掉",
+      "created_at": "2026-01-06T08:00:00Z",
+      "id": "hl9G0006",
+      "insert_rank": 3051,
+      "role": "rx_event",
+      "scenario": "migration",
+      "title": "历史订单表迁移另一次：迁移时开了无条件覆盖",
+      "topic": "r2-migration-5",
+      "ts": "2026-01-06"
+    },
+    {
+      "attrs": {
+        "action": "把凭据直接贴进了纪要",
+        "is_gold": true,
+        "outcome": "凭据被迫全量轮换"
+      },
+      "content": "【前因】测试租户 的 生产库账号 那次审批\n【行为】做了 把凭据直接贴进了纪要\n【后果】结果凭据被迫全量轮换",
+      "created_at": "2026-04-07T08:00:00Z",
+      "id": "hl9H0005",
+      "insert_rank": 3060,
+      "role": "rx_event",
+      "scenario": "approval",
+      "title": "生产库账号审批事件：把凭据直接贴进了纪要",
+      "topic": "r2-approval-6",
+      "ts": "2026-04-07"
+    },
+    {
+      "attrs": {
+        "action": "回灌中途改了字段映射",
+        "is_gold": false,
+        "outcome": "半张表键值错位"
+      },
+      "content": "【前因】生产租户 的 发布平台 另一次审批\n【行为】做了 回灌中途改了字段映射\n【后果】结果半张表键值错位",
+      "created_at": "2026-01-07T08:00:00Z",
+      "id": "hl9H0006",
+      "insert_rank": 3061,
+      "role": "rx_event",
+      "scenario": "approval",
+      "title": "发布平台审批另一次：回灌中途改了字段映射",
+      "topic": "r2-approval-6",
+      "ts": "2026-01-07"
+    },
+    {
+      "attrs": {
+        "action": "在群里转发了密钥截图",
+        "is_gold": true,
+        "outcome": "截图被二次传播"
+      },
+      "content": "【前因】生产 的 会员服务 那次上线\n【行为】做了 在群里转发了密钥截图\n【后果】结果截图被二次传播",
+      "created_at": "2026-04-08T08:00:00Z",
+      "id": "hl9A0005",
+      "insert_rank": 3070,
+      "role": "rx_event",
+      "scenario": "deploy",
+      "title": "会员服务上线事件：在群里转发了密钥截图",
+      "topic": "r2-deploy-7",
+      "ts": "2026-04-08"
+    },
+    {
+      "attrs": {
+        "action": "审批加急跳过了复核",
+        "is_gold": false,
+        "outcome": "错误授权直接生效"
+      },
+      "content": "【前因】预发 的 订单服务 另一次上线\n【行为】做了 审批加急跳过了复核\n【后果】结果错误授权直接生效",
+      "created_at": "2026-01-08T08:00:00Z",
+      "id": "hl9A0006",
+      "insert_rank": 3071,
+      "role": "rx_event",
+      "scenario": "deploy",
+      "title": "订单服务上线另一次：审批加急跳过了复核",
+      "topic": "r2-deploy-7",
+      "ts": "2026-01-08"
+    },
+    {
+      "attrs": {
+        "action": "口径没试算就上线报表",
+        "is_gold": true,
+        "outcome": "首日数字全线偏差"
+      },
+      "content": "【前因】灰度组 的 风控服务 那次灰度\n【行为】做了 口径没试算就上线报表\n【后果】结果首日数字全线偏差",
+      "created_at": "2026-04-09T08:00:00Z",
+      "id": "hl9B0007",
+      "insert_rank": 3080,
+      "role": "rx_event",
+      "scenario": "canary",
+      "title": "风控服务灰度事件：口径没试算就上线报表",
+      "topic": "r2-canary-8",
+      "ts": "2026-04-09"
+    },
+    {
+      "attrs": {
+        "action": "授权范围整包勾选",
+        "is_gold": false,
+        "outcome": "越权写入了配置"
+      },
+      "content": "【前因】全量组 的 推荐服务 另一次灰度\n【行为】做了 授权范围整包勾选\n【后果】结果越权写入了配置",
+      "created_at": "2026-01-09T08:00:00Z",
+      "id": "hl9B0008",
+      "insert_rank": 3081,
+      "role": "rx_event",
+      "scenario": "canary",
+      "title": "推荐服务灰度另一次：授权范围整包勾选",
+      "topic": "r2-canary-8",
+      "ts": "2026-01-09"
+    },
+    {
+      "attrs": {
+        "action": "纪要漏发给了数据组",
+        "is_gold": true,
+        "outcome": "第二天又返工重出"
+      },
+      "content": "【前因】正式 的 对账接口 那次接口\n【行为】做了 纪要漏发给了数据组\n【后果】结果第二天又返工重出",
+      "created_at": "2026-04-10T08:00:00Z",
+      "id": "hl9C0007",
+      "insert_rank": 3090,
+      "role": "rx_event",
+      "scenario": "api",
+      "title": "对账接口接口事件：纪要漏发给了数据组",
+      "topic": "r2-api-9",
+      "ts": "2026-04-10"
+    },
+    {
+      "attrs": {
+        "action": "把超时从 3 秒改成 1 秒",
+        "is_gold": false,
+        "outcome": "长尾请求被掐断引发告警"
+      },
+      "content": "【前因】沙箱 的 回调接口 另一次接口\n【行为】做了 把超时从 3 秒改成 1 秒\n【后果】结果长尾请求被掐断引发告警",
+      "created_at": "2026-01-10T08:00:00Z",
+      "id": "hl9C0008",
+      "insert_rank": 3091,
+      "role": "rx_event",
+      "scenario": "api",
+      "title": "回调接口接口另一次：把超时从 3 秒改成",
+      "topic": "r2-api-9",
+      "ts": "2026-01-10"
+    },
+    {
+      "attrs": {
+        "action": "扩容时关了熔断保护",
+        "is_gold": true,
+        "outcome": "下游被瞬时打挂"
+      },
+      "content": "【前因】本机 的 定时任务 那次交接\n【行为】做了 扩容时关了熔断保护\n【后果】结果下游被瞬时打挂",
+      "created_at": "2026-04-11T08:00:00Z",
+      "id": "hl9D0007",
+      "insert_rank": 3100,
+      "role": "rx_event",
+      "scenario": "handoff",
+      "title": "定时任务交接事件：扩容时关了熔断保护",
+      "topic": "r2-handoff-10",
+      "ts": "2026-04-11"
+    },
+    {
+      "attrs": {
+        "action": "直接改了生产库索引",
+        "is_gold": false,
+        "outcome": "写入抖动持续两小时"
+      },
+      "content": "【前因】跳板机 的 监控看板 另一次交接\n【行为】做了 直接改了生产库索引\n【后果】结果写入抖动持续两小时",
+      "created_at": "2026-01-11T08:00:00Z",
+      "id": "hl9D0008",
+      "insert_rank": 3101,
+      "role": "rx_event",
+      "scenario": "handoff",
+      "title": "监控看板交接另一次：直接改了生产库索引",
+      "topic": "r2-handoff-10",
+      "ts": "2026-01-11"
+    },
+    {
+      "attrs": {
+        "action": "回滚没通知业务方",
+        "is_gold": true,
+        "outcome": "业务侧误判为再次故障"
+      },
+      "content": "【前因】评审会 的 命名规范 那次会议\n【行为】做了 回滚没通知业务方\n【后果】结果业务侧误判为再次故障",
+      "created_at": "2026-04-12T08:00:00Z",
+      "id": "hl9E0007",
+      "insert_rank": 3110,
+      "role": "rx_event",
+      "scenario": "meeting",
+      "title": "命名规范会议事件：回滚没通知业务方",
+      "topic": "r2-meeting-11",
+      "ts": "2026-04-12"
+    },
+    {
+      "attrs": {
+        "action": "灰度比例一步拉到全量",
+        "is_gold": false,
+        "outcome": "全量用户瞬间受影响"
+      },
+      "content": "【前因】周会 的 指标口径 另一次会议\n【行为】做了 灰度比例一步拉到全量\n【后果】结果全量用户瞬间受影响",
+      "created_at": "2026-01-12T08:00:00Z",
+      "id": "hl9E0008",
+      "insert_rank": 3111,
+      "role": "rx_event",
+      "scenario": "meeting",
+      "title": "指标口径会议另一次：灰度比例一步拉到全量",
+      "topic": "r2-meeting-11",
+      "ts": "2026-01-12"
+    },
+    {
+      "attrs": {
+        "action": "迁移时开了无条件覆盖",
+        "is_gold": true,
+        "outcome": "增量数据被旧值盖掉"
+      },
+      "content": "【前因】线上 的 支付回调 那次故障\n【行为】做了 迁移时开了无条件覆盖\n【后果】结果增量数据被旧值盖掉",
+      "created_at": "2026-04-13T08:00:00Z",
+      "id": "hl9F0007",
+      "insert_rank": 3120,
+      "role": "rx_event",
+      "scenario": "ops",
+      "title": "支付回调故障事件：迁移时开了无条件覆盖",
+      "topic": "r2-ops-12",
+      "ts": "2026-04-13"
+    },
+    {
+      "attrs": {
+        "action": "回滚时只回了代码没回配置",
+        "is_gold": false,
+        "outcome": "新旧配置混跑报错"
+      },
+      "content": "【前因】演练环境 的 消息队列 另一次故障\n【行为】做了 回滚时只回了代码没回配置\n【后果】结果新旧配置混跑报错",
+      "created_at": "2026-01-13T08:00:00Z",
+      "id": "hl9F0008",
+      "insert_rank": 3121,
+      "role": "rx_event",
+      "scenario": "ops",
+      "title": "消息队列故障另一次：回滚时只回了代码没回",
+      "topic": "r2-ops-12",
+      "ts": "2026-01-13"
+    },
+    {
+      "attrs": {
+        "action": "回灌中途改了字段映射",
+        "is_gold": true,
+        "outcome": "半张表键值错位"
+      },
+      "content": "【前因】生产库 的 用户档案 那次迁移\n【行为】做了 回灌中途改了字段映射\n【后果】结果半张表键值错位",
+      "created_at": "2026-04-14T08:00:00Z",
+      "id": "hl9G0007",
+      "insert_rank": 3130,
+      "role": "rx_event",
+      "scenario": "migration",
+      "title": "用户档案迁移事件：回灌中途改了字段映射",
+      "topic": "r2-migration-13",
+      "ts": "2026-04-14"
+    },
+    {
+      "attrs": {
+        "action": "联调用了假数据没走真链路",
+        "is_gold": false,
+        "outcome": "上线后字段类型对不上"
+      },
+      "content": "【前因】迁移库 的 日志索引 另一次迁移\n【行为】做了 联调用了假数据没走真链路\n【后果】结果上线后字段类型对不上",
+      "created_at": "2026-01-14T08:00:00Z",
+      "id": "hl9G0008",
+      "insert_rank": 3131,
+      "role": "rx_event",
+      "scenario": "migration",
+      "title": "日志索引迁移另一次：联调用了假数据没走真",
+      "topic": "r2-migration-13",
+      "ts": "2026-01-14"
+    },
+    {
+      "attrs": {
+        "action": "审批加急跳过了复核",
+        "is_gold": true,
+        "outcome": "错误授权直接生效"
+      },
+      "content": "【前因】测试租户 的 配置中心 那次审批\n【行为】做了 审批加急跳过了复核\n【后果】结果错误授权直接生效",
+      "created_at": "2026-04-15T08:00:00Z",
+      "id": "hl9H0007",
+      "insert_rank": 3140,
+      "role": "rx_event",
+      "scenario": "approval",
+      "title": "配置中心审批事件：审批加急跳过了复核",
+      "topic": "r2-approval-14",
+      "ts": "2026-04-15"
+    },
+    {
+      "attrs": {
+        "action": "回调地址填成了测试域名",
+        "is_gold": false,
+        "outcome": "生产事件全部丢弃"
+      },
+      "content": "【前因】生产租户 的 生产库账号 另一次审批\n【行为】做了 回调地址填成了测试域名\n【后果】结果生产事件全部丢弃",
+      "created_at": "2026-01-15T08:00:00Z",
+      "id": "hl9H0008",
+      "insert_rank": 3141,
+      "role": "rx_event",
+      "scenario": "approval",
+      "title": "生产库账号审批另一次：回调地址填成了测试域",
+      "topic": "r2-approval-14",
+      "ts": "2026-01-15"
+    },
+    {
+      "attrs": {
+        "action": "授权范围整包勾选",
+        "is_gold": true,
+        "outcome": "越权写入了配置"
+      },
+      "content": "【前因】生产 的 会员服务 那次上线\n【行为】做了 授权范围整包勾选\n【后果】结果越权写入了配置",
+      "created_at": "2026-04-16T08:00:00Z",
+      "id": "hl9A0007",
+      "insert_rank": 3150,
+      "role": "rx_event",
+      "scenario": "deploy",
+      "title": "会员服务上线事件：授权范围整包勾选",
+      "topic": "r2-deploy-15",
+      "ts": "2026-04-16"
+    },
+    {
+      "attrs": {
+        "action": "把凭据直接贴进了纪要",
+        "is_gold": false,
+        "outcome": "凭据被迫全量轮换"
+      },
+      "content": "【前因】预发 的 订单服务 另一次上线\n【行为】做了 把凭据直接贴进了纪要\n【后果】结果凭据被迫全量轮换",
+      "created_at": "2026-01-16T08:00:00Z",
+      "id": "hl9A0008",
+      "insert_rank": 3151,
+      "role": "rx_event",
+      "scenario": "deploy",
+      "title": "订单服务上线另一次：把凭据直接贴进了纪要",
+      "topic": "r2-deploy-15",
+      "ts": "2026-01-16"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "灰度比例",
+        "value": "10%"
+      },
+      "content": "【前因】灰度组 的 推荐服务 那次灰度\n【行为】当时 灰度比例 记的是 10%\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9B0009",
+      "insert_rank": 4000,
+      "role": "stale",
+      "scenario": "canary",
+      "title": "推荐服务灰度灰度比例旧记：10%",
+      "topic": "r3-canary-0",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "灰度比例",
+        "value": "15 分钟"
+      },
+      "content": "【前因】灰度组 的 推荐服务 这次灰度后\n【行为】灰度比例 后来更新为 15 分钟\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9B0010",
+      "insert_rank": 4001,
+      "role": "fresh",
+      "scenario": "canary",
+      "title": "推荐服务灰度灰度比例新记：15 分钟",
+      "topic": "r3-canary-0",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "重试次数",
+        "value": "2 次"
+      },
+      "content": "【前因】正式 的 回调接口 那次接口\n【行为】当时 重试次数 记的是 2 次\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9C0009",
+      "insert_rank": 4010,
+      "role": "stale",
+      "scenario": "api",
+      "title": "回调接口接口重试次数旧记：2 次",
+      "topic": "r3-api-1",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "重试次数",
+        "value": "HMAC-SHA256"
+      },
+      "content": "【前因】正式 的 回调接口 这次接口后\n【行为】重试次数 后来更新为 HMAC-SHA256\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9C0010",
+      "insert_rank": 4011,
+      "role": "fresh",
+      "scenario": "api",
+      "title": "回调接口接口重试次数新记：HMAC-SHA256",
+      "topic": "r3-api-1",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "日志目录",
+        "value": "/var/log/app"
+      },
+      "content": "【前因】本机 的 监控看板 那次交接\n【行为】当时 日志目录 记的是 /var/log/app\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9D0009",
+      "insert_rank": 4020,
+      "role": "stale",
+      "scenario": "handoff",
+      "title": "监控看板交接日志目录旧记：/var/log/app",
+      "topic": "r3-handoff-2",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "日志目录",
+        "value": "/opt/ops/run.sh"
+      },
+      "content": "【前因】本机 的 监控看板 这次交接后\n【行为】日志目录 后来更新为 /opt/ops/run.sh\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9D0010",
+      "insert_rank": 4021,
+      "role": "fresh",
+      "scenario": "handoff",
+      "title": "监控看板交接日志目录新记：/opt/ops/run.sh",
+      "topic": "r3-handoff-2",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "统计周期",
+        "value": "自然周"
+      },
+      "content": "【前因】评审会 的 指标口径 那次会议\n【行为】当时 统计周期 记的是 自然周\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9E0009",
+      "insert_rank": 4030,
+      "role": "stale",
+      "scenario": "meeting",
+      "title": "指标口径会议统计周期旧记：自然周",
+      "topic": "r3-meeting-3",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "统计周期",
+        "value": "按下单时间"
+      },
+      "content": "【前因】评审会 的 指标口径 这次会议后\n【行为】统计周期 后来更新为 按下单时间\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9E0010",
+      "insert_rank": 4031,
+      "role": "fresh",
+      "scenario": "meeting",
+      "title": "指标口径会议统计周期新记：按下单时间",
+      "topic": "r3-meeting-3",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "扩容策略",
+        "value": "先加两副本"
+      },
+      "content": "【前因】线上 的 消息队列 那次故障\n【行为】当时 扩容策略 记的是 先加两副本\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9F0009",
+      "insert_rank": 4040,
+      "role": "stale",
+      "scenario": "ops",
+      "title": "消息队列故障扩容策略旧记：先加两副本",
+      "topic": "r3-ops-4",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "扩容策略",
+        "value": "上一个稳定版本"
+      },
+      "content": "【前因】线上 的 消息队列 这次故障后\n【行为】扩容策略 后来更新为 上一个稳定版本\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9F0010",
+      "insert_rank": 4041,
+      "role": "fresh",
+      "scenario": "ops",
+      "title": "消息队列故障扩容策略新记：上一个稳定版本",
+      "topic": "r3-ops-4",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "切换时点",
+        "value": "凌晨 3 点"
+      },
+      "content": "【前因】生产库 的 日志索引 那次迁移\n【行为】当时 切换时点 记的是 凌晨 3 点\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9G0009",
+      "insert_rank": 4050,
+      "role": "stale",
+      "scenario": "migration",
+      "title": "日志索引迁移切换时点旧记：凌晨 3 点",
+      "topic": "r3-migration-5",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "切换时点",
+        "value": "5000 行"
+      },
+      "content": "【前因】生产库 的 日志索引 这次迁移后\n【行为】切换时点 后来更新为 5000 行\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9G0010",
+      "insert_rank": 4051,
+      "role": "fresh",
+      "scenario": "migration",
+      "title": "日志索引迁移切换时点新记：5000 行",
+      "topic": "r3-migration-5",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "审批人",
+        "value": "组长加 DBA"
+      },
+      "content": "【前因】测试租户 的 生产库账号 那次审批\n【行为】当时 审批人 记的是 组长加 DBA\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9H0009",
+      "insert_rank": 4060,
+      "role": "stale",
+      "scenario": "approval",
+      "title": "生产库账号审批审批人旧记：组长加 DBA",
+      "topic": "r3-approval-6",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "审批人",
+        "value": "7 天"
+      },
+      "content": "【前因】测试租户 的 生产库账号 这次审批后\n【行为】审批人 后来更新为 7 天\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9H0010",
+      "insert_rank": 4061,
+      "role": "fresh",
+      "scenario": "approval",
+      "title": "生产库账号审批审批人新记：7 天",
+      "topic": "r3-approval-6",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "v2.3.1"
+      },
+      "content": "【前因】生产 的 会员服务 那次上线\n【行为】当时 镜像版本 记的是 v2.3.1\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9A0009",
+      "insert_rank": 4070,
+      "role": "stale",
+      "scenario": "deploy",
+      "title": "会员服务上线镜像版本旧记：v2.3.1",
+      "topic": "r3-deploy-7",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "镜像版本",
+        "value": "max-conn=200"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线后\n【行为】镜像版本 后来更新为 max-conn=200\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9A0010",
+      "insert_rank": 4071,
+      "role": "fresh",
+      "scenario": "deploy",
+      "title": "会员服务上线镜像版本新记：max-conn=200",
+      "topic": "r3-deploy-7",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "放量档位",
+        "value": "10→30→100"
+      },
+      "content": "【前因】灰度组 的 风控服务 那次灰度\n【行为】当时 放量档位 记的是 10→30→100\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9B0011",
+      "insert_rank": 4080,
+      "role": "stale",
+      "scenario": "canary",
+      "title": "风控服务灰度放量档位旧记：10→30→100",
+      "topic": "r3-canary-8",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "放量档位",
+        "value": "10%"
+      },
+      "content": "【前因】灰度组 的 风控服务 这次灰度后\n【行为】放量档位 后来更新为 10%\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9B0012",
+      "insert_rank": 4081,
+      "role": "fresh",
+      "scenario": "canary",
+      "title": "风控服务灰度放量档位新记：10%",
+      "topic": "r3-canary-8",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "超时",
+        "value": "3 秒"
+      },
+      "content": "【前因】正式 的 对账接口 那次接口\n【行为】当时 超时 记的是 3 秒\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9C0011",
+      "insert_rank": 4090,
+      "role": "stale",
+      "scenario": "api",
+      "title": "对账接口接口超时旧记：3 秒",
+      "topic": "r3-api-9",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "超时",
+        "value": "2 次"
+      },
+      "content": "【前因】正式 的 对账接口 这次接口后\n【行为】超时 后来更新为 2 次\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9C0012",
+      "insert_rank": 4091,
+      "role": "fresh",
+      "scenario": "api",
+      "title": "对账接口接口超时新记：2 次",
+      "topic": "r3-api-9",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "告警接收人",
+        "value": "当班组"
+      },
+      "content": "【前因】本机 的 定时任务 那次交接\n【行为】当时 告警接收人 记的是 当班组\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9D0011",
+      "insert_rank": 4100,
+      "role": "stale",
+      "scenario": "handoff",
+      "title": "定时任务交接告警接收人旧记：当班组",
+      "topic": "r3-handoff-10",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "告警接收人",
+        "value": "/var/log/app"
+      },
+      "content": "【前因】本机 的 定时任务 这次交接后\n【行为】告警接收人 后来更新为 /var/log/app\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9D0012",
+      "insert_rank": 4101,
+      "role": "fresh",
+      "scenario": "handoff",
+      "title": "定时任务交接告警接收人新记：/var/log/app",
+      "topic": "r3-handoff-10",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "生效时间",
+        "value": "下个迭代"
+      },
+      "content": "【前因】评审会 的 命名规范 那次会议\n【行为】当时 生效时间 记的是 下个迭代\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9E0011",
+      "insert_rank": 4110,
+      "role": "stale",
+      "scenario": "meeting",
+      "title": "命名规范会议生效时间旧记：下个迭代",
+      "topic": "r3-meeting-11",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "生效时间",
+        "value": "自然周"
+      },
+      "content": "【前因】评审会 的 命名规范 这次会议后\n【行为】生效时间 后来更新为 自然周\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9E0012",
+      "insert_rank": 4111,
+      "role": "fresh",
+      "scenario": "meeting",
+      "title": "命名规范会议生效时间新记：自然周",
+      "topic": "r3-meeting-11",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "熔断阈值",
+        "value": "连续 5 次"
+      },
+      "content": "【前因】线上 的 支付回调 那次故障\n【行为】当时 熔断阈值 记的是 连续 5 次\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9F0011",
+      "insert_rank": 4120,
+      "role": "stale",
+      "scenario": "ops",
+      "title": "支付回调故障熔断阈值旧记：连续 5 次",
+      "topic": "r3-ops-12",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "熔断阈值",
+        "value": "先加两副本"
+      },
+      "content": "【前因】线上 的 支付回调 这次故障后\n【行为】熔断阈值 后来更新为 先加两副本\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9F0012",
+      "insert_rank": 4121,
+      "role": "fresh",
+      "scenario": "ops",
+      "title": "支付回调故障熔断阈值新记：先加两副本",
+      "topic": "r3-ops-12",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "校验方式",
+        "value": "抽样比对"
+      },
+      "content": "【前因】生产库 的 用户档案 那次迁移\n【行为】当时 校验方式 记的是 抽样比对\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9G0011",
+      "insert_rank": 4130,
+      "role": "stale",
+      "scenario": "migration",
+      "title": "用户档案迁移校验方式旧记：抽样比对",
+      "topic": "r3-migration-13",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "校验方式",
+        "value": "凌晨 3 点"
+      },
+      "content": "【前因】生产库 的 用户档案 这次迁移后\n【行为】校验方式 后来更新为 凌晨 3 点\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9G0012",
+      "insert_rank": 4131,
+      "role": "fresh",
+      "scenario": "migration",
+      "title": "用户档案迁移校验方式新记：凌晨 3 点",
+      "topic": "r3-migration-13",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "授权范围",
+        "value": "只读"
+      },
+      "content": "【前因】测试租户 的 配置中心 那次审批\n【行为】当时 授权范围 记的是 只读\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9H0011",
+      "insert_rank": 4140,
+      "role": "stale",
+      "scenario": "approval",
+      "title": "配置中心审批授权范围旧记：只读",
+      "topic": "r3-approval-14",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "授权范围",
+        "value": "组长加 DBA"
+      },
+      "content": "【前因】测试租户 的 配置中心 这次审批后\n【行为】授权范围 后来更新为 组长加 DBA\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9H0012",
+      "insert_rank": 4141,
+      "role": "fresh",
+      "scenario": "approval",
+      "title": "配置中心审批授权范围新记：组长加 DBA",
+      "topic": "r3-approval-14",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "v2.3.1"
+      },
+      "content": "【前因】生产 的 会员服务 那次上线\n【行为】当时 镜像版本 记的是 v2.3.1\n【后果】那条记录停在三月，后来被更新过",
+      "created_at": "2026-03-05T08:00:00Z",
+      "id": "hl9A0011",
+      "insert_rank": 4150,
+      "role": "stale",
+      "scenario": "deploy",
+      "title": "会员服务上线镜像版本旧记：v2.3.1",
+      "topic": "r3-deploy-15",
+      "ts": "2026-03-05"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "param": "镜像版本",
+        "value": "max-conn=200"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线后\n【行为】镜像版本 后来更新为 max-conn=200\n【后果】九月的记录写明以此为准",
+      "created_at": "2026-09-20T08:00:00Z",
+      "id": "hl9A0012",
+      "insert_rank": 4151,
+      "role": "fresh",
+      "scenario": "deploy",
+      "title": "会员服务上线镜像版本新记：max-conn=200",
+      "topic": "r3-deploy-15",
+      "ts": "2026-09-20"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "三次返工都卡在同一步：变更前没有双人复核"
+      },
+      "content": "【前因】把 灰度组 的 推荐服务 这几次灰度放在一起看\n【行为】主线是：三次返工都卡在同一步：变更前没有双人复核\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-01T08:00:00Z",
+      "id": "hl9B0013",
+      "insert_rank": 6000,
+      "role": "rx_mainline",
+      "scenario": "canary",
+      "title": "推荐服务灰度主线复盘",
+      "topic": "r4-canary-0",
+      "ts": "2026-06-01"
+    },
+    {
+      "attrs": {
+        "detail": "把重试从 0 次调到 2 次",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-01 灰度组 的 推荐服务 单独一次灰度\n【行为】那回具体动了：把重试从 0 次调到 2 次\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-01T09:00:00Z",
+      "id": "hl9B0014",
+      "insert_rank": 6001,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "推荐服务灰度细节第1记：把重试从 0 次",
+      "topic": "r4-canary-0",
+      "ts": "2026-01-01"
+    },
+    {
+      "attrs": {
+        "detail": "灰度比例从 5% 提到 15%",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-02 灰度组 的 推荐服务 单独一次灰度\n【行为】那回具体动了：灰度比例从 5% 提到 15%\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-02T09:00:00Z",
+      "id": "hl9B0015",
+      "insert_rank": 6002,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "推荐服务灰度细节第2记：灰度比例从 5%",
+      "topic": "r4-canary-0",
+      "ts": "2026-01-02"
+    },
+    {
+      "attrs": {
+        "detail": "分批大小从 1000 行改成 500 行",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-03 灰度组 的 推荐服务 单独一次灰度\n【行为】那回具体动了：分批大小从 1000 行改成 500 行\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-03T09:00:00Z",
+      "id": "hl9B0016",
+      "insert_rank": 6003,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "推荐服务灰度细节第3记：分批大小从 10",
+      "topic": "r4-canary-0",
+      "ts": "2026-01-03"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "回看这几回，问题都出在没给下游留缓冲时间"
+      },
+      "content": "【前因】把 正式 的 回调接口 这几次接口放在一起看\n【行为】主线是：回看这几回，问题都出在没给下游留缓冲时间\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-02T08:00:00Z",
+      "id": "hl9C0013",
+      "insert_rank": 6010,
+      "role": "rx_mainline",
+      "scenario": "api",
+      "title": "回调接口接口主线复盘",
+      "topic": "r4-api-1",
+      "ts": "2026-06-02"
+    },
+    {
+      "attrs": {
+        "detail": "观察窗口从 5 分钟拉到 15 分钟",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-04 正式 的 回调接口 单独一次接口\n【行为】那回具体动了：观察窗口从 5 分钟拉到 15 分钟\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-04T09:00:00Z",
+      "id": "hl9C0014",
+      "insert_rank": 6011,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "回调接口接口细节第1记：观察窗口从 5 ",
+      "topic": "r4-api-1",
+      "ts": "2026-02-04"
+    },
+    {
+      "attrs": {
+        "detail": "把超时从 1 秒放到 3 秒",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-05 正式 的 回调接口 单独一次接口\n【行为】那回具体动了：把超时从 1 秒放到 3 秒\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-05T09:00:00Z",
+      "id": "hl9C0015",
+      "insert_rank": 6012,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "回调接口接口细节第2记：把超时从 1 秒",
+      "topic": "r4-api-1",
+      "ts": "2026-02-05"
+    },
+    {
+      "attrs": {
+        "detail": "连接池上限从 50 提到 200",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-06 正式 的 回调接口 单独一次接口\n【行为】那回具体动了：连接池上限从 50 提到 200\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-06T09:00:00Z",
+      "id": "hl9C0016",
+      "insert_rank": 6013,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "回调接口接口细节第3记：连接池上限从 5",
+      "topic": "r4-api-1",
+      "ts": "2026-02-06"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "几件事共同点：做完没有回读校验就报完成"
+      },
+      "content": "【前因】把 本机 的 监控看板 这几次交接放在一起看\n【行为】主线是：几件事共同点：做完没有回读校验就报完成\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-03T08:00:00Z",
+      "id": "hl9D0013",
+      "insert_rank": 6020,
+      "role": "rx_mainline",
+      "scenario": "handoff",
+      "title": "监控看板交接主线复盘",
+      "topic": "r4-handoff-2",
+      "ts": "2026-06-03"
+    },
+    {
+      "attrs": {
+        "detail": "回滚点改成了前一晚的快照",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-07 本机 的 监控看板 单独一次交接\n【行为】那回具体动了：回滚点改成了前一晚的快照\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-07T09:00:00Z",
+      "id": "hl9D0014",
+      "insert_rank": 6021,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "监控看板交接细节第1记：回滚点改成了前一",
+      "topic": "r4-handoff-2",
+      "ts": "2026-03-07"
+    },
+    {
+      "attrs": {
+        "detail": "告警接收人换成了当班组",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-08 本机 的 监控看板 单独一次交接\n【行为】那回具体动了：告警接收人换成了当班组\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-08T09:00:00Z",
+      "id": "hl9D0015",
+      "insert_rank": 6022,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "监控看板交接细节第2记：告警接收人换成了",
+      "topic": "r4-handoff-2",
+      "ts": "2026-03-08"
+    },
+    {
+      "attrs": {
+        "detail": "统计周期按自然周重算",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-09 本机 的 监控看板 单独一次交接\n【行为】那回具体动了：统计周期按自然周重算\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-09T09:00:00Z",
+      "id": "hl9D0016",
+      "insert_rank": 6023,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "监控看板交接细节第3记：统计周期按自然周",
+      "topic": "r4-handoff-2",
+      "ts": "2026-03-09"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "几次出岔子都栽在同一件事：交接时没人复核"
+      },
+      "content": "【前因】把 评审会 的 指标口径 这几次会议放在一起看\n【行为】主线是：几次出岔子都栽在同一件事：交接时没人复核\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-04T08:00:00Z",
+      "id": "hl9E0013",
+      "insert_rank": 6030,
+      "role": "rx_mainline",
+      "scenario": "meeting",
+      "title": "指标口径会议主线复盘",
+      "topic": "r4-meeting-3",
+      "ts": "2026-06-04"
+    },
+    {
+      "attrs": {
+        "detail": "校验方式换成抽样比对",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-10 评审会 的 指标口径 单独一次会议\n【行为】那回具体动了：校验方式换成抽样比对\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-10T09:00:00Z",
+      "id": "hl9E0014",
+      "insert_rank": 6031,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "指标口径会议细节第1记：校验方式换成抽样",
+      "topic": "r4-meeting-3",
+      "ts": "2026-04-10"
+    },
+    {
+      "attrs": {
+        "detail": "授权范围收窄到只读",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-11 评审会 的 指标口径 单独一次会议\n【行为】那回具体动了：授权范围收窄到只读\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-11T09:00:00Z",
+      "id": "hl9E0015",
+      "insert_rank": 6032,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "指标口径会议细节第2记：授权范围收窄到只",
+      "topic": "r4-meeting-3",
+      "ts": "2026-04-11"
+    },
+    {
+      "attrs": {
+        "detail": "有效期从 30 天改到 7 天",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-12 评审会 的 指标口径 单独一次会议\n【行为】那回具体动了：有效期从 30 天改到 7 天\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-12T09:00:00Z",
+      "id": "hl9E0016",
+      "insert_rank": 6033,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "指标口径会议细节第3记：有效期从 30 ",
+      "topic": "r4-meeting-3",
+      "ts": "2026-04-12"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "主线很清楚：所有事故都始于跳过了演练"
+      },
+      "content": "【前因】把 线上 的 消息队列 这几次故障放在一起看\n【行为】主线是：主线很清楚：所有事故都始于跳过了演练\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-05T08:00:00Z",
+      "id": "hl9F0013",
+      "insert_rank": 6040,
+      "role": "rx_mainline",
+      "scenario": "ops",
+      "title": "消息队列故障主线复盘",
+      "topic": "r4-ops-4",
+      "ts": "2026-06-05"
+    },
+    {
+      "attrs": {
+        "detail": "日志目录迁到了大盘",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-13 线上 的 消息队列 单独一次故障\n【行为】那回具体动了：日志目录迁到了大盘\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-13T09:00:00Z",
+      "id": "hl9F0014",
+      "insert_rank": 6041,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "消息队列故障细节第1记：日志目录迁到了大",
+      "topic": "r4-ops-4",
+      "ts": "2026-05-13"
+    },
+    {
+      "attrs": {
+        "detail": "脚本路径改成项目内目录",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-14 线上 的 消息队列 单独一次故障\n【行为】那回具体动了：脚本路径改成项目内目录\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-14T09:00:00Z",
+      "id": "hl9F0015",
+      "insert_rank": 6042,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "消息队列故障细节第2记：脚本路径改成项目",
+      "topic": "r4-ops-4",
+      "ts": "2026-05-14"
+    },
+    {
+      "attrs": {
+        "detail": "签名方式换成 HMAC",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-15 线上 的 消息队列 单独一次故障\n【行为】那回具体动了：签名方式换成 HMAC\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-15T09:00:00Z",
+      "id": "hl9F0016",
+      "insert_rank": 6043,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "消息队列故障细节第3记：签名方式换成 H",
+      "topic": "r4-ops-4",
+      "ts": "2026-05-15"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "这几回的通病：信息发了但没确认对方收到"
+      },
+      "content": "【前因】把 生产库 的 日志索引 这几次迁移放在一起看\n【行为】主线是：这几回的通病：信息发了但没确认对方收到\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-06T08:00:00Z",
+      "id": "hl9G0013",
+      "insert_rank": 6050,
+      "role": "rx_mainline",
+      "scenario": "migration",
+      "title": "日志索引迁移主线复盘",
+      "topic": "r4-migration-5",
+      "ts": "2026-06-06"
+    },
+    {
+      "attrs": {
+        "detail": "切换时点挪到凌晨三点",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-16 生产库 的 日志索引 单独一次迁移\n【行为】那回具体动了：切换时点挪到凌晨三点\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-16T09:00:00Z",
+      "id": "hl9G0014",
+      "insert_rank": 6051,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "日志索引迁移细节第1记：切换时点挪到凌晨",
+      "topic": "r4-migration-5",
+      "ts": "2026-06-16"
+    },
+    {
+      "attrs": {
+        "detail": "把重试从 0 次调到 2 次",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-17 生产库 的 日志索引 单独一次迁移\n【行为】那回具体动了：把重试从 0 次调到 2 次\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-17T09:00:00Z",
+      "id": "hl9G0015",
+      "insert_rank": 6052,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "日志索引迁移细节第2记：把重试从 0 次",
+      "topic": "r4-migration-5",
+      "ts": "2026-06-17"
+    },
+    {
+      "attrs": {
+        "detail": "灰度比例从 5% 提到 15%",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-18 生产库 的 日志索引 单独一次迁移\n【行为】那回具体动了：灰度比例从 5% 提到 15%\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-18T09:00:00Z",
+      "id": "hl9G0016",
+      "insert_rank": 6053,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "日志索引迁移细节第3记：灰度比例从 5%",
+      "topic": "r4-migration-5",
+      "ts": "2026-06-18"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "共同根源：配置改了却没同步改文档"
+      },
+      "content": "【前因】把 测试租户 的 生产库账号 这几次审批放在一起看\n【行为】主线是：共同根源：配置改了却没同步改文档\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-07T08:00:00Z",
+      "id": "hl9H0013",
+      "insert_rank": 6060,
+      "role": "rx_mainline",
+      "scenario": "approval",
+      "title": "生产库账号审批主线复盘",
+      "topic": "r4-approval-6",
+      "ts": "2026-06-07"
+    },
+    {
+      "attrs": {
+        "detail": "分批大小从 1000 行改成 500 行",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-19 测试租户 的 生产库账号 单独一次审批\n【行为】那回具体动了：分批大小从 1000 行改成 500 行\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-19T09:00:00Z",
+      "id": "hl9H0014",
+      "insert_rank": 6061,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "生产库账号审批细节第1记：分批大小从 10",
+      "topic": "r4-approval-6",
+      "ts": "2026-01-19"
+    },
+    {
+      "attrs": {
+        "detail": "观察窗口从 5 分钟拉到 15 分钟",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-20 测试租户 的 生产库账号 单独一次审批\n【行为】那回具体动了：观察窗口从 5 分钟拉到 15 分钟\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-20T09:00:00Z",
+      "id": "hl9H0015",
+      "insert_rank": 6062,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "生产库账号审批细节第2记：观察窗口从 5 ",
+      "topic": "r4-approval-6",
+      "ts": "2026-01-20"
+    },
+    {
+      "attrs": {
+        "detail": "把超时从 1 秒放到 3 秒",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-21 测试租户 的 生产库账号 单独一次审批\n【行为】那回具体动了：把超时从 1 秒放到 3 秒\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-21T09:00:00Z",
+      "id": "hl9H0016",
+      "insert_rank": 6063,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "生产库账号审批细节第3记：把超时从 1 秒",
+      "topic": "r4-approval-6",
+      "ts": "2026-01-21"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "每次出事前都有同一件事没做：留了档但没验过"
+      },
+      "content": "【前因】把 生产 的 会员服务 这几次上线放在一起看\n【行为】主线是：每次出事前都有同一件事没做：留了档但没验过\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-08T08:00:00Z",
+      "id": "hl9A0013",
+      "insert_rank": 6070,
+      "role": "rx_mainline",
+      "scenario": "deploy",
+      "title": "会员服务上线主线复盘",
+      "topic": "r4-deploy-7",
+      "ts": "2026-06-08"
+    },
+    {
+      "attrs": {
+        "detail": "连接池上限从 50 提到 200",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-22 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：连接池上限从 50 提到 200\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-22T09:00:00Z",
+      "id": "hl9A0014",
+      "insert_rank": 6071,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第1记：连接池上限从 5",
+      "topic": "r4-deploy-7",
+      "ts": "2026-02-22"
+    },
+    {
+      "attrs": {
+        "detail": "回滚点改成了前一晚的快照",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-23 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：回滚点改成了前一晚的快照\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-23T09:00:00Z",
+      "id": "hl9A0015",
+      "insert_rank": 6072,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第2记：回滚点改成了前一",
+      "topic": "r4-deploy-7",
+      "ts": "2026-02-23"
+    },
+    {
+      "attrs": {
+        "detail": "告警接收人换成了当班组",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-24 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：告警接收人换成了当班组\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-24T09:00:00Z",
+      "id": "hl9A0016",
+      "insert_rank": 6073,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第3记：告警接收人换成了",
+      "topic": "r4-deploy-7",
+      "ts": "2026-02-24"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "根子上是同一件事：先上线后补记录"
+      },
+      "content": "【前因】把 灰度组 的 风控服务 这几次灰度放在一起看\n【行为】主线是：根子上是同一件事：先上线后补记录\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-09T08:00:00Z",
+      "id": "hl9B0017",
+      "insert_rank": 6080,
+      "role": "rx_mainline",
+      "scenario": "canary",
+      "title": "风控服务灰度主线复盘",
+      "topic": "r4-canary-8",
+      "ts": "2026-06-09"
+    },
+    {
+      "attrs": {
+        "detail": "统计周期按自然周重算",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-25 灰度组 的 风控服务 单独一次灰度\n【行为】那回具体动了：统计周期按自然周重算\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-25T09:00:00Z",
+      "id": "hl9B0018",
+      "insert_rank": 6081,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "风控服务灰度细节第1记：统计周期按自然周",
+      "topic": "r4-canary-8",
+      "ts": "2026-03-25"
+    },
+    {
+      "attrs": {
+        "detail": "校验方式换成抽样比对",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-26 灰度组 的 风控服务 单独一次灰度\n【行为】那回具体动了：校验方式换成抽样比对\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-26T09:00:00Z",
+      "id": "hl9B0019",
+      "insert_rank": 6082,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "风控服务灰度细节第2记：校验方式换成抽样",
+      "topic": "r4-canary-8",
+      "ts": "2026-03-26"
+    },
+    {
+      "attrs": {
+        "detail": "授权范围收窄到只读",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-27 灰度组 的 风控服务 单独一次灰度\n【行为】那回具体动了：授权范围收窄到只读\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-27T09:00:00Z",
+      "id": "hl9B0020",
+      "insert_rank": 6083,
+      "role": "rx_detail",
+      "scenario": "canary",
+      "title": "风控服务灰度细节第3记：授权范围收窄到只",
+      "topic": "r4-canary-8",
+      "ts": "2026-03-27"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "三回都一样：把临时方案当成了正式方案"
+      },
+      "content": "【前因】把 正式 的 对账接口 这几次接口放在一起看\n【行为】主线是：三回都一样：把临时方案当成了正式方案\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-10T08:00:00Z",
+      "id": "hl9C0017",
+      "insert_rank": 6090,
+      "role": "rx_mainline",
+      "scenario": "api",
+      "title": "对账接口接口主线复盘",
+      "topic": "r4-api-9",
+      "ts": "2026-06-10"
+    },
+    {
+      "attrs": {
+        "detail": "有效期从 30 天改到 7 天",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-01 正式 的 对账接口 单独一次接口\n【行为】那回具体动了：有效期从 30 天改到 7 天\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-01T09:00:00Z",
+      "id": "hl9C0018",
+      "insert_rank": 6091,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "对账接口接口细节第1记：有效期从 30 ",
+      "topic": "r4-api-9",
+      "ts": "2026-04-01"
+    },
+    {
+      "attrs": {
+        "detail": "日志目录迁到了大盘",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-02 正式 的 对账接口 单独一次接口\n【行为】那回具体动了：日志目录迁到了大盘\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-02T09:00:00Z",
+      "id": "hl9C0019",
+      "insert_rank": 6092,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "对账接口接口细节第2记：日志目录迁到了大",
+      "topic": "r4-api-9",
+      "ts": "2026-04-02"
+    },
+    {
+      "attrs": {
+        "detail": "脚本路径改成项目内目录",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-03 正式 的 对账接口 单独一次接口\n【行为】那回具体动了：脚本路径改成项目内目录\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-03T09:00:00Z",
+      "id": "hl9C0020",
+      "insert_rank": 6093,
+      "role": "rx_detail",
+      "scenario": "api",
+      "title": "对账接口接口细节第3记：脚本路径改成项目",
+      "topic": "r4-api-9",
+      "ts": "2026-04-03"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "验证这一步永远被挤掉"
+      },
+      "content": "【前因】把 本机 的 定时任务 这几次交接放在一起看\n【行为】主线是：验证这一步永远被挤掉\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-11T08:00:00Z",
+      "id": "hl9D0017",
+      "insert_rank": 6100,
+      "role": "rx_mainline",
+      "scenario": "handoff",
+      "title": "定时任务交接主线复盘",
+      "topic": "r4-handoff-10",
+      "ts": "2026-06-11"
+    },
+    {
+      "attrs": {
+        "detail": "签名方式换成 HMAC",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-04 本机 的 定时任务 单独一次交接\n【行为】那回具体动了：签名方式换成 HMAC\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-04T09:00:00Z",
+      "id": "hl9D0018",
+      "insert_rank": 6101,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "定时任务交接细节第1记：签名方式换成 H",
+      "topic": "r4-handoff-10",
+      "ts": "2026-05-04"
+    },
+    {
+      "attrs": {
+        "detail": "切换时点挪到凌晨三点",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-05 本机 的 定时任务 单独一次交接\n【行为】那回具体动了：切换时点挪到凌晨三点\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-05T09:00:00Z",
+      "id": "hl9D0019",
+      "insert_rank": 6102,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "定时任务交接细节第2记：切换时点挪到凌晨",
+      "topic": "r4-handoff-10",
+      "ts": "2026-05-05"
+    },
+    {
+      "attrs": {
+        "detail": "把重试从 0 次调到 2 次",
+        "is_gold": false
+      },
+      "content": "【前因】2026-05-06 本机 的 定时任务 单独一次交接\n【行为】那回具体动了：把重试从 0 次调到 2 次\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-05-06T09:00:00Z",
+      "id": "hl9D0020",
+      "insert_rank": 6103,
+      "role": "rx_detail",
+      "scenario": "handoff",
+      "title": "定时任务交接细节第3记：把重试从 0 次",
+      "topic": "r4-handoff-10",
+      "ts": "2026-05-06"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "根子上的共性：容量预估没算上下游联动"
+      },
+      "content": "【前因】把 评审会 的 命名规范 这几次会议放在一起看\n【行为】主线是：根子上的共性：容量预估没算上下游联动\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-12T08:00:00Z",
+      "id": "hl9E0017",
+      "insert_rank": 6110,
+      "role": "rx_mainline",
+      "scenario": "meeting",
+      "title": "命名规范会议主线复盘",
+      "topic": "r4-meeting-11",
+      "ts": "2026-06-12"
+    },
+    {
+      "attrs": {
+        "detail": "灰度比例从 5% 提到 15%",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-07 评审会 的 命名规范 单独一次会议\n【行为】那回具体动了：灰度比例从 5% 提到 15%\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-07T09:00:00Z",
+      "id": "hl9E0018",
+      "insert_rank": 6111,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "命名规范会议细节第1记：灰度比例从 5%",
+      "topic": "r4-meeting-11",
+      "ts": "2026-06-07"
+    },
+    {
+      "attrs": {
+        "detail": "分批大小从 1000 行改成 500 行",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-08 评审会 的 命名规范 单独一次会议\n【行为】那回具体动了：分批大小从 1000 行改成 500 行\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-08T09:00:00Z",
+      "id": "hl9E0019",
+      "insert_rank": 6112,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "命名规范会议细节第2记：分批大小从 10",
+      "topic": "r4-meeting-11",
+      "ts": "2026-06-08"
+    },
+    {
+      "attrs": {
+        "detail": "观察窗口从 5 分钟拉到 15 分钟",
+        "is_gold": false
+      },
+      "content": "【前因】2026-06-09 评审会 的 命名规范 单独一次会议\n【行为】那回具体动了：观察窗口从 5 分钟拉到 15 分钟\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-06-09T09:00:00Z",
+      "id": "hl9E0020",
+      "insert_rank": 6113,
+      "role": "rx_detail",
+      "scenario": "meeting",
+      "title": "命名规范会议细节第3记：观察窗口从 5 ",
+      "topic": "r4-meeting-11",
+      "ts": "2026-06-09"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "这几回的共同点：口径改了没做回归对照"
+      },
+      "content": "【前因】把 线上 的 支付回调 这几次故障放在一起看\n【行为】主线是：这几回的共同点：口径改了没做回归对照\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-13T08:00:00Z",
+      "id": "hl9F0017",
+      "insert_rank": 6120,
+      "role": "rx_mainline",
+      "scenario": "ops",
+      "title": "支付回调故障主线复盘",
+      "topic": "r4-ops-12",
+      "ts": "2026-06-13"
+    },
+    {
+      "attrs": {
+        "detail": "把超时从 1 秒放到 3 秒",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-10 线上 的 支付回调 单独一次故障\n【行为】那回具体动了：把超时从 1 秒放到 3 秒\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-10T09:00:00Z",
+      "id": "hl9F0018",
+      "insert_rank": 6121,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "支付回调故障细节第1记：把超时从 1 秒",
+      "topic": "r4-ops-12",
+      "ts": "2026-01-10"
+    },
+    {
+      "attrs": {
+        "detail": "连接池上限从 50 提到 200",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-11 线上 的 支付回调 单独一次故障\n【行为】那回具体动了：连接池上限从 50 提到 200\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-11T09:00:00Z",
+      "id": "hl9F0019",
+      "insert_rank": 6122,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "支付回调故障细节第2记：连接池上限从 5",
+      "topic": "r4-ops-12",
+      "ts": "2026-01-11"
+    },
+    {
+      "attrs": {
+        "detail": "回滚点改成了前一晚的快照",
+        "is_gold": false
+      },
+      "content": "【前因】2026-01-12 线上 的 支付回调 单独一次故障\n【行为】那回具体动了：回滚点改成了前一晚的快照\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-01-12T09:00:00Z",
+      "id": "hl9F0020",
+      "insert_rank": 6123,
+      "role": "rx_detail",
+      "scenario": "ops",
+      "title": "支付回调故障细节第3记：回滚点改成了前一",
+      "topic": "r4-ops-12",
+      "ts": "2026-01-12"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "都是同一个弱点：出问题时找不到当时的参数快照"
+      },
+      "content": "【前因】把 生产库 的 用户档案 这几次迁移放在一起看\n【行为】主线是：都是同一个弱点：出问题时找不到当时的参数快照\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-14T08:00:00Z",
+      "id": "hl9G0017",
+      "insert_rank": 6130,
+      "role": "rx_mainline",
+      "scenario": "migration",
+      "title": "用户档案迁移主线复盘",
+      "topic": "r4-migration-13",
+      "ts": "2026-06-14"
+    },
+    {
+      "attrs": {
+        "detail": "告警接收人换成了当班组",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-13 生产库 的 用户档案 单独一次迁移\n【行为】那回具体动了：告警接收人换成了当班组\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-13T09:00:00Z",
+      "id": "hl9G0018",
+      "insert_rank": 6131,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "用户档案迁移细节第1记：告警接收人换成了",
+      "topic": "r4-migration-13",
+      "ts": "2026-02-13"
+    },
+    {
+      "attrs": {
+        "detail": "统计周期按自然周重算",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-14 生产库 的 用户档案 单独一次迁移\n【行为】那回具体动了：统计周期按自然周重算\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-14T09:00:00Z",
+      "id": "hl9G0019",
+      "insert_rank": 6132,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "用户档案迁移细节第2记：统计周期按自然周",
+      "topic": "r4-migration-13",
+      "ts": "2026-02-14"
+    },
+    {
+      "attrs": {
+        "detail": "校验方式换成抽样比对",
+        "is_gold": false
+      },
+      "content": "【前因】2026-02-15 生产库 的 用户档案 单独一次迁移\n【行为】那回具体动了：校验方式换成抽样比对\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-02-15T09:00:00Z",
+      "id": "hl9G0020",
+      "insert_rank": 6133,
+      "role": "rx_detail",
+      "scenario": "migration",
+      "title": "用户档案迁移细节第3记：校验方式换成抽样",
+      "topic": "r4-migration-13",
+      "ts": "2026-02-15"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "一条线贯下来：审批通过后没人追踪落地"
+      },
+      "content": "【前因】把 测试租户 的 配置中心 这几次审批放在一起看\n【行为】主线是：一条线贯下来：审批通过后没人追踪落地\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-15T08:00:00Z",
+      "id": "hl9H0017",
+      "insert_rank": 6140,
+      "role": "rx_mainline",
+      "scenario": "approval",
+      "title": "配置中心审批主线复盘",
+      "topic": "r4-approval-14",
+      "ts": "2026-06-15"
+    },
+    {
+      "attrs": {
+        "detail": "授权范围收窄到只读",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-16 测试租户 的 配置中心 单独一次审批\n【行为】那回具体动了：授权范围收窄到只读\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-16T09:00:00Z",
+      "id": "hl9H0018",
+      "insert_rank": 6141,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "配置中心审批细节第1记：授权范围收窄到只",
+      "topic": "r4-approval-14",
+      "ts": "2026-03-16"
+    },
+    {
+      "attrs": {
+        "detail": "有效期从 30 天改到 7 天",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-17 测试租户 的 配置中心 单独一次审批\n【行为】那回具体动了：有效期从 30 天改到 7 天\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-17T09:00:00Z",
+      "id": "hl9H0019",
+      "insert_rank": 6142,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "配置中心审批细节第2记：有效期从 30 ",
+      "topic": "r4-approval-14",
+      "ts": "2026-03-17"
+    },
+    {
+      "attrs": {
+        "detail": "日志目录迁到了大盘",
+        "is_gold": false
+      },
+      "content": "【前因】2026-03-18 测试租户 的 配置中心 单独一次审批\n【行为】那回具体动了：日志目录迁到了大盘\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-03-18T09:00:00Z",
+      "id": "hl9H0020",
+      "insert_rank": 6143,
+      "role": "rx_detail",
+      "scenario": "approval",
+      "title": "配置中心审批细节第3记：日志目录迁到了大",
+      "topic": "r4-approval-14",
+      "ts": "2026-03-18"
+    },
+    {
+      "attrs": {
+        "is_gold": true,
+        "line": "共同教训：每一步完成的定义里都缺了验证"
+      },
+      "content": "【前因】把 生产 的 会员服务 这几次上线放在一起看\n【行为】主线是：共同教训：每一步完成的定义里都缺了验证\n【后果】细节各不相同，但根子压在同一步上",
+      "created_at": "2026-06-16T08:00:00Z",
+      "id": "hl9A0017",
+      "insert_rank": 6150,
+      "role": "rx_mainline",
+      "scenario": "deploy",
+      "title": "会员服务上线主线复盘",
+      "topic": "r4-deploy-15",
+      "ts": "2026-06-16"
+    },
+    {
+      "attrs": {
+        "detail": "脚本路径改成项目内目录",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-19 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：脚本路径改成项目内目录\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-19T09:00:00Z",
+      "id": "hl9A0018",
+      "insert_rank": 6151,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第1记：脚本路径改成项目",
+      "topic": "r4-deploy-15",
+      "ts": "2026-04-19"
+    },
+    {
+      "attrs": {
+        "detail": "签名方式换成 HMAC",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-20 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：签名方式换成 HMAC\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-20T09:00:00Z",
+      "id": "hl9A0019",
+      "insert_rank": 6152,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第2记：签名方式换成 H",
+      "topic": "r4-deploy-15",
+      "ts": "2026-04-20"
+    },
+    {
+      "attrs": {
+        "detail": "切换时点挪到凌晨三点",
+        "is_gold": false
+      },
+      "content": "【前因】2026-04-21 生产 的 会员服务 单独一次上线\n【行为】那回具体动了：切换时点挪到凌晨三点\n【后果】只记了这一处，没提别的",
+      "created_at": "2026-04-21T09:00:00Z",
+      "id": "hl9A0020",
+      "insert_rank": 6153,
+      "role": "rx_detail",
+      "scenario": "deploy",
+      "title": "会员服务上线细节第3记：切换时点挪到凌晨",
+      "topic": "r4-deploy-15",
+      "ts": "2026-04-21"
+    },
+    {
+      "attrs": {
+        "attr_a": "熔断阈值",
+        "attr_b": "冷启动超时",
+        "is_gold": true,
+        "value": "10%"
+      },
+      "content": "【前因】灰度组 的 推荐服务 那次灰度\n【行为】复核后记下：熔断阈值 定为 10%\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-01T08:00:00Z",
+      "id": "hl9B0021",
+      "insert_rank": 7000,
+      "role": "rx_recorded",
+      "scenario": "canary",
+      "title": "推荐服务灰度结论：熔断阈值定为10%",
+      "topic": "r5-canary-0",
+      "ts": "2026-07-01"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】灰度组 的 推荐服务 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-02T08:00:00Z",
+      "id": "hl9B0022",
+      "insert_rank": 7001,
+      "role": "rx_rule",
+      "scenario": "canary",
+      "title": "推荐服务灰度归档规矩：能复用的记为重要",
+      "topic": "r5-canary-0",
+      "ts": "2026-07-02"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-03T08:00:00Z",
+      "id": "hl9B0023",
+      "insert_rank": 7002,
+      "role": "rx_rule",
+      "scenario": "canary",
+      "title": "推荐服务灰度归档规矩：一次性的走流水",
+      "topic": "r5-canary-0",
+      "ts": "2026-07-03"
+    },
+    {
+      "attrs": {
+        "attr_a": "重试上限",
+        "attr_b": "热备延迟秒数",
+        "is_gold": true,
+        "value": "2 次"
+      },
+      "content": "【前因】正式 的 回调接口 那次接口\n【行为】复核后记下：重试上限 定为 2 次\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-02T08:00:00Z",
+      "id": "hl9C0021",
+      "insert_rank": 7010,
+      "role": "rx_recorded",
+      "scenario": "api",
+      "title": "回调接口接口结论：重试上限定为2 次",
+      "topic": "r5-api-1",
+      "ts": "2026-07-02"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】正式 的 回调接口 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-03T08:00:00Z",
+      "id": "hl9C0022",
+      "insert_rank": 7011,
+      "role": "rx_rule",
+      "scenario": "api",
+      "title": "回调接口接口归档规矩：能复用的记为重要",
+      "topic": "r5-api-1",
+      "ts": "2026-07-03"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-04T08:00:00Z",
+      "id": "hl9C0023",
+      "insert_rank": 7012,
+      "role": "rx_rule",
+      "scenario": "api",
+      "title": "回调接口接口归档规矩：一次性的走流水",
+      "topic": "r5-api-1",
+      "ts": "2026-07-04"
+    },
+    {
+      "attrs": {
+        "attr_a": "放量档位",
+        "attr_b": "兜底备用号",
+        "is_gold": true,
+        "value": "/var/log/app"
+      },
+      "content": "【前因】本机 的 监控看板 那次交接\n【行为】复核后记下：放量档位 定为 /var/log/app\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-03T08:00:00Z",
+      "id": "hl9D0021",
+      "insert_rank": 7020,
+      "role": "rx_recorded",
+      "scenario": "handoff",
+      "title": "监控看板交接结论：放量档位定为/var/log/app",
+      "topic": "r5-handoff-2",
+      "ts": "2026-07-03"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】本机 的 监控看板 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-04T08:00:00Z",
+      "id": "hl9D0022",
+      "insert_rank": 7021,
+      "role": "rx_rule",
+      "scenario": "handoff",
+      "title": "监控看板交接归档规矩：能复用的记为重要",
+      "topic": "r5-handoff-2",
+      "ts": "2026-07-04"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-05T08:00:00Z",
+      "id": "hl9D0023",
+      "insert_rank": 7022,
+      "role": "rx_rule",
+      "scenario": "handoff",
+      "title": "监控看板交接归档规矩：一次性的走流水",
+      "topic": "r5-handoff-2",
+      "ts": "2026-07-05"
+    },
+    {
+      "attrs": {
+        "attr_a": "告警接收人",
+        "attr_b": "备机序列号",
+        "is_gold": true,
+        "value": "自然周"
+      },
+      "content": "【前因】评审会 的 指标口径 那次会议\n【行为】复核后记下：告警接收人 定为 自然周\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-04T08:00:00Z",
+      "id": "hl9E0021",
+      "insert_rank": 7030,
+      "role": "rx_recorded",
+      "scenario": "meeting",
+      "title": "指标口径会议结论：告警接收人定为自然周",
+      "topic": "r5-meeting-3",
+      "ts": "2026-07-04"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】评审会 的 指标口径 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-05T08:00:00Z",
+      "id": "hl9E0022",
+      "insert_rank": 7031,
+      "role": "rx_rule",
+      "scenario": "meeting",
+      "title": "指标口径会议归档规矩：能复用的记为重要",
+      "topic": "r5-meeting-3",
+      "ts": "2026-07-05"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-06T08:00:00Z",
+      "id": "hl9E0023",
+      "insert_rank": 7032,
+      "role": "rx_rule",
+      "scenario": "meeting",
+      "title": "指标口径会议归档规矩：一次性的走流水",
+      "topic": "r5-meeting-3",
+      "ts": "2026-07-06"
+    },
+    {
+      "attrs": {
+        "attr_a": "统计周期",
+        "attr_b": "审批单流水号",
+        "is_gold": true,
+        "value": "先加两副本"
+      },
+      "content": "【前因】线上 的 消息队列 那次故障\n【行为】复核后记下：统计周期 定为 先加两副本\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-05T08:00:00Z",
+      "id": "hl9F0021",
+      "insert_rank": 7040,
+      "role": "rx_recorded",
+      "scenario": "ops",
+      "title": "消息队列故障结论：统计周期定为先加两副本",
+      "topic": "r5-ops-4",
+      "ts": "2026-07-05"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】线上 的 消息队列 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-06T08:00:00Z",
+      "id": "hl9F0022",
+      "insert_rank": 7041,
+      "role": "rx_rule",
+      "scenario": "ops",
+      "title": "消息队列故障归档规矩：能复用的记为重要",
+      "topic": "r5-ops-4",
+      "ts": "2026-07-06"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-07T08:00:00Z",
+      "id": "hl9F0023",
+      "insert_rank": 7042,
+      "role": "rx_rule",
+      "scenario": "ops",
+      "title": "消息队列故障归档规矩：一次性的走流水",
+      "topic": "r5-ops-4",
+      "ts": "2026-07-07"
+    },
+    {
+      "attrs": {
+        "attr_a": "扩容上限",
+        "attr_b": "机房温控阈值",
+        "is_gold": true,
+        "value": "凌晨 3 点"
+      },
+      "content": "【前因】生产库 的 日志索引 那次迁移\n【行为】复核后记下：扩容上限 定为 凌晨 3 点\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-06T08:00:00Z",
+      "id": "hl9G0021",
+      "insert_rank": 7050,
+      "role": "rx_recorded",
+      "scenario": "migration",
+      "title": "日志索引迁移结论：扩容上限定为凌晨 3 点",
+      "topic": "r5-migration-5",
+      "ts": "2026-07-06"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】生产库 的 日志索引 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-07T08:00:00Z",
+      "id": "hl9G0022",
+      "insert_rank": 7051,
+      "role": "rx_rule",
+      "scenario": "migration",
+      "title": "日志索引迁移归档规矩：能复用的记为重要",
+      "topic": "r5-migration-5",
+      "ts": "2026-07-07"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-08T08:00:00Z",
+      "id": "hl9G0023",
+      "insert_rank": 7052,
+      "role": "rx_rule",
+      "scenario": "migration",
+      "title": "日志索引迁移归档规矩：一次性的走流水",
+      "topic": "r5-migration-5",
+      "ts": "2026-07-08"
+    },
+    {
+      "attrs": {
+        "attr_a": "分批大小",
+        "attr_b": "回灌校验和",
+        "is_gold": true,
+        "value": "组长加 DBA"
+      },
+      "content": "【前因】测试租户 的 生产库账号 那次审批\n【行为】复核后记下：分批大小 定为 组长加 DBA\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-07T08:00:00Z",
+      "id": "hl9H0021",
+      "insert_rank": 7060,
+      "role": "rx_recorded",
+      "scenario": "approval",
+      "title": "生产库账号审批结论：分批大小定为组长加 DBA",
+      "topic": "r5-approval-6",
+      "ts": "2026-07-07"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】测试租户 的 生产库账号 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-08T08:00:00Z",
+      "id": "hl9H0022",
+      "insert_rank": 7061,
+      "role": "rx_rule",
+      "scenario": "approval",
+      "title": "生产库账号审批归档规矩：能复用的记为重要",
+      "topic": "r5-approval-6",
+      "ts": "2026-07-08"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-09T08:00:00Z",
+      "id": "hl9H0023",
+      "insert_rank": 7062,
+      "role": "rx_rule",
+      "scenario": "approval",
+      "title": "生产库账号审批归档规矩：一次性的走流水",
+      "topic": "r5-approval-6",
+      "ts": "2026-07-09"
+    },
+    {
+      "attrs": {
+        "attr_a": "授权范围",
+        "attr_b": "工单归档号",
+        "is_gold": true,
+        "value": "v2.3.1"
+      },
+      "content": "【前因】生产 的 会员服务 那次上线\n【行为】复核后记下：授权范围 定为 v2.3.1\n【后果】这条结论下次可直接引用",
+      "created_at": "2026-07-08T08:00:00Z",
+      "id": "hl9A0021",
+      "insert_rank": 7070,
+      "role": "rx_recorded",
+      "scenario": "deploy",
+      "title": "会员服务上线结论：授权范围定为v2.3.1",
+      "topic": "r5-deploy-7",
+      "ts": "2026-07-08"
+    },
+    {
+      "attrs": {
+        "grade": "important",
+        "is_gold": false
+      },
+      "content": "【前因】生产 的 会员服务 记忆归档时定过一条规矩\n【行为】能复用到下一次的结论要单独标为重要，反复查证\n【后果】这类条目按重要保存，检索时优先回",
+      "created_at": "2026-07-09T08:00:00Z",
+      "id": "hl9A0022",
+      "insert_rank": 7071,
+      "role": "rx_rule",
+      "scenario": "deploy",
+      "title": "会员服务上线归档规矩：能复用的记为重要",
+      "topic": "r5-deploy-7",
+      "ts": "2026-07-09"
+    },
+    {
+      "attrs": {
+        "grade": "trivial",
+        "is_gold": false
+      },
+      "content": "【前因】同一次归档还定过另一条规矩\n【行为】一次性跑完就过的流水只做流水记录，不进重点\n【后果】这类条目按次要保存，过期可清",
+      "created_at": "2026-07-10T08:00:00Z",
+      "id": "hl9A0023",
+      "insert_rank": 7072,
+      "role": "rx_rule",
+      "scenario": "deploy",
+      "title": "会员服务上线归档规矩：一次性的走流水",
+      "topic": "r5-deploy-7",
+      "ts": "2026-07-10"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "灰度比例",
+        "value": "10%"
+      },
+      "content": "【前因】灰度组 的 推荐服务 这次灰度\n【行为】我实测 灰度比例 是 10%，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-01T08:00:00Z",
+      "id": "hl9B0024",
+      "insert_rank": 8000,
+      "role": "rx_measured",
+      "scenario": "canary",
+      "title": "推荐服务灰度实测：灰度比例=10%",
+      "topic": "r6-canary-0",
+      "ts": "2026-08-01"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "灰度比例",
+        "value": "15 分钟"
+      },
+      "content": "【前因】关于 灰度组 的 推荐服务 的灰度\n【行为】同事说「灰度比例 用 15 分钟 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-02T08:00:00Z",
+      "id": "hl9B0025",
+      "insert_rank": 8001,
+      "role": "rx_retell",
+      "scenario": "canary",
+      "title": "推荐服务灰度转述：灰度比例=15 分钟",
+      "topic": "r6-canary-0",
+      "ts": "2026-08-02"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "灰度比例",
+        "value": "10→30→100"
+      },
+      "content": "【前因】关于 推荐服务 的灰度归档\n【行为】交接文档里写着 推荐服务 的 灰度比例 是 10→30→100\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-03T08:00:00Z",
+      "id": "hl9B0026",
+      "insert_rank": 8002,
+      "role": "rx_doc",
+      "scenario": "canary",
+      "title": "推荐服务灰度文档：灰度比例=10→30→100",
+      "topic": "r6-canary-0",
+      "ts": "2026-08-03"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "重试次数",
+        "value": "2 次"
+      },
+      "content": "【前因】正式 的 回调接口 这次接口\n【行为】我实测 重试次数 是 2 次，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-02T08:00:00Z",
+      "id": "hl9C0024",
+      "insert_rank": 8010,
+      "role": "rx_measured",
+      "scenario": "api",
+      "title": "回调接口接口实测：重试次数=2 次",
+      "topic": "r6-api-1",
+      "ts": "2026-08-02"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "重试次数",
+        "value": "HMAC-SHA256"
+      },
+      "content": "【前因】关于 正式 的 回调接口 的接口\n【行为】同事说「重试次数 用 HMAC-SHA256 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-03T08:00:00Z",
+      "id": "hl9C0025",
+      "insert_rank": 8011,
+      "role": "rx_retell",
+      "scenario": "api",
+      "title": "回调接口接口转述：重试次数=HMAC-SHA256",
+      "topic": "r6-api-1",
+      "ts": "2026-08-03"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "重试次数",
+        "value": "3 秒"
+      },
+      "content": "【前因】关于 回调接口 的接口归档\n【行为】知识库里记着 回调接口 的 重试次数 是 3 秒\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-04T08:00:00Z",
+      "id": "hl9C0026",
+      "insert_rank": 8012,
+      "role": "rx_doc",
+      "scenario": "api",
+      "title": "回调接口接口文档：重试次数=3 秒",
+      "topic": "r6-api-1",
+      "ts": "2026-08-04"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "日志目录",
+        "value": "/var/log/app"
+      },
+      "content": "【前因】本机 的 监控看板 这次交接\n【行为】我实测 日志目录 是 /var/log/app，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-03T08:00:00Z",
+      "id": "hl9D0024",
+      "insert_rank": 8020,
+      "role": "rx_measured",
+      "scenario": "handoff",
+      "title": "监控看板交接实测：日志目录=/var/log/app",
+      "topic": "r6-handoff-2",
+      "ts": "2026-08-03"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "日志目录",
+        "value": "/opt/ops/run.sh"
+      },
+      "content": "【前因】关于 本机 的 监控看板 的交接\n【行为】同事说「日志目录 用 /opt/ops/run.sh 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-04T08:00:00Z",
+      "id": "hl9D0025",
+      "insert_rank": 8021,
+      "role": "rx_retell",
+      "scenario": "handoff",
+      "title": "监控看板交接转述：日志目录=/opt/ops/run.sh",
+      "topic": "r6-handoff-2",
+      "ts": "2026-08-04"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "日志目录",
+        "value": "当班组"
+      },
+      "content": "【前因】关于 监控看板 的交接归档\n【行为】归档纪要里写着 监控看板 的 日志目录 是 当班组\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-05T08:00:00Z",
+      "id": "hl9D0026",
+      "insert_rank": 8022,
+      "role": "rx_doc",
+      "scenario": "handoff",
+      "title": "监控看板交接文档：日志目录=当班组",
+      "topic": "r6-handoff-2",
+      "ts": "2026-08-05"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "统计周期",
+        "value": "自然周"
+      },
+      "content": "【前因】评审会 的 指标口径 这次会议\n【行为】我实测 统计周期 是 自然周，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-04T08:00:00Z",
+      "id": "hl9E0024",
+      "insert_rank": 8030,
+      "role": "rx_measured",
+      "scenario": "meeting",
+      "title": "指标口径会议实测：统计周期=自然周",
+      "topic": "r6-meeting-3",
+      "ts": "2026-08-04"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "统计周期",
+        "value": "按下单时间"
+      },
+      "content": "【前因】关于 评审会 的 指标口径 的会议\n【行为】同事说「统计周期 用 按下单时间 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-05T08:00:00Z",
+      "id": "hl9E0025",
+      "insert_rank": 8031,
+      "role": "rx_retell",
+      "scenario": "meeting",
+      "title": "指标口径会议转述：统计周期=按下单时间",
+      "topic": "r6-meeting-3",
+      "ts": "2026-08-05"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "统计周期",
+        "value": "下个迭代"
+      },
+      "content": "【前因】关于 指标口径 的会议归档\n【行为】交接文档里写着 指标口径 的 统计周期 是 下个迭代\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-06T08:00:00Z",
+      "id": "hl9E0026",
+      "insert_rank": 8032,
+      "role": "rx_doc",
+      "scenario": "meeting",
+      "title": "指标口径会议文档：统计周期=下个迭代",
+      "topic": "r6-meeting-3",
+      "ts": "2026-08-06"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "扩容策略",
+        "value": "先加两副本"
+      },
+      "content": "【前因】线上 的 消息队列 这次故障\n【行为】我实测 扩容策略 是 先加两副本，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-05T08:00:00Z",
+      "id": "hl9F0024",
+      "insert_rank": 8040,
+      "role": "rx_measured",
+      "scenario": "ops",
+      "title": "消息队列故障实测：扩容策略=先加两副本",
+      "topic": "r6-ops-4",
+      "ts": "2026-08-05"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "扩容策略",
+        "value": "上一个稳定版本"
+      },
+      "content": "【前因】关于 线上 的 消息队列 的故障\n【行为】同事说「扩容策略 用 上一个稳定版本 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-06T08:00:00Z",
+      "id": "hl9F0025",
+      "insert_rank": 8041,
+      "role": "rx_retell",
+      "scenario": "ops",
+      "title": "消息队列故障转述：扩容策略=上一个稳定版本",
+      "topic": "r6-ops-4",
+      "ts": "2026-08-06"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "扩容策略",
+        "value": "连续 5 次"
+      },
+      "content": "【前因】关于 消息队列 的故障归档\n【行为】知识库里记着 消息队列 的 扩容策略 是 连续 5 次\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-07T08:00:00Z",
+      "id": "hl9F0026",
+      "insert_rank": 8042,
+      "role": "rx_doc",
+      "scenario": "ops",
+      "title": "消息队列故障文档：扩容策略=连续 5 次",
+      "topic": "r6-ops-4",
+      "ts": "2026-08-07"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "切换时点",
+        "value": "凌晨 3 点"
+      },
+      "content": "【前因】生产库 的 日志索引 这次迁移\n【行为】我实测 切换时点 是 凌晨 3 点，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-06T08:00:00Z",
+      "id": "hl9G0024",
+      "insert_rank": 8050,
+      "role": "rx_measured",
+      "scenario": "migration",
+      "title": "日志索引迁移实测：切换时点=凌晨 3 点",
+      "topic": "r6-migration-5",
+      "ts": "2026-08-06"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "切换时点",
+        "value": "5000 行"
+      },
+      "content": "【前因】关于 生产库 的 日志索引 的迁移\n【行为】同事说「切换时点 用 5000 行 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-07T08:00:00Z",
+      "id": "hl9G0025",
+      "insert_rank": 8051,
+      "role": "rx_retell",
+      "scenario": "migration",
+      "title": "日志索引迁移转述：切换时点=5000 行",
+      "topic": "r6-migration-5",
+      "ts": "2026-08-07"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "切换时点",
+        "value": "抽样比对"
+      },
+      "content": "【前因】关于 日志索引 的迁移归档\n【行为】归档纪要里写着 日志索引 的 切换时点 是 抽样比对\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-08T08:00:00Z",
+      "id": "hl9G0026",
+      "insert_rank": 8052,
+      "role": "rx_doc",
+      "scenario": "migration",
+      "title": "日志索引迁移文档：切换时点=抽样比对",
+      "topic": "r6-migration-5",
+      "ts": "2026-08-08"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "审批人",
+        "value": "组长加 DBA"
+      },
+      "content": "【前因】测试租户 的 生产库账号 这次审批\n【行为】我实测 审批人 是 组长加 DBA，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-07T08:00:00Z",
+      "id": "hl9H0024",
+      "insert_rank": 8060,
+      "role": "rx_measured",
+      "scenario": "approval",
+      "title": "生产库账号审批实测：审批人=组长加 DBA",
+      "topic": "r6-approval-6",
+      "ts": "2026-08-07"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "审批人",
+        "value": "7 天"
+      },
+      "content": "【前因】关于 测试租户 的 生产库账号 的审批\n【行为】同事说「审批人 用 7 天 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-08T08:00:00Z",
+      "id": "hl9H0025",
+      "insert_rank": 8061,
+      "role": "rx_retell",
+      "scenario": "approval",
+      "title": "生产库账号审批转述：审批人=7 天",
+      "topic": "r6-approval-6",
+      "ts": "2026-08-08"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "审批人",
+        "value": "只读"
+      },
+      "content": "【前因】关于 生产库账号 的审批归档\n【行为】交接文档里写着 生产库账号 的 审批人 是 只读\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-09T08:00:00Z",
+      "id": "hl9H0026",
+      "insert_rank": 8062,
+      "role": "rx_doc",
+      "scenario": "approval",
+      "title": "生产库账号审批文档：审批人=只读",
+      "topic": "r6-approval-6",
+      "ts": "2026-08-09"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "镜像版本",
+        "value": "v2.3.1"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线\n【行为】我实测 镜像版本 是 v2.3.1，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-08T08:00:00Z",
+      "id": "hl9A0024",
+      "insert_rank": 8070,
+      "role": "rx_measured",
+      "scenario": "deploy",
+      "title": "会员服务上线实测：镜像版本=v2.3.1",
+      "topic": "r6-deploy-7",
+      "ts": "2026-08-08"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "max-conn=200"
+      },
+      "content": "【前因】关于 生产 的 会员服务 的上线\n【行为】同事说「镜像版本 用 max-conn=200 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-09T08:00:00Z",
+      "id": "hl9A0025",
+      "insert_rank": 8071,
+      "role": "rx_retell",
+      "scenario": "deploy",
+      "title": "会员服务上线转述：镜像版本=max-conn=200",
+      "topic": "r6-deploy-7",
+      "ts": "2026-08-09"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "/healthz"
+      },
+      "content": "【前因】关于 会员服务 的上线归档\n【行为】知识库里记着 会员服务 的 镜像版本 是 /healthz\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-10T08:00:00Z",
+      "id": "hl9A0026",
+      "insert_rank": 8072,
+      "role": "rx_doc",
+      "scenario": "deploy",
+      "title": "会员服务上线文档：镜像版本=/healthz",
+      "topic": "r6-deploy-7",
+      "ts": "2026-08-10"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "放量档位",
+        "value": "10→30→100"
+      },
+      "content": "【前因】灰度组 的 风控服务 这次灰度\n【行为】我实测 放量档位 是 10→30→100，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-09T08:00:00Z",
+      "id": "hl9B0027",
+      "insert_rank": 8080,
+      "role": "rx_measured",
+      "scenario": "canary",
+      "title": "风控服务灰度实测：放量档位=10→30→100",
+      "topic": "r6-canary-8",
+      "ts": "2026-08-09"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "放量档位",
+        "value": "10%"
+      },
+      "content": "【前因】关于 灰度组 的 风控服务 的灰度\n【行为】同事说「放量档位 用 10% 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-10T08:00:00Z",
+      "id": "hl9B0028",
+      "insert_rank": 8081,
+      "role": "rx_retell",
+      "scenario": "canary",
+      "title": "风控服务灰度转述：放量档位=10%",
+      "topic": "r6-canary-8",
+      "ts": "2026-08-10"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "放量档位",
+        "value": "15 分钟"
+      },
+      "content": "【前因】关于 风控服务 的灰度归档\n【行为】归档纪要里写着 风控服务 的 放量档位 是 15 分钟\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-11T08:00:00Z",
+      "id": "hl9B0029",
+      "insert_rank": 8082,
+      "role": "rx_doc",
+      "scenario": "canary",
+      "title": "风控服务灰度文档：放量档位=15 分钟",
+      "topic": "r6-canary-8",
+      "ts": "2026-08-11"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "超时",
+        "value": "3 秒"
+      },
+      "content": "【前因】正式 的 对账接口 这次接口\n【行为】我实测 超时 是 3 秒，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-10T08:00:00Z",
+      "id": "hl9C0027",
+      "insert_rank": 8090,
+      "role": "rx_measured",
+      "scenario": "api",
+      "title": "对账接口接口实测：超时=3 秒",
+      "topic": "r6-api-9",
+      "ts": "2026-08-10"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "超时",
+        "value": "2 次"
+      },
+      "content": "【前因】关于 正式 的 对账接口 的接口\n【行为】同事说「超时 用 2 次 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-11T08:00:00Z",
+      "id": "hl9C0028",
+      "insert_rank": 8091,
+      "role": "rx_retell",
+      "scenario": "api",
+      "title": "对账接口接口转述：超时=2 次",
+      "topic": "r6-api-9",
+      "ts": "2026-08-11"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "超时",
+        "value": "HMAC-SHA256"
+      },
+      "content": "【前因】关于 对账接口 的接口归档\n【行为】交接文档里写着 对账接口 的 超时 是 HMAC-SHA256\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-12T08:00:00Z",
+      "id": "hl9C0029",
+      "insert_rank": 8092,
+      "role": "rx_doc",
+      "scenario": "api",
+      "title": "对账接口接口文档：超时=HMAC-SHA256",
+      "topic": "r6-api-9",
+      "ts": "2026-08-12"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "告警接收人",
+        "value": "当班组"
+      },
+      "content": "【前因】本机 的 定时任务 这次交接\n【行为】我实测 告警接收人 是 当班组，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-11T08:00:00Z",
+      "id": "hl9D0027",
+      "insert_rank": 8100,
+      "role": "rx_measured",
+      "scenario": "handoff",
+      "title": "定时任务交接实测：告警接收人=当班组",
+      "topic": "r6-handoff-10",
+      "ts": "2026-08-11"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "告警接收人",
+        "value": "/var/log/app"
+      },
+      "content": "【前因】关于 本机 的 定时任务 的交接\n【行为】同事说「告警接收人 用 /var/log/app 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-12T08:00:00Z",
+      "id": "hl9D0028",
+      "insert_rank": 8101,
+      "role": "rx_retell",
+      "scenario": "handoff",
+      "title": "定时任务交接转述：告警接收人=/var/log/app",
+      "topic": "r6-handoff-10",
+      "ts": "2026-08-12"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "告警接收人",
+        "value": "/opt/ops/run.sh"
+      },
+      "content": "【前因】关于 定时任务 的交接归档\n【行为】知识库里记着 定时任务 的 告警接收人 是 /opt/ops/run.sh\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-13T08:00:00Z",
+      "id": "hl9D0029",
+      "insert_rank": 8102,
+      "role": "rx_doc",
+      "scenario": "handoff",
+      "title": "定时任务交接文档：告警接收人=/opt/ops/run.sh",
+      "topic": "r6-handoff-10",
+      "ts": "2026-08-13"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "生效时间",
+        "value": "下个迭代"
+      },
+      "content": "【前因】评审会 的 命名规范 这次会议\n【行为】我实测 生效时间 是 下个迭代，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-12T08:00:00Z",
+      "id": "hl9E0027",
+      "insert_rank": 8110,
+      "role": "rx_measured",
+      "scenario": "meeting",
+      "title": "命名规范会议实测：生效时间=下个迭代",
+      "topic": "r6-meeting-11",
+      "ts": "2026-08-12"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "生效时间",
+        "value": "自然周"
+      },
+      "content": "【前因】关于 评审会 的 命名规范 的会议\n【行为】同事说「生效时间 用 自然周 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-13T08:00:00Z",
+      "id": "hl9E0028",
+      "insert_rank": 8111,
+      "role": "rx_retell",
+      "scenario": "meeting",
+      "title": "命名规范会议转述：生效时间=自然周",
+      "topic": "r6-meeting-11",
+      "ts": "2026-08-13"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "生效时间",
+        "value": "按下单时间"
+      },
+      "content": "【前因】关于 命名规范 的会议归档\n【行为】归档纪要里写着 命名规范 的 生效时间 是 按下单时间\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-14T08:00:00Z",
+      "id": "hl9E0029",
+      "insert_rank": 8112,
+      "role": "rx_doc",
+      "scenario": "meeting",
+      "title": "命名规范会议文档：生效时间=按下单时间",
+      "topic": "r6-meeting-11",
+      "ts": "2026-08-14"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "熔断阈值",
+        "value": "连续 5 次"
+      },
+      "content": "【前因】线上 的 支付回调 这次故障\n【行为】我实测 熔断阈值 是 连续 5 次，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-13T08:00:00Z",
+      "id": "hl9F0027",
+      "insert_rank": 8120,
+      "role": "rx_measured",
+      "scenario": "ops",
+      "title": "支付回调故障实测：熔断阈值=连续 5 次",
+      "topic": "r6-ops-12",
+      "ts": "2026-08-13"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "熔断阈值",
+        "value": "先加两副本"
+      },
+      "content": "【前因】关于 线上 的 支付回调 的故障\n【行为】同事说「熔断阈值 用 先加两副本 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-14T08:00:00Z",
+      "id": "hl9F0028",
+      "insert_rank": 8121,
+      "role": "rx_retell",
+      "scenario": "ops",
+      "title": "支付回调故障转述：熔断阈值=先加两副本",
+      "topic": "r6-ops-12",
+      "ts": "2026-08-14"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "熔断阈值",
+        "value": "上一个稳定版本"
+      },
+      "content": "【前因】关于 支付回调 的故障归档\n【行为】交接文档里写着 支付回调 的 熔断阈值 是 上一个稳定版本\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-15T08:00:00Z",
+      "id": "hl9F0029",
+      "insert_rank": 8122,
+      "role": "rx_doc",
+      "scenario": "ops",
+      "title": "支付回调故障文档：熔断阈值=上一个稳定版本",
+      "topic": "r6-ops-12",
+      "ts": "2026-08-15"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "校验方式",
+        "value": "抽样比对"
+      },
+      "content": "【前因】生产库 的 用户档案 这次迁移\n【行为】我实测 校验方式 是 抽样比对，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-14T08:00:00Z",
+      "id": "hl9G0027",
+      "insert_rank": 8130,
+      "role": "rx_measured",
+      "scenario": "migration",
+      "title": "用户档案迁移实测：校验方式=抽样比对",
+      "topic": "r6-migration-13",
+      "ts": "2026-08-14"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "校验方式",
+        "value": "凌晨 3 点"
+      },
+      "content": "【前因】关于 生产库 的 用户档案 的迁移\n【行为】同事说「校验方式 用 凌晨 3 点 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-15T08:00:00Z",
+      "id": "hl9G0028",
+      "insert_rank": 8131,
+      "role": "rx_retell",
+      "scenario": "migration",
+      "title": "用户档案迁移转述：校验方式=凌晨 3 点",
+      "topic": "r6-migration-13",
+      "ts": "2026-08-15"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "校验方式",
+        "value": "5000 行"
+      },
+      "content": "【前因】关于 用户档案 的迁移归档\n【行为】知识库里记着 用户档案 的 校验方式 是 5000 行\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-16T08:00:00Z",
+      "id": "hl9G0029",
+      "insert_rank": 8132,
+      "role": "rx_doc",
+      "scenario": "migration",
+      "title": "用户档案迁移文档：校验方式=5000 行",
+      "topic": "r6-migration-13",
+      "ts": "2026-08-16"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "授权范围",
+        "value": "只读"
+      },
+      "content": "【前因】测试租户 的 配置中心 这次审批\n【行为】我实测 授权范围 是 只读，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-15T08:00:00Z",
+      "id": "hl9H0027",
+      "insert_rank": 8140,
+      "role": "rx_measured",
+      "scenario": "approval",
+      "title": "配置中心审批实测：授权范围=只读",
+      "topic": "r6-approval-14",
+      "ts": "2026-08-15"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "授权范围",
+        "value": "组长加 DBA"
+      },
+      "content": "【前因】关于 测试租户 的 配置中心 的审批\n【行为】同事说「授权范围 用 组长加 DBA 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-16T08:00:00Z",
+      "id": "hl9H0028",
+      "insert_rank": 8141,
+      "role": "rx_retell",
+      "scenario": "approval",
+      "title": "配置中心审批转述：授权范围=组长加 DBA",
+      "topic": "r6-approval-14",
+      "ts": "2026-08-16"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "授权范围",
+        "value": "7 天"
+      },
+      "content": "【前因】关于 配置中心 的审批归档\n【行为】归档纪要里写着 配置中心 的 授权范围 是 7 天\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-17T08:00:00Z",
+      "id": "hl9H0029",
+      "insert_rank": 8142,
+      "role": "rx_doc",
+      "scenario": "approval",
+      "title": "配置中心审批文档：授权范围=7 天",
+      "topic": "r6-approval-14",
+      "ts": "2026-08-17"
+    },
+    {
+      "attrs": {
+        "grade": "measured",
+        "is_gold": true,
+        "param": "镜像版本",
+        "value": "v2.3.1"
+      },
+      "content": "【前因】生产 的 会员服务 这次上线\n【行为】我实测 镜像版本 是 v2.3.1，复核过两遍\n【后果】以这次实测为准",
+      "created_at": "2026-08-16T08:00:00Z",
+      "id": "hl9A0027",
+      "insert_rank": 8150,
+      "role": "rx_measured",
+      "scenario": "deploy",
+      "title": "会员服务上线实测：镜像版本=v2.3.1",
+      "topic": "r6-deploy-15",
+      "ts": "2026-08-16"
+    },
+    {
+      "attrs": {
+        "grade": "retell",
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "max-conn=200"
+      },
+      "content": "【前因】关于 生产 的 会员服务 的上线\n【行为】同事说「镜像版本 用 max-conn=200 应该没事」，我没细问\n【后果】说法是从别处听来的",
+      "created_at": "2026-08-17T08:00:00Z",
+      "id": "hl9A0028",
+      "insert_rank": 8151,
+      "role": "rx_retell",
+      "scenario": "deploy",
+      "title": "会员服务上线转述：镜像版本=max-conn=200",
+      "topic": "r6-deploy-15",
+      "ts": "2026-08-17"
+    },
+    {
+      "attrs": {
+        "grade": "doc",
+        "is_gold": false,
+        "param": "镜像版本",
+        "value": "/healthz"
+      },
+      "content": "【前因】关于 会员服务 的上线归档\n【行为】交接文档里写着 会员服务 的 镜像版本 是 /healthz\n【后果】文档没标最后复核时间",
+      "created_at": "2026-08-18T08:00:00Z",
+      "id": "hl9A0029",
+      "insert_rank": 8152,
+      "role": "rx_doc",
+      "scenario": "deploy",
+      "title": "会员服务上线文档：镜像版本=/healthz",
+      "topic": "r6-deploy-15",
+      "ts": "2026-08-18"
+    }
+  ]
+}

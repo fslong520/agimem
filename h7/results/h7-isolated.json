@@ -1,0 +1,509 @@
+{
+ "schema": "agimem-h7-isolated/1",
+ "port": 16344,
+ "store": "/tmp/agimem-h7-iso",
+ "n_nodes": 144,
+ "n_questions": 80,
+ "parent_edges_planned": 80,
+ "import_rc": 0,
+ "import_summary_keys": [
+  "duplicates",
+  "imported",
+  "orphaned",
+  "reattached",
+  "skipped"
+ ],
+ "index": {
+  "state": "ready",
+  "local_total": 144,
+  "embedding_model": "m3",
+  "waited_s": 112.7
+ },
+ "list_mapped": 144,
+ "attach_ok": 80,
+ "attach_fail": 0,
+ "attach_fail_sids": [],
+ "score_h7": {
+  "n_total": 80,
+  "scored": 80,
+  "distribution": {
+   "L1": 16,
+   "L2": 16,
+   "L3": 24,
+   "L4": 24
+  },
+  "L1": {
+   "hit@1": {
+    "point": 0.1875,
+    "lo": 0.06591599071428142,
+    "hi": 0.4300888096197414,
+    "n": 16,
+    "k": 3,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hit@5": {
+    "point": 0.875,
+    "lo": 0.639771727342413,
+    "hi": 0.9650225122567595,
+    "n": 16,
+    "k": 14,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "by_hop": {
+    "hops1": {
+     "n": 4,
+     "hit@1": {
+      "point": 0.75,
+      "lo": 0.30064184258240184,
+      "hi": 0.9544127391902995,
+      "n": 4,
+      "k": 3,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 0.75,
+      "lo": 0.30064184258240184,
+      "hi": 0.9544127391902995,
+      "n": 4,
+      "k": 3,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "hops2": {
+     "n": 4,
+     "hit@1": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.4898908364545973,
+      "n": 4,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 1.0,
+      "lo": 0.5101091635454027,
+      "hi": 1.0,
+      "n": 4,
+      "k": 4,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "hops3": {
+     "n": 4,
+     "hit@1": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.4898908364545973,
+      "n": 4,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 1.0,
+      "lo": 0.5101091635454027,
+      "hi": 1.0,
+      "n": 4,
+      "k": 4,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "hops4": {
+     "n": 4,
+     "hit@1": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.4898908364545973,
+      "n": 4,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 0.75,
+      "lo": 0.30064184258240184,
+      "hi": 0.9544127391902995,
+      "n": 4,
+      "k": 3,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    }
+   }
+  },
+  "L2": {
+   "accuracy": {
+    "point": 1.0,
+    "lo": 0.8063923194655637,
+    "hi": 1.0,
+    "n": 16,
+    "k": 16,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hop2": {
+    "n": 8,
+    "accuracy": {
+     "point": 1.0,
+     "lo": 0.6755924351161198,
+     "hi": 1.0,
+     "n": 8,
+     "k": 8,
+     "method": "wilson",
+     "z": 1.959963984540054
+    }
+   },
+   "hop3": {
+    "n": 8,
+    "accuracy": {
+     "point": 1.0,
+     "lo": 0.6755924351161198,
+     "hi": 1.0,
+     "n": 8,
+     "k": 8,
+     "method": "wilson",
+     "z": 1.959963984540054
+    }
+   }
+  },
+  "L3": {
+   "n": 24,
+   "n_abstain_gold": 16,
+   "n_answered": 8,
+   "abstain_precision": {
+    "point": null,
+    "lo": null,
+    "hi": null,
+    "n": 0,
+    "k": 0
+   },
+   "abstain_recall": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.1936076805344365,
+    "n": 16,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "closed_ended": {
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "tp": 8,
+    "fn": 0,
+    "fp": 16
+   },
+   "by_tier": {
+    "answered": {
+     "n": 8,
+     "accuracy": {
+      "point": 1.0,
+      "lo": 0.6755924351161198,
+      "hi": 1.0,
+      "n": 8,
+      "k": 8,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "in_unwritten": {
+     "n": 8,
+     "accuracy": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.32440756488388023,
+      "n": 8,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "off_spectrum": {
+     "n": 8,
+     "accuracy": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.32440756488388023,
+      "n": 8,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    }
+   }
+  },
+  "L4": {
+   "hit@1": {
+    "point": 0.375,
+    "lo": 0.21159367559548778,
+    "hi": 0.5729003755732572,
+    "n": 24,
+    "k": 9,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hit@5": {
+    "point": 0.625,
+    "lo": 0.42709962442674276,
+    "hi": 0.7884063244045122,
+    "n": 24,
+    "k": 15,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "by_aug": {
+    "rewrite": {
+     "n": 8,
+     "hit@1": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.32440756488388023,
+      "n": 8,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 0.25,
+      "lo": 0.071479212752109,
+      "hi": 0.5907245696898311,
+      "n": 8,
+      "k": 2,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "rephrase": {
+     "n": 8,
+     "hit@1": {
+      "point": 0.375,
+      "lo": 0.13684428582359742,
+      "hi": 0.6942576053973727,
+      "n": 8,
+      "k": 3,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 0.75,
+      "lo": 0.40927543031016883,
+      "hi": 0.9285207872478909,
+      "n": 8,
+      "k": 6,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "reorder": {
+     "n": 8,
+     "hit@1": {
+      "point": 0.75,
+      "lo": 0.40927543031016883,
+      "hi": 0.9285207872478909,
+      "n": 8,
+      "k": 6,
+      "method": "wilson",
+      "z": 1.959963984540054
+     },
+     "hit@5": {
+      "point": 0.875,
+      "lo": 0.5291118177871464,
+      "hi": 0.9775825085499433,
+      "n": 8,
+      "k": 7,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    }
+   }
+  },
+  "params": {
+   "topk": 5
+  }
+ },
+ "l2_real_recall": {
+  "definition": "top-1 合成 id 的 parent 链深 == gold hop_count；score_h7 的 L2 不读召回，不作能力分",
+  "accuracy": {
+   "point": 0.125,
+   "lo": 0.03497748774324047,
+   "hi": 0.36022827265758695,
+   "n": 16,
+   "k": 2,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "subject_hit@1": {
+   "point": 0.0,
+   "lo": 0.0,
+   "hi": 0.1936076805344365,
+   "n": 16,
+   "k": 0,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "rows": [
+   {
+    "qid": "q017",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7A0002",
+    "subject": "h7A0007",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q018",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7B0002",
+    "subject": "h7B0010",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q019",
+    "want": 2,
+    "measured": 2,
+    "top1": "h7C0003",
+    "subject": "h7C0011",
+    "correct": true,
+    "subject_hit": false
+   },
+   {
+    "qid": "q020",
+    "want": 3,
+    "measured": 3,
+    "top1": "h7D0004",
+    "subject": "h7D0014",
+    "correct": true,
+    "subject_hit": false
+   },
+   {
+    "qid": "q021",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7E0002",
+    "subject": "h7E0007",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q022",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7F0002",
+    "subject": "h7F0010",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q023",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7G0002",
+    "subject": "h7G0011",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q024",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7H0002",
+    "subject": "h7H0014",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q025",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7A0002",
+    "subject": "h7A0010",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q026",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7B0012",
+    "subject": "h7B0014",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q027",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7C0006",
+    "subject": "h7C0014",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q028",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7D0016",
+    "subject": "h7D0018",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q029",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7E0004",
+    "subject": "h7E0010",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q030",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7F0005",
+    "subject": "h7F0014",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q031",
+    "want": 2,
+    "measured": 1,
+    "top1": "h7G0006",
+    "subject": "h7G0014",
+    "correct": false,
+    "subject_hit": false
+   },
+   {
+    "qid": "q032",
+    "want": 3,
+    "measured": 1,
+    "top1": "h7H0007",
+    "subject": "h7H0018",
+    "correct": false,
+    "subject_hit": false
+   }
+  ]
+ },
+ "l4_semantic_increment": {
+  "baseline": 0.3333,
+  "hit@1": 0.375,
+  "delta": 0.0417,
+  "reading": "字面匹配"
+ },
+ "elapsed_s": 246.5,
+ "recall_model_set": [
+  "m3"
+ ]
+}

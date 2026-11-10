@@ -1,0 +1,305 @@
+{
+  "schema": "agimem-causal-supersession-real/2",
+  "arm": "isolated-rsrs-real-supersedes-edges",
+  "files": {
+    "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-supersession-real-predictions.jsonl",
+    "build": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-supersession-real-build.json",
+    "chain": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-supersede-chain.json",
+    "baseline": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-isolated-predictions.jsonl"
+  },
+  "write_side": {
+    "command": "rsrs remember <新结论> --importance important --supersedes <旧UUID> --force",
+    "n_pairs": 10,
+    "n_written_ok": 10,
+    "n_written_fail": 0,
+    "constraint_probe_trivial": {
+      "rc": 1,
+      "out": "{\"command\":\"cli\",\"status\":\"fail\",\"summary\":{\"reason\":\"runtime_error\"},\"items\":[],\"actions\":[],\"errors\":[\"associations require important memory\"],\"details\":{\"error_type\":\"runtime\"},\"related\":[]}"
+    },
+    "verify_samples": [
+      {
+        "old": "sntD0002",
+        "superseded_by_present": true,
+        "superseded_by_sid": "sntD0011",
+        "top_ids": [
+          "sntD0002",
+          "sntG0005",
+          "sntD0001"
+        ]
+      },
+      {
+        "old": "sntF0002",
+        "superseded_by_present": true,
+        "superseded_by_sid": "sntF0011",
+        "top_ids": [
+          "sntF0002",
+          "sntF0014",
+          "sntE0010"
+        ]
+      },
+      {
+        "old": "sntI0002",
+        "superseded_by_present": true,
+        "superseded_by_sid": "sntI0015",
+        "top_ids": [
+          "sntI0002",
+          "sntI0014",
+          "sntI0004"
+        ]
+      }
+    ],
+    "index_after": {
+      "state": "ready",
+      "local_total": 143,
+      "worker_active": true,
+      "error": null,
+      "embedding_model": "m3",
+      "waited_s": 1.4
+    }
+  },
+  "read_side": {
+    "n_supersession_questions": 10,
+    "status_current_stale_missing": [
+      10,
+      0,
+      0
+    ],
+    "n_questions_old_recalled_with_marker": 10,
+    "supersession_acc": 1.0,
+    "supersession_acc_ci": {
+      "point": 1.0,
+      "lo": 0.7224672001371107,
+      "hi": 0.9999999999999999,
+      "n": 10,
+      "k": 10,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "baseline_no_edge_acc": 0.1,
+    "delta_vs_no_edge": {
+      "point": 0.9,
+      "lo": 0.7,
+      "hi": 1.0,
+      "n": 10,
+      "reps": 2000
+    },
+    "per_question": [
+      {
+        "qid": "q089",
+        "status": "current",
+        "gold": [
+          "sntD0011"
+        ],
+        "top": [
+          "sntD0002",
+          "sntD0004",
+          "sntG0005",
+          "sntD0009",
+          "sntD0001"
+        ]
+      },
+      {
+        "qid": "q090",
+        "status": "current",
+        "gold": [
+          "sntF0011"
+        ],
+        "top": [
+          "sntF0002",
+          "sntF0014",
+          "sntE0010",
+          "sntI0015",
+          "sntF0003"
+        ]
+      },
+      {
+        "qid": "q091",
+        "status": "current",
+        "gold": [
+          "sntI0015"
+        ],
+        "top": [
+          "sntI0002",
+          "sntI0014",
+          "sntI0004",
+          "sntI0015",
+          "sntI0003"
+        ]
+      },
+      {
+        "qid": "q092",
+        "status": "current",
+        "gold": [
+          "sntC0011"
+        ],
+        "top": [
+          "sntC0003",
+          "sntC0015",
+          "sntC0005",
+          "sntC0004",
+          "sntG0004"
+        ]
+      },
+      {
+        "qid": "q093",
+        "status": "current",
+        "gold": [
+          "sntJ0009"
+        ],
+        "top": [
+          "sntJ0002",
+          "sntJ0003",
+          "sntJ0012",
+          "sntC0002",
+          "sntH0003"
+        ]
+      },
+      {
+        "qid": "q094",
+        "status": "current",
+        "gold": [
+          "sntE0010"
+        ],
+        "top": [
+          "sntE0002",
+          "sntE0001",
+          "sntE0012",
+          "sntJ0003",
+          "sntI0003"
+        ]
+      },
+      {
+        "qid": "q095",
+        "status": "current",
+        "gold": [
+          "sntG0009"
+        ],
+        "top": [
+          "sntG0002",
+          "sntG0003",
+          "sntG0001",
+          "sntG0004",
+          "sntI0015"
+        ]
+      },
+      {
+        "qid": "q096",
+        "status": "current",
+        "gold": [
+          "sntH0009"
+        ],
+        "top": [
+          "sntH0002",
+          "sntH0012",
+          "sntC0003",
+          "sntC0005",
+          "sntH0003"
+        ]
+      },
+      {
+        "qid": "q097",
+        "status": "current",
+        "gold": [
+          "sntA0015"
+        ],
+        "top": [
+          "sntA0002",
+          "sntC0005",
+          "sntA0009",
+          "sntI0003",
+          "sntE0004"
+        ]
+      },
+      {
+        "qid": "q098",
+        "status": "current",
+        "gold": [
+          "sntB0009"
+        ],
+        "top": [
+          "sntB0002",
+          "sntB0012",
+          "sntB0001",
+          "sntI0003",
+          "sntC0003"
+        ]
+      }
+    ]
+  },
+  "koushu": {
+    "A_oracle": "生成器种边（`superseded_by` 写在 data/*.json 里）。**从未生效**：`import` 把该字段硬编码为空串（app-core/service.rs:1739-1740），所以历史 «oracle 口径» 的 supersession 数字实际上是「无边 + 文本召回」。",
+    "B_system": "系统真写边：`remember --supersedes`（必须配 --importance important，实测 trivial 被拒：`associations require important memory`）。本轮 A/B 两口径**不并表**。"
+  },
+  "chain_supersession": {
+    "ok": true,
+    "marks": {
+      "A": {
+        "supersedes_present": false,
+        "superseded_by_present": true
+      },
+      "B": {
+        "supersedes_present": true,
+        "superseded_by_present": true
+      },
+      "C": {
+        "supersedes_present": true,
+        "superseded_by_present": false
+      }
+    },
+    "ranks": [
+      {
+        "title": "链式取代探针A",
+        "superseded_by": "C",
+        "has_supersedes": false
+      },
+      {
+        "title": "链式取代探针C",
+        "superseded_by": null,
+        "has_supersedes": true
+      },
+      {
+        "title": "链式取代探针B",
+        "superseded_by": "C",
+        "has_supersedes": true
+      }
+    ],
+    "steps": [
+      {
+        "label": "A",
+        "rc": 0,
+        "uuid_present": true
+      },
+      {
+        "label": "B(supersedes A)",
+        "rc": 0,
+        "uuid_present": true,
+        "out": "ok"
+      },
+      {
+        "label": "C(supersedes B)",
+        "rc": 0,
+        "uuid_present": true,
+        "out": "ok"
+      }
+    ],
+    "top1_body": "unknown",
+    "shows": {
+      "A": {
+        "supersedes_to": null,
+        "superseded_by": "B",
+        "content": "发布窗口按 15 分钟执行。"
+      },
+      "B": {
+        "supersedes_to": "A",
+        "superseded_by": "C",
+        "content": "发布窗口按 30 分钟执行。"
+      },
+      "C": {
+        "supersedes_to": "B",
+        "superseded_by": null,
+        "content": "发布窗口按 45 分钟执行。"
+      }
+    },
+    "top1_label": "链式取代探针A"
+  }
+}

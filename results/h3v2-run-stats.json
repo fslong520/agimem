@@ -1,0 +1,66 @@
+{
+  "schema": "agimem-h3-v2-run/1",
+  "arms": [
+    {
+      "arm": "recency",
+      "data_dir": "/tmp/agimem-h3v2/recency",
+      "port": 16221,
+      "planned_entries": 40,
+      "imported_batch": 20,
+      "remembered": 20,
+      "index": {
+        "state": "ready",
+        "local_total": 40,
+        "worker_active": true,
+        "error": null,
+        "embedding_model": "m3",
+        "waited_s": 18.9
+      },
+      "local_total": 40,
+      "n_questions": 20,
+      "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/h3v2-predictions-recency.jsonl",
+      "elapsed_s": 53.0
+    },
+    {
+      "arm": "correction",
+      "data_dir": "/tmp/agimem-h3v2/correction",
+      "port": 16222,
+      "planned_entries": 40,
+      "imported_batch": 20,
+      "remembered": 20,
+      "index": {
+        "state": "ready",
+        "local_total": 40,
+        "worker_active": true,
+        "error": null,
+        "embedding_model": "m3",
+        "waited_s": 19.8
+      },
+      "local_total": 40,
+      "n_questions": 20,
+      "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/h3v2-predictions-correction.jsonl",
+      "elapsed_s": 54.8
+    },
+    {
+      "arm": "repeat",
+      "data_dir": "/tmp/agimem-h3v2/repeat",
+      "port": 16223,
+      "planned_entries": 80,
+      "imported_batch": 20,
+      "remembered": 60,
+      "index": {
+        "state": "ready",
+        "local_total": 80,
+        "worker_active": true,
+        "error": null,
+        "embedding_model": "m3",
+        "waited_s": 7.2
+      },
+      "local_total": 80,
+      "n_questions": 20,
+      "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/h3v2-predictions-repeat.jsonl",
+      "elapsed_s": 74.2
+    }
+  ],
+  "notes": "隔离库（/tmp 独立目录+独立端口+独立 super）；未触碰 ~/.rsrs；标题码自造，UUID 不落盘"
+}

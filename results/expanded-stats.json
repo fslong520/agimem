@@ -1,0 +1,746 @@
+{
+  "n_questions": 122,
+  "limit": 5,
+  "n_hits": 610,
+  "n_empty_questions": 0,
+  "n_id_prefix_match_tree": 0,
+  "n_details_with_superseded_by": 0,
+  "score_min": 2.595363140106201,
+  "score_max": 4.794957637786865,
+  "per_question": [
+    {
+      "qid": "q001",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.844058990478515
+    },
+    {
+      "qid": "q002",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.8978066444396977
+    },
+    {
+      "qid": "q003",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.937210321426392
+    },
+    {
+      "qid": "q004",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.103203296661377
+    },
+    {
+      "qid": "q005",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.967528820037842
+    },
+    {
+      "qid": "q006",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.009986877441406
+    },
+    {
+      "qid": "q007",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.940686702728271
+    },
+    {
+      "qid": "q008",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.6100685596466064
+    },
+    {
+      "qid": "q009",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.184911251068115
+    },
+    {
+      "qid": "q010",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.653649806976318
+    },
+    {
+      "qid": "q011",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.085629463195801
+    },
+    {
+      "qid": "q012",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.949068069458008
+    },
+    {
+      "qid": "q013",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.181423664093018
+    },
+    {
+      "qid": "q014",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.6893019676208496
+    },
+    {
+      "qid": "q015",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.8099474906921382
+    },
+    {
+      "qid": "q016",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.254175662994385
+    },
+    {
+      "qid": "q017",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.593924045562744
+    },
+    {
+      "qid": "q018",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.076409816741943
+    },
+    {
+      "qid": "q019",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.2161407470703125
+    },
+    {
+      "qid": "q020",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.757169485092163
+    },
+    {
+      "qid": "q021",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.5951292514801025
+    },
+    {
+      "qid": "q022",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.377885341644287
+    },
+    {
+      "qid": "q023",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.961052656173706
+    },
+    {
+      "qid": "q024",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.036721706390381
+    },
+    {
+      "qid": "q025",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.8792409896850586
+    },
+    {
+      "qid": "q026",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.3002729415893555
+    },
+    {
+      "qid": "q027",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.8450191020965576
+    },
+    {
+      "qid": "q028",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.780896425247192
+    },
+    {
+      "qid": "q029",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.303323268890381
+    },
+    {
+      "qid": "q030",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.2526164054870605
+    },
+    {
+      "qid": "q031",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.146704196929932
+    },
+    {
+      "qid": "q032",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.9503326416015625
+    },
+    {
+      "qid": "q033",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.240927696228027
+    },
+    {
+      "qid": "q034",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.8950510025024414
+    },
+    {
+      "qid": "q035",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.7391724586486816
+    },
+    {
+      "qid": "q036",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.970120429992676
+    },
+    {
+      "qid": "q037",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.802334308624267
+    },
+    {
+      "qid": "q038",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.93616795539856
+    },
+    {
+      "qid": "q039",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.115372657775879
+    },
+    {
+      "qid": "q040",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.054612636566162
+    },
+    {
+      "qid": "q041",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.690484523773194
+    },
+    {
+      "qid": "q042",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.200247764587402
+    },
+    {
+      "qid": "q043",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.8288919925689697
+    },
+    {
+      "qid": "q044",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.161623001098633
+    },
+    {
+      "qid": "q045",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.0748677253723145
+    },
+    {
+      "qid": "q046",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.7049577236175537
+    },
+    {
+      "qid": "q047",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.181610107421875
+    },
+    {
+      "qid": "q048",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.783560037612915
+    },
+    {
+      "qid": "q049",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.790513038635254
+    },
+    {
+      "qid": "q050",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.014440536499023
+    },
+    {
+      "qid": "q051",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.081486225128174
+    },
+    {
+      "qid": "q052",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.893512725830078
+    },
+    {
+      "qid": "q053",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.6677567958831783
+    },
+    {
+      "qid": "q054",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.155636310577393
+    },
+    {
+      "qid": "q055",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.8214211463928223
+    },
+    {
+      "qid": "q056",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.997483730316162
+    },
+    {
+      "qid": "q057",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.229937553405762
+    },
+    {
+      "qid": "q058",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.246496677398682
+    },
+    {
+      "qid": "q059",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.644324779510498
+    },
+    {
+      "qid": "q060",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.837242603302002
+    },
+    {
+      "qid": "q061",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.639256238937378
+    },
+    {
+      "qid": "q062",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.6797828674316406
+    },
+    {
+      "qid": "q063",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.922917604446411
+    },
+    {
+      "qid": "q064",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.780951976776123
+    },
+    {
+      "qid": "q065",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.034700870513916
+    },
+    {
+      "qid": "q066",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.061259746551514
+    },
+    {
+      "qid": "q067",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.6942739486694336
+    },
+    {
+      "qid": "q068",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.7679598331451416
+    },
+    {
+      "qid": "q069",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.817281723022461
+    },
+    {
+      "qid": "q070",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.8085415363311768
+    },
+    {
+      "qid": "q071",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.9964287281036377
+    },
+    {
+      "qid": "q072",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.9926915168762207
+    },
+    {
+      "qid": "q073",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.168285369873047
+    },
+    {
+      "qid": "q074",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.828632116317749
+    },
+    {
+      "qid": "q075",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.7899820804595943
+    },
+    {
+      "qid": "q076",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.339481353759766
+    },
+    {
+      "qid": "q077",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.1160993576049805
+    },
+    {
+      "qid": "q078",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.890997886657715
+    },
+    {
+      "qid": "q079",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.80261492729187
+    },
+    {
+      "qid": "q080",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.1036601066589355
+    },
+    {
+      "qid": "q081",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.814573287963867
+    },
+    {
+      "qid": "q082",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.816984176635742
+    },
+    {
+      "qid": "q083",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.9304330348968506
+    },
+    {
+      "qid": "q084",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.885169267654419
+    },
+    {
+      "qid": "q085",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.794957637786865
+    },
+    {
+      "qid": "q086",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.799821615219116
+    },
+    {
+      "qid": "q087",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 4.196099281311035
+    },
+    {
+      "qid": "q088",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.8017385005950928
+    },
+    {
+      "qid": "q089",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.272521495819092
+    },
+    {
+      "qid": "q090",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.548615455627441
+    },
+    {
+      "qid": "q091",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.035264015197754
+    },
+    {
+      "qid": "q092",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.210463523864746
+    },
+    {
+      "qid": "q093",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 3.7456188201904297
+    },
+    {
+      "qid": "q094",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.097729206085205
+    },
+    {
+      "qid": "q095",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 3.8168654441833496
+    },
+    {
+      "qid": "q096",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.210463523864746
+    },
+    {
+      "qid": "q097",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.264196872711182
+    },
+    {
+      "qid": "q098",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 3.8186018466949463
+    },
+    {
+      "qid": "q099",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.5487425327301025
+    },
+    {
+      "qid": "q100",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 4.56342077255249
+    },
+    {
+      "qid": "q101",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.771140098571778
+    },
+    {
+      "qid": "q102",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.664706230163574
+    },
+    {
+      "qid": "q103",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.487086296081543
+    },
+    {
+      "qid": "q104",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.2210121154785156
+    },
+    {
+      "qid": "q105",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.61187481880188
+    },
+    {
+      "qid": "q106",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.773244619369507
+    },
+    {
+      "qid": "q107",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.485370397567749
+    },
+    {
+      "qid": "q108",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.719239473342895
+    },
+    {
+      "qid": "q109",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.84087586402893
+    },
+    {
+      "qid": "q110",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 4.333704948425293
+    },
+    {
+      "qid": "q111",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.485370397567749
+    },
+    {
+      "qid": "q112",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.9255781173706055
+    },
+    {
+      "qid": "q113",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 4.048771858215332
+    },
+    {
+      "qid": "q114",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.832549333572388
+    },
+    {
+      "qid": "q115",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.568002700805664
+    },
+    {
+      "qid": "q116",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.877880573272705
+    },
+    {
+      "qid": "q117",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.710630416870117
+    },
+    {
+      "qid": "q118",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.897040843963623
+    },
+    {
+      "qid": "q119",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 4.207757472991943
+    },
+    {
+      "qid": "q120",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.836846351623535
+    },
+    {
+      "qid": "q121",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.676373243331909
+    },
+    {
+      "qid": "q122",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.4935057163238525
+    }
+  ],
+  "redaction": "real ids replaced by e+7digits before write; titles dropped",
+  "command": "rsrs --client-only recall <query> --json --titles --limit 5"
+}

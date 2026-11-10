@@ -1,0 +1,1826 @@
+{
+ "schema": "agimem-human-dimension/1",
+ "generated_at": "2026-11-09T15:42:17+0800",
+ "n_topics": 20,
+ "isolated_root": "/tmp/agimem-human-dim",
+ "discipline": {
+  "write_scope": "仅隔离 profile（每臂独立目录+独立 RSRS_RPC_PORT+独立 super）",
+  "real_store": "未读写 ~/.rsrs",
+  "ablate": "RSRS_ABLATE=hot",
+  "scoring": "标题 token 命中，机械判分，零 LLM"
+ },
+ "arms": {
+  "repeat_1": {
+   "n_planted": 1,
+   "n_items": 20,
+   "n_questions": 20,
+   "hit@5": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hit@1": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "index_wait_s": 28.3,
+   "index_state": {
+    "state": "ready",
+    "worker_active": true,
+    "running": false,
+    "error": null,
+    "local_total": 20,
+    "embedding_model": "m3"
+   },
+   "recall_mode": null,
+   "rows": [
+    {
+     "key": "HM-RP-01",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-01",
+      "HM-RP-08",
+      "HM-RP-05",
+      "HM-RP-04",
+      "HM-RP-06"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-02",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-02",
+      "HM-RP-07",
+      "HM-RP-11"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-03",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-03",
+      "HM-RP-09",
+      "HM-RP-08",
+      "HM-RP-06",
+      "HM-RP-10"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-04",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-04",
+      "HM-RP-10"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-05",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-05",
+      "HM-RP-14",
+      "HM-RP-08",
+      "HM-RP-01",
+      "HM-RP-06"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-06",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-06",
+      "HM-RP-03",
+      "HM-RP-09",
+      "HM-RP-14",
+      "HM-RP-13"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-07",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-07",
+      "HM-RP-02",
+      "HM-RP-13",
+      "HM-RP-10",
+      "HM-RP-18"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-08",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-08",
+      "HM-RP-01",
+      "HM-RP-04",
+      "HM-RP-03"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-09",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-09",
+      "HM-RP-03",
+      "HM-RP-08",
+      "HM-RP-10",
+      "HM-RP-07"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-10",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-10",
+      "HM-RP-04",
+      "HM-RP-16",
+      "HM-RP-02",
+      "HM-RP-13"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-11",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-11",
+      "HM-RP-15",
+      "HM-RP-06"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-12",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-12",
+      "HM-RP-10",
+      "HM-RP-07",
+      "HM-RP-09",
+      "HM-RP-04"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-13",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-13",
+      "HM-RP-08",
+      "HM-RP-10",
+      "HM-RP-06"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-14",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-14",
+      "HM-RP-03",
+      "HM-RP-09",
+      "HM-RP-19",
+      "HM-RP-08"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-15",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-15",
+      "HM-RP-02"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-16",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-16",
+      "HM-RP-10",
+      "HM-RP-09",
+      "HM-RP-08",
+      "HM-RP-04"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-17",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-17",
+      "HM-RP-08"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-18",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-18",
+      "HM-RP-07",
+      "HM-RP-01",
+      "HM-RP-04",
+      "HM-RP-02"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-19",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-19",
+      "HM-RP-14",
+      "HM-RP-03",
+      "HM-RP-08",
+      "HM-RP-01"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-20",
+     "n_planted": 1,
+     "returned": [
+      "HM-RP-20",
+      "HM-RP-08",
+      "HM-RP-03",
+      "HM-RP-01"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    }
+   ]
+  },
+  "repeat_3": {
+   "n_planted": 3,
+   "n_items": 60,
+   "n_questions": 20,
+   "hit@5": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hit@1": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "index_wait_s": 34.5,
+   "index_state": {
+    "state": "ready",
+    "worker_active": true,
+    "running": false,
+    "error": null,
+    "local_total": 60,
+    "embedding_model": "m3"
+   },
+   "recall_mode": null,
+   "rows": [
+    {
+     "key": "HM-RP-01",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-01-r1",
+      "HM-RP-08-r1",
+      "HM-RP-05-r1",
+      "HM-RP-04-r2",
+      "HM-RP-06-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-02",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-02-r1",
+      "HM-RP-02-r3",
+      "HM-RP-07-r3",
+      "HM-RP-11-r2",
+      "HM-RP-15-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-03",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-03-r2",
+      "HM-RP-09-r3",
+      "HM-RP-06-r1",
+      "HM-RP-08-r1",
+      "HM-RP-20-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-04",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-04-r1",
+      "HM-RP-04-r3",
+      "HM-RP-04-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-05",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-05-r1",
+      "HM-RP-01-r2",
+      "HM-RP-14-r2",
+      "HM-RP-08-r1",
+      "HM-RP-06-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-06",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-06-r1",
+      "HM-RP-03-r2",
+      "HM-RP-09-r2",
+      "HM-RP-14-r3",
+      "HM-RP-07-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-07",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-07-r3",
+      "HM-RP-02-r1",
+      "HM-RP-13-r2",
+      "HM-RP-04-r2",
+      "HM-RP-12-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-08",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-08-r1",
+      "HM-RP-01-r1",
+      "HM-RP-04-r2",
+      "HM-RP-16-r3",
+      "HM-RP-03-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-09",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-09-r3",
+      "HM-RP-03-r1",
+      "HM-RP-07-r2",
+      "HM-RP-08-r1",
+      "HM-RP-16-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-10",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-10-r2",
+      "HM-RP-04-r3",
+      "HM-RP-16-r3",
+      "HM-RP-02-r1",
+      "HM-RP-07-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-11",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-11-r1",
+      "HM-RP-15-r3",
+      "HM-RP-17-r3",
+      "HM-RP-06-r3",
+      "HM-RP-04-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-12",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-12-r1",
+      "HM-RP-07-r1",
+      "HM-RP-10-r2",
+      "HM-RP-09-r1",
+      "HM-RP-03-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-13",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-13-r2",
+      "HM-RP-13-r1",
+      "HM-RP-08-r1",
+      "HM-RP-06-r1",
+      "HM-RP-10-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-14",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-14-r1",
+      "HM-RP-03-r2",
+      "HM-RP-09-r3",
+      "HM-RP-19-r2",
+      "HM-RP-08-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-15",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-15-r1",
+      "HM-RP-15-r3",
+      "HM-RP-15-r2",
+      "HM-RP-02-r1",
+      "HM-RP-02-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-16",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-16-r1",
+      "HM-RP-09-r2",
+      "HM-RP-04-r3",
+      "HM-RP-02-r1",
+      "HM-RP-06-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-17",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-17-r1",
+      "HM-RP-17-r2",
+      "HM-RP-17-r3",
+      "HM-RP-08-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-18",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-18-r1",
+      "HM-RP-02-r1",
+      "HM-RP-04-r3",
+      "HM-RP-20-r2",
+      "HM-RP-01-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-19",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-19-r1",
+      "HM-RP-14-r2",
+      "HM-RP-03-r1",
+      "HM-RP-01-r1",
+      "HM-RP-05-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-20",
+     "n_planted": 3,
+     "returned": [
+      "HM-RP-20-r1",
+      "HM-RP-03-r2",
+      "HM-RP-08-r3",
+      "HM-RP-05-r2",
+      "HM-RP-06-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    }
+   ]
+  },
+  "repeat_5": {
+   "n_planted": 5,
+   "n_items": 100,
+   "n_questions": 20,
+   "hit@5": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "hit@1": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "index_wait_s": 39.7,
+   "index_state": {
+    "state": "ready",
+    "worker_active": true,
+    "running": false,
+    "error": null,
+    "local_total": 100,
+    "embedding_model": "m3"
+   },
+   "recall_mode": null,
+   "rows": [
+    {
+     "key": "HM-RP-01",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-01-r1",
+      "HM-RP-08-r5",
+      "HM-RP-04-r5",
+      "HM-RP-05-r1",
+      "HM-RP-06-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-02",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-02-r1",
+      "HM-RP-02-r4",
+      "HM-RP-07-r5",
+      "HM-RP-11-r5",
+      "HM-RP-15-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-03",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-03-r2",
+      "HM-RP-09-r5",
+      "HM-RP-08-r5",
+      "HM-RP-06-r1",
+      "HM-RP-20-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-04",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-04-r1",
+      "HM-RP-04-r3",
+      "HM-RP-04-r5",
+      "HM-RP-04-r4",
+      "HM-RP-04-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-05",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-05-r1",
+      "HM-RP-08-r5",
+      "HM-RP-14-r5",
+      "HM-RP-01-r5",
+      "HM-RP-06-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-06",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-06-r1",
+      "HM-RP-03-r2",
+      "HM-RP-09-r4",
+      "HM-RP-14-r5",
+      "HM-RP-07-r4"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-07",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-07-r5",
+      "HM-RP-02-r1",
+      "HM-RP-13-r4",
+      "HM-RP-10-r4",
+      "HM-RP-16-r4"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-08",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-08-r5",
+      "HM-RP-01-r1",
+      "HM-RP-04-r2",
+      "HM-RP-16-r3",
+      "HM-RP-03-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-09",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-09-r5",
+      "HM-RP-03-r1",
+      "HM-RP-07-r4",
+      "HM-RP-08-r5",
+      "HM-RP-16-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-10",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-10-r2",
+      "HM-RP-04-r3",
+      "HM-RP-16-r3",
+      "HM-RP-02-r1",
+      "HM-RP-01-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-11",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-11-r1",
+      "HM-RP-15-r5",
+      "HM-RP-17-r3",
+      "HM-RP-08-r5",
+      "HM-RP-06-r3"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-12",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-12-r1",
+      "HM-RP-10-r5",
+      "HM-RP-07-r1",
+      "HM-RP-03-r1",
+      "HM-RP-04-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-13",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-13-r2",
+      "HM-RP-06-r5",
+      "HM-RP-08-r5",
+      "HM-RP-10-r4",
+      "HM-RP-07-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-14",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-14-r1",
+      "HM-RP-03-r2",
+      "HM-RP-09-r3",
+      "HM-RP-19-r5",
+      "HM-RP-08-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-15",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-15-r1",
+      "HM-RP-15-r5",
+      "HM-RP-15-r3",
+      "HM-RP-15-r2",
+      "HM-RP-02-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-16",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-16-r4",
+      "HM-RP-09-r4",
+      "HM-RP-11-r5",
+      "HM-RP-10-r5",
+      "HM-RP-08-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-17",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-17-r1",
+      "HM-RP-17-r2",
+      "HM-RP-17-r5",
+      "HM-RP-17-r4",
+      "HM-RP-08-r1"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-18",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-18-r5",
+      "HM-RP-02-r1",
+      "HM-RP-04-r3",
+      "HM-RP-01-r5",
+      "HM-RP-07-r4"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-19",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-19-r5",
+      "HM-RP-14-r2",
+      "HM-RP-03-r1",
+      "HM-RP-01-r1",
+      "HM-RP-08-r5"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RP-20",
+     "n_planted": 5,
+     "returned": [
+      "HM-RP-20-r1",
+      "HM-RP-03-r2",
+      "HM-RP-08-r5",
+      "HM-RP-06-r5",
+      "HM-RP-05-r2"
+     ],
+     "rank": 1,
+     "hit@1": true,
+     "hit@5": true,
+     "mode": null,
+     "rc": 0
+    }
+   ]
+  },
+  "recency": {
+   "n_items": 40,
+   "n_questions": 20,
+   "new_top1": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.16112515805281938,
+    "n": 20,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "new_in_top5": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.16112515805281938,
+    "n": 20,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "stale_top1": {
+    "point": 0.95,
+    "lo": 0.763868806553258,
+    "hi": 0.9911185511992047,
+    "n": 20,
+    "k": 19,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "index_wait_s": 34.2,
+   "index_state": {
+    "state": "ready",
+    "worker_active": true,
+    "running": false,
+    "error": null,
+    "local_total": 80,
+    "embedding_model": "m3"
+   },
+   "recall_mode": null,
+   "rows": [
+    {
+     "key": "HM-RC-01-v2",
+     "returned": [
+      "HM-RC-01-v1",
+      "HM-CR-01-wrong",
+      "HM-RC-08-v1",
+      "HM-RC-05-v1",
+      "HM-RC-14-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-02-v2",
+     "returned": [
+      "HM-RC-02-v1",
+      "HM-CR-02-wrong",
+      "HM-RC-07-v1",
+      "HM-RC-15-v1",
+      "HM-RC-11-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-03-v2",
+     "returned": [
+      "HM-RC-03-v1",
+      "HM-CR-03-fixed",
+      "HM-RC-09-v1",
+      "HM-CR-09-wrong",
+      "HM-RC-20-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-04-v2",
+     "returned": [
+      "HM-RC-04-v1",
+      "HM-CR-04-fixed",
+      "HM-CR-04-wrong",
+      "HM-RC-10-v1",
+      "HM-RC-03-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-05-v2",
+     "returned": [
+      "HM-RC-05-v1",
+      "HM-CR-05-wrong",
+      "HM-RC-14-v1",
+      "HM-RC-01-v1",
+      "HM-RC-08-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-06-v2",
+     "returned": [
+      "HM-RC-06-v1",
+      "HM-CR-06-wrong",
+      "HM-RC-03-v1",
+      "HM-CR-03-wrong",
+      "HM-RC-14-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-07-v2",
+     "returned": [
+      "HM-RC-07-v1",
+      "HM-CR-07-wrong",
+      "HM-RC-02-v1",
+      "HM-CR-02-wrong",
+      "HM-RC-13-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-08-v2",
+     "returned": [
+      "HM-RC-08-v1",
+      "HM-CR-08-wrong",
+      "HM-RC-01-v1",
+      "HM-RC-03-v1",
+      "HM-RC-20-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-09-v2",
+     "returned": [
+      "HM-RC-09-v1",
+      "HM-CR-09-wrong",
+      "HM-RC-03-v1",
+      "HM-CR-03-wrong",
+      "HM-RC-07-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-10-v2",
+     "returned": [
+      "HM-RC-10-v1",
+      "HM-CR-10-fixed",
+      "HM-RC-04-v1",
+      "HM-RC-03-v2",
+      "HM-RC-07-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-11-v2",
+     "returned": [
+      "HM-RC-11-v1",
+      "HM-CR-11-wrong",
+      "HM-RC-15-v1",
+      "HM-RC-03-v1",
+      "HM-RC-17-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-12-v2",
+     "returned": [
+      "HM-RC-12-v1",
+      "HM-CR-12-wrong",
+      "HM-RC-10-v1",
+      "HM-RC-07-v1",
+      "HM-RC-09-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-13-v2",
+     "returned": [
+      "HM-RC-13-v1",
+      "HM-CR-13-wrong",
+      "HM-RC-14-v1",
+      "HM-RC-08-v1",
+      "HM-RC-06-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-14-v2",
+     "returned": [
+      "HM-RC-14-v1",
+      "HM-CR-14-wrong",
+      "HM-RC-03-v1",
+      "HM-RC-05-v2",
+      "HM-RC-08-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-15-v2",
+     "returned": [
+      "HM-RC-15-v1",
+      "HM-CR-15-wrong",
+      "HM-RC-07-v1",
+      "HM-CR-20-fixed",
+      "HM-CR-08-fixed"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-16-v2",
+     "returned": [
+      "HM-RC-16-v1",
+      "HM-CR-16-wrong",
+      "HM-CR-20-wrong",
+      "HM-RC-09-v1",
+      "HM-RC-10-v2"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-17-v2",
+     "returned": [
+      "HM-RC-17-v1",
+      "HM-CR-17-fixed",
+      "HM-RC-03-v1",
+      "HM-CR-08-fixed",
+      "HM-RC-05-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-18-v2",
+     "returned": [
+      "HM-RC-18-v1",
+      "HM-CR-18-fixed",
+      "HM-CR-20-wrong",
+      "HM-RC-07-v1",
+      "HM-RC-05-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-19-v2",
+     "returned": [
+      "HM-CR-19-fixed",
+      "HM-RC-14-v1",
+      "HM-CR-14-wrong",
+      "HM-RC-03-v1",
+      "HM-RC-01-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 0,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-RC-20-v2",
+     "returned": [
+      "HM-RC-20-v1",
+      "HM-CR-20-wrong",
+      "HM-RC-03-v1",
+      "HM-RC-05-v1",
+      "HM-RC-13-v1"
+     ],
+     "new_rank": 0,
+     "old_rank": 1,
+     "new_top1": false,
+     "new_in_top5": false,
+     "stale_top1": true,
+     "mode": null,
+     "rc": 0
+    }
+   ]
+  },
+  "correction": {
+   "n_items": 40,
+   "n_questions": 20,
+   "fixed_top1": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.16112515805281938,
+    "n": 20,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "wrong_top1": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.16112515805281938,
+    "n": 20,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "fixed_beats_wrong": {
+    "point": 0.2,
+    "lo": 0.08065766257979806,
+    "hi": 0.41601743225189364,
+    "n": 20,
+    "k": 4,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "index_wait_s": 34.2,
+   "index_state": {
+    "state": "ready",
+    "worker_active": true,
+    "running": false,
+    "error": null,
+    "local_total": 80,
+    "embedding_model": "m3"
+   },
+   "recall_mode": null,
+   "rows": [
+    {
+     "key": "HM-CR-01-fixed",
+     "returned": [
+      "HM-RC-01-v2",
+      "HM-CR-01-wrong",
+      "HM-CR-01-fixed",
+      "HM-RC-08-v2",
+      "HM-RC-05-v2"
+     ],
+     "fixed_rank": 3,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-02-fixed",
+     "returned": [
+      "HM-RC-02-v2",
+      "HM-CR-02-wrong",
+      "HM-RC-07-v2",
+      "HM-RC-10-v2",
+      "HM-RC-15-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-03-fixed",
+     "returned": [
+      "HM-RC-03-v2",
+      "HM-CR-03-fixed",
+      "HM-RC-09-v2",
+      "HM-RC-10-v2",
+      "HM-RC-06-v2"
+     ],
+     "fixed_rank": 2,
+     "wrong_rank": 0,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-04-fixed",
+     "returned": [
+      "HM-RC-04-v2",
+      "HM-CR-04-fixed",
+      "HM-CR-04-wrong",
+      "HM-RC-10-v2",
+      "HM-RC-03-v2"
+     ],
+     "fixed_rank": 2,
+     "wrong_rank": 3,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-05-fixed",
+     "returned": [
+      "HM-RC-05-v2",
+      "HM-CR-05-wrong",
+      "HM-RC-14-v2",
+      "HM-RC-01-v2",
+      "HM-RC-06-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-06-fixed",
+     "returned": [
+      "HM-RC-06-v2",
+      "HM-CR-06-wrong",
+      "HM-RC-03-v2",
+      "HM-RC-13-v2",
+      "HM-RC-07-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-07-fixed",
+     "returned": [
+      "HM-RC-07-v2",
+      "HM-CR-07-wrong",
+      "HM-RC-13-v2",
+      "HM-RC-02-v2",
+      "HM-RC-10-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-08-fixed",
+     "returned": [
+      "HM-RC-08-v2",
+      "HM-CR-08-fixed",
+      "HM-RC-16-v2",
+      "HM-RC-03-v2",
+      "HM-RC-07-v2"
+     ],
+     "fixed_rank": 2,
+     "wrong_rank": 0,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-09-fixed",
+     "returned": [
+      "HM-RC-09-v2",
+      "HM-CR-09-wrong",
+      "HM-RC-03-v2",
+      "HM-RC-07-v2",
+      "HM-RC-16-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-10-fixed",
+     "returned": [
+      "HM-RC-10-v2",
+      "HM-CR-10-fixed",
+      "HM-RC-16-v2",
+      "HM-RC-13-v2",
+      "HM-RC-03-v2"
+     ],
+     "fixed_rank": 2,
+     "wrong_rank": 0,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": true,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-11-fixed",
+     "returned": [
+      "HM-RC-11-v2",
+      "HM-CR-11-wrong",
+      "HM-RC-17-v2",
+      "HM-RC-06-v2",
+      "HM-RC-16-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-12-fixed",
+     "returned": [
+      "HM-RC-12-v2",
+      "HM-CR-12-wrong",
+      "HM-RC-10-v2",
+      "HM-RC-07-v2",
+      "HM-RC-09-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-13-fixed",
+     "returned": [
+      "HM-RC-13-v2",
+      "HM-CR-13-wrong",
+      "HM-RC-10-v2",
+      "HM-RC-06-v2",
+      "HM-RC-16-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-14-fixed",
+     "returned": [
+      "HM-RC-14-v2",
+      "HM-CR-14-wrong",
+      "HM-RC-03-v2",
+      "HM-RC-09-v2",
+      "HM-RC-06-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-15-fixed",
+     "returned": [
+      "HM-RC-15-v2",
+      "HM-CR-15-wrong",
+      "HM-RC-02-v2",
+      "HM-RC-07-v2",
+      "HM-CR-17-fixed"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-16-fixed",
+     "returned": [
+      "HM-RC-16-v2",
+      "HM-CR-16-wrong",
+      "HM-RC-09-v2",
+      "HM-RC-10-v2",
+      "HM-RC-06-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-17-fixed",
+     "returned": [
+      "HM-RC-17-v2",
+      "HM-CR-17-wrong",
+      "HM-RC-03-v2",
+      "HM-RC-09-v2",
+      "HM-CR-15-fixed"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-18-fixed",
+     "returned": [
+      "HM-RC-18-v2",
+      "HM-CR-18-wrong",
+      "HM-RC-07-v2",
+      "HM-RC-02-v2",
+      "HM-RC-09-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-19-fixed",
+     "returned": [
+      "HM-RC-19-v2",
+      "HM-CR-19-wrong",
+      "HM-RC-03-v2",
+      "HM-RC-14-v2",
+      "HM-RC-09-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    },
+    {
+     "key": "HM-CR-20-fixed",
+     "returned": [
+      "HM-RC-20-v2",
+      "HM-CR-20-wrong",
+      "HM-RC-13-v2",
+      "HM-RC-03-v2",
+      "HM-RC-16-v2"
+     ],
+     "fixed_rank": 0,
+     "wrong_rank": 2,
+     "fixed_top1": false,
+     "wrong_top1": false,
+     "fixed_beats_wrong": false,
+     "mode": null,
+     "rc": 0
+    }
+   ]
+  }
+ }
+}

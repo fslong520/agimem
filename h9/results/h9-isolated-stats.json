@@ -1,0 +1,34 @@
+{
+  "port": 16346,
+  "root": "/tmp/agimem-h9-iso",
+  "n_nodes": 232,
+  "n_questions": 96,
+  "import": {
+    "rc": 0,
+    "imported": 232,
+    "duplicates": 0,
+    "orphaned": 0,
+    "local_total": null
+  },
+  "index": {
+    "state": "ready",
+    "local_total": 232,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 110.4
+  },
+  "list_mapped_hl9": 232,
+  "list_rc": 0,
+  "recall": {
+    "n": 96,
+    "unmapped": 0,
+    "empty": 0,
+    "elapsed_s": 115.9,
+    "models": [
+      "m3"
+    ]
+  },
+  "uuid_hits_predictions": 0,
+  "elapsed_s": 229.1
+}

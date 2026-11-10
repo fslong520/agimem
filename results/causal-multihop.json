@@ -1,0 +1,293 @@
+{
+  "schema": "agimem-causal-multihop/1",
+  "definition": "深度 ≥3 的链题；看 top-5 里是否出现距离 ≥2 的远祖（祖父及以上）。距离按 parent 链算：直接父=1，祖父=2。",
+  "n_questions": 10,
+  "multi_hop_hits": 5,
+  "rows": [
+    {
+      "qid": "q001",
+      "type": "chain_ancestor",
+      "subject": "sntJ0013",
+      "subject_depth": 3,
+      "gold": [
+        "sntJ0003",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "top1": "sntJ0013",
+      "top": [
+        "sntJ0013",
+        "sntJ0009",
+        "sntB0001",
+        "sntB0011",
+        "sntI0002"
+      ],
+      "hit": false,
+      "gold_rank": null,
+      "ancestor_distances": {},
+      "multi_hop_hit": false,
+      "max_hop": 0,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q002",
+      "type": "chain_ancestor",
+      "subject": "sntE0013",
+      "subject_depth": 5,
+      "gold": [
+        "sntE0005",
+        "sntE0004",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "top1": "sntE0013",
+      "top": [
+        "sntE0013",
+        "sntE0003",
+        "sntF0014",
+        "sntE0014",
+        "sntH0007"
+      ],
+      "hit": true,
+      "gold_rank": 1,
+      "ancestor_distances": {
+        "sntE0003": 3
+      },
+      "multi_hop_hit": true,
+      "max_hop": 3,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q003",
+      "type": "chain_ancestor",
+      "subject": "sntF0012",
+      "subject_depth": 4,
+      "gold": [
+        "sntF0004",
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "top1": "sntF0012",
+      "top": [
+        "sntF0012",
+        "sntF0001",
+        "sntF0013",
+        "sntF0006",
+        "sntH0006"
+      ],
+      "hit": true,
+      "gold_rank": 1,
+      "ancestor_distances": {
+        "sntF0001": 4
+      },
+      "multi_hop_hit": true,
+      "max_hop": 4,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q004",
+      "type": "chain_ancestor",
+      "subject": "sntC0011",
+      "subject_depth": 5,
+      "gold": [
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "top1": "sntC0011",
+      "top": [
+        "sntC0011",
+        "sntC0008",
+        "sntJ0011",
+        "sntD0010",
+        "sntH0010"
+      ],
+      "hit": false,
+      "gold_rank": null,
+      "ancestor_distances": {},
+      "multi_hop_hit": false,
+      "max_hop": 0,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q005",
+      "type": "chain_ancestor",
+      "subject": "sntC0008",
+      "subject_depth": 4,
+      "gold": [
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "top1": "sntC0008",
+      "top": [
+        "sntC0008",
+        "sntC0011",
+        "sntJ0006",
+        "sntB0011",
+        "sntD0010"
+      ],
+      "hit": false,
+      "gold_rank": null,
+      "ancestor_distances": {},
+      "multi_hop_hit": false,
+      "max_hop": 0,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q006",
+      "type": "chain_ancestor",
+      "subject": "sntG0008",
+      "subject_depth": 5,
+      "gold": [
+        "sntG0005",
+        "sntG0004",
+        "sntG0003",
+        "sntG0002",
+        "sntG0001"
+      ],
+      "top1": "sntG0008",
+      "top": [
+        "sntG0008",
+        "sntG0009",
+        "sntG0004",
+        "sntH0010",
+        "sntA0009"
+      ],
+      "hit": true,
+      "gold_rank": 2,
+      "ancestor_distances": {
+        "sntG0004": 2
+      },
+      "multi_hop_hit": true,
+      "max_hop": 2,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q007",
+      "type": "chain_ancestor",
+      "subject": "sntB0013",
+      "subject_depth": 4,
+      "gold": [
+        "sntB0004",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "top1": "sntB0013",
+      "top": [
+        "sntB0013",
+        "sntB0011",
+        "sntB0001",
+        "sntA0003",
+        "sntC0005"
+      ],
+      "hit": true,
+      "gold_rank": 2,
+      "ancestor_distances": {
+        "sntB0001": 4
+      },
+      "multi_hop_hit": true,
+      "max_hop": 4,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q008",
+      "type": "chain_ancestor",
+      "subject": "sntF0007",
+      "subject_depth": 3,
+      "gold": [
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "top1": "sntF0007",
+      "top": [
+        "sntF0007",
+        "sntF0009",
+        "sntF0001",
+        "sntA0003",
+        "sntB0011"
+      ],
+      "hit": true,
+      "gold_rank": 2,
+      "ancestor_distances": {
+        "sntF0001": 3
+      },
+      "multi_hop_hit": true,
+      "max_hop": 3,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q009",
+      "type": "chain_ancestor",
+      "subject": "sntC0014",
+      "subject_depth": 6,
+      "gold": [
+        "sntC0006",
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "top1": "sntC0014",
+      "top": [
+        "sntC0014",
+        "sntG0014",
+        "sntH0008",
+        "sntH0010",
+        "sntA0001"
+      ],
+      "hit": false,
+      "gold_rank": null,
+      "ancestor_distances": {},
+      "multi_hop_hit": false,
+      "max_hop": 0,
+      "top1_is_subject": true
+    },
+    {
+      "qid": "q010",
+      "type": "chain_ancestor",
+      "subject": "sntC0012",
+      "subject_depth": 4,
+      "gold": [
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "top1": "sntC0012",
+      "top": [
+        "sntC0012",
+        "sntC0009",
+        "sntH0010",
+        "sntA0012",
+        "sntB0011"
+      ],
+      "hit": false,
+      "gold_rank": null,
+      "ancestor_distances": {},
+      "multi_hop_hit": false,
+      "max_hop": 0,
+      "top1_is_subject": true
+    }
+  ],
+  "multi_hop_rate": 0.5,
+  "multi_hop_ci": {
+    "point": 0.5,
+    "lo": 0.236593090512564,
+    "hi": 0.7634069094874361,
+    "n": 10,
+    "k": 5,
+    "method": "wilson",
+    "z": 1.959963984540054
+  },
+  "any_ancestor_rate": 0.5,
+  "max_hop_mean": 1.6
+}

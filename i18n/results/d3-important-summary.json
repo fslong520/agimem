@@ -1,0 +1,81 @@
+{
+ "protocol": "24 facts × 4 语言 = 96 次 remember --importance important；判重命中后按策略采纳 --merge-ids 或 --force 落副本；每臂 model activate m3 后跑 96 次跨语言召回",
+ "baseline_trivial": {
+  "merges": 0,
+  "forced": 0,
+  "entries": 96,
+  "mean_entries_per_fact": 4.0,
+  "zero_entry_facts": 0,
+  "recall_hit": 0.938,
+  "identity_fid_level": 0.75,
+  "note": "tests/33 §4 的原始采集（缺省 trivial，判重未运行）"
+ },
+ "mech45": {
+  "threshold": 0.45,
+  "policy": "机械采纳全部 merge 候选（不核对是否同一事实）",
+  "merges": 26,
+  "forced": 16,
+  "entries": 39,
+  "mean_entries_per_fact": 1.625,
+  "zero_entry_facts": 6,
+  "zero_facts": [
+   "mlf0001",
+   "mlf0020",
+   "mlf0021",
+   "mlf0022",
+   "mlf0023",
+   "mlf0024"
+  ],
+  "recall_hit": 0.677,
+  "identity_fid_level": 0.458
+ },
+ "mech50": {
+  "threshold": 0.5,
+  "policy": "机械采纳 similarity>=50% 的候选",
+  "merges": 27,
+  "forced": 23,
+  "entries": 54,
+  "mean_entries_per_fact": 2.25,
+  "zero_entry_facts": 2,
+  "zero_facts": [
+   "mlf0001",
+   "mlf0022"
+  ],
+  "recall_hit": 0.885,
+  "identity_fid_level": 0.583
+ },
+ "sf45": {
+  "threshold": 0.45,
+  "policy": "先核对候选标题属于同一 fact 再合并（同事实校验）",
+  "merges": 21,
+  "forced": 32,
+  "entries": 67,
+  "mean_entries_per_fact": 2.792,
+  "zero_entry_facts": 0,
+  "recall_hit": 0.927,
+  "identity_fid_level": 0.625,
+  "candidate_sim_dist": {
+   "n": 21,
+   "lt_0.45": 0,
+   "[0.45,0.50)": 3,
+   "ge_0.50": 18,
+   "median": 0.55
+  }
+ },
+ "sf50": {
+  "threshold": 0.5,
+  "policy": "同事实校验 + similarity>=50%",
+  "merges": 20,
+  "forced": 35,
+  "entries": 69,
+  "mean_entries_per_fact": 2.875,
+  "zero_entry_facts": 0,
+  "recall_hit": 0.927,
+  "identity_fid_level": 0.667
+ },
+ "sources": {
+  "entries_and_zero": "sqlite memories where deleted=0, title->fid 映射",
+  "hit_identity": "各臂 rows（96 次召回）",
+  "merges_forced": "运行日志逐 fact 计数"
+ }
+}

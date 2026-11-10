@@ -1,0 +1,316 @@
+{
+  "schema": "agimem-tricky-t4-supersedes/1",
+  "arm": "T4 with real --supersedes edges",
+  "data_dir": "/tmp/agimem-tricky-supersede/t4",
+  "port": 16321,
+  "n_questions": 22,
+  "n_pairs": 22,
+  "n_written_ok": 22,
+  "n_written_fail": 0,
+  "receipts": [
+    {
+      "old": "trkC0042",
+      "new": "trkC0041",
+      "rc": 0
+    },
+    {
+      "old": "trkD0043",
+      "new": "trkD0042",
+      "rc": 0
+    },
+    {
+      "old": "trkE0052",
+      "new": "trkE0051",
+      "rc": 0
+    },
+    {
+      "old": "trkF0046",
+      "new": "trkF0045",
+      "rc": 0
+    },
+    {
+      "old": "trkG0061",
+      "new": "trkG0060",
+      "rc": 0
+    },
+    {
+      "old": "trkH0063",
+      "new": "trkH0062",
+      "rc": 0
+    },
+    {
+      "old": "trkA0055",
+      "new": "trkA0054",
+      "rc": 0
+    },
+    {
+      "old": "trkB0060",
+      "new": "trkB0059",
+      "rc": 0
+    },
+    {
+      "old": "trkC0046",
+      "new": "trkC0045",
+      "rc": 0
+    },
+    {
+      "old": "trkD0051",
+      "new": "trkD0050",
+      "rc": 0
+    },
+    {
+      "old": "trkE0057",
+      "new": "trkE0056",
+      "rc": 0
+    },
+    {
+      "old": "trkF0054",
+      "new": "trkF0053",
+      "rc": 0
+    },
+    {
+      "old": "trkG0063",
+      "new": "trkG0062",
+      "rc": 0
+    },
+    {
+      "old": "trkH0069",
+      "new": "trkH0068",
+      "rc": 0
+    },
+    {
+      "old": "trkA0059",
+      "new": "trkA0058",
+      "rc": 0
+    },
+    {
+      "old": "trkB0064",
+      "new": "trkB0063",
+      "rc": 0
+    },
+    {
+      "old": "trkC0053",
+      "new": "trkC0052",
+      "rc": 0
+    },
+    {
+      "old": "trkD0054",
+      "new": "trkD0053",
+      "rc": 0
+    },
+    {
+      "old": "trkE0060",
+      "new": "trkE0059",
+      "rc": 0
+    },
+    {
+      "old": "trkF0060",
+      "new": "trkF0059",
+      "rc": 0
+    },
+    {
+      "old": "trkG0068",
+      "new": "trkG0067",
+      "rc": 0
+    },
+    {
+      "old": "trkH0075",
+      "new": "trkH0074",
+      "rc": 0
+    }
+  ],
+  "verify": [
+    {
+      "old": "trkC0042",
+      "superseded_by_present": true
+    },
+    {
+      "old": "trkD0043",
+      "superseded_by_present": true
+    },
+    {
+      "old": "trkE0052",
+      "superseded_by_present": true
+    }
+  ],
+  "index_after": {
+    "state": "ready",
+    "local_total": 748,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 6.9
+  },
+  "hit_at_1": 0.2727272727272727,
+  "hit_at_5": 1.0,
+  "hit_at_1_k": 6,
+  "hit_at_5_k": 22,
+  "prior_arm": {
+    "name": "T11 隔离库（无边，import 丢字段）",
+    "hit_at_1": 0.045,
+    "hit_at_5": 1.0,
+    "source": "tests/34 §9"
+  },
+  "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/tricky/results/t4-supersedes-predictions.jsonl",
+  "elapsed_s": 267.7,
+  "delta_vs_t11": {
+    "hit_at_1": {
+      "new": 0.2727272727272727,
+      "old": 0.045454545454545456,
+      "delta": {
+        "point": 0.22727272727272727,
+        "lo": 0.045454545454545456,
+        "hi": 0.4090909090909091,
+        "n": 22,
+        "reps": 2000
+      }
+    },
+    "hit_at_5": {
+      "new": 1.0,
+      "old": 1.0,
+      "delta": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 22,
+        "reps": 2000
+      }
+    },
+    "n": 22,
+    "per_question": [
+      {
+        "qid": "t4-001",
+        "gold": "trkC0041",
+        "rank_new": 2,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-002",
+        "gold": "trkD0042",
+        "rank_new": 2,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-003",
+        "gold": "trkE0051",
+        "rank_new": 3,
+        "rank_old": 3
+      },
+      {
+        "qid": "t4-004",
+        "gold": "trkF0045",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-005",
+        "gold": "trkG0060",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-006",
+        "gold": "trkH0062",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-007",
+        "gold": "trkA0054",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-008",
+        "gold": "trkB0059",
+        "rank_new": 0,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-009",
+        "gold": "trkC0045",
+        "rank_new": 3,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-010",
+        "gold": "trkD0050",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-011",
+        "gold": "trkE0056",
+        "rank_new": 0,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-012",
+        "gold": "trkF0053",
+        "rank_new": 2,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-013",
+        "gold": "trkG0062",
+        "rank_new": 0,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-014",
+        "gold": "trkH0068",
+        "rank_new": 0,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-015",
+        "gold": "trkA0058",
+        "rank_new": 0,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-016",
+        "gold": "trkB0063",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-017",
+        "gold": "trkC0052",
+        "rank_new": 3,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-018",
+        "gold": "trkD0053",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-019",
+        "gold": "trkE0059",
+        "rank_new": 1,
+        "rank_old": 1
+      },
+      {
+        "qid": "t4-020",
+        "gold": "trkF0059",
+        "rank_new": 3,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-021",
+        "gold": "trkG0067",
+        "rank_new": 3,
+        "rank_old": 2
+      },
+      {
+        "qid": "t4-022",
+        "gold": "trkH0074",
+        "rank_new": 0,
+        "rank_old": 0
+      }
+    ],
+    "baseline_note": "T11 隔离库臂（`import` 丢 superseded_by → 实际无边）；旧数字 hit@1 0.045 / hit@5 1.000"
+  }
+}

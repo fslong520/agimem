@@ -1,0 +1,1224 @@
+{
+  "class_scores": {
+    "R1": 0.125,
+    "R2": 0.625,
+    "R3": 0.375,
+    "R4": 0.9375,
+    "R5": 0.8333333333333334,
+    "R6": 0.0
+  },
+  "composite_equal_weight": 0.4826388888888889,
+  "per_question": {
+    "r1-001": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0001",
+        "rank": 4
+      },
+      "qid": "r1-001",
+      "rank": 4,
+      "type": "R1"
+    },
+    "r1-002": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0001",
+        "rank": 2
+      },
+      "qid": "r1-002",
+      "rank": 2,
+      "type": "R1"
+    },
+    "r1-003": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0001",
+        "rank": null
+      },
+      "qid": "r1-003",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-004": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9E0001",
+        "rank": 2
+      },
+      "qid": "r1-004",
+      "rank": 2,
+      "type": "R1"
+    },
+    "r1-005": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0001",
+        "rank": 2
+      },
+      "qid": "r1-005",
+      "rank": 2,
+      "type": "R1"
+    },
+    "r1-006": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9G0001",
+        "rank": 3
+      },
+      "qid": "r1-006",
+      "rank": 3,
+      "type": "R1"
+    },
+    "r1-007": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0001",
+        "rank": 1
+      },
+      "qid": "r1-007",
+      "rank": 1,
+      "type": "R1"
+    },
+    "r1-008": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9A0001",
+        "rank": 0
+      },
+      "qid": "r1-008",
+      "rank": 0,
+      "type": "R1"
+    },
+    "r1-009": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0003",
+        "rank": null
+      },
+      "qid": "r1-009",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-010": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0003",
+        "rank": null
+      },
+      "qid": "r1-010",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-011": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0003",
+        "rank": null
+      },
+      "qid": "r1-011",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-012": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9E0003",
+        "rank": 4
+      },
+      "qid": "r1-012",
+      "rank": 4,
+      "type": "R1"
+    },
+    "r1-013": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0003",
+        "rank": null
+      },
+      "qid": "r1-013",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-014": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0003",
+        "rank": 0
+      },
+      "qid": "r1-014",
+      "rank": 0,
+      "type": "R1"
+    },
+    "r1-015": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0003",
+        "rank": null
+      },
+      "qid": "r1-015",
+      "rank": null,
+      "type": "R1"
+    },
+    "r1-016": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0003",
+        "rank": null
+      },
+      "qid": "r1-016",
+      "rank": null,
+      "type": "R1"
+    },
+    "r2-001": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0005",
+        "rank": 0
+      },
+      "qid": "r2-001",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-002": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9C0005",
+        "rank": 0
+      },
+      "qid": "r2-002",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-003": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0005",
+        "rank": 0
+      },
+      "qid": "r2-003",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-004": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0005",
+        "rank": 0
+      },
+      "qid": "r2-004",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-005": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0005",
+        "rank": 0
+      },
+      "qid": "r2-005",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-006": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9G0005",
+        "rank": 2
+      },
+      "qid": "r2-006",
+      "rank": 2,
+      "type": "R2"
+    },
+    "r2-007": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0005",
+        "rank": 2
+      },
+      "qid": "r2-007",
+      "rank": 2,
+      "type": "R2"
+    },
+    "r2-008": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9A0005",
+        "rank": 0
+      },
+      "qid": "r2-008",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-009": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0007",
+        "rank": 0
+      },
+      "qid": "r2-009",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-010": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0007",
+        "rank": 1
+      },
+      "qid": "r2-010",
+      "rank": 1,
+      "type": "R2"
+    },
+    "r2-011": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0007",
+        "rank": 0
+      },
+      "qid": "r2-011",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-012": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0007",
+        "rank": 0
+      },
+      "qid": "r2-012",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-013": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0007",
+        "rank": 1
+      },
+      "qid": "r2-013",
+      "rank": 1,
+      "type": "R2"
+    },
+    "r2-014": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0007",
+        "rank": 0
+      },
+      "qid": "r2-014",
+      "rank": 0,
+      "type": "R2"
+    },
+    "r2-015": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0007",
+        "rank": 1
+      },
+      "qid": "r2-015",
+      "rank": 1,
+      "type": "R2"
+    },
+    "r2-016": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0007",
+        "rank": 3
+      },
+      "qid": "r2-016",
+      "rank": 3,
+      "type": "R2"
+    },
+    "r3-001": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0010",
+        "other": "hl9B0009",
+        "rank": 1,
+        "stale_crown": true,
+        "top1": "hl9B0009"
+      },
+      "qid": "r3-001",
+      "rank": 1,
+      "stale_crown": true,
+      "type": "R3"
+    },
+    "r3-002": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0010",
+        "other": "hl9C0009",
+        "rank": 2,
+        "stale_crown": false,
+        "top1": "hl9C0024"
+      },
+      "qid": "r3-002",
+      "rank": 2,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-003": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0010",
+        "other": "hl9D0009",
+        "rank": 3,
+        "stale_crown": false,
+        "top1": "hl9D0024"
+      },
+      "qid": "r3-003",
+      "rank": 3,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-004": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0010",
+        "other": "hl9E0009",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9E0010"
+      },
+      "qid": "r3-004",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-005": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0010",
+        "other": "hl9F0009",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9F0010"
+      },
+      "qid": "r3-005",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-006": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9G0010",
+        "other": "hl9G0009",
+        "rank": 1,
+        "stale_crown": false,
+        "top1": "hl9G0024"
+      },
+      "qid": "r3-006",
+      "rank": 1,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-007": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9H0010",
+        "other": "hl9H0009",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9H0010"
+      },
+      "qid": "r3-007",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-008": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0010",
+        "other": "hl9A0009",
+        "rank": 1,
+        "stale_crown": false,
+        "top1": "hl9A0027"
+      },
+      "qid": "r3-008",
+      "rank": 1,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-009": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0012",
+        "other": "hl9B0011",
+        "rank": 1,
+        "stale_crown": false,
+        "top1": "hl9B0027"
+      },
+      "qid": "r3-009",
+      "rank": 1,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-010": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0012",
+        "other": "hl9C0011",
+        "rank": 1,
+        "stale_crown": false,
+        "top1": "hl9C0027"
+      },
+      "qid": "r3-010",
+      "rank": 1,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-011": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0012",
+        "other": "hl9D0011",
+        "rank": 1,
+        "stale_crown": false,
+        "top1": "hl9D0027"
+      },
+      "qid": "r3-011",
+      "rank": 1,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-012": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0012",
+        "other": "hl9E0011",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9E0012"
+      },
+      "qid": "r3-012",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-013": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0012",
+        "other": "hl9F0011",
+        "rank": null,
+        "stale_crown": false,
+        "top1": "hl9F0027"
+      },
+      "qid": "r3-013",
+      "rank": null,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-014": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0012",
+        "other": "hl9G0011",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9G0012"
+      },
+      "qid": "r3-014",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-015": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9H0012",
+        "other": "hl9H0011",
+        "rank": 0,
+        "stale_crown": false,
+        "top1": "hl9H0012"
+      },
+      "qid": "r3-015",
+      "rank": 0,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r3-016": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0012",
+        "other": "hl9A0011",
+        "rank": null,
+        "stale_crown": false,
+        "top1": "hl9A0027"
+      },
+      "qid": "r3-016",
+      "rank": null,
+      "stale_crown": false,
+      "type": "R3"
+    },
+    "r4-001": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0013",
+        "rank": 0
+      },
+      "qid": "r4-001",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-002": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9C0013",
+        "rank": 0
+      },
+      "qid": "r4-002",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-003": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0013",
+        "rank": 0
+      },
+      "qid": "r4-003",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-004": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0013",
+        "rank": 0
+      },
+      "qid": "r4-004",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-005": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0013",
+        "rank": 0
+      },
+      "qid": "r4-005",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-006": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0013",
+        "rank": 0
+      },
+      "qid": "r4-006",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-007": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9H0013",
+        "rank": 0
+      },
+      "qid": "r4-007",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-008": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9A0013",
+        "rank": 0
+      },
+      "qid": "r4-008",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-009": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0017",
+        "rank": 0
+      },
+      "qid": "r4-009",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-010": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9C0017",
+        "rank": 0
+      },
+      "qid": "r4-010",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-011": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0017",
+        "rank": 0
+      },
+      "qid": "r4-011",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-012": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0017",
+        "rank": 0
+      },
+      "qid": "r4-012",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-013": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0017",
+        "rank": 0
+      },
+      "qid": "r4-013",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-014": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0017",
+        "rank": 0
+      },
+      "qid": "r4-014",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-015": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9H0017",
+        "rank": 0
+      },
+      "qid": "r4-015",
+      "rank": 0,
+      "type": "R4"
+    },
+    "r4-016": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0017",
+        "rank": null
+      },
+      "qid": "r4-016",
+      "rank": null,
+      "type": "R4"
+    },
+    "r5-001": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0021",
+        "phase": "recorded",
+        "rank": 0
+      },
+      "qid": "r5-001",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-002": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9B0022",
+        "grade": "important",
+        "rank": 0
+      },
+      "qid": "r5-002",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-003": {
+      "correct": true,
+      "detail": {
+        "gold": "",
+        "hardcode": false,
+        "phase": "unrecorded",
+        "top1": "hl9C0015"
+      },
+      "hardcode": false,
+      "qid": "r5-003",
+      "type": "R5"
+    },
+    "r5-004": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9C0023",
+        "grade": "trivial",
+        "rank": 0
+      },
+      "qid": "r5-004",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-005": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0021",
+        "phase": "recorded",
+        "rank": 0
+      },
+      "qid": "r5-005",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-006": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9D0022",
+        "grade": "important",
+        "rank": 0
+      },
+      "qid": "r5-006",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-007": {
+      "correct": true,
+      "detail": {
+        "gold": "",
+        "hardcode": false,
+        "phase": "unrecorded",
+        "top1": "hl9E0022"
+      },
+      "hardcode": false,
+      "qid": "r5-007",
+      "type": "R5"
+    },
+    "r5-008": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9E0023",
+        "grade": "trivial",
+        "rank": 0
+      },
+      "qid": "r5-008",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-009": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0021",
+        "phase": "recorded",
+        "rank": 0
+      },
+      "qid": "r5-009",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-010": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9F0022",
+        "grade": "important",
+        "rank": 0
+      },
+      "qid": "r5-010",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-011": {
+      "correct": false,
+      "detail": {
+        "gold": "",
+        "hardcode": true,
+        "phase": "unrecorded",
+        "top1": "hl9G0009"
+      },
+      "hardcode": true,
+      "qid": "r5-011",
+      "type": "R5"
+    },
+    "r5-012": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9G0023",
+        "grade": "trivial",
+        "rank": 0
+      },
+      "qid": "r5-012",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-013": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0021",
+        "phase": "recorded",
+        "rank": 1
+      },
+      "qid": "r5-013",
+      "rank": 1,
+      "type": "R5"
+    },
+    "r5-014": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9H0022",
+        "grade": "important",
+        "rank": 0
+      },
+      "qid": "r5-014",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r5-015": {
+      "correct": true,
+      "detail": {
+        "gold": "",
+        "hardcode": false,
+        "phase": "unrecorded",
+        "top1": "hl9A0022"
+      },
+      "hardcode": false,
+      "qid": "r5-015",
+      "type": "R5"
+    },
+    "r5-016": {
+      "correct": true,
+      "detail": {
+        "gold": "hl9A0023",
+        "grade": "trivial",
+        "rank": 0
+      },
+      "qid": "r5-016",
+      "rank": 0,
+      "type": "R5"
+    },
+    "r6-001": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0024",
+        "rank": 2,
+        "retell_crown": true,
+        "top1": "hl9B0025"
+      },
+      "qid": "r6-001",
+      "rank": 2,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-002": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0024",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9C0025"
+      },
+      "qid": "r6-002",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-003": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0024",
+        "rank": 2,
+        "retell_crown": true,
+        "top1": "hl9D0025"
+      },
+      "qid": "r6-003",
+      "rank": 2,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-004": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9E0024",
+        "rank": 2,
+        "retell_crown": true,
+        "top1": "hl9E0025"
+      },
+      "qid": "r6-004",
+      "rank": 2,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-005": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0024",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9F0025"
+      },
+      "qid": "r6-005",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-006": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9G0024",
+        "rank": 2,
+        "retell_crown": true,
+        "top1": "hl9G0025"
+      },
+      "qid": "r6-006",
+      "rank": 2,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-007": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0024",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9H0025"
+      },
+      "qid": "r6-007",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-008": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0024",
+        "rank": null,
+        "retell_crown": false,
+        "top1": "hl9A0028"
+      },
+      "qid": "r6-008",
+      "rank": null,
+      "retell_crown": false,
+      "type": "R6"
+    },
+    "r6-009": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9B0027",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9B0028"
+      },
+      "qid": "r6-009",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-010": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9C0027",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9C0028"
+      },
+      "qid": "r6-010",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-011": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9D0027",
+        "rank": 3,
+        "retell_crown": true,
+        "top1": "hl9D0028"
+      },
+      "qid": "r6-011",
+      "rank": 3,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-012": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9E0027",
+        "rank": 2,
+        "retell_crown": true,
+        "top1": "hl9E0028"
+      },
+      "qid": "r6-012",
+      "rank": 2,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-013": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9F0027",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9F0028"
+      },
+      "qid": "r6-013",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-014": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9G0027",
+        "rank": 1,
+        "retell_crown": true,
+        "top1": "hl9G0028"
+      },
+      "qid": "r6-014",
+      "rank": 1,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-015": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9H0027",
+        "rank": 3,
+        "retell_crown": true,
+        "top1": "hl9H0028"
+      },
+      "qid": "r6-015",
+      "rank": 3,
+      "retell_crown": true,
+      "type": "R6"
+    },
+    "r6-016": {
+      "correct": false,
+      "detail": {
+        "gold": "hl9A0027",
+        "rank": 2,
+        "retell_crown": false,
+        "top1": "hl9A0025"
+      },
+      "qid": "r6-016",
+      "rank": 2,
+      "retell_crown": false,
+      "type": "R6"
+    }
+  },
+  "types": {
+    "R1": {
+      "n": 16,
+      "name": "因果归因→处方",
+      "prescription_hit@1": {
+        "hi": 0.36022827265758695,
+        "k": 2,
+        "lo": 0.03497748774324047,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.125,
+        "z": 1.959963984540054
+      }
+    },
+    "R2": {
+      "counterfactual_hit@1": {
+        "hi": 0.8151876744113636,
+        "k": 10,
+        "lo": 0.38641040545502714,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.625,
+        "z": 1.959963984540054
+      },
+      "n": 16,
+      "name": "反事实"
+    },
+    "R3": {
+      "fresh_hit@1": {
+        "hi": 0.6135895945449727,
+        "k": 6,
+        "lo": 0.18481232558863633,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.375,
+        "z": 1.959963984540054
+      },
+      "n": 16,
+      "name": "动态更新",
+      "note": "stale_crown_rate=头榜落旧值条目的比例（诊断，不进 composite）",
+      "stale_crown_rate": {
+        "hi": 0.28328737570298945,
+        "k": 1,
+        "lo": 0.01111934476464252,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.0625,
+        "z": 1.959963984540054
+      }
+    },
+    "R4": {
+      "gist_line_hit@1": {
+        "hi": 0.9888806552353576,
+        "k": 15,
+        "lo": 0.7167126242970107,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.9375,
+        "z": 1.959963984540054
+      },
+      "n": 16,
+      "name": "压缩摘要"
+    },
+    "R5": {
+      "importance_hit@1": {
+        "hi": 1.0,
+        "k": 8,
+        "lo": 0.6755924351161198,
+        "method": "wilson",
+        "n": 8,
+        "point": 1.0,
+        "z": 1.959963984540054
+      },
+      "n": 16,
+      "name": "元认知",
+      "note": "类分=三指标均值；unrecorded 正确=不硬凑（gold 空）",
+      "probe_recorded_hit@1": {
+        "hi": 0.9544127391902995,
+        "k": 3,
+        "lo": 0.30064184258240184,
+        "method": "wilson",
+        "n": 4,
+        "point": 0.75,
+        "z": 1.959963984540054
+      },
+      "probe_unrecorded_resist": {
+        "hi": 0.9544127391902995,
+        "k": 3,
+        "lo": 0.30064184258240184,
+        "method": "wilson",
+        "n": 4,
+        "point": 0.75,
+        "z": 1.959963984540054
+      }
+    },
+    "R6": {
+      "evidence_first": {
+        "hi": 0.1936076805344365,
+        "k": 0,
+        "lo": 0.0,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.0,
+        "z": 1.959963984540054
+      },
+      "n": 16,
+      "name": "跨来源置信",
+      "note": "retell_crown_rate=头榜落转述条目的比例（诊断；对照 H4 T6 86.4%）",
+      "retell_crown_rate": {
+        "hi": 0.9650225122567595,
+        "k": 14,
+        "lo": 0.639771727342413,
+        "method": "wilson",
+        "n": 16,
+        "point": 0.875,
+        "z": 1.959963984540054
+      }
+    }
+  }
+}

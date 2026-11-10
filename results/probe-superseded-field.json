@@ -1,0 +1,96 @@
+{
+  "query": "探针旧结论现在还成立吗？当前有效的是哪条？",
+  "n_details": 3,
+  "details": [
+    {
+      "title": "探针旧结论｜sntP0001",
+      "keys_top": [
+        "ancestors",
+        "entry",
+        "score",
+        "superseded_by"
+      ],
+      "keys_entry": [
+        "computer",
+        "content",
+        "created_at",
+        "device",
+        "emotion",
+        "id",
+        "importance",
+        "kind",
+        "modified_by",
+        "parent_id",
+        "project",
+        "tags",
+        "title",
+        "updated_at",
+        "user"
+      ],
+      "sup_top": null,
+      "sup_entry": "<absent>",
+      "score": 0.3073597550392151
+    },
+    {
+      "title": "探针新结论｜sntP0002",
+      "keys_top": [
+        "ancestors",
+        "entry",
+        "score",
+        "superseded_by"
+      ],
+      "keys_entry": [
+        "computer",
+        "content",
+        "created_at",
+        "device",
+        "emotion",
+        "id",
+        "importance",
+        "kind",
+        "modified_by",
+        "parent_id",
+        "project",
+        "tags",
+        "title",
+        "updated_at",
+        "user"
+      ],
+      "sup_top": null,
+      "sup_entry": "<absent>",
+      "score": 0.26413097977638245
+    },
+    {
+      "title": "探针干扰｜sntP0003",
+      "keys_top": [
+        "ancestors",
+        "entry",
+        "score",
+        "superseded_by"
+      ],
+      "keys_entry": [
+        "computer",
+        "content",
+        "created_at",
+        "device",
+        "emotion",
+        "id",
+        "importance",
+        "kind",
+        "modified_by",
+        "parent_id",
+        "project",
+        "tags",
+        "title",
+        "updated_at",
+        "user"
+      ],
+      "sup_top": null,
+      "sup_entry": "<absent>",
+      "score": 0.19902198016643524
+    }
+  ],
+  "n_with_sup_key": 3,
+  "n_with_sup_value": 0,
+  "n_entry_with_sup_value": 3
+}

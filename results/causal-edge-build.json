@@ -1,0 +1,67 @@
+{
+  "schema": "agimem-causal-edge-build/1",
+  "data_dir": "/tmp/agimem-causal-tree/tree",
+  "port": 16310,
+  "n_nodes": 143,
+  "imported": 142,
+  "remembered": 1,
+  "import_summary": {
+    "duplicates": 0,
+    "imported": 142,
+    "orphaned": 0,
+    "reattached": 0,
+    "skipped": 0
+  },
+  "n_edges_planned": 133,
+  "n_edges_ok": 133,
+  "n_edges_fail": 0,
+  "attach_errors": [],
+  "verify": {
+    "deep_nodes": [
+      {
+        "sid": "sntC0010",
+        "tree_depth": 6,
+        "ancestors_len": 6,
+        "ancestors_is_list": true,
+        "query": "离线队列设上限并按优先级出队"
+      },
+      {
+        "sid": "sntC0014",
+        "tree_depth": 6,
+        "ancestors_len": 6,
+        "ancestors_is_list": true,
+        "query": "同步失败静默重试无上限"
+      },
+      {
+        "sid": "sntA0008",
+        "tree_depth": 5,
+        "ancestors_len": 5,
+        "ancestors_is_list": true,
+        "query": "镜像滚动回滚掩盖真实报错"
+      }
+    ],
+    "chain": {
+      "rc": 0,
+      "sid": "sntC0010",
+      "ancestors_n": 6,
+      "descendants_n": 0,
+      "keys": [
+        "ancestors",
+        "descendants",
+        "entry"
+      ]
+    },
+    "edges_verified": true
+  },
+  "index_after_attach": {
+    "state": "ready",
+    "local_total": 143,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 1.6
+  },
+  "elapsed_s": 274.1,
+  "n_questions": 122,
+  "n_hits": 505
+}

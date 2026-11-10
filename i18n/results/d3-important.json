@@ -1,0 +1,2453 @@
+{
+ "sf45": {
+  "arm": "sf45",
+  "merge_threshold": 0.5,
+  "writes": 96,
+  "merges": 21,
+  "forced_copies": 32,
+  "suggestion_hist": [
+   {
+    "fid": "mlf0001",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.54,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.82,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 2
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 2
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 2
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 3
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.52,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.79,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "es",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.76,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.5,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.86,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.86,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "ja",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.47,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.59,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.48,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "zh",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 2
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "ja",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.5,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "es",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.53,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.74,
+    "cross_fact_candidates": 1
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.52,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.48,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.68,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.84,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.55,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "top_sim": 0.56,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "top_sim": null,
+    "cross_fact_candidates": 0
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "top_sim": 0.51,
+    "cross_fact_candidates": 1
+   }
+  ],
+  "activations_indexed": 0,
+  "entries_total": 67,
+  "unmatched_titles": 0,
+  "entries_per_fact": {
+   "mlf0001": 1,
+   "mlf0002": 4,
+   "mlf0003": 4,
+   "mlf0004": 4,
+   "mlf0005": 4,
+   "mlf0006": 1,
+   "mlf0007": 4,
+   "mlf0008": 2,
+   "mlf0009": 3,
+   "mlf0010": 1,
+   "mlf0011": 1,
+   "mlf0012": 3,
+   "mlf0013": 4,
+   "mlf0014": 3,
+   "mlf0015": 4,
+   "mlf0016": 4,
+   "mlf0017": 4,
+   "mlf0018": 4,
+   "mlf0019": 1,
+   "mlf0020": 3,
+   "mlf0021": 3,
+   "mlf0022": 1,
+   "mlf0023": 3,
+   "mlf0024": 1
+  },
+  "mean_entries_per_fact": 2.792,
+  "recall_hit": 0.9271,
+  "recall_hit_by_lang": {
+   "en": 0.875,
+   "es": 0.9167,
+   "ja": 0.9583,
+   "zh": 0.9583
+  },
+  "identity_same_entry": 0.625,
+  "rows": [
+   {
+    "qid": "d3-mlf0001-en",
+    "fid": "mlf0001",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0001"
+   },
+   {
+    "qid": "d3-mlf0001-es",
+    "fid": "mlf0001",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0001"
+   },
+   {
+    "qid": "d3-mlf0001-ja",
+    "fid": "mlf0001",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0001"
+   },
+   {
+    "qid": "d3-mlf0001-zh",
+    "fid": "mlf0001",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0002-en",
+    "fid": "mlf0002",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0002-es",
+    "fid": "mlf0002",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0002-ja",
+    "fid": "mlf0002",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0002-zh",
+    "fid": "mlf0002",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0003-en",
+    "fid": "mlf0003",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0003"
+   },
+   {
+    "qid": "d3-mlf0003-es",
+    "fid": "mlf0003",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0003"
+   },
+   {
+    "qid": "d3-mlf0003-ja",
+    "fid": "mlf0003",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0003"
+   },
+   {
+    "qid": "d3-mlf0003-zh",
+    "fid": "mlf0003",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0003"
+   },
+   {
+    "qid": "d3-mlf0004-en",
+    "fid": "mlf0004",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0004-es",
+    "fid": "mlf0004",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0004-ja",
+    "fid": "mlf0004",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0004-zh",
+    "fid": "mlf0004",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0005-en",
+    "fid": "mlf0005",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0005"
+   },
+   {
+    "qid": "d3-mlf0005-es",
+    "fid": "mlf0005",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0005"
+   },
+   {
+    "qid": "d3-mlf0005-ja",
+    "fid": "mlf0005",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0005"
+   },
+   {
+    "qid": "d3-mlf0005-zh",
+    "fid": "mlf0005",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0005"
+   },
+   {
+    "qid": "d3-mlf0006-en",
+    "fid": "mlf0006",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0006-es",
+    "fid": "mlf0006",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0006"
+   },
+   {
+    "qid": "d3-mlf0006-ja",
+    "fid": "mlf0006",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0006"
+   },
+   {
+    "qid": "d3-mlf0006-zh",
+    "fid": "mlf0006",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0007-en",
+    "fid": "mlf0007",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0007-es",
+    "fid": "mlf0007",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0007-ja",
+    "fid": "mlf0007",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0007-zh",
+    "fid": "mlf0007",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0008-en",
+    "fid": "mlf0008",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0008"
+   },
+   {
+    "qid": "d3-mlf0008-es",
+    "fid": "mlf0008",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0008"
+   },
+   {
+    "qid": "d3-mlf0008-ja",
+    "fid": "mlf0008",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0008"
+   },
+   {
+    "qid": "d3-mlf0008-zh",
+    "fid": "mlf0008",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0008"
+   },
+   {
+    "qid": "d3-mlf0009-en",
+    "fid": "mlf0009",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0009"
+   },
+   {
+    "qid": "d3-mlf0009-es",
+    "fid": "mlf0009",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0009"
+   },
+   {
+    "qid": "d3-mlf0009-ja",
+    "fid": "mlf0009",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0009"
+   },
+   {
+    "qid": "d3-mlf0009-zh",
+    "fid": "mlf0009",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0009"
+   },
+   {
+    "qid": "d3-mlf0010-en",
+    "fid": "mlf0010",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0010-es",
+    "fid": "mlf0010",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0010"
+   },
+   {
+    "qid": "d3-mlf0010-ja",
+    "fid": "mlf0010",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0010"
+   },
+   {
+    "qid": "d3-mlf0010-zh",
+    "fid": "mlf0010",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0009"
+   },
+   {
+    "qid": "d3-mlf0011-en",
+    "fid": "mlf0011",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0011"
+   },
+   {
+    "qid": "d3-mlf0011-es",
+    "fid": "mlf0011",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0011"
+   },
+   {
+    "qid": "d3-mlf0011-ja",
+    "fid": "mlf0011",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0011"
+   },
+   {
+    "qid": "d3-mlf0011-zh",
+    "fid": "mlf0011",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0011"
+   },
+   {
+    "qid": "d3-mlf0012-en",
+    "fid": "mlf0012",
+    "lang": "en",
+    "hit": false,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0012-es",
+    "fid": "mlf0012",
+    "lang": "es",
+    "hit": false,
+    "top1": "mlf0010"
+   },
+   {
+    "qid": "d3-mlf0012-ja",
+    "fid": "mlf0012",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0008"
+   },
+   {
+    "qid": "d3-mlf0012-zh",
+    "fid": "mlf0012",
+    "lang": "zh",
+    "hit": false,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0013-en",
+    "fid": "mlf0013",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0013"
+   },
+   {
+    "qid": "d3-mlf0013-es",
+    "fid": "mlf0013",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0013"
+   },
+   {
+    "qid": "d3-mlf0013-ja",
+    "fid": "mlf0013",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0013-zh",
+    "fid": "mlf0013",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0014-en",
+    "fid": "mlf0014",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0014"
+   },
+   {
+    "qid": "d3-mlf0014-es",
+    "fid": "mlf0014",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0014"
+   },
+   {
+    "qid": "d3-mlf0014-ja",
+    "fid": "mlf0014",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0014"
+   },
+   {
+    "qid": "d3-mlf0014-zh",
+    "fid": "mlf0014",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0015-en",
+    "fid": "mlf0015",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0015"
+   },
+   {
+    "qid": "d3-mlf0015-es",
+    "fid": "mlf0015",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0015"
+   },
+   {
+    "qid": "d3-mlf0015-ja",
+    "fid": "mlf0015",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0015"
+   },
+   {
+    "qid": "d3-mlf0015-zh",
+    "fid": "mlf0015",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0015"
+   },
+   {
+    "qid": "d3-mlf0016-en",
+    "fid": "mlf0016",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0016-es",
+    "fid": "mlf0016",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0016-ja",
+    "fid": "mlf0016",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0016-zh",
+    "fid": "mlf0016",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0016"
+   },
+   {
+    "qid": "d3-mlf0017-en",
+    "fid": "mlf0017",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0017"
+   },
+   {
+    "qid": "d3-mlf0017-es",
+    "fid": "mlf0017",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0017"
+   },
+   {
+    "qid": "d3-mlf0017-ja",
+    "fid": "mlf0017",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0017"
+   },
+   {
+    "qid": "d3-mlf0017-zh",
+    "fid": "mlf0017",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0017"
+   },
+   {
+    "qid": "d3-mlf0018-en",
+    "fid": "mlf0018",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0018"
+   },
+   {
+    "qid": "d3-mlf0018-es",
+    "fid": "mlf0018",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0018"
+   },
+   {
+    "qid": "d3-mlf0018-ja",
+    "fid": "mlf0018",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0018"
+   },
+   {
+    "qid": "d3-mlf0018-zh",
+    "fid": "mlf0018",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0018"
+   },
+   {
+    "qid": "d3-mlf0019-en",
+    "fid": "mlf0019",
+    "lang": "en",
+    "hit": false,
+    "top1": "mlf0002"
+   },
+   {
+    "qid": "d3-mlf0019-es",
+    "fid": "mlf0019",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0019"
+   },
+   {
+    "qid": "d3-mlf0019-ja",
+    "fid": "mlf0019",
+    "lang": "ja",
+    "hit": false,
+    "top1": "mlf0007"
+   },
+   {
+    "qid": "d3-mlf0019-zh",
+    "fid": "mlf0019",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0020-en",
+    "fid": "mlf0020",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0020"
+   },
+   {
+    "qid": "d3-mlf0020-es",
+    "fid": "mlf0020",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0020"
+   },
+   {
+    "qid": "d3-mlf0020-ja",
+    "fid": "mlf0020",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0020"
+   },
+   {
+    "qid": "d3-mlf0020-zh",
+    "fid": "mlf0020",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0020"
+   },
+   {
+    "qid": "d3-mlf0021-en",
+    "fid": "mlf0021",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0021"
+   },
+   {
+    "qid": "d3-mlf0021-es",
+    "fid": "mlf0021",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0021"
+   },
+   {
+    "qid": "d3-mlf0021-ja",
+    "fid": "mlf0021",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0021"
+   },
+   {
+    "qid": "d3-mlf0021-zh",
+    "fid": "mlf0021",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0021"
+   },
+   {
+    "qid": "d3-mlf0022-en",
+    "fid": "mlf0022",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0022"
+   },
+   {
+    "qid": "d3-mlf0022-es",
+    "fid": "mlf0022",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0022"
+   },
+   {
+    "qid": "d3-mlf0022-ja",
+    "fid": "mlf0022",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0022"
+   },
+   {
+    "qid": "d3-mlf0022-zh",
+    "fid": "mlf0022",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0022"
+   },
+   {
+    "qid": "d3-mlf0023-en",
+    "fid": "mlf0023",
+    "lang": "en",
+    "hit": false,
+    "top1": "mlf0004"
+   },
+   {
+    "qid": "d3-mlf0023-es",
+    "fid": "mlf0023",
+    "lang": "es",
+    "hit": false,
+    "top1": "mlf0010"
+   },
+   {
+    "qid": "d3-mlf0023-ja",
+    "fid": "mlf0023",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0017"
+   },
+   {
+    "qid": "d3-mlf0023-zh",
+    "fid": "mlf0023",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0023"
+   },
+   {
+    "qid": "d3-mlf0024-en",
+    "fid": "mlf0024",
+    "lang": "en",
+    "hit": true,
+    "top1": "mlf0005"
+   },
+   {
+    "qid": "d3-mlf0024-es",
+    "fid": "mlf0024",
+    "lang": "es",
+    "hit": true,
+    "top1": "mlf0024"
+   },
+   {
+    "qid": "d3-mlf0024-ja",
+    "fid": "mlf0024",
+    "lang": "ja",
+    "hit": true,
+    "top1": "mlf0024"
+   },
+   {
+    "qid": "d3-mlf0024-zh",
+    "fid": "mlf0024",
+    "lang": "zh",
+    "hit": true,
+    "top1": "mlf0002"
+   }
+  ],
+  "log": [
+   {
+    "fid": "mlf0001",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.54
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0001",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.82
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0002",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0003",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0004",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0005",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.52
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0006",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.79
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0007",
+    "lang": "es",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0008",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.76
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0009",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.5
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.86
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0010",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.86
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "ja",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.47
+   },
+   {
+    "fid": "mlf0011",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.59
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0012",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.48
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0013",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "zh",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "ja",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.5
+   },
+   {
+    "fid": "mlf0014",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0015",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "ja",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0016",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "en",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0017",
+    "lang": "es",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0018",
+    "lang": "es",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.53
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0019",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.74
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0020",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.52
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0021",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.48
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.68
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0022",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.84
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "zh",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "en",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0023",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.55
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "zh",
+    "status": "pending",
+    "state": "parent_candidates",
+    "n_sug": 0,
+    "accepted": true,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "en",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 1,
+    "accepted": true,
+    "top_sim": 0.56
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "ja",
+    "status": "ok",
+    "state": null,
+    "n_sug": 0,
+    "accepted": false,
+    "top_sim": null
+   },
+   {
+    "fid": "mlf0024",
+    "lang": "es",
+    "status": "pending",
+    "state": "candidates",
+    "n_sug": 2,
+    "accepted": true,
+    "top_sim": 0.51
+   }
+  ]
+ }
+}

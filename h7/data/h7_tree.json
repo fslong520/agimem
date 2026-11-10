@@ -1,0 +1,2410 @@
+{
+ "schema": "agimem-h7/1",
+ "synthetic": true,
+ "seed": 20261110,
+ "generator": "gen_h7.py",
+ "scenario_whitelist": [
+  "部署上线",
+  "灰度发布",
+  "接口对接",
+  "同事交接",
+  "开会定口径",
+  "线上排障",
+  "数据迁移",
+  "权限审批"
+ ],
+ "nodes": [
+  {
+   "id": "h7A0001",
+   "scenario": "deploy",
+   "title": "订单服务上线链路第1环：预发健康检查首现抖动",
+   "content": "【前因】订单服务 这次上线时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 订单服务 的链路记录",
+   "ts": "2026-08-01",
+   "created_at": "2026-08-01T10:00:00Z",
+   "insert_rank": 2000,
+   "role": "chain",
+   "topic": "l1-deploy-0",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 0
+   }
+  },
+  {
+   "id": "h7A0002",
+   "scenario": "deploy",
+   "title": "订单服务上线链路第2环：下游超时随之升高",
+   "content": "【前因】订单服务 这次上线时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 订单服务 的链路记录",
+   "ts": "2026-08-01",
+   "created_at": "2026-08-01T10:00:00Z",
+   "insert_rank": 2001,
+   "role": "chain",
+   "topic": "l1-deploy-0",
+   "parent": "h7A0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 0
+   }
+  },
+  {
+   "id": "h7B0001",
+   "scenario": "canary",
+   "title": "搜索服务灰度链路第1环：预发健康检查首现抖动",
+   "content": "【前因】搜索服务 这次灰度时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 搜索服务 的链路记录",
+   "ts": "2026-08-02",
+   "created_at": "2026-08-02T10:00:00Z",
+   "insert_rank": 2010,
+   "role": "chain",
+   "topic": "l1-canary-1",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7B0002",
+   "scenario": "canary",
+   "title": "搜索服务灰度链路第2环：下游超时随之升高",
+   "content": "【前因】搜索服务 这次灰度时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 搜索服务 的链路记录",
+   "ts": "2026-08-02",
+   "created_at": "2026-08-02T10:00:00Z",
+   "insert_rank": 2011,
+   "role": "chain",
+   "topic": "l1-canary-1",
+   "parent": "h7B0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7B0003",
+   "scenario": "canary",
+   "title": "搜索服务灰度链路第3环：故障单要求回滚点核对",
+   "content": "【前因】搜索服务 这次灰度时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 搜索服务 的链路记录",
+   "ts": "2026-08-02",
+   "created_at": "2026-08-02T10:00:00Z",
+   "insert_rank": 2012,
+   "role": "chain",
+   "topic": "l1-canary-1",
+   "parent": "h7B0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7C0001",
+   "scenario": "api",
+   "title": "查询接口接口链路第1环：预发健康检查首现抖动",
+   "content": "【前因】查询接口 这次接口时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 查询接口 的链路记录",
+   "ts": "2026-08-03",
+   "created_at": "2026-08-03T10:00:00Z",
+   "insert_rank": 2020,
+   "role": "chain",
+   "topic": "l1-api-2",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7C0002",
+   "scenario": "api",
+   "title": "查询接口接口链路第2环：下游超时随之升高",
+   "content": "【前因】查询接口 这次接口时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 查询接口 的链路记录",
+   "ts": "2026-08-03",
+   "created_at": "2026-08-03T10:00:00Z",
+   "insert_rank": 2021,
+   "role": "chain",
+   "topic": "l1-api-2",
+   "parent": "h7C0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7C0003",
+   "scenario": "api",
+   "title": "查询接口接口链路第3环：故障单要求回滚点核对",
+   "content": "【前因】查询接口 这次接口时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 查询接口 的链路记录",
+   "ts": "2026-08-03",
+   "created_at": "2026-08-03T10:00:00Z",
+   "insert_rank": 2022,
+   "role": "chain",
+   "topic": "l1-api-2",
+   "parent": "h7C0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7C0004",
+   "scenario": "api",
+   "title": "查询接口接口链路第4环：首因沉淀进值班手册",
+   "content": "【前因】查询接口 这次接口时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 查询接口 的链路记录",
+   "ts": "2026-08-03",
+   "created_at": "2026-08-03T10:00:00Z",
+   "insert_rank": 2023,
+   "role": "chain",
+   "topic": "l1-api-2",
+   "parent": "h7C0003",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7D0001",
+   "scenario": "handoff",
+   "title": "值班手册交接链路第1环：预发健康检查首现抖动",
+   "content": "【前因】值班手册 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 值班手册 的链路记录",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 2030,
+   "role": "chain",
+   "topic": "l1-handoff-3",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0002",
+   "scenario": "handoff",
+   "title": "值班手册交接链路第2环：下游超时随之升高",
+   "content": "【前因】值班手册 这次交接时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 值班手册 的链路记录",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 2031,
+   "role": "chain",
+   "topic": "l1-handoff-3",
+   "parent": "h7D0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0003",
+   "scenario": "handoff",
+   "title": "值班手册交接链路第3环：故障单要求回滚点核对",
+   "content": "【前因】值班手册 这次交接时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 值班手册 的链路记录",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 2032,
+   "role": "chain",
+   "topic": "l1-handoff-3",
+   "parent": "h7D0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0004",
+   "scenario": "handoff",
+   "title": "值班手册交接链路第4环：首因沉淀进值班手册",
+   "content": "【前因】值班手册 这次交接时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 值班手册 的链路记录",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 2033,
+   "role": "chain",
+   "topic": "l1-handoff-3",
+   "parent": "h7D0003",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0005",
+   "scenario": "handoff",
+   "title": "值班手册交接链路第5环：预发健康检查首现抖动",
+   "content": "【前因】值班手册 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 5 环）\n【后果】这一环挂进 值班手册 的链路记录",
+   "ts": "2026-08-04",
+   "created_at": "2026-08-04T10:00:00Z",
+   "insert_rank": 2034,
+   "role": "chain",
+   "topic": "l1-handoff-3",
+   "parent": "h7D0004",
+   "attrs": {
+    "chain_step": 5,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7E0001",
+   "scenario": "meeting",
+   "title": "统计规范会议链路第1环：预发健康检查首现抖动",
+   "content": "【前因】统计规范 这次会议时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 统计规范 的链路记录",
+   "ts": "2026-08-05",
+   "created_at": "2026-08-05T10:00:00Z",
+   "insert_rank": 2040,
+   "role": "chain",
+   "topic": "l1-meeting-4",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 4
+   }
+  },
+  {
+   "id": "h7E0002",
+   "scenario": "meeting",
+   "title": "统计规范会议链路第2环：下游超时随之升高",
+   "content": "【前因】统计规范 这次会议时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 统计规范 的链路记录",
+   "ts": "2026-08-05",
+   "created_at": "2026-08-05T10:00:00Z",
+   "insert_rank": 2041,
+   "role": "chain",
+   "topic": "l1-meeting-4",
+   "parent": "h7E0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 4
+   }
+  },
+  {
+   "id": "h7F0001",
+   "scenario": "ops",
+   "title": "数据库主库故障链路第1环：预发健康检查首现抖动",
+   "content": "【前因】数据库主库 这次故障时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 数据库主库 的链路记录",
+   "ts": "2026-08-06",
+   "created_at": "2026-08-06T10:00:00Z",
+   "insert_rank": 2050,
+   "role": "chain",
+   "topic": "l1-ops-5",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7F0002",
+   "scenario": "ops",
+   "title": "数据库主库故障链路第2环：下游超时随之升高",
+   "content": "【前因】数据库主库 这次故障时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 数据库主库 的链路记录",
+   "ts": "2026-08-06",
+   "created_at": "2026-08-06T10:00:00Z",
+   "insert_rank": 2051,
+   "role": "chain",
+   "topic": "l1-ops-5",
+   "parent": "h7F0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7F0003",
+   "scenario": "ops",
+   "title": "数据库主库故障链路第3环：故障单要求回滚点核对",
+   "content": "【前因】数据库主库 这次故障时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 数据库主库 的链路记录",
+   "ts": "2026-08-06",
+   "created_at": "2026-08-06T10:00:00Z",
+   "insert_rank": 2052,
+   "role": "chain",
+   "topic": "l1-ops-5",
+   "parent": "h7F0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7G0001",
+   "scenario": "migration",
+   "title": "历史订单表迁移链路第1环：预发健康检查首现抖动",
+   "content": "【前因】历史订单表 这次迁移时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 历史订单表 的链路记录",
+   "ts": "2026-08-07",
+   "created_at": "2026-08-07T10:00:00Z",
+   "insert_rank": 2060,
+   "role": "chain",
+   "topic": "l1-migration-6",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7G0002",
+   "scenario": "migration",
+   "title": "历史订单表迁移链路第2环：下游超时随之升高",
+   "content": "【前因】历史订单表 这次迁移时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 历史订单表 的链路记录",
+   "ts": "2026-08-07",
+   "created_at": "2026-08-07T10:00:00Z",
+   "insert_rank": 2061,
+   "role": "chain",
+   "topic": "l1-migration-6",
+   "parent": "h7G0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7G0003",
+   "scenario": "migration",
+   "title": "历史订单表迁移链路第3环：故障单要求回滚点核对",
+   "content": "【前因】历史订单表 这次迁移时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 历史订单表 的链路记录",
+   "ts": "2026-08-07",
+   "created_at": "2026-08-07T10:00:00Z",
+   "insert_rank": 2062,
+   "role": "chain",
+   "topic": "l1-migration-6",
+   "parent": "h7G0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7G0004",
+   "scenario": "migration",
+   "title": "历史订单表迁移链路第4环：首因沉淀进值班手册",
+   "content": "【前因】历史订单表 这次迁移时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 历史订单表 的链路记录",
+   "ts": "2026-08-07",
+   "created_at": "2026-08-07T10:00:00Z",
+   "insert_rank": 2063,
+   "role": "chain",
+   "topic": "l1-migration-6",
+   "parent": "h7G0003",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7H0001",
+   "scenario": "approval",
+   "title": "发布平台审批链路第1环：预发健康检查首现抖动",
+   "content": "【前因】发布平台 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 发布平台 的链路记录",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 2070,
+   "role": "chain",
+   "topic": "l1-approval-7",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0002",
+   "scenario": "approval",
+   "title": "发布平台审批链路第2环：下游超时随之升高",
+   "content": "【前因】发布平台 这次审批时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 发布平台 的链路记录",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 2071,
+   "role": "chain",
+   "topic": "l1-approval-7",
+   "parent": "h7H0001",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0003",
+   "scenario": "approval",
+   "title": "发布平台审批链路第3环：故障单要求回滚点核对",
+   "content": "【前因】发布平台 这次审批时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 发布平台 的链路记录",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 2072,
+   "role": "chain",
+   "topic": "l1-approval-7",
+   "parent": "h7H0002",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0004",
+   "scenario": "approval",
+   "title": "发布平台审批链路第4环：首因沉淀进值班手册",
+   "content": "【前因】发布平台 这次审批时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 发布平台 的链路记录",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 2073,
+   "role": "chain",
+   "topic": "l1-approval-7",
+   "parent": "h7H0003",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0005",
+   "scenario": "approval",
+   "title": "发布平台审批链路第5环：预发健康检查首现抖动",
+   "content": "【前因】发布平台 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 5 环）\n【后果】这一环挂进 发布平台 的链路记录",
+   "ts": "2026-08-08",
+   "created_at": "2026-08-08T10:00:00Z",
+   "insert_rank": 2074,
+   "role": "chain",
+   "topic": "l1-approval-7",
+   "parent": "h7H0004",
+   "attrs": {
+    "chain_step": 5,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7A0003",
+   "scenario": "deploy",
+   "title": "订单服务上线链路第1环：预发健康检查首现抖动",
+   "content": "【前因】订单服务 这次上线时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 订单服务 的链路记录",
+   "ts": "2026-08-09",
+   "created_at": "2026-08-09T10:00:00Z",
+   "insert_rank": 2080,
+   "role": "chain",
+   "topic": "l1-deploy-8",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 8
+   }
+  },
+  {
+   "id": "h7A0004",
+   "scenario": "deploy",
+   "title": "订单服务上线链路第2环：下游超时随之升高",
+   "content": "【前因】订单服务 这次上线时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 订单服务 的链路记录",
+   "ts": "2026-08-09",
+   "created_at": "2026-08-09T10:00:00Z",
+   "insert_rank": 2081,
+   "role": "chain",
+   "topic": "l1-deploy-8",
+   "parent": "h7A0003",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 8
+   }
+  },
+  {
+   "id": "h7B0004",
+   "scenario": "canary",
+   "title": "推荐服务灰度链路第1环：预发健康检查首现抖动",
+   "content": "【前因】推荐服务 这次灰度时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 推荐服务 的链路记录",
+   "ts": "2026-08-10",
+   "created_at": "2026-08-10T10:00:00Z",
+   "insert_rank": 2090,
+   "role": "chain",
+   "topic": "l1-canary-9",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7B0005",
+   "scenario": "canary",
+   "title": "推荐服务灰度链路第2环：下游超时随之升高",
+   "content": "【前因】推荐服务 这次灰度时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 推荐服务 的链路记录",
+   "ts": "2026-08-10",
+   "created_at": "2026-08-10T10:00:00Z",
+   "insert_rank": 2091,
+   "role": "chain",
+   "topic": "l1-canary-9",
+   "parent": "h7B0004",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7B0006",
+   "scenario": "canary",
+   "title": "推荐服务灰度链路第3环：故障单要求回滚点核对",
+   "content": "【前因】推荐服务 这次灰度时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 推荐服务 的链路记录",
+   "ts": "2026-08-10",
+   "created_at": "2026-08-10T10:00:00Z",
+   "insert_rank": 2092,
+   "role": "chain",
+   "topic": "l1-canary-9",
+   "parent": "h7B0005",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7C0005",
+   "scenario": "api",
+   "title": "回调接口接口链路第1环：预发健康检查首现抖动",
+   "content": "【前因】回调接口 这次接口时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 回调接口 的链路记录",
+   "ts": "2026-08-11",
+   "created_at": "2026-08-11T10:00:00Z",
+   "insert_rank": 2100,
+   "role": "chain",
+   "topic": "l1-api-10",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7C0006",
+   "scenario": "api",
+   "title": "回调接口接口链路第2环：下游超时随之升高",
+   "content": "【前因】回调接口 这次接口时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 回调接口 的链路记录",
+   "ts": "2026-08-11",
+   "created_at": "2026-08-11T10:00:00Z",
+   "insert_rank": 2101,
+   "role": "chain",
+   "topic": "l1-api-10",
+   "parent": "h7C0005",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7C0007",
+   "scenario": "api",
+   "title": "回调接口接口链路第3环：故障单要求回滚点核对",
+   "content": "【前因】回调接口 这次接口时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 回调接口 的链路记录",
+   "ts": "2026-08-11",
+   "created_at": "2026-08-11T10:00:00Z",
+   "insert_rank": 2102,
+   "role": "chain",
+   "topic": "l1-api-10",
+   "parent": "h7C0006",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7C0008",
+   "scenario": "api",
+   "title": "回调接口接口链路第4环：首因沉淀进值班手册",
+   "content": "【前因】回调接口 这次接口时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 回调接口 的链路记录",
+   "ts": "2026-08-11",
+   "created_at": "2026-08-11T10:00:00Z",
+   "insert_rank": 2103,
+   "role": "chain",
+   "topic": "l1-api-10",
+   "parent": "h7C0007",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7D0006",
+   "scenario": "handoff",
+   "title": "监控看板交接链路第1环：预发健康检查首现抖动",
+   "content": "【前因】监控看板 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 监控看板 的链路记录",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 2110,
+   "role": "chain",
+   "topic": "l1-handoff-11",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0007",
+   "scenario": "handoff",
+   "title": "监控看板交接链路第2环：下游超时随之升高",
+   "content": "【前因】监控看板 这次交接时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 监控看板 的链路记录",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 2111,
+   "role": "chain",
+   "topic": "l1-handoff-11",
+   "parent": "h7D0006",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0008",
+   "scenario": "handoff",
+   "title": "监控看板交接链路第3环：故障单要求回滚点核对",
+   "content": "【前因】监控看板 这次交接时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 监控看板 的链路记录",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 2112,
+   "role": "chain",
+   "topic": "l1-handoff-11",
+   "parent": "h7D0007",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0009",
+   "scenario": "handoff",
+   "title": "监控看板交接链路第4环：首因沉淀进值班手册",
+   "content": "【前因】监控看板 这次交接时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 监控看板 的链路记录",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 2113,
+   "role": "chain",
+   "topic": "l1-handoff-11",
+   "parent": "h7D0008",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0010",
+   "scenario": "handoff",
+   "title": "监控看板交接链路第5环：预发健康检查首现抖动",
+   "content": "【前因】监控看板 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 5 环）\n【后果】这一环挂进 监控看板 的链路记录",
+   "ts": "2026-08-12",
+   "created_at": "2026-08-12T10:00:00Z",
+   "insert_rank": 2114,
+   "role": "chain",
+   "topic": "l1-handoff-11",
+   "parent": "h7D0009",
+   "attrs": {
+    "chain_step": 5,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7E0003",
+   "scenario": "meeting",
+   "title": "指标口径会议链路第1环：预发健康检查首现抖动",
+   "content": "【前因】指标口径 这次会议时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 指标口径 的链路记录",
+   "ts": "2026-08-13",
+   "created_at": "2026-08-13T10:00:00Z",
+   "insert_rank": 2120,
+   "role": "chain",
+   "topic": "l1-meeting-12",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 12
+   }
+  },
+  {
+   "id": "h7E0004",
+   "scenario": "meeting",
+   "title": "指标口径会议链路第2环：下游超时随之升高",
+   "content": "【前因】指标口径 这次会议时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 指标口径 的链路记录",
+   "ts": "2026-08-13",
+   "created_at": "2026-08-13T10:00:00Z",
+   "insert_rank": 2121,
+   "role": "chain",
+   "topic": "l1-meeting-12",
+   "parent": "h7E0003",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 12
+   }
+  },
+  {
+   "id": "h7F0004",
+   "scenario": "ops",
+   "title": "消息队列故障链路第1环：预发健康检查首现抖动",
+   "content": "【前因】消息队列 这次故障时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 消息队列 的链路记录",
+   "ts": "2026-08-14",
+   "created_at": "2026-08-14T10:00:00Z",
+   "insert_rank": 2130,
+   "role": "chain",
+   "topic": "l1-ops-13",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7F0005",
+   "scenario": "ops",
+   "title": "消息队列故障链路第2环：下游超时随之升高",
+   "content": "【前因】消息队列 这次故障时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 消息队列 的链路记录",
+   "ts": "2026-08-14",
+   "created_at": "2026-08-14T10:00:00Z",
+   "insert_rank": 2131,
+   "role": "chain",
+   "topic": "l1-ops-13",
+   "parent": "h7F0004",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7F0006",
+   "scenario": "ops",
+   "title": "消息队列故障链路第3环：故障单要求回滚点核对",
+   "content": "【前因】消息队列 这次故障时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 消息队列 的链路记录",
+   "ts": "2026-08-14",
+   "created_at": "2026-08-14T10:00:00Z",
+   "insert_rank": 2132,
+   "role": "chain",
+   "topic": "l1-ops-13",
+   "parent": "h7F0005",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7G0005",
+   "scenario": "migration",
+   "title": "日志索引迁移链路第1环：预发健康检查首现抖动",
+   "content": "【前因】日志索引 这次迁移时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 日志索引 的链路记录",
+   "ts": "2026-08-15",
+   "created_at": "2026-08-15T10:00:00Z",
+   "insert_rank": 2140,
+   "role": "chain",
+   "topic": "l1-migration-14",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7G0006",
+   "scenario": "migration",
+   "title": "日志索引迁移链路第2环：下游超时随之升高",
+   "content": "【前因】日志索引 这次迁移时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 日志索引 的链路记录",
+   "ts": "2026-08-15",
+   "created_at": "2026-08-15T10:00:00Z",
+   "insert_rank": 2141,
+   "role": "chain",
+   "topic": "l1-migration-14",
+   "parent": "h7G0005",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7G0007",
+   "scenario": "migration",
+   "title": "日志索引迁移链路第3环：故障单要求回滚点核对",
+   "content": "【前因】日志索引 这次迁移时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 日志索引 的链路记录",
+   "ts": "2026-08-15",
+   "created_at": "2026-08-15T10:00:00Z",
+   "insert_rank": 2142,
+   "role": "chain",
+   "topic": "l1-migration-14",
+   "parent": "h7G0006",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7G0008",
+   "scenario": "migration",
+   "title": "日志索引迁移链路第4环：首因沉淀进值班手册",
+   "content": "【前因】日志索引 这次迁移时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 日志索引 的链路记录",
+   "ts": "2026-08-15",
+   "created_at": "2026-08-15T10:00:00Z",
+   "insert_rank": 2143,
+   "role": "chain",
+   "topic": "l1-migration-14",
+   "parent": "h7G0007",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7H0006",
+   "scenario": "approval",
+   "title": "生产库账号审批链路第1环：预发健康检查首现抖动",
+   "content": "【前因】生产库账号 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 生产库账号 的链路记录",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 2150,
+   "role": "chain",
+   "topic": "l1-approval-15",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0007",
+   "scenario": "approval",
+   "title": "生产库账号审批链路第2环：下游超时随之升高",
+   "content": "【前因】生产库账号 这次审批时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 生产库账号 的链路记录",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 2151,
+   "role": "chain",
+   "topic": "l1-approval-15",
+   "parent": "h7H0006",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0008",
+   "scenario": "approval",
+   "title": "生产库账号审批链路第3环：故障单要求回滚点核对",
+   "content": "【前因】生产库账号 这次审批时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 生产库账号 的链路记录",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 2152,
+   "role": "chain",
+   "topic": "l1-approval-15",
+   "parent": "h7H0007",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0009",
+   "scenario": "approval",
+   "title": "生产库账号审批链路第4环：首因沉淀进值班手册",
+   "content": "【前因】生产库账号 这次审批时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 生产库账号 的链路记录",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 2153,
+   "role": "chain",
+   "topic": "l1-approval-15",
+   "parent": "h7H0008",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0010",
+   "scenario": "approval",
+   "title": "生产库账号审批链路第5环：预发健康检查首现抖动",
+   "content": "【前因】生产库账号 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 5 环）\n【后果】这一环挂进 生产库账号 的链路记录",
+   "ts": "2026-08-16",
+   "created_at": "2026-08-16T10:00:00Z",
+   "insert_rank": 2154,
+   "role": "chain",
+   "topic": "l1-approval-15",
+   "parent": "h7H0009",
+   "attrs": {
+    "chain_step": 5,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7A0005",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】订单服务 这次上线时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-01",
+   "created_at": "2026-09-01T10:00:00Z",
+   "insert_rank": 3000,
+   "role": "chain",
+   "topic": "l2-deploy-0",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 0
+   }
+  },
+  {
+   "id": "h7A0006",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第2环：下游超时随之升高",
+   "content": "【前因】订单服务 这次上线时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-01",
+   "created_at": "2026-09-01T10:00:00Z",
+   "insert_rank": 3001,
+   "role": "chain",
+   "topic": "l2-deploy-0",
+   "parent": "h7A0005",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 0
+   }
+  },
+  {
+   "id": "h7A0007",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】订单服务 这次上线时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-01",
+   "created_at": "2026-09-01T10:00:00Z",
+   "insert_rank": 3002,
+   "role": "chain",
+   "topic": "l2-deploy-0",
+   "parent": "h7A0006",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 0
+   }
+  },
+  {
+   "id": "h7B0007",
+   "scenario": "canary",
+   "title": "搜索服务灰度混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】搜索服务 这次灰度时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 搜索服务 的混跳记录",
+   "ts": "2026-09-02",
+   "created_at": "2026-09-02T10:00:00Z",
+   "insert_rank": 3010,
+   "role": "chain",
+   "topic": "l2-canary-1",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7B0008",
+   "scenario": "canary",
+   "title": "搜索服务灰度混跳第2环：下游超时随之升高",
+   "content": "【前因】搜索服务 这次灰度时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 搜索服务 的混跳记录",
+   "ts": "2026-09-02",
+   "created_at": "2026-09-02T10:00:00Z",
+   "insert_rank": 3011,
+   "role": "chain",
+   "topic": "l2-canary-1",
+   "parent": "h7B0007",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7B0009",
+   "scenario": "canary",
+   "title": "搜索服务灰度混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】搜索服务 这次灰度时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 搜索服务 的混跳记录",
+   "ts": "2026-09-02",
+   "created_at": "2026-09-02T10:00:00Z",
+   "insert_rank": 3012,
+   "role": "chain",
+   "topic": "l2-canary-1",
+   "parent": "h7B0008",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7B0010",
+   "scenario": "canary",
+   "title": "搜索服务灰度混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】搜索服务 这次灰度时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 搜索服务 的混跳记录",
+   "ts": "2026-09-02",
+   "created_at": "2026-09-02T10:00:00Z",
+   "insert_rank": 3013,
+   "role": "chain",
+   "topic": "l2-canary-1",
+   "parent": "h7B0009",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 1
+   }
+  },
+  {
+   "id": "h7C0009",
+   "scenario": "api",
+   "title": "查询接口接口混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】查询接口 这次接口时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 查询接口 的混跳记录",
+   "ts": "2026-09-03",
+   "created_at": "2026-09-03T10:00:00Z",
+   "insert_rank": 3020,
+   "role": "chain",
+   "topic": "l2-api-2",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7C0010",
+   "scenario": "api",
+   "title": "查询接口接口混跳第2环：下游超时随之升高",
+   "content": "【前因】查询接口 这次接口时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 查询接口 的混跳记录",
+   "ts": "2026-09-03",
+   "created_at": "2026-09-03T10:00:00Z",
+   "insert_rank": 3021,
+   "role": "chain",
+   "topic": "l2-api-2",
+   "parent": "h7C0009",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7C0011",
+   "scenario": "api",
+   "title": "查询接口接口混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】查询接口 这次接口时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 查询接口 的混跳记录",
+   "ts": "2026-09-03",
+   "created_at": "2026-09-03T10:00:00Z",
+   "insert_rank": 3022,
+   "role": "chain",
+   "topic": "l2-api-2",
+   "parent": "h7C0010",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 2
+   }
+  },
+  {
+   "id": "h7D0011",
+   "scenario": "handoff",
+   "title": "值班手册交接混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】值班手册 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 值班手册 的混跳记录",
+   "ts": "2026-09-04",
+   "created_at": "2026-09-04T10:00:00Z",
+   "insert_rank": 3030,
+   "role": "chain",
+   "topic": "l2-handoff-3",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0012",
+   "scenario": "handoff",
+   "title": "值班手册交接混跳第2环：下游超时随之升高",
+   "content": "【前因】值班手册 这次交接时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 值班手册 的混跳记录",
+   "ts": "2026-09-04",
+   "created_at": "2026-09-04T10:00:00Z",
+   "insert_rank": 3031,
+   "role": "chain",
+   "topic": "l2-handoff-3",
+   "parent": "h7D0011",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0013",
+   "scenario": "handoff",
+   "title": "值班手册交接混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】值班手册 这次交接时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 值班手册 的混跳记录",
+   "ts": "2026-09-04",
+   "created_at": "2026-09-04T10:00:00Z",
+   "insert_rank": 3032,
+   "role": "chain",
+   "topic": "l2-handoff-3",
+   "parent": "h7D0012",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7D0014",
+   "scenario": "handoff",
+   "title": "值班手册交接混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】值班手册 这次交接时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 值班手册 的混跳记录",
+   "ts": "2026-09-04",
+   "created_at": "2026-09-04T10:00:00Z",
+   "insert_rank": 3033,
+   "role": "chain",
+   "topic": "l2-handoff-3",
+   "parent": "h7D0013",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 3
+   }
+  },
+  {
+   "id": "h7E0005",
+   "scenario": "meeting",
+   "title": "统计规范会议混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】统计规范 这次会议时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 统计规范 的混跳记录",
+   "ts": "2026-09-05",
+   "created_at": "2026-09-05T10:00:00Z",
+   "insert_rank": 3040,
+   "role": "chain",
+   "topic": "l2-meeting-4",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 4
+   }
+  },
+  {
+   "id": "h7E0006",
+   "scenario": "meeting",
+   "title": "统计规范会议混跳第2环：下游超时随之升高",
+   "content": "【前因】统计规范 这次会议时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 统计规范 的混跳记录",
+   "ts": "2026-09-05",
+   "created_at": "2026-09-05T10:00:00Z",
+   "insert_rank": 3041,
+   "role": "chain",
+   "topic": "l2-meeting-4",
+   "parent": "h7E0005",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 4
+   }
+  },
+  {
+   "id": "h7E0007",
+   "scenario": "meeting",
+   "title": "统计规范会议混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】统计规范 这次会议时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 统计规范 的混跳记录",
+   "ts": "2026-09-05",
+   "created_at": "2026-09-05T10:00:00Z",
+   "insert_rank": 3042,
+   "role": "chain",
+   "topic": "l2-meeting-4",
+   "parent": "h7E0006",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 4
+   }
+  },
+  {
+   "id": "h7F0007",
+   "scenario": "ops",
+   "title": "数据库主库故障混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】数据库主库 这次故障时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 数据库主库 的混跳记录",
+   "ts": "2026-09-06",
+   "created_at": "2026-09-06T10:00:00Z",
+   "insert_rank": 3050,
+   "role": "chain",
+   "topic": "l2-ops-5",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7F0008",
+   "scenario": "ops",
+   "title": "数据库主库故障混跳第2环：下游超时随之升高",
+   "content": "【前因】数据库主库 这次故障时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 数据库主库 的混跳记录",
+   "ts": "2026-09-06",
+   "created_at": "2026-09-06T10:00:00Z",
+   "insert_rank": 3051,
+   "role": "chain",
+   "topic": "l2-ops-5",
+   "parent": "h7F0007",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7F0009",
+   "scenario": "ops",
+   "title": "数据库主库故障混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】数据库主库 这次故障时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 数据库主库 的混跳记录",
+   "ts": "2026-09-06",
+   "created_at": "2026-09-06T10:00:00Z",
+   "insert_rank": 3052,
+   "role": "chain",
+   "topic": "l2-ops-5",
+   "parent": "h7F0008",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7F0010",
+   "scenario": "ops",
+   "title": "数据库主库故障混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】数据库主库 这次故障时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 数据库主库 的混跳记录",
+   "ts": "2026-09-06",
+   "created_at": "2026-09-06T10:00:00Z",
+   "insert_rank": 3053,
+   "role": "chain",
+   "topic": "l2-ops-5",
+   "parent": "h7F0009",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 5
+   }
+  },
+  {
+   "id": "h7G0009",
+   "scenario": "migration",
+   "title": "历史订单表迁移混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】历史订单表 这次迁移时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 历史订单表 的混跳记录",
+   "ts": "2026-09-07",
+   "created_at": "2026-09-07T10:00:00Z",
+   "insert_rank": 3060,
+   "role": "chain",
+   "topic": "l2-migration-6",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7G0010",
+   "scenario": "migration",
+   "title": "历史订单表迁移混跳第2环：下游超时随之升高",
+   "content": "【前因】历史订单表 这次迁移时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 历史订单表 的混跳记录",
+   "ts": "2026-09-07",
+   "created_at": "2026-09-07T10:00:00Z",
+   "insert_rank": 3061,
+   "role": "chain",
+   "topic": "l2-migration-6",
+   "parent": "h7G0009",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7G0011",
+   "scenario": "migration",
+   "title": "历史订单表迁移混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】历史订单表 这次迁移时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 历史订单表 的混跳记录",
+   "ts": "2026-09-07",
+   "created_at": "2026-09-07T10:00:00Z",
+   "insert_rank": 3062,
+   "role": "chain",
+   "topic": "l2-migration-6",
+   "parent": "h7G0010",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 6
+   }
+  },
+  {
+   "id": "h7H0011",
+   "scenario": "approval",
+   "title": "发布平台审批混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】发布平台 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 发布平台 的混跳记录",
+   "ts": "2026-09-08",
+   "created_at": "2026-09-08T10:00:00Z",
+   "insert_rank": 3070,
+   "role": "chain",
+   "topic": "l2-approval-7",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0012",
+   "scenario": "approval",
+   "title": "发布平台审批混跳第2环：下游超时随之升高",
+   "content": "【前因】发布平台 这次审批时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 发布平台 的混跳记录",
+   "ts": "2026-09-08",
+   "created_at": "2026-09-08T10:00:00Z",
+   "insert_rank": 3071,
+   "role": "chain",
+   "topic": "l2-approval-7",
+   "parent": "h7H0011",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0013",
+   "scenario": "approval",
+   "title": "发布平台审批混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】发布平台 这次审批时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 发布平台 的混跳记录",
+   "ts": "2026-09-08",
+   "created_at": "2026-09-08T10:00:00Z",
+   "insert_rank": 3072,
+   "role": "chain",
+   "topic": "l2-approval-7",
+   "parent": "h7H0012",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7H0014",
+   "scenario": "approval",
+   "title": "发布平台审批混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】发布平台 这次审批时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 发布平台 的混跳记录",
+   "ts": "2026-09-08",
+   "created_at": "2026-09-08T10:00:00Z",
+   "insert_rank": 3073,
+   "role": "chain",
+   "topic": "l2-approval-7",
+   "parent": "h7H0013",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 7
+   }
+  },
+  {
+   "id": "h7A0008",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】订单服务 这次上线时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-09",
+   "created_at": "2026-09-09T10:00:00Z",
+   "insert_rank": 3080,
+   "role": "chain",
+   "topic": "l2-deploy-8",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 8
+   }
+  },
+  {
+   "id": "h7A0009",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第2环：下游超时随之升高",
+   "content": "【前因】订单服务 这次上线时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-09",
+   "created_at": "2026-09-09T10:00:00Z",
+   "insert_rank": 3081,
+   "role": "chain",
+   "topic": "l2-deploy-8",
+   "parent": "h7A0008",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 8
+   }
+  },
+  {
+   "id": "h7A0010",
+   "scenario": "deploy",
+   "title": "订单服务上线混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】订单服务 这次上线时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 订单服务 的混跳记录",
+   "ts": "2026-09-09",
+   "created_at": "2026-09-09T10:00:00Z",
+   "insert_rank": 3082,
+   "role": "chain",
+   "topic": "l2-deploy-8",
+   "parent": "h7A0009",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 8
+   }
+  },
+  {
+   "id": "h7B0011",
+   "scenario": "canary",
+   "title": "推荐服务灰度混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】推荐服务 这次灰度时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 推荐服务 的混跳记录",
+   "ts": "2026-09-10",
+   "created_at": "2026-09-10T10:00:00Z",
+   "insert_rank": 3090,
+   "role": "chain",
+   "topic": "l2-canary-9",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7B0012",
+   "scenario": "canary",
+   "title": "推荐服务灰度混跳第2环：下游超时随之升高",
+   "content": "【前因】推荐服务 这次灰度时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 推荐服务 的混跳记录",
+   "ts": "2026-09-10",
+   "created_at": "2026-09-10T10:00:00Z",
+   "insert_rank": 3091,
+   "role": "chain",
+   "topic": "l2-canary-9",
+   "parent": "h7B0011",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7B0013",
+   "scenario": "canary",
+   "title": "推荐服务灰度混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】推荐服务 这次灰度时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 推荐服务 的混跳记录",
+   "ts": "2026-09-10",
+   "created_at": "2026-09-10T10:00:00Z",
+   "insert_rank": 3092,
+   "role": "chain",
+   "topic": "l2-canary-9",
+   "parent": "h7B0012",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7B0014",
+   "scenario": "canary",
+   "title": "推荐服务灰度混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】推荐服务 这次灰度时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 推荐服务 的混跳记录",
+   "ts": "2026-09-10",
+   "created_at": "2026-09-10T10:00:00Z",
+   "insert_rank": 3093,
+   "role": "chain",
+   "topic": "l2-canary-9",
+   "parent": "h7B0013",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 9
+   }
+  },
+  {
+   "id": "h7C0012",
+   "scenario": "api",
+   "title": "回调接口接口混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】回调接口 这次接口时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 回调接口 的混跳记录",
+   "ts": "2026-09-11",
+   "created_at": "2026-09-11T10:00:00Z",
+   "insert_rank": 3100,
+   "role": "chain",
+   "topic": "l2-api-10",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7C0013",
+   "scenario": "api",
+   "title": "回调接口接口混跳第2环：下游超时随之升高",
+   "content": "【前因】回调接口 这次接口时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 回调接口 的混跳记录",
+   "ts": "2026-09-11",
+   "created_at": "2026-09-11T10:00:00Z",
+   "insert_rank": 3101,
+   "role": "chain",
+   "topic": "l2-api-10",
+   "parent": "h7C0012",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7C0014",
+   "scenario": "api",
+   "title": "回调接口接口混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】回调接口 这次接口时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 回调接口 的混跳记录",
+   "ts": "2026-09-11",
+   "created_at": "2026-09-11T10:00:00Z",
+   "insert_rank": 3102,
+   "role": "chain",
+   "topic": "l2-api-10",
+   "parent": "h7C0013",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 10
+   }
+  },
+  {
+   "id": "h7D0015",
+   "scenario": "handoff",
+   "title": "监控看板交接混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】监控看板 这次交接时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 监控看板 的混跳记录",
+   "ts": "2026-09-12",
+   "created_at": "2026-09-12T10:00:00Z",
+   "insert_rank": 3110,
+   "role": "chain",
+   "topic": "l2-handoff-11",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0016",
+   "scenario": "handoff",
+   "title": "监控看板交接混跳第2环：下游超时随之升高",
+   "content": "【前因】监控看板 这次交接时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 监控看板 的混跳记录",
+   "ts": "2026-09-12",
+   "created_at": "2026-09-12T10:00:00Z",
+   "insert_rank": 3111,
+   "role": "chain",
+   "topic": "l2-handoff-11",
+   "parent": "h7D0015",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0017",
+   "scenario": "handoff",
+   "title": "监控看板交接混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】监控看板 这次交接时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 监控看板 的混跳记录",
+   "ts": "2026-09-12",
+   "created_at": "2026-09-12T10:00:00Z",
+   "insert_rank": 3112,
+   "role": "chain",
+   "topic": "l2-handoff-11",
+   "parent": "h7D0016",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7D0018",
+   "scenario": "handoff",
+   "title": "监控看板交接混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】监控看板 这次交接时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 监控看板 的混跳记录",
+   "ts": "2026-09-12",
+   "created_at": "2026-09-12T10:00:00Z",
+   "insert_rank": 3113,
+   "role": "chain",
+   "topic": "l2-handoff-11",
+   "parent": "h7D0017",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 11
+   }
+  },
+  {
+   "id": "h7E0008",
+   "scenario": "meeting",
+   "title": "指标口径会议混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】指标口径 这次会议时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 指标口径 的混跳记录",
+   "ts": "2026-09-13",
+   "created_at": "2026-09-13T10:00:00Z",
+   "insert_rank": 3120,
+   "role": "chain",
+   "topic": "l2-meeting-12",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 12
+   }
+  },
+  {
+   "id": "h7E0009",
+   "scenario": "meeting",
+   "title": "指标口径会议混跳第2环：下游超时随之升高",
+   "content": "【前因】指标口径 这次会议时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 指标口径 的混跳记录",
+   "ts": "2026-09-13",
+   "created_at": "2026-09-13T10:00:00Z",
+   "insert_rank": 3121,
+   "role": "chain",
+   "topic": "l2-meeting-12",
+   "parent": "h7E0008",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 12
+   }
+  },
+  {
+   "id": "h7E0010",
+   "scenario": "meeting",
+   "title": "指标口径会议混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】指标口径 这次会议时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 指标口径 的混跳记录",
+   "ts": "2026-09-13",
+   "created_at": "2026-09-13T10:00:00Z",
+   "insert_rank": 3122,
+   "role": "chain",
+   "topic": "l2-meeting-12",
+   "parent": "h7E0009",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 12
+   }
+  },
+  {
+   "id": "h7F0011",
+   "scenario": "ops",
+   "title": "消息队列故障混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】消息队列 这次故障时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 消息队列 的混跳记录",
+   "ts": "2026-09-14",
+   "created_at": "2026-09-14T10:00:00Z",
+   "insert_rank": 3130,
+   "role": "chain",
+   "topic": "l2-ops-13",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7F0012",
+   "scenario": "ops",
+   "title": "消息队列故障混跳第2环：下游超时随之升高",
+   "content": "【前因】消息队列 这次故障时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 消息队列 的混跳记录",
+   "ts": "2026-09-14",
+   "created_at": "2026-09-14T10:00:00Z",
+   "insert_rank": 3131,
+   "role": "chain",
+   "topic": "l2-ops-13",
+   "parent": "h7F0011",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7F0013",
+   "scenario": "ops",
+   "title": "消息队列故障混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】消息队列 这次故障时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 消息队列 的混跳记录",
+   "ts": "2026-09-14",
+   "created_at": "2026-09-14T10:00:00Z",
+   "insert_rank": 3132,
+   "role": "chain",
+   "topic": "l2-ops-13",
+   "parent": "h7F0012",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7F0014",
+   "scenario": "ops",
+   "title": "消息队列故障混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】消息队列 这次故障时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 消息队列 的混跳记录",
+   "ts": "2026-09-14",
+   "created_at": "2026-09-14T10:00:00Z",
+   "insert_rank": 3133,
+   "role": "chain",
+   "topic": "l2-ops-13",
+   "parent": "h7F0013",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 13
+   }
+  },
+  {
+   "id": "h7G0012",
+   "scenario": "migration",
+   "title": "日志索引迁移混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】日志索引 这次迁移时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 日志索引 的混跳记录",
+   "ts": "2026-09-15",
+   "created_at": "2026-09-15T10:00:00Z",
+   "insert_rank": 3140,
+   "role": "chain",
+   "topic": "l2-migration-14",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7G0013",
+   "scenario": "migration",
+   "title": "日志索引迁移混跳第2环：下游超时随之升高",
+   "content": "【前因】日志索引 这次迁移时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 日志索引 的混跳记录",
+   "ts": "2026-09-15",
+   "created_at": "2026-09-15T10:00:00Z",
+   "insert_rank": 3141,
+   "role": "chain",
+   "topic": "l2-migration-14",
+   "parent": "h7G0012",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7G0014",
+   "scenario": "migration",
+   "title": "日志索引迁移混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】日志索引 这次迁移时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 日志索引 的混跳记录",
+   "ts": "2026-09-15",
+   "created_at": "2026-09-15T10:00:00Z",
+   "insert_rank": 3142,
+   "role": "chain",
+   "topic": "l2-migration-14",
+   "parent": "h7G0013",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 14
+   }
+  },
+  {
+   "id": "h7H0015",
+   "scenario": "approval",
+   "title": "生产库账号审批混跳第1环：预发健康检查首现抖动",
+   "content": "【前因】生产库账号 这次审批时，发布单先在预发跑健康检查\n【行为】随后 预发健康检查首现抖动（第 1 环）\n【后果】这一环挂进 生产库账号 的混跳记录",
+   "ts": "2026-09-16",
+   "created_at": "2026-09-16T10:00:00Z",
+   "insert_rank": 3150,
+   "role": "chain",
+   "topic": "l2-approval-15",
+   "parent": "",
+   "attrs": {
+    "chain_step": 1,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0016",
+   "scenario": "approval",
+   "title": "生产库账号审批混跳第2环：下游超时随之升高",
+   "content": "【前因】生产库账号 这次审批时，抖动沿调用链传导到下游\n【行为】随后 下游超时随之升高（第 2 环）\n【后果】这一环挂进 生产库账号 的混跳记录",
+   "ts": "2026-09-16",
+   "created_at": "2026-09-16T10:00:00Z",
+   "insert_rank": 3151,
+   "role": "chain",
+   "topic": "l2-approval-15",
+   "parent": "h7H0015",
+   "attrs": {
+    "chain_step": 2,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0017",
+   "scenario": "approval",
+   "title": "生产库账号审批混跳第3环：故障单要求回滚点核对",
+   "content": "【前因】生产库账号 这次审批时，超时触发值班告警并挂故障单\n【行为】随后 故障单要求回滚点核对（第 3 环）\n【后果】这一环挂进 生产库账号 的混跳记录",
+   "ts": "2026-09-16",
+   "created_at": "2026-09-16T10:00:00Z",
+   "insert_rank": 3152,
+   "role": "chain",
+   "topic": "l2-approval-15",
+   "parent": "h7H0016",
+   "attrs": {
+    "chain_step": 3,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7H0018",
+   "scenario": "approval",
+   "title": "生产库账号审批混跳第4环：首因沉淀进值班手册",
+   "content": "【前因】生产库账号 这次审批时，核对回滚点后定位到真正首因\n【行为】随后 首因沉淀进值班手册（第 4 环）\n【后果】这一环挂进 生产库账号 的混跳记录",
+   "ts": "2026-09-16",
+   "created_at": "2026-09-16T10:00:00Z",
+   "insert_rank": 3153,
+   "role": "chain",
+   "topic": "l2-approval-15",
+   "parent": "h7H0017",
+   "attrs": {
+    "chain_step": 4,
+    "chain_idx": 15
+   }
+  },
+  {
+   "id": "h7A0011",
+   "scenario": "deploy",
+   "title": "订单服务上线启动参数：回滚点已登记",
+   "content": "【前因】订单服务 这次上线的 启动参数 登记过几项，逐条对得上\n【行为】记下的：回滚点定为 max-conn=200，其余按流程走\n【后果】这张 启动参数 只写到这一层，没往下记",
+   "ts": "2026-10-01",
+   "created_at": "2026-10-01T10:00:00Z",
+   "insert_rank": 4000,
+   "role": "entity",
+   "topic": "l3-deploy-0",
+   "parent": "",
+   "attrs": {
+    "written_attr": "回滚点",
+    "unwritten_attr": "灰度白名单 ID",
+    "offspec_attr": "球衣号码",
+    "ticket": "启动参数"
+   }
+  },
+  {
+   "id": "h7B0015",
+   "scenario": "canary",
+   "title": "搜索服务灰度观察窗口：告警阈值已登记",
+   "content": "【前因】搜索服务 这次灰度的 观察窗口 登记过几项，逐条对得上\n【行为】记下的：告警阈值定为 15 分钟，其余按流程走\n【后果】这张 观察窗口 只写到这一层，没往下记",
+   "ts": "2026-10-02",
+   "created_at": "2026-10-02T10:00:00Z",
+   "insert_rank": 4001,
+   "role": "entity",
+   "topic": "l3-canary-1",
+   "parent": "",
+   "attrs": {
+    "written_attr": "告警阈值",
+    "unwritten_attr": "熔断窗口秒数",
+    "offspec_attr": "星座运势",
+    "ticket": "观察窗口"
+   }
+  },
+  {
+   "id": "h7C0015",
+   "scenario": "api",
+   "title": "查询接口接口签名方式：生效时点已登记",
+   "content": "【前因】查询接口 这次接口的 签名方式 登记过几项，逐条对得上\n【行为】记下的：生效时点定为 HMAC-SHA256，其余按流程走\n【后果】这张 签名方式 只写到这一层，没往下记",
+   "ts": "2026-10-03",
+   "created_at": "2026-10-03T10:00:00Z",
+   "insert_rank": 4002,
+   "role": "entity",
+   "topic": "l3-api-2",
+   "parent": "",
+   "attrs": {
+    "written_attr": "生效时点",
+    "unwritten_attr": "审计保留天数",
+    "offspec_attr": "菜谱火候",
+    "ticket": "签名方式"
+   }
+  },
+  {
+   "id": "h7D0019",
+   "scenario": "handoff",
+   "title": "值班手册交接脚本路径：审批人已登记",
+   "content": "【前因】值班手册 这次交接的 脚本路径 登记过几项，逐条对得上\n【行为】记下的：审批人定为 /opt/ops/run.sh，其余按流程走\n【后果】这张 脚本路径 只写到这一层，没往下记",
+   "ts": "2026-10-04",
+   "created_at": "2026-10-04T10:00:00Z",
+   "insert_rank": 4003,
+   "role": "entity",
+   "topic": "l3-handoff-3",
+   "parent": "",
+   "attrs": {
+    "written_attr": "审批人",
+    "unwritten_attr": "配额流水号",
+    "offspec_attr": "诗词韵脚",
+    "ticket": "脚本路径"
+   }
+  },
+  {
+   "id": "h7E0011",
+   "scenario": "meeting",
+   "title": "统计规范会议口径定义：回滚点已登记",
+   "content": "【前因】统计规范 这次会议的 口径定义 登记过几项，逐条对得上\n【行为】记下的：回滚点定为 按下单时间，其余按流程走\n【后果】这张 口径定义 只写到这一层，没往下记",
+   "ts": "2026-10-05",
+   "created_at": "2026-10-05T10:00:00Z",
+   "insert_rank": 4004,
+   "role": "entity",
+   "topic": "l3-meeting-4",
+   "parent": "",
+   "attrs": {
+    "written_attr": "回滚点",
+    "unwritten_attr": "灰度白名单 ID",
+    "offspec_attr": "球衣号码",
+    "ticket": "口径定义"
+   }
+  },
+  {
+   "id": "h7F0015",
+   "scenario": "ops",
+   "title": "数据库主库故障回滚点：告警阈值已登记",
+   "content": "【前因】数据库主库 这次故障的 回滚点 登记过几项，逐条对得上\n【行为】记下的：告警阈值定为 上一个稳定版本，其余按流程走\n【后果】这张 回滚点 只写到这一层，没往下记",
+   "ts": "2026-10-06",
+   "created_at": "2026-10-06T10:00:00Z",
+   "insert_rank": 4005,
+   "role": "entity",
+   "topic": "l3-ops-5",
+   "parent": "",
+   "attrs": {
+    "written_attr": "告警阈值",
+    "unwritten_attr": "熔断窗口秒数",
+    "offspec_attr": "星座运势",
+    "ticket": "回滚点"
+   }
+  },
+  {
+   "id": "h7G0015",
+   "scenario": "migration",
+   "title": "历史订单表迁移分批大小：生效时点已登记",
+   "content": "【前因】历史订单表 这次迁移的 分批大小 登记过几项，逐条对得上\n【行为】记下的：生效时点定为 5000 行，其余按流程走\n【后果】这张 分批大小 只写到这一层，没往下记",
+   "ts": "2026-10-07",
+   "created_at": "2026-10-07T10:00:00Z",
+   "insert_rank": 4006,
+   "role": "entity",
+   "topic": "l3-migration-6",
+   "parent": "",
+   "attrs": {
+    "written_attr": "生效时点",
+    "unwritten_attr": "审计保留天数",
+    "offspec_attr": "菜谱火候",
+    "ticket": "分批大小"
+   }
+  },
+  {
+   "id": "h7H0019",
+   "scenario": "approval",
+   "title": "发布平台审批有效期：审批人已登记",
+   "content": "【前因】发布平台 这次审批的 有效期 登记过几项，逐条对得上\n【行为】记下的：审批人定为 7 天，其余按流程走\n【后果】这张 有效期 只写到这一层，没往下记",
+   "ts": "2026-10-08",
+   "created_at": "2026-10-08T10:00:00Z",
+   "insert_rank": 4007,
+   "role": "entity",
+   "topic": "l3-approval-7",
+   "parent": "",
+   "attrs": {
+    "written_attr": "审批人",
+    "unwritten_attr": "配额流水号",
+    "offspec_attr": "诗词韵脚",
+    "ticket": "有效期"
+   }
+  },
+  {
+   "id": "h7A0012",
+   "scenario": "deploy",
+   "title": "值班记录第 1 号：那次没对齐后来重落了",
+   "content": "【前因】订单服务 这次上线卡在回滚点没对齐，只能重来\n【行为】最后照 回滚点 那版重新落了一次，启动参数 签字确认\n【后果】这次启动参数就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-01",
+   "created_at": "2026-11-01T10:00:00Z",
+   "insert_rank": 5000,
+   "role": "fact",
+   "topic": "l4-deploy-0",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "回滚点",
+    "c": "启动参数",
+    "comp": "订单服务",
+    "comp_q": "结算服务"
+   }
+  },
+  {
+   "id": "h7B0016",
+   "scenario": "canary",
+   "title": "值班记录第 2 号：那次没对齐后来重落了",
+   "content": "【前因】搜索服务 这次灰度卡在告警阈值没对齐，只能重来\n【行为】最后照 告警阈值 那版重新落了一次，观察窗口 签字确认\n【后果】这次观察窗口就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-02",
+   "created_at": "2026-11-02T10:00:00Z",
+   "insert_rank": 5001,
+   "role": "fact",
+   "topic": "l4-canary-1",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "告警阈值",
+    "c": "观察窗口",
+    "comp": "搜索服务",
+    "comp_q": "风控服务"
+   }
+  },
+  {
+   "id": "h7C0016",
+   "scenario": "api",
+   "title": "值班记录第 3 号：那次没对齐后来重落了",
+   "content": "【前因】查询接口 这次接口卡在生效时点没对齐，只能重来\n【行为】最后照 生效时点 那版重新落了一次，签名方式 签字确认\n【后果】这次签名方式就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-03",
+   "created_at": "2026-11-03T10:00:00Z",
+   "insert_rank": 5002,
+   "role": "fact",
+   "topic": "l4-api-2",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "生效时点",
+    "c": "签名方式",
+    "comp": "查询接口",
+    "comp_q": "对账接口"
+   }
+  },
+  {
+   "id": "h7D0020",
+   "scenario": "handoff",
+   "title": "值班记录第 4 号：那次没对齐后来重落了",
+   "content": "【前因】值班手册 这次交接卡在审批人没对齐，只能重来\n【行为】最后照 审批人 那版重新落了一次，脚本路径 签字确认\n【后果】这次脚本路径就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-04",
+   "created_at": "2026-11-04T10:00:00Z",
+   "insert_rank": 5003,
+   "role": "fact",
+   "topic": "l4-handoff-3",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "审批人",
+    "c": "脚本路径",
+    "comp": "值班手册",
+    "comp_q": "定时任务"
+   }
+  },
+  {
+   "id": "h7E0012",
+   "scenario": "meeting",
+   "title": "值班记录第 5 号：那次没对齐后来重落了",
+   "content": "【前因】统计规范 这次会议卡在回滚点没对齐，只能重来\n【行为】最后照 熔断阈值 那版重新落了一次，口径定义 签字确认\n【后果】这次口径定义就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-05",
+   "created_at": "2026-11-05T10:00:00Z",
+   "insert_rank": 5004,
+   "role": "fact",
+   "topic": "l4-meeting-4",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "熔断阈值",
+    "c": "口径定义",
+    "comp": "统计规范",
+    "comp_q": "命名规范"
+   }
+  },
+  {
+   "id": "h7F0016",
+   "scenario": "ops",
+   "title": "值班记录第 6 号：那次没对齐后来重落了",
+   "content": "【前因】数据库主库 这次故障卡在告警阈值没对齐，只能重来\n【行为】最后照 灰度比例 那版重新落了一次，回滚点 签字确认\n【后果】这次回滚点就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-06",
+   "created_at": "2026-11-06T10:00:00Z",
+   "insert_rank": 5005,
+   "role": "fact",
+   "topic": "l4-ops-5",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "灰度比例",
+    "c": "回滚点",
+    "comp": "数据库主库",
+    "comp_q": "支付回调"
+   }
+  },
+  {
+   "id": "h7G0016",
+   "scenario": "migration",
+   "title": "值班记录第 7 号：那次没对齐后来重落了",
+   "content": "【前因】历史订单表 这次迁移卡在生效时点没对齐，只能重来\n【行为】最后照 回滚点 那版重新落了一次，分批大小 签字确认\n【后果】这次分批大小就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-07",
+   "created_at": "2026-11-07T10:00:00Z",
+   "insert_rank": 5006,
+   "role": "fact",
+   "topic": "l4-migration-6",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "回滚点",
+    "c": "分批大小",
+    "comp": "历史订单表",
+    "comp_q": "用户档案"
+   }
+  },
+  {
+   "id": "h7H0020",
+   "scenario": "approval",
+   "title": "值班记录第 8 号：那次没对齐后来重落了",
+   "content": "【前因】发布平台 这次审批卡在审批人没对齐，只能重来\n【行为】最后照 告警阈值 那版重新落了一次，有效期 签字确认\n【后果】这次有效期就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-08",
+   "created_at": "2026-11-08T10:00:00Z",
+   "insert_rank": 5007,
+   "role": "fact",
+   "topic": "l4-approval-7",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "告警阈值",
+    "c": "有效期",
+    "comp": "发布平台",
+    "comp_q": "配置中心"
+   }
+  },
+  {
+   "id": "h7A0013",
+   "scenario": "deploy",
+   "title": "值班记录第 9 号：那次没对齐后来重落了",
+   "content": "【前因】订单服务 这次上线卡在回滚点没对齐，只能重来\n【行为】最后照 生效时点 那版重新落了一次，启动参数 签字确认\n【后果】这次启动参数就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-09",
+   "created_at": "2026-11-09T10:00:00Z",
+   "insert_rank": 5008,
+   "role": "fact",
+   "topic": "l4-deploy-8",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "生效时点",
+    "c": "启动参数",
+    "comp": "订单服务",
+    "comp_q": "结算服务"
+   }
+  },
+  {
+   "id": "h7B0017",
+   "scenario": "canary",
+   "title": "值班记录第 10 号：那次没对齐后来重落了",
+   "content": "【前因】推荐服务 这次灰度卡在告警阈值没对齐，只能重来\n【行为】最后照 审批人 那版重新落了一次，灰度比例 签字确认\n【后果】这次灰度比例就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-10",
+   "created_at": "2026-11-10T10:00:00Z",
+   "insert_rank": 5009,
+   "role": "fact",
+   "topic": "l4-canary-9",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "审批人",
+    "c": "灰度比例",
+    "comp": "推荐服务",
+    "comp_q": "搜索服务"
+   }
+  },
+  {
+   "id": "h7C0017",
+   "scenario": "api",
+   "title": "值班记录第 11 号：那次没对齐后来重落了",
+   "content": "【前因】回调接口 这次接口卡在生效时点没对齐，只能重来\n【行为】最后照 熔断阈值 那版重新落了一次，重试次数 签字确认\n【后果】这次重试次数就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-11",
+   "created_at": "2026-11-11T10:00:00Z",
+   "insert_rank": 5010,
+   "role": "fact",
+   "topic": "l4-api-10",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "熔断阈值",
+    "c": "重试次数",
+    "comp": "回调接口",
+    "comp_q": "查询接口"
+   }
+  },
+  {
+   "id": "h7D0021",
+   "scenario": "handoff",
+   "title": "值班记录第 12 号：那次没对齐后来重落了",
+   "content": "【前因】监控看板 这次交接卡在审批人没对齐，只能重来\n【行为】最后照 灰度比例 那版重新落了一次，日志目录 签字确认\n【后果】这次日志目录就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-12",
+   "created_at": "2026-11-12T10:00:00Z",
+   "insert_rank": 5011,
+   "role": "fact",
+   "topic": "l4-handoff-11",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "灰度比例",
+    "c": "日志目录",
+    "comp": "监控看板",
+    "comp_q": "值班手册"
+   }
+  },
+  {
+   "id": "h7E0013",
+   "scenario": "meeting",
+   "title": "值班记录第 13 号：那次没对齐后来重落了",
+   "content": "【前因】指标口径 这次会议卡在回滚点没对齐，只能重来\n【行为】最后照 回滚点 那版重新落了一次，统计周期 签字确认\n【后果】这次统计周期就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-13",
+   "created_at": "2026-11-13T10:00:00Z",
+   "insert_rank": 5012,
+   "role": "fact",
+   "topic": "l4-meeting-12",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "回滚点",
+    "c": "统计周期",
+    "comp": "指标口径",
+    "comp_q": "统计规范"
+   }
+  },
+  {
+   "id": "h7F0017",
+   "scenario": "ops",
+   "title": "值班记录第 14 号：那次没对齐后来重落了",
+   "content": "【前因】消息队列 这次故障卡在告警阈值没对齐，只能重来\n【行为】最后照 告警阈值 那版重新落了一次，扩容策略 签字确认\n【后果】这次扩容策略就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-14",
+   "created_at": "2026-11-14T10:00:00Z",
+   "insert_rank": 5013,
+   "role": "fact",
+   "topic": "l4-ops-13",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "告警阈值",
+    "c": "扩容策略",
+    "comp": "消息队列",
+    "comp_q": "数据库主库"
+   }
+  },
+  {
+   "id": "h7G0017",
+   "scenario": "migration",
+   "title": "值班记录第 15 号：那次没对齐后来重落了",
+   "content": "【前因】日志索引 这次迁移卡在生效时点没对齐，只能重来\n【行为】最后照 生效时点 那版重新落了一次，切换时点 签字确认\n【后果】这次切换时点就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-15",
+   "created_at": "2026-11-15T10:00:00Z",
+   "insert_rank": 5014,
+   "role": "fact",
+   "topic": "l4-migration-14",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "生效时点",
+    "c": "切换时点",
+    "comp": "日志索引",
+    "comp_q": "历史订单表"
+   }
+  },
+  {
+   "id": "h7H0021",
+   "scenario": "approval",
+   "title": "值班记录第 16 号：那次没对齐后来重落了",
+   "content": "【前因】生产库账号 这次审批卡在审批人没对齐，只能重来\n【行为】最后照 审批人 那版重新落了一次，审批人 签字确认\n【后果】这次审批人就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-16",
+   "created_at": "2026-11-16T10:00:00Z",
+   "insert_rank": 5015,
+   "role": "fact",
+   "topic": "l4-approval-15",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "审批人",
+    "c": "审批人",
+    "comp": "生产库账号",
+    "comp_q": "发布平台"
+   }
+  },
+  {
+   "id": "h7A0014",
+   "scenario": "deploy",
+   "title": "值班记录第 17 号：那次没对齐后来重落了",
+   "content": "【前因】订单服务 这次上线卡在回滚点没对齐，只能重来\n【行为】最后照 熔断阈值 那版重新落了一次，启动参数 签字确认\n【后果】这次启动参数就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-17",
+   "created_at": "2026-11-17T10:00:00Z",
+   "insert_rank": 5016,
+   "role": "fact",
+   "topic": "l4-deploy-16",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "熔断阈值",
+    "c": "启动参数",
+    "comp": "订单服务",
+    "comp_q": "结算服务"
+   }
+  },
+  {
+   "id": "h7B0018",
+   "scenario": "canary",
+   "title": "值班记录第 18 号：那次没对齐后来重落了",
+   "content": "【前因】风控服务 这次灰度卡在告警阈值没对齐，只能重来\n【行为】最后照 灰度比例 那版重新落了一次，放量档位 签字确认\n【后果】这次放量档位就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-18",
+   "created_at": "2026-11-18T10:00:00Z",
+   "insert_rank": 5017,
+   "role": "fact",
+   "topic": "l4-canary-17",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "灰度比例",
+    "c": "放量档位",
+    "comp": "风控服务",
+    "comp_q": "推荐服务"
+   }
+  },
+  {
+   "id": "h7C0018",
+   "scenario": "api",
+   "title": "值班记录第 19 号：那次没对齐后来重落了",
+   "content": "【前因】对账接口 这次接口卡在生效时点没对齐，只能重来\n【行为】最后照 回滚点 那版重新落了一次，超时 签字确认\n【后果】这次超时就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-19",
+   "created_at": "2026-11-19T10:00:00Z",
+   "insert_rank": 5018,
+   "role": "fact",
+   "topic": "l4-api-18",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "回滚点",
+    "c": "超时",
+    "comp": "对账接口",
+    "comp_q": "回调接口"
+   }
+  },
+  {
+   "id": "h7D0022",
+   "scenario": "handoff",
+   "title": "值班记录第 20 号：那次没对齐后来重落了",
+   "content": "【前因】定时任务 这次交接卡在审批人没对齐，只能重来\n【行为】最后照 告警阈值 那版重新落了一次，告警接收人 签字确认\n【后果】这次告警接收人就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-20",
+   "created_at": "2026-11-20T10:00:00Z",
+   "insert_rank": 5019,
+   "role": "fact",
+   "topic": "l4-handoff-19",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "告警阈值",
+    "c": "告警接收人",
+    "comp": "定时任务",
+    "comp_q": "监控看板"
+   }
+  },
+  {
+   "id": "h7E0014",
+   "scenario": "meeting",
+   "title": "值班记录第 21 号：那次没对齐后来重落了",
+   "content": "【前因】命名规范 这次会议卡在回滚点没对齐，只能重来\n【行为】最后照 生效时点 那版重新落了一次，生效时间 签字确认\n【后果】这次生效时间就算过了，回滚点 留作下次校对样本",
+   "ts": "2026-11-21",
+   "created_at": "2026-11-21T10:00:00Z",
+   "insert_rank": 5020,
+   "role": "fact",
+   "topic": "l4-meeting-20",
+   "parent": "",
+   "attrs": {
+    "a": "回滚点",
+    "b": "生效时点",
+    "c": "生效时间",
+    "comp": "命名规范",
+    "comp_q": "指标口径"
+   }
+  },
+  {
+   "id": "h7F0018",
+   "scenario": "ops",
+   "title": "值班记录第 22 号：那次没对齐后来重落了",
+   "content": "【前因】支付回调 这次故障卡在告警阈值没对齐，只能重来\n【行为】最后照 审批人 那版重新落了一次，熔断阈值 签字确认\n【后果】这次熔断阈值就算过了，告警阈值 留作下次校对样本",
+   "ts": "2026-11-22",
+   "created_at": "2026-11-22T10:00:00Z",
+   "insert_rank": 5021,
+   "role": "fact",
+   "topic": "l4-ops-21",
+   "parent": "",
+   "attrs": {
+    "a": "告警阈值",
+    "b": "审批人",
+    "c": "熔断阈值",
+    "comp": "支付回调",
+    "comp_q": "消息队列"
+   }
+  },
+  {
+   "id": "h7G0018",
+   "scenario": "migration",
+   "title": "值班记录第 23 号：那次没对齐后来重落了",
+   "content": "【前因】用户档案 这次迁移卡在生效时点没对齐，只能重来\n【行为】最后照 熔断阈值 那版重新落了一次，校验方式 签字确认\n【后果】这次校验方式就算过了，生效时点 留作下次校对样本",
+   "ts": "2026-11-23",
+   "created_at": "2026-11-23T10:00:00Z",
+   "insert_rank": 5022,
+   "role": "fact",
+   "topic": "l4-migration-22",
+   "parent": "",
+   "attrs": {
+    "a": "生效时点",
+    "b": "熔断阈值",
+    "c": "校验方式",
+    "comp": "用户档案",
+    "comp_q": "日志索引"
+   }
+  },
+  {
+   "id": "h7H0022",
+   "scenario": "approval",
+   "title": "值班记录第 24 号：那次没对齐后来重落了",
+   "content": "【前因】配置中心 这次审批卡在审批人没对齐，只能重来\n【行为】最后照 灰度比例 那版重新落了一次，授权范围 签字确认\n【后果】这次授权范围就算过了，审批人 留作下次校对样本",
+   "ts": "2026-11-24",
+   "created_at": "2026-11-24T10:00:00Z",
+   "insert_rank": 5023,
+   "role": "fact",
+   "topic": "l4-approval-23",
+   "parent": "",
+   "attrs": {
+    "a": "审批人",
+    "b": "灰度比例",
+    "c": "授权范围",
+    "comp": "配置中心",
+    "comp_q": "生产库账号"
+   }
+  }
+ ]
+}

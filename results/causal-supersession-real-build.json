@@ -1,0 +1,117 @@
+{
+  "schema": "agimem-causal-supersession-real/1",
+  "data_dir": "/tmp/agimem-supersede/causal",
+  "port": 16320,
+  "n_pairs": 10,
+  "n_written_ok": 10,
+  "n_written_fail": 0,
+  "receipts": [
+    {
+      "old": "sntD0002",
+      "new": "sntD0011",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntF0002",
+      "new": "sntF0011",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntI0002",
+      "new": "sntI0015",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntC0003",
+      "new": "sntC0011",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntJ0002",
+      "new": "sntJ0009",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntE0002",
+      "new": "sntE0010",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntG0002",
+      "new": "sntG0009",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntH0002",
+      "new": "sntH0009",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntA0002",
+      "new": "sntA0015",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntB0002",
+      "new": "sntB0009",
+      "rc": 0,
+      "new_uuid_present": true
+    }
+  ],
+  "verify": [
+    {
+      "old": "sntD0002",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntD0011",
+      "top_ids": [
+        "sntD0002",
+        "sntG0005",
+        "sntD0001"
+      ]
+    },
+    {
+      "old": "sntF0002",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntF0011",
+      "top_ids": [
+        "sntF0002",
+        "sntF0014",
+        "sntE0010"
+      ]
+    },
+    {
+      "old": "sntI0002",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntI0015",
+      "top_ids": [
+        "sntI0002",
+        "sntI0014",
+        "sntI0004"
+      ]
+    }
+  ],
+  "constraint_trivial_supersedes": {
+    "rc": 1,
+    "out": "{\"command\":\"cli\",\"status\":\"fail\",\"summary\":{\"reason\":\"runtime_error\"},\"items\":[],\"actions\":[],\"errors\":[\"associations require important memory\"],\"details\":{\"error_type\":\"runtime\"},\"related\":[]}"
+  },
+  "index_after": {
+    "state": "ready",
+    "local_total": 143,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 1.4
+  },
+  "n_hits": 505,
+  "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-supersession-real-predictions.jsonl",
+  "elapsed_s": 161.1
+}

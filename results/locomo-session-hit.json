@@ -1,0 +1,202 @@
+{
+ "results_dir": "../../results/locomo",
+ "data": "/home/fslong/locomo-src/data/locomo10.json",
+ "data_present": true,
+ "runs": [
+  {
+   "file": "om_conv0_judged.json",
+   "n_rows": 199,
+   "n_no_evidence": 2,
+   "denominator": 197,
+   "session_hit": {
+    "point": 0.39086294416243655,
+    "lo": 0.32543561076871796,
+    "hi": 0.46046516762390843,
+    "n": 197,
+    "k": 77,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "session_hit_top3": {
+    "point": 0.2436548223350254,
+    "lo": 0.1889855182558513,
+    "hi": 0.3081302635500851,
+    "n": 197,
+    "k": 48,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "by_category": {
+    "1": {
+     "session_hit": 0.4375,
+     "k": 14,
+     "n": 32,
+     "session_hit_top3": 0.34375
+    },
+    "2": {
+     "session_hit": 0.2702702702702703,
+     "k": 10,
+     "n": 37,
+     "session_hit_top3": 0.21621621621621623
+    },
+    "3": {
+     "session_hit": 0.45454545454545453,
+     "k": 5,
+     "n": 11,
+     "session_hit_top3": 0.36363636363636365
+    },
+    "4": {
+     "session_hit": 0.34285714285714286,
+     "k": 24,
+     "n": 70,
+     "session_hit_top3": 0.21428571428571427
+    },
+    "5": {
+     "session_hit": 0.5106382978723404,
+     "k": 24,
+     "n": 47,
+     "session_hit_top3": 0.2127659574468085
+    }
+   },
+   "note": "分母=有 evidence 的题；hit_top3 只算前 3 条 retrieved"
+  },
+  {
+   "file": "om_conv0_c5_judged.json",
+   "n_rows": 199,
+   "n_no_evidence": 2,
+   "denominator": 197,
+   "session_hit": {
+    "point": 0.4873096446700508,
+    "lo": 0.4184243438197581,
+    "hi": 0.5566803978538032,
+    "n": 197,
+    "k": 96,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "session_hit_top3": {
+    "point": 0.27411167512690354,
+    "lo": 0.21659033724853177,
+    "hi": 0.3402740645408577,
+    "n": 197,
+    "k": 54,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "by_category": {
+    "1": {
+     "session_hit": 0.65625,
+     "k": 21,
+     "n": 32,
+     "session_hit_top3": 0.34375
+    },
+    "2": {
+     "session_hit": 0.2972972972972973,
+     "k": 11,
+     "n": 37,
+     "session_hit_top3": 0.10810810810810811
+    },
+    "3": {
+     "session_hit": 0.36363636363636365,
+     "k": 4,
+     "n": 11,
+     "session_hit_top3": 0.2727272727272727
+    },
+    "4": {
+     "session_hit": 0.4857142857142857,
+     "k": 34,
+     "n": 70,
+     "session_hit_top3": 0.3142857142857143
+    },
+    "5": {
+     "session_hit": 0.5531914893617021,
+     "k": 26,
+     "n": 47,
+     "session_hit_top3": 0.2978723404255319
+    }
+   },
+   "note": "分母=有 evidence 的题；hit_top3 只算前 3 条 retrieved"
+  },
+  {
+   "file": "om_m3chunk_conv0_judged.json",
+   "n_rows": 199,
+   "n_no_evidence": 2,
+   "denominator": 197,
+   "session_hit": {
+    "point": 0.868020304568528,
+    "lo": 0.8136448194057507,
+    "hi": 0.9083176720609746,
+    "n": 197,
+    "k": 171,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "session_hit_top3": {
+    "point": 0.7563451776649747,
+    "lo": 0.6918697364499151,
+    "hi": 0.8110144817441489,
+    "n": 197,
+    "k": 149,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "by_category": {
+    "1": {
+     "session_hit": 0.71875,
+     "k": 23,
+     "n": 32,
+     "session_hit_top3": 0.5625
+    },
+    "2": {
+     "session_hit": 0.8108108108108109,
+     "k": 30,
+     "n": 37,
+     "session_hit_top3": 0.6756756756756757
+    },
+    "3": {
+     "session_hit": 0.9090909090909091,
+     "k": 10,
+     "n": 11,
+     "session_hit_top3": 0.7272727272727273
+    },
+    "4": {
+     "session_hit": 0.9285714285714286,
+     "k": 65,
+     "n": 70,
+     "session_hit_top3": 0.8571428571428571
+    },
+    "5": {
+     "session_hit": 0.9148936170212766,
+     "k": 43,
+     "n": 47,
+     "session_hit_top3": 0.8085106382978723
+    }
+   },
+   "note": "分母=有 evidence 的题；hit_top3 只算前 3 条 retrieved"
+  },
+  {
+   "file": "mem0_conv0_judged.json",
+   "n_rows": 199,
+   "n_no_evidence": 199,
+   "denominator": 0,
+   "session_hit": {
+    "point": null,
+    "lo": null,
+    "hi": null,
+    "n": 0,
+    "k": 0,
+    "method": "wilson"
+   },
+   "session_hit_top3": {
+    "point": null,
+    "lo": null,
+    "hi": null,
+    "n": 0,
+    "k": 0,
+    "method": "wilson"
+   },
+   "by_category": {},
+   "note": "分母=有 evidence 的题；hit_top3 只算前 3 条 retrieved"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 编辑器 / 系统
+.DS_Store
+
+# 临时产物
+*.tmp
+*.log
+
+# 隔离库跑分中间件（正式产物在 results/ 下，保留）
+/tmp/
+*.pid

@@ -1,0 +1,4 @@
+{"qid": "q001", "query": "「为赶报表临时改聚合窗口」这一步的前因链是什么？从直接前因一直追到最初的起因。", "hits": [{"id": "sntJ0002", "score": 0.7, "superseded_by": null}, {"id": "sntX9999", "score": 0.2, "superseded_by": null}]}
+{"qid": "q070", "query": "我马上要「临时把窗口改成包含当天」，历史上这么做踩过坑吗？先给我个预警。", "hits": [{"id": "sntJ0013", "score": 0.66, "superseded_by": null}]}
+{"qid": "q089", "query": "关于「值班开始凭感觉忽略告警」这个结论，现在还成立吗？当前有效的结论是哪条？", "hits": [{"id": "sntD0002", "score": 0.5, "superseded_by": "sntD0011"}]}
+{"qid": "q099", "query": "传统木作榫卯的常见类型有哪些？", "hits": []}

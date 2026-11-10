@@ -1,0 +1,8 @@
+=== RespireCausalBench 判分结果 ===
+题量 26/26 | topk=5 | min_score=0.0
+[因果链追溯]  n=12  链命中率 hit@5=0.000  hit@1=0.000  链覆盖率=0.000
+    - chain_ancestor: n=6 hit@5=0.000
+    - chain_descendant: n=6 hit@5=0.000
+[干预预警]     n=6  预警准确率=0.500  混淆 TP/FP/FN/TN=0/0/3/3  抑制误报率(干扰项)=0.000 (分母 3)
+[软取代感知]   n=2  取代正确率=0.000  current/stale/missing=0/0/2
+[负样本噪声]   n=6  负样本噪声率=1.000  噪声题数=6/6

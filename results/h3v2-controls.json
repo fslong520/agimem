@@ -1,0 +1,689 @@
+{
+  "schema": "agimem-h3-v2-controls/1",
+  "purpose": "把主臂的「后写先排」拆成 created_at / 写入路径 / 插入顺序，并检验 repeat 优势是不是内容相关度",
+  "insertion_control": {
+    "arm": "insertion_control",
+    "n": 20,
+    "index": {
+      "state": "ready",
+      "local_total": 40,
+      "worker_active": true,
+      "error": null,
+      "embedding_model": "m3",
+      "waited_s": 1.9
+    },
+    "rows": [
+      {
+        "qid": "k1-01",
+        "query": "「夜间发布窗口」现在按哪条执行？",
+        "top": [
+          "HM-K1-01-b",
+          "HM-K1-08-a",
+          "HM-K1-04-b",
+          "HM-K1-19-b",
+          "HM-K1-05-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-02",
+        "query": "「告警收敛阈值」现在按哪条执行？",
+        "top": [
+          "HM-K1-02-b",
+          "HM-K1-07-b",
+          "HM-K1-10-b",
+          "HM-K1-13-b",
+          "HM-K1-11-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-03",
+        "query": "「备份保留期」现在按哪条执行？",
+        "top": [
+          "HM-K1-03-b",
+          "HM-K1-09-b",
+          "HM-K1-05-b",
+          "HM-K1-20-a",
+          "HM-K1-08-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-04",
+        "query": "「灰度比例」现在按哪条执行？",
+        "top": [
+          "HM-K1-04-b",
+          "HM-K1-04-a",
+          "HM-K1-10-b",
+          "HM-K1-10-a"
+        ],
+        "rank_a": 1,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": 0.0228862464427948
+      },
+      {
+        "qid": "k1-05",
+        "query": "「值班交接方式」现在按哪条执行？",
+        "top": [
+          "HM-K1-05-a",
+          "HM-K1-08-a",
+          "HM-K1-14-b",
+          "HM-K1-01-b",
+          "HM-K1-16-b"
+        ],
+        "rank_a": 0,
+        "rank_b": null,
+        "later_first": false,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-06",
+        "query": "「索引重建时间」现在按哪条执行？",
+        "top": [
+          "HM-K1-06-b",
+          "HM-K1-09-b",
+          "HM-K1-13-b",
+          "HM-K1-19-b",
+          "HM-K1-11-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-07",
+        "query": "「慢查询阈值」现在按哪条执行？",
+        "top": [
+          "HM-K1-07-b",
+          "HM-K1-13-b",
+          "HM-K1-02-b",
+          "HM-K1-16-b",
+          "HM-K1-10-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-08",
+        "query": "「发布审批人」现在按哪条执行？",
+        "top": [
+          "HM-K1-08-b",
+          "HM-K1-01-b",
+          "HM-K1-16-b",
+          "HM-K1-19-b",
+          "HM-K1-04-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-09",
+        "query": "「日志留存级别」现在按哪条执行？",
+        "top": [
+          "HM-K1-09-b",
+          "HM-K1-03-b",
+          "HM-K1-16-b",
+          "HM-K1-07-b",
+          "HM-K1-10-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-10",
+        "query": "「容量预警水位」现在按哪条执行？",
+        "top": [
+          "HM-K1-10-a",
+          "HM-K1-04-b",
+          "HM-K1-16-b",
+          "HM-K1-07-b",
+          "HM-K1-13-a"
+        ],
+        "rank_a": 0,
+        "rank_b": null,
+        "later_first": false,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-11",
+        "query": "「熔断重试次数」现在按哪条执行？",
+        "top": [
+          "HM-K1-11-b",
+          "HM-K1-19-b",
+          "HM-K1-02-b",
+          "HM-K1-17-b",
+          "HM-K1-15-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-12",
+        "query": "「缓存预热范围」现在按哪条执行？",
+        "top": [
+          "HM-K1-12-b",
+          "HM-K1-10-b",
+          "HM-K1-13-b",
+          "HM-K1-09-b",
+          "HM-K1-11-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-13",
+        "query": "「数据库连接池」现在按哪条执行？",
+        "top": [
+          "HM-K1-13-a",
+          "HM-K1-09-b",
+          "HM-K1-10-b",
+          "HM-K1-08-b",
+          "HM-K1-06-b"
+        ],
+        "rank_a": 0,
+        "rank_b": null,
+        "later_first": false,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-14",
+        "query": "「密钥轮换周期」现在按哪条执行？",
+        "top": [
+          "HM-K1-14-b",
+          "HM-K1-19-b",
+          "HM-K1-09-b",
+          "HM-K1-08-b",
+          "HM-K1-17-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-15",
+        "query": "「压测基线并发」现在按哪条执行？",
+        "top": [
+          "HM-K1-15-b",
+          "HM-K1-02-b",
+          "HM-K1-08-b",
+          "HM-K1-20-b",
+          "HM-K1-11-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-16",
+        "query": "「故障分级标准」现在按哪条执行？",
+        "top": [
+          "HM-K1-16-b",
+          "HM-K1-10-b",
+          "HM-K1-11-b",
+          "HM-K1-07-b",
+          "HM-K1-08-a"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-17",
+        "query": "「月度演练内容」现在按哪条执行？",
+        "top": [
+          "HM-K1-17-b",
+          "HM-K1-03-b",
+          "HM-K1-08-b",
+          "HM-K1-19-b",
+          "HM-K1-02-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-18",
+        "query": "「监控采集间隔」现在按哪条执行？",
+        "top": [
+          "HM-K1-18-b",
+          "HM-K1-07-b",
+          "HM-K1-02-b",
+          "HM-K1-20-b",
+          "HM-K1-05-a"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-19",
+        "query": "「变更窗口长度」现在按哪条执行？",
+        "top": [
+          "HM-K1-19-b",
+          "HM-K1-01-b",
+          "HM-K1-14-a",
+          "HM-K1-03-b",
+          "HM-K1-04-b"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      },
+      {
+        "qid": "k1-20",
+        "query": "「异地副本同步」现在按哪条执行？",
+        "top": [
+          "HM-K1-20-b",
+          "HM-K1-09-b",
+          "HM-K1-13-b",
+          "HM-K1-05-b",
+          "HM-K1-08-a"
+        ],
+        "rank_a": null,
+        "rank_b": 0,
+        "later_first": true,
+        "tie": false,
+        "score_gap": null
+      }
+    ],
+    "metrics": {
+      "later_first": {
+        "point": 0.85,
+        "lo": 0.6395811352592431,
+        "hi": 0.9476312541037835,
+        "n": 20,
+        "k": 17,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "tie_rate": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.16112515805281938,
+        "n": 20,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "score_gap_mean": 0.0228862464427948
+    }
+  },
+  "repeat1_control": {
+    "arm": "repeat1_control",
+    "n": 20,
+    "index": {
+      "state": "ready",
+      "local_total": 40,
+      "worker_active": true,
+      "error": null,
+      "embedding_model": "m3",
+      "waited_s": 18.6
+    },
+    "rows": [
+      {
+        "qid": "k2-01",
+        "query": "「夜间发布窗口」的做法是什么？",
+        "top": [
+          "HM-K2-01-f",
+          "HM-K2-01-z",
+          "HM-K2-19-z",
+          "HM-K2-08-f",
+          "HM-K2-04-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-02",
+        "query": "「告警收敛阈值」的做法是什么？",
+        "top": [
+          "HM-K2-02-f",
+          "HM-K2-02-z",
+          "HM-K2-07-f",
+          "HM-K2-10-f",
+          "HM-K2-12-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-03",
+        "query": "「备份保留期」的做法是什么？",
+        "top": [
+          "HM-K2-03-f",
+          "HM-K2-03-z",
+          "HM-K2-09-f",
+          "HM-K2-18-z",
+          "HM-K2-01-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-04",
+        "query": "「灰度比例」的做法是什么？",
+        "top": [
+          "HM-K2-04-f",
+          "HM-K2-04-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-05",
+        "query": "「值班交接方式」的做法是什么？",
+        "top": [
+          "HM-K2-05-f",
+          "HM-K2-08-f",
+          "HM-K2-05-z",
+          "HM-K2-02-z",
+          "HM-K2-01-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 2,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-06",
+        "query": "「索引重建时间」的做法是什么？",
+        "top": [
+          "HM-K2-06-f",
+          "HM-K2-06-z",
+          "HM-K2-07-z",
+          "HM-K2-03-z",
+          "HM-K2-11-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-07",
+        "query": "「慢查询阈值」的做法是什么？",
+        "top": [
+          "HM-K2-07-f",
+          "HM-K2-07-z",
+          "HM-K2-13-f",
+          "HM-K2-20-z",
+          "HM-K2-02-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-08",
+        "query": "「发布审批人」的做法是什么？",
+        "top": [
+          "HM-K2-08-f",
+          "HM-K2-08-z",
+          "HM-K2-01-z",
+          "HM-K2-01-f",
+          "HM-K2-19-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-09",
+        "query": "「日志留存级别」的做法是什么？",
+        "top": [
+          "HM-K2-09-z",
+          "HM-K2-09-f",
+          "HM-K2-07-z",
+          "HM-K2-03-f",
+          "HM-K2-18-z"
+        ],
+        "fact_rank": 1,
+        "distractor_rank": 0,
+        "fact_first": false,
+        "fact_beats_single": false
+      },
+      {
+        "qid": "k2-10",
+        "query": "「容量预警水位」的做法是什么？",
+        "top": [
+          "HM-K2-10-f",
+          "HM-K2-10-z",
+          "HM-K2-20-z",
+          "HM-K2-04-f",
+          "HM-K2-13-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-11",
+        "query": "「熔断重试次数」的做法是什么？",
+        "top": [
+          "HM-K2-11-f",
+          "HM-K2-11-z",
+          "HM-K2-03-z",
+          "HM-K2-17-z",
+          "HM-K2-01-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-12",
+        "query": "「缓存预热范围」的做法是什么？",
+        "top": [
+          "HM-K2-12-f",
+          "HM-K2-12-z",
+          "HM-K2-10-f",
+          "HM-K2-13-f",
+          "HM-K2-18-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-13",
+        "query": "「数据库连接池」的做法是什么？",
+        "top": [
+          "HM-K2-13-f",
+          "HM-K2-13-z",
+          "HM-K2-10-f",
+          "HM-K2-08-f",
+          "HM-K2-06-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-14",
+        "query": "「密钥轮换周期」的做法是什么？",
+        "top": [
+          "HM-K2-14-f",
+          "HM-K2-14-z",
+          "HM-K2-03-z",
+          "HM-K2-19-z",
+          "HM-K2-08-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-15",
+        "query": "「压测基线并发」的做法是什么？",
+        "top": [
+          "HM-K2-15-f",
+          "HM-K2-15-z",
+          "HM-K2-11-z",
+          "HM-K2-13-z",
+          "HM-K2-04-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-16",
+        "query": "「故障分级标准」的做法是什么？",
+        "top": [
+          "HM-K2-16-f",
+          "HM-K2-16-z",
+          "HM-K2-12-z",
+          "HM-K2-17-z",
+          "HM-K2-07-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-17",
+        "query": "「月度演练内容」的做法是什么？",
+        "top": [
+          "HM-K2-17-f",
+          "HM-K2-03-z",
+          "HM-K2-17-z",
+          "HM-K2-01-z",
+          "HM-K2-03-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 2,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-18",
+        "query": "「监控采集间隔」的做法是什么？",
+        "top": [
+          "HM-K2-18-f",
+          "HM-K2-18-z",
+          "HM-K2-07-z",
+          "HM-K2-04-f",
+          "HM-K2-20-f"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-19",
+        "query": "「变更窗口长度」的做法是什么？",
+        "top": [
+          "HM-K2-19-f",
+          "HM-K2-19-z",
+          "HM-K2-01-f",
+          "HM-K2-01-z",
+          "HM-K2-09-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      },
+      {
+        "qid": "k2-20",
+        "query": "「异地副本同步」的做法是什么？",
+        "top": [
+          "HM-K2-20-f",
+          "HM-K2-20-z",
+          "HM-K2-03-z",
+          "HM-K2-01-z",
+          "HM-K2-14-z"
+        ],
+        "fact_rank": 0,
+        "distractor_rank": 1,
+        "fact_first": true,
+        "fact_beats_single": true
+      }
+    ],
+    "metrics": {
+      "fact_first": {
+        "point": 0.95,
+        "lo": 0.763868806553258,
+        "hi": 0.9911185511992047,
+        "n": 20,
+        "k": 19,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "fact_beats_single": {
+        "point": 0.95,
+        "lo": 0.763868806553258,
+        "hi": 0.9911185511992047,
+        "n": 20,
+        "k": 19,
+        "method": "wilson",
+        "z": 1.959963984540054
+      }
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "n_total": 26,
+    "n_dataset": 26,
+    "scored": 26,
+    "excluded_missing": 0,
+    "missing_predictions": [],
+    "params": {
+      "topk": 5,
+      "min_score": 0.0
+    },
+    "chain": {
+      "n": 12,
+      "hit_at_k": 0.0,
+      "hit_at_1": 0.0,
+      "coverage_at_k": 0.0,
+      "by_type": {
+        "chain_ancestor": {
+          "n": 6,
+          "hit_at_k": 0.0
+        },
+        "chain_descendant": {
+          "n": 6,
+          "hit_at_k": 0.0
+        }
+      }
+    },
+    "intervention": {
+      "n": 6,
+      "accuracy": 0.5,
+      "confusion": {
+        "TP": 0,
+        "FP": 0,
+        "FN": 3,
+        "TN": 3
+      },
+      "false_alarm_rate": 0.0
+    },
+    "supersession": {
+      "n": 2,
+      "accuracy": 0.0,
+      "current": 0,
+      "stale": 0,
+      "missing": 2
+    },
+    "negative": {
+      "n": 6,
+      "noise_rate": 1.0,
+      "noisy": 6
+    }
+  },
+  "rows": [
+    {
+      "qid": "q01",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q02",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q03",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q04",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q05",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q06",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q07",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q08",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q09",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q10",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q11",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q12",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "hit": false,
+      "rank": null,
+      "coverage": 0.0
+    },
+    {
+      "qid": "q13",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "WARNING",
+      "pred_label": "SAFE",
+      "correct": false,
+      "confusion": "FN"
+    },
+    {
+      "qid": "q14",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "SAFE",
+      "pred_label": "SAFE",
+      "correct": true,
+      "confusion": "TN"
+    },
+    {
+      "qid": "q15",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "WARNING",
+      "pred_label": "SAFE",
+      "correct": false,
+      "confusion": "FN"
+    },
+    {
+      "qid": "q16",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "WARNING",
+      "pred_label": "SAFE",
+      "correct": false,
+      "confusion": "FN"
+    },
+    {
+      "qid": "q17",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "SAFE",
+      "pred_label": "SAFE",
+      "correct": true,
+      "confusion": "TN"
+    },
+    {
+      "qid": "q18",
+      "type": "intervention",
+      "n_hits": 5,
+      "gold_label": "SAFE",
+      "pred_label": "SAFE",
+      "correct": true,
+      "confusion": "TN"
+    },
+    {
+      "qid": "q19",
+      "type": "supersession",
+      "n_hits": 5,
+      "status": "missing",
+      "correct": false
+    },
+    {
+      "qid": "q20",
+      "type": "supersession",
+      "n_hits": 5,
+      "status": "missing",
+      "correct": false
+    },
+    {
+      "qid": "q21",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    },
+    {
+      "qid": "q22",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    },
+    {
+      "qid": "q23",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    },
+    {
+      "qid": "q24",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    },
+    {
+      "qid": "q25",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    },
+    {
+      "qid": "q26",
+      "type": "negative",
+      "n_hits": 5,
+      "noisy": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "agimem-causal-arms/1",
+  "arms": {
+    "leaves": {
+      "arm": "leaves",
+      "data_dir": "/tmp/agimem-causal-arms/leaves",
+      "port": 16303,
+      "n_nodes_in_store": 95,
+      "n_questions": 122,
+      "n_hits": 505,
+      "n_zero_hit": 18
+    },
+    "half": {
+      "arm": "half",
+      "data_dir": "/tmp/agimem-causal-arms/half",
+      "port": 16304,
+      "n_nodes_in_store": 71,
+      "n_questions": 122,
+      "n_hits": 495,
+      "n_zero_hit": 21
+    },
+    "full": {
+      "arm": "full",
+      "data_dir": "/tmp/agimem-causal-arms/full",
+      "port": 16305,
+      "n_nodes_in_store": 143,
+      "n_questions": 122,
+      "n_hits": 505,
+      "n_zero_hit": 18,
+      "anon": {
+        "n_hits": 505,
+        "n_changed_query": 78
+      }
+    }
+  },
+  "elapsed_s": 688.4
+}

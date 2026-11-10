@@ -1,0 +1,35 @@
+{
+ "channel": "remember --supersedes",
+ "source": {
+  "gate": "respire-cli/cli/src/main.rs:8132",
+  "important_required": "respire-cli/cli/src/main.rs:7972",
+  "write": "respire-cli/cli/src/main.rs:8380-8381 (service::store_related)",
+  "read_recall": "respire-cli/cli/src/main.rs:8728,8736 (associations.superseded -> superseded_by)",
+  "import_drops": "respire-cli/core/crates/app-core/src/service.rs:1739-1740 硬编码空串",
+  "update_has_no_field": "rsrs update --help 无 superseded 项"
+ },
+ "measured": {
+  "A_write": "created, id=<m1>",
+  "B_write_with_supersedes": "created, id=<m2>",
+  "show_old": {
+   "superseded_by": "<m2>"
+  },
+  "show_new": {
+   "supersedes": "<m1>",
+   "superseded_by": null
+  },
+  "recall_hits": [
+   {
+    "id": "<m1>",
+    "score": 0.86,
+    "superseded_by": "<m2>"
+   },
+   {
+    "id": "<m2>",
+    "score": 0.86,
+    "superseded_by": null
+   }
+  ]
+ },
+ "verdict": "(A) 能写能读；唯一正牌入口是 remember --importance important --supersedes <old_id>"
+}

@@ -1,0 +1,47 @@
+{
+  "adversarial": {
+    "R3_stale_crown": 1.0,
+    "R5_unrecorded_resist": 0.0,
+    "R6_evidence_first": 0.0,
+    "R6_retell_crown": 1.0,
+    "class_scores": {
+      "R1": 0.0,
+      "R2": 0.0,
+      "R3": 0.0,
+      "R4": 0.0,
+      "R5": 0.0,
+      "R6": 0.0
+    },
+    "composite": 0.0
+  },
+  "lexical": {
+    "R3_stale_crown": 0.0,
+    "R5_unrecorded_resist": 0.0,
+    "R6_evidence_first": 0.0,
+    "R6_retell_crown": 0.9375,
+    "class_scores": {
+      "R1": 0.0,
+      "R2": 0.9375,
+      "R3": 0.5,
+      "R4": 0.9375,
+      "R5": 0.6666666666666666,
+      "R6": 0.0
+    },
+    "composite": 0.5069444444444444
+  },
+  "perfect": {
+    "R3_stale_crown": 0.0,
+    "R5_unrecorded_resist": 1.0,
+    "R6_evidence_first": 1.0,
+    "R6_retell_crown": 0.0,
+    "class_scores": {
+      "R1": 1.0,
+      "R2": 1.0,
+      "R3": 1.0,
+      "R4": 1.0,
+      "R5": 1.0,
+      "R6": 1.0
+    },
+    "composite": 1.0
+  }
+}

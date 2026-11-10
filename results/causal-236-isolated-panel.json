@@ -1,0 +1,8115 @@
+{
+  "schema": "agimem-score-summary/1",
+  "warning": "本臂为隔离库真跑：合成因果树已入库，数字属检索层真能力分；语料全合成、gold 由树结构机械推导，外推需另证",
+  "arm_label": "236题新树attach边",
+  "params": {
+    "topk": 5,
+    "min_score": 0.0
+  },
+  "n_dataset": 236,
+  "scored": 236,
+  "distribution": {
+    "chain_ancestor": 68,
+    "chain_descendant": 68,
+    "intervention": 40,
+    "supersession": 20,
+    "negative": 40
+  },
+  "metrics": {
+    "chain_hit_at_k": 0.7352941176470589,
+    "chain_cov": 0.2968574929971989,
+    "intervention_acc": 0.6,
+    "false_alarm_rate": 0.8,
+    "supersession_acc": 0.0,
+    "negative_noise_rate": 0.325
+  },
+  "cis": {
+    "chain_hit_at_k": {
+      "point": 0.7352941176470589,
+      "lo": 0.655424390111397,
+      "hi": 0.8022367394257408,
+      "n": 136,
+      "k": 100,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "chain_hit_at_1": {
+      "point": 0.29411764705882354,
+      "lo": 0.22404267545649473,
+      "hi": 0.3755038361985098,
+      "n": 136,
+      "k": 40,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "chain_cov": {
+      "point": 0.2968574929971989,
+      "lo": 0.2517879140372723,
+      "hi": 0.34192707195712546,
+      "n": 136,
+      "method": "normal-approx",
+      "z": 1.959963984540054
+    },
+    "intervention_acc": {
+      "point": 0.6,
+      "lo": 0.44595893660346186,
+      "hi": 0.7365167431570808,
+      "n": 40,
+      "k": 24,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "false_alarm_rate": {
+      "point": 0.8,
+      "lo": 0.5839825677481064,
+      "hi": 0.919342337420202,
+      "n": 20,
+      "k": 16,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "supersession_acc": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.16112515805281938,
+      "n": 20,
+      "k": 0,
+      "method": "wilson",
+      "z": 1.959963984540054
+    },
+    "negative_noise_rate": {
+      "point": 0.325,
+      "lo": 0.200845022317827,
+      "hi": 0.47982253810122333,
+      "n": 40,
+      "k": 13,
+      "method": "wilson",
+      "z": 1.959963984540054
+    }
+  },
+  "chain": {
+    "n": 136,
+    "hit_at_k": 0.7352941176470589,
+    "hit_at_1": 0.29411764705882354,
+    "coverage_at_k": 0.2968574929971989,
+    "by_type": {
+      "chain_ancestor": {
+        "n": 68,
+        "hit_at_k": 0.8676470588235294,
+        "hit_at_k_ci": {
+          "point": 0.8676470588235294,
+          "lo": 0.7671994025434227,
+          "hi": 0.928777555897702,
+          "n": 68,
+          "k": 59,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "chain_descendant": {
+        "n": 68,
+        "hit_at_k": 0.6029411764705882,
+        "hit_at_k_ci": {
+          "point": 0.6029411764705882,
+          "lo": 0.48416055016632126,
+          "hi": 0.7107129981971936,
+          "n": 68,
+          "k": 41,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      }
+    }
+  },
+  "intervention": {
+    "n": 40,
+    "n_warning": 20,
+    "n_safe": 20,
+    "accuracy": 0.6,
+    "confusion": {
+      "TP": 20,
+      "FP": 16,
+      "FN": 0,
+      "TN": 4
+    },
+    "false_alarm_rate": 0.8
+  },
+  "supersession": {
+    "n": 20,
+    "accuracy": 0.0,
+    "current": 0,
+    "stale": 20,
+    "missing": 0
+  },
+  "negative": {
+    "n": 40,
+    "noise_rate": 0.325,
+    "noisy": 13
+  },
+  "baselines": null,
+  "per_question": [
+    {
+      "qid": "q001",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0003",
+        "sntA0002",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0023",
+          "score": 0.5979843735694885
+        },
+        {
+          "id": "sntA0021",
+          "score": 0.582779049873352
+        },
+        {
+          "id": "sntA0007",
+          "score": 0.4623103439807892
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.42941874265670776
+        },
+        {
+          "id": "sntA0016",
+          "score": 0.37397775053977966
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q002",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0031",
+        "sntI0030",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0032",
+          "score": 0.6030378937721252
+        },
+        {
+          "id": "sntI0001",
+          "score": 0.46210283041000366
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.4012501835823059
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.3990247845649719
+        },
+        {
+          "id": "sntI0017",
+          "score": 0.3816480934619904
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q003",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0004",
+          "score": 0.5922077298164368
+        },
+        {
+          "id": "sntF0003",
+          "score": 0.38028040528297424
+        },
+        {
+          "id": "sntF0005",
+          "score": 0.35301464796066284
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.35287046432495117
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.34751296043395996
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q004",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0031",
+        "sntE0030",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0032",
+          "score": 0.6343762278556824
+        },
+        {
+          "id": "sntE0030",
+          "score": 0.5745779871940613
+        },
+        {
+          "id": "sntE0003",
+          "score": 0.4766786694526672
+        },
+        {
+          "id": "sntF0032",
+          "score": 0.398969441652298
+        },
+        {
+          "id": "sntE0028",
+          "score": 0.3819243907928467
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q005",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0025",
+        "sntA0024",
+        "sntA0002",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0026",
+          "score": 0.5714431405067444
+        },
+        {
+          "id": "sntA0024",
+          "score": 0.4746430814266205
+        },
+        {
+          "id": "sntE0028",
+          "score": 0.3588322103023529
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.33301839232444763
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.3086627423763275
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q006",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0004",
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0025",
+          "score": 0.6769214272499084
+        },
+        {
+          "id": "sntF0024",
+          "score": 0.6083366870880127
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.48209619522094727
+        },
+        {
+          "id": "sntF0029",
+          "score": 0.361200898885727
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.35119500756263733
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 2,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=2; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q007",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntC0014",
+        "sntC0013",
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0015",
+          "score": 0.6167571544647217
+        },
+        {
+          "id": "sntC0013",
+          "score": 0.4958043098449707
+        },
+        {
+          "id": "sntC0019",
+          "score": 0.42424726486206055
+        },
+        {
+          "id": "sntC0021",
+          "score": 0.412567675113678
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.3953197598457336
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.14285714285714285
+      },
+      "reason": "gold 链长 7; top-5 内首个 gold rank=1; 覆盖率=0.143（召回全集对 gold）"
+    },
+    {
+      "qid": "q008",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntG0005",
+        "sntG0004",
+        "sntG0003",
+        "sntG0002",
+        "sntG0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0022",
+          "score": 0.6157012581825256
+        },
+        {
+          "id": "sntG0021",
+          "score": 0.5474655032157898
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.3544923961162567
+        },
+        {
+          "id": "sntI0017",
+          "score": 0.3496421277523041
+        },
+        {
+          "id": "sntG0004",
+          "score": 0.34497520327568054
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 4,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=4; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q009",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0004",
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0005",
+          "score": 0.6797956228256226
+        },
+        {
+          "id": "sntD0027",
+          "score": 0.3703484237194062
+        },
+        {
+          "id": "sntC0006",
+          "score": 0.3664523661136627
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.3358412981033325
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.3266436755657196
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q010",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0018",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0019",
+          "score": 0.6334468722343445
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.5415881276130676
+        },
+        {
+          "id": "sntB0013",
+          "score": 0.4495396316051483
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.39027026295661926
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.3893851339817047
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q011",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0028",
+        "sntB0027",
+        "sntB0005",
+        "sntB0004",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0029",
+          "score": 0.6021569967269897
+        },
+        {
+          "id": "sntB0027",
+          "score": 0.4993568062782288
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.352340966463089
+        },
+        {
+          "id": "sntB0020",
+          "score": 0.3341163694858551
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.31677672266960144
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.14285714285714285
+      },
+      "reason": "gold 链长 7; top-5 内首个 gold rank=1; 覆盖率=0.143（召回全集对 gold）"
+    },
+    {
+      "qid": "q012",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0019",
+          "score": 0.6478354334831238
+        },
+        {
+          "id": "sntF0018",
+          "score": 0.5745397210121155
+        },
+        {
+          "id": "sntF0010",
+          "score": 0.5215784907341003
+        },
+        {
+          "id": "sntF0009",
+          "score": 0.5137205123901367
+        },
+        {
+          "id": "sntH0019",
+          "score": 0.3736148178577423
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q013",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0010",
+        "sntF0009",
+        "sntF0005",
+        "sntF0004",
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0011",
+          "score": 0.6122454404830933
+        },
+        {
+          "id": "sntF0009",
+          "score": 0.5268999338150024
+        },
+        {
+          "id": "sntF0020",
+          "score": 0.5210648775100708
+        },
+        {
+          "id": "sntF0018",
+          "score": 0.44437146186828613
+        },
+        {
+          "id": "sntB0029",
+          "score": 0.3564598262310028
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.14285714285714285
+      },
+      "reason": "gold 链长 7; top-5 内首个 gold rank=1; 覆盖率=0.143（召回全集对 gold）"
+    },
+    {
+      "qid": "q014",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0013",
+        "sntD0012",
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0014",
+          "score": 0.6097856760025024
+        },
+        {
+          "id": "sntD0012",
+          "score": 0.5332925319671631
+        },
+        {
+          "id": "sntD0017",
+          "score": 0.45731320977211
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.4397784471511841
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.37659138441085815
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q015",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntC0026",
+        "sntC0025",
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0027",
+          "score": 0.5884782671928406
+        },
+        {
+          "id": "sntC0025",
+          "score": 0.5164703130722046
+        },
+        {
+          "id": "sntG0026",
+          "score": 0.4077662229537964
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.3821588456630707
+        },
+        {
+          "id": "sntH0014",
+          "score": 0.3784519731998443
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.14285714285714285
+      },
+      "reason": "gold 链长 7; top-5 内首个 gold rank=1; 覆盖率=0.143（召回全集对 gold）"
+    },
+    {
+      "qid": "q016",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntC0031",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0002",
+          "score": 0.6826742887496948
+        },
+        {
+          "id": "sntC0032",
+          "score": 0.6796587109565735
+        },
+        {
+          "id": "sntC0001",
+          "score": 0.4597041308879852
+        },
+        {
+          "id": "sntC0029",
+          "score": 0.4126349687576294
+        },
+        {
+          "id": "sntB0027",
+          "score": 0.3947562277317047
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.6666666666666666
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=0; 覆盖率=0.667（召回全集对 gold）"
+    },
+    {
+      "qid": "q017",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0030",
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0031",
+          "score": 0.5776888132095337
+        },
+        {
+          "id": "sntD0030",
+          "score": 0.412439227104187
+        },
+        {
+          "id": "sntD0013",
+          "score": 0.39885061979293823
+        },
+        {
+          "id": "sntG0014",
+          "score": 0.3961848020553589
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.3851367831230163
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q018",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0031",
+        "sntD0030",
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0032",
+          "score": 0.5803961157798767
+        },
+        {
+          "id": "sntD0023",
+          "score": 0.40685784816741943
+        },
+        {
+          "id": "sntG0014",
+          "score": 0.40684568881988525
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.40524518489837646
+        },
+        {
+          "id": "sntD0014",
+          "score": 0.4037184417247772
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q019",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0031",
+          "score": 0.6009340882301331
+        },
+        {
+          "id": "sntD0030",
+          "score": 0.4841711223125458
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.383967787027359
+        },
+        {
+          "id": "sntG0013",
+          "score": 0.38066503405570984
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.3590535521507263
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 4,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=4; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q020",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntJ0022",
+        "sntJ0021",
+        "sntJ0003",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.6187073588371277
+        },
+        {
+          "id": "sntJ0021",
+          "score": 0.4611012041568756
+        },
+        {
+          "id": "sntJ0014",
+          "score": 0.3849771022796631
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.36019307374954224
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.3383611738681793
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q021",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntJ0003",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0022",
+          "score": 0.5767683982849121
+        },
+        {
+          "id": "sntJ0021",
+          "score": 0.4976722598075866
+        },
+        {
+          "id": "sntJ0012",
+          "score": 0.3337228000164032
+        },
+        {
+          "id": "sntJ0013",
+          "score": 0.33297502994537354
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3113645613193512
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q022",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntJ0005",
+        "sntJ0004",
+        "sntJ0003",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0016",
+          "score": 0.6074355244636536
+        },
+        {
+          "id": "sntJ0015",
+          "score": 0.5453544855117798
+        },
+        {
+          "id": "sntJ0007",
+          "score": 0.42766907811164856
+        },
+        {
+          "id": "sntJ0006",
+          "score": 0.42582905292510986
+        },
+        {
+          "id": "sntJ0001",
+          "score": 0.3242294490337372
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 4,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=4; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q023",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0012",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0013",
+          "score": 0.5988420248031616
+        },
+        {
+          "id": "sntB0012",
+          "score": 0.501781165599823
+        },
+        {
+          "id": "sntB0019",
+          "score": 0.4297182857990265
+        },
+        {
+          "id": "sntB0028",
+          "score": 0.39011409878730774
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3670524060726166
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q024",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0009",
+        "sntI0004",
+        "sntI0003",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0010",
+          "score": 0.6425716876983643
+        },
+        {
+          "id": "sntI0009",
+          "score": 0.5685107707977295
+        },
+        {
+          "id": "sntI0015",
+          "score": 0.44668710231781006
+        },
+        {
+          "id": "sntG0029",
+          "score": 0.4147142767906189
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3614177703857422
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q025",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntG0016",
+        "sntG0015",
+        "sntG0004",
+        "sntG0003",
+        "sntG0002",
+        "sntG0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0017",
+          "score": 0.5927538871765137
+        },
+        {
+          "id": "sntG0015",
+          "score": 0.4773541390895843
+        },
+        {
+          "id": "sntD0014",
+          "score": 0.40575170516967773
+        },
+        {
+          "id": "sntD0023",
+          "score": 0.3943253457546234
+        },
+        {
+          "id": "sntD0008",
+          "score": 0.3775636553764343
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=1; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q026",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0004",
+        "sntI0003",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0005",
+          "score": 0.6352760791778564
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.32956430315971375
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.31742873787879944
+        },
+        {
+          "id": "sntD0021",
+          "score": 0.3105020821094513
+        },
+        {
+          "id": "sntB0021",
+          "score": 0.3104660212993622
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q027",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0007",
+        "sntI0006",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0008",
+          "score": 0.6136812567710876
+        },
+        {
+          "id": "sntI0006",
+          "score": 0.5168830156326294
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.4660423696041107
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.4113768339157105
+        },
+        {
+          "id": "sntI0014",
+          "score": 0.4055110216140747
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q028",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0016",
+        "sntI0015",
+        "sntI0003",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0017",
+          "score": 0.6010483503341675
+        },
+        {
+          "id": "sntI0015",
+          "score": 0.4018501043319702
+        },
+        {
+          "id": "sntI0023",
+          "score": 0.3945757746696472
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.3879113793373108
+        },
+        {
+          "id": "sntI0032",
+          "score": 0.38368308544158936
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q029",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0003",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0004",
+          "score": 0.5478959083557129
+        },
+        {
+          "id": "sntI0002",
+          "score": 0.37060800194740295
+        },
+        {
+          "id": "sntI0028",
+          "score": 0.3691804111003876
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.34448084235191345
+        },
+        {
+          "id": "sntI0031",
+          "score": 0.34302306175231934
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q030",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0013",
+        "sntI0012",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0014",
+          "score": 0.598299503326416
+        },
+        {
+          "id": "sntI0012",
+          "score": 0.5423545837402344
+        },
+        {
+          "id": "sntI0023",
+          "score": 0.4844050705432892
+        },
+        {
+          "id": "sntI0021",
+          "score": 0.4398413300514221
+        },
+        {
+          "id": "sntI0008",
+          "score": 0.4157628715038299
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q031",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0019",
+        "sntI0018",
+        "sntI0002",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0020",
+          "score": 0.5875121355056763
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.4568362832069397
+        },
+        {
+          "id": "sntI0017",
+          "score": 0.4142358303070069
+        },
+        {
+          "id": "sntI0008",
+          "score": 0.4057838022708893
+        },
+        {
+          "id": "sntI0023",
+          "score": 0.4049767851829529
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q032",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntI0025",
+        "sntI0024",
+        "sntI0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0026",
+          "score": 0.6228713989257812
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.4742961823940277
+        },
+        {
+          "id": "sntI0032",
+          "score": 0.4497532248497009
+        },
+        {
+          "id": "sntI0002",
+          "score": 0.4473593831062317
+        },
+        {
+          "id": "sntI0029",
+          "score": 0.408489465713501
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q033",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0007",
+        "sntA0006",
+        "sntA0004",
+        "sntA0003",
+        "sntA0002",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0007",
+          "score": 0.5670457482337952
+        },
+        {
+          "id": "sntA0023",
+          "score": 0.47519317269325256
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.453681617975235
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.3915858268737793
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.38854461908340454
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=0; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q034",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0028",
+        "sntA0027",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0029",
+          "score": 0.5810744166374207
+        },
+        {
+          "id": "sntA0027",
+          "score": 0.501571536064148
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.3469735085964203
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.3452286720275879
+        },
+        {
+          "id": "sntB0029",
+          "score": 0.334197998046875
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q035",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0025",
+        "sntE0024",
+        "sntE0004",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0026",
+          "score": 0.6441460251808167
+        },
+        {
+          "id": "sntE0024",
+          "score": 0.5532439351081848
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.4057745337486267
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.39568230509758
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3815973401069641
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=1; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q036",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0004",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0026",
+          "score": 0.6623927354812622
+        },
+        {
+          "id": "sntE0024",
+          "score": 0.6215023398399353
+        },
+        {
+          "id": "sntE0002",
+          "score": 0.3815806210041046
+        },
+        {
+          "id": "sntE0010",
+          "score": 0.3736158311367035
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.36430835723876953
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 2,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=2; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q037",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0003",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0004",
+          "score": 0.5222651958465576
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.39843687415122986
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.3889826536178589
+        },
+        {
+          "id": "sntD0013",
+          "score": 0.35621339082717896
+        },
+        {
+          "id": "sntF0033",
+          "score": 0.3437759280204773
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q038",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0012",
+        "sntE0004",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0013",
+          "score": 0.6322988867759705
+        },
+        {
+          "id": "sntE0012",
+          "score": 0.5178386569023132
+        },
+        {
+          "id": "sntE0021",
+          "score": 0.43005600571632385
+        },
+        {
+          "id": "sntE0023",
+          "score": 0.4271632730960846
+        },
+        {
+          "id": "sntE0028",
+          "score": 0.4072439670562744
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q039",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0007",
+        "sntE0006",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0008",
+          "score": 0.6328176856040955
+        },
+        {
+          "id": "sntE0006",
+          "score": 0.528871476650238
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.45410794019699097
+        },
+        {
+          "id": "sntJ0014",
+          "score": 0.445800244808197
+        },
+        {
+          "id": "sntJ0001",
+          "score": 0.4212956726551056
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q040",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntJ0009",
+        "sntJ0003",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0011",
+          "score": 0.5735594630241394
+        },
+        {
+          "id": "sntJ0009",
+          "score": 0.5112113356590271
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.37452611327171326
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.3333255350589752
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.32974451780319214
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q041",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0027",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0028",
+          "score": 0.598701536655426
+        },
+        {
+          "id": "sntF0027",
+          "score": 0.525286078453064
+        },
+        {
+          "id": "sntF0022",
+          "score": 0.3667457401752472
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.35642683506011963
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.35496893525123596
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q042",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0006",
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0008",
+          "score": 0.6416590213775635
+        },
+        {
+          "id": "sntF0006",
+          "score": 0.5627996921539307
+        },
+        {
+          "id": "sntF0022",
+          "score": 0.3929854929447174
+        },
+        {
+          "id": "sntB0016",
+          "score": 0.3808940649032593
+        },
+        {
+          "id": "sntH0019",
+          "score": 0.3683069348335266
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q043",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntF0007",
+        "sntF0006",
+        "sntF0003",
+        "sntF0002",
+        "sntF0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0008",
+          "score": 0.6543046236038208
+        },
+        {
+          "id": "sntF0006",
+          "score": 0.5747557878494263
+        },
+        {
+          "id": "sntF0023",
+          "score": 0.4020619392395019
+        },
+        {
+          "id": "sntB0016",
+          "score": 0.39056259393692017
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.3800022304058075
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q044",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0019",
+        "sntA0018",
+        "sntA0004",
+        "sntA0003",
+        "sntA0002",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0020",
+          "score": 0.5625224113464355
+        },
+        {
+          "id": "sntA0014",
+          "score": 0.40684375166893005
+        },
+        {
+          "id": "sntA0018",
+          "score": 0.4001883566379547
+        },
+        {
+          "id": "sntA0012",
+          "score": 0.372428297996521
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.3271382749080658
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 2,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=2; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q045",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntG0031",
+        "sntG0030",
+        "sntG0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0032",
+          "score": 0.6338479518890381
+        },
+        {
+          "id": "sntG0030",
+          "score": 0.5724458694458008
+        },
+        {
+          "id": "sntG0008",
+          "score": 0.3530366122722626
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.3442137539386749
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.32728612422943115
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q046",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0006",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0007",
+          "score": 0.5866134166717529
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.5133371353149414
+        },
+        {
+          "id": "sntB0004",
+          "score": 0.38372352719306946
+        },
+        {
+          "id": "sntB0025",
+          "score": 0.3713471591472626
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3657198548316955
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q047",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0024",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0025",
+          "score": 0.6236429214477539
+        },
+        {
+          "id": "sntB0024",
+          "score": 0.549440860748291
+        },
+        {
+          "id": "sntB0008",
+          "score": 0.4218136668205261
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.37894347310066223
+        },
+        {
+          "id": "sntB0003",
+          "score": 0.35128024220466614
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q048",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0025",
+        "sntB0024",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0026",
+          "score": 0.6179296970367432
+        },
+        {
+          "id": "sntB0024",
+          "score": 0.5376138687133789
+        },
+        {
+          "id": "sntB0008",
+          "score": 0.4277431070804596
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.37376531958580017
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.35050106048583984
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q049",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0028",
+        "sntH0027",
+        "sntH0002",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0029",
+          "score": 0.6635571122169495
+        },
+        {
+          "id": "sntH0027",
+          "score": 0.5694766044616699
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.404519647359848
+        },
+        {
+          "id": "sntD0026",
+          "score": 0.3965275287628174
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.3711860179901123
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q050",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntC0023",
+        "sntC0022",
+        "sntC0006",
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0024",
+          "score": 0.6502651572227478
+        },
+        {
+          "id": "sntC0022",
+          "score": 0.5688914060592651
+        },
+        {
+          "id": "sntC0009",
+          "score": 0.4671672582626343
+        },
+        {
+          "id": "sntC0007",
+          "score": 0.4128069281578064
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3811979591846466
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.125
+      },
+      "reason": "gold 链长 8; top-5 内首个 gold rank=1; 覆盖率=0.125（召回全集对 gold）"
+    },
+    {
+      "qid": "q051",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntC0006",
+        "sntC0005",
+        "sntC0004",
+        "sntC0003",
+        "sntC0002",
+        "sntC0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0024",
+          "score": 0.6463664770126343
+        },
+        {
+          "id": "sntC0022",
+          "score": 0.5966429114341736
+        },
+        {
+          "id": "sntC0008",
+          "score": 0.4536025822162628
+        },
+        {
+          "id": "sntC0007",
+          "score": 0.4250634610652923
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.3440118134021759
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q052",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0015",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.6149305105209351
+        },
+        {
+          "id": "sntE0015",
+          "score": 0.495089054107666
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.41243043541908264
+        },
+        {
+          "id": "sntE0007",
+          "score": 0.4109129309654236
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.37919723987579346
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q053",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntA0004",
+        "sntA0003",
+        "sntA0002",
+        "sntA0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0032",
+          "score": 0.6548799276351929
+        },
+        {
+          "id": "sntA0030",
+          "score": 0.5624054670333862
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3755689263343811
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.36518579721450806
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.36378470063209534
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q054",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntJ0018",
+        "sntJ0002",
+        "sntJ0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0019",
+          "score": 0.5816091299057007
+        },
+        {
+          "id": "sntJ0018",
+          "score": 0.5133100152015686
+        },
+        {
+          "id": "sntJ0028",
+          "score": 0.41978955268859863
+        },
+        {
+          "id": "sntJ0027",
+          "score": 0.3777804374694824
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.3469424545764923
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q055",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0025",
+        "sntH0024",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0026",
+          "score": 0.6324891448020935
+        },
+        {
+          "id": "sntH0024",
+          "score": 0.5611512660980225
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.4882546663284302
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.46188461780548096
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.4230776131153106
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.6666666666666666
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.667（召回全集对 gold）"
+    },
+    {
+      "qid": "q056",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0007",
+        "sntH0006",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0008",
+          "score": 0.5682616233825684
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.4565388262271881
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.4043004512786865
+        },
+        {
+          "id": "sntH0018",
+          "score": 0.3714248239994049
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.35749685764312744
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q057",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0019",
+        "sntH0018",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0020",
+          "score": 0.6771974563598633
+        },
+        {
+          "id": "sntH0018",
+          "score": 0.5788573026657104
+        },
+        {
+          "id": "sntH0008",
+          "score": 0.4036512076854706
+        },
+        {
+          "id": "sntH0026",
+          "score": 0.4006499648094177
+        },
+        {
+          "id": "sntH0032",
+          "score": 0.3788650333881378
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q058",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0031",
+        "sntH0030",
+        "sntH0004",
+        "sntH0003",
+        "sntH0002",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0032",
+          "score": 0.6217824220657349
+        },
+        {
+          "id": "sntH0030",
+          "score": 0.540306031703949
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.4995838701725006
+        },
+        {
+          "id": "sntH0008",
+          "score": 0.44162100553512573
+        },
+        {
+          "id": "sntH0026",
+          "score": 0.4323638677597046
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=1; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q059",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0021",
+        "sntH0003",
+        "sntH0002",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0022",
+          "score": 0.6385872960090637
+        },
+        {
+          "id": "sntH0021",
+          "score": 0.4882697463035583
+        },
+        {
+          "id": "sntH0011",
+          "score": 0.4477846920490265
+        },
+        {
+          "id": "sntH0019",
+          "score": 0.3839145600795746
+        },
+        {
+          "id": "sntG0014",
+          "score": 0.3778078258037567
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q060",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0015",
+        "sntB0005",
+        "sntB0004",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0016",
+          "score": 0.6722654700279236
+        },
+        {
+          "id": "sntB0015",
+          "score": 0.5469798445701599
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.44721877574920654
+        },
+        {
+          "id": "sntC0018",
+          "score": 0.40396493673324585
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.39242446422576904
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=1; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q061",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0009",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0010",
+          "score": 0.633052408695221
+        },
+        {
+          "id": "sntE0009",
+          "score": 0.5373346209526062
+        },
+        {
+          "id": "sntE0018",
+          "score": 0.5123116970062256
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.44404372572898865
+        },
+        {
+          "id": "sntE0025",
+          "score": 0.41427135467529297
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q062",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntE0010",
+        "sntE0009",
+        "sntE0003",
+        "sntE0002",
+        "sntE0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0011",
+          "score": 0.6071977019309998
+        },
+        {
+          "id": "sntE0009",
+          "score": 0.4903174042701721
+        },
+        {
+          "id": "sntE0018",
+          "score": 0.4791959524154663
+        },
+        {
+          "id": "sntE0020",
+          "score": 0.4395231902599334
+        },
+        {
+          "id": "sntE0025",
+          "score": 0.4109168648719787
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q063",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0016",
+        "sntH0015",
+        "sntH0005",
+        "sntH0004",
+        "sntH0003",
+        "sntH0002",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0017",
+          "score": 0.6052316427230835
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.5097701549530029
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.41149821877479553
+        },
+        {
+          "id": "sntH0014",
+          "score": 0.3876409530639648
+        },
+        {
+          "id": "sntG0026",
+          "score": 0.3734022378921509
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.14285714285714285
+      },
+      "reason": "gold 链长 7; top-5 内首个 gold rank=1; 覆盖率=0.143（召回全集对 gold）"
+    },
+    {
+      "qid": "q064",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntH0005",
+        "sntH0004",
+        "sntH0003",
+        "sntH0002",
+        "sntH0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0016",
+          "score": 0.5823714733123779
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.5562399625778198
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.367959201335907
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.3454919755458832
+        },
+        {
+          "id": "sntH0014",
+          "score": 0.3310248553752899
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 3,
+        "coverage": 0.2
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=3; 覆盖率=0.200（召回全集对 gold）"
+    },
+    {
+      "qid": "q065",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0019",
+        "sntD0018",
+        "sntD0002",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0020",
+          "score": 0.619957685470581
+        },
+        {
+          "id": "sntD0018",
+          "score": 0.5322636365890503
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.3982587456703186
+        },
+        {
+          "id": "sntH0008",
+          "score": 0.3767984211444855
+        },
+        {
+          "id": "sntH0020",
+          "score": 0.375029593706131
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.25
+      },
+      "reason": "gold 链长 4; top-5 内首个 gold rank=1; 覆盖率=0.250（召回全集对 gold）"
+    },
+    {
+      "qid": "q066",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntD0010",
+        "sntD0009",
+        "sntD0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0011",
+          "score": 0.6685911417007446
+        },
+        {
+          "id": "sntD0009",
+          "score": 0.5551757216453552
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.40340346097946167
+        },
+        {
+          "id": "sntH0029",
+          "score": 0.3799594640731811
+        },
+        {
+          "id": "sntD0020",
+          "score": 0.3762466609477997
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.3333333333333333
+      },
+      "reason": "gold 链长 3; top-5 内首个 gold rank=1; 覆盖率=0.333（召回全集对 gold）"
+    },
+    {
+      "qid": "q067",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntG0028",
+        "sntG0027",
+        "sntG0004",
+        "sntG0003",
+        "sntG0002",
+        "sntG0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0029",
+          "score": 0.6252959370613098
+        },
+        {
+          "id": "sntC0009",
+          "score": 0.5023155808448792
+        },
+        {
+          "id": "sntG0027",
+          "score": 0.49989253282547
+        },
+        {
+          "id": "sntI0011",
+          "score": 0.41461318731307983
+        },
+        {
+          "id": "sntB0032",
+          "score": 0.384314626455307
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 2,
+        "coverage": 0.16666666666666666
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=2; 覆盖率=0.167（召回全集对 gold）"
+    },
+    {
+      "qid": "q068",
+      "type": "chain_ancestor",
+      "gold": [
+        "sntB0031",
+        "sntB0030",
+        "sntB0003",
+        "sntB0002",
+        "sntB0001"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0032",
+          "score": 0.6134138703346252
+        },
+        {
+          "id": "sntB0030",
+          "score": 0.45290133357048035
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.4223214089870453
+        },
+        {
+          "id": "sntB0002",
+          "score": 0.394925057888031
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.3642108738422394
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.6
+      },
+      "reason": "gold 链长 5; top-5 内首个 gold rank=1; 覆盖率=0.600（召回全集对 gold）"
+    },
+    {
+      "qid": "q069",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0023"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0022",
+          "score": 0.5443417429924011
+        },
+        {
+          "id": "sntA0021",
+          "score": 0.4866146743297577
+        },
+        {
+          "id": "sntA0007",
+          "score": 0.4349193572998047
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.3519724905490875
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.32440680265426636
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q070",
+      "type": "chain_descendant",
+      "gold": [
+        "sntJ0028",
+        "sntJ0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0028",
+          "score": 0.5589146614074707
+        },
+        {
+          "id": "sntJ0027",
+          "score": 0.5457813739776611
+        },
+        {
+          "id": "sntJ0018",
+          "score": 0.4289722740650177
+        },
+        {
+          "id": "sntJ0019",
+          "score": 0.409927636384964
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.35485586524009705
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q071",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0032",
+          "score": 0.5712538361549377
+        },
+        {
+          "id": "sntI0001",
+          "score": 0.5379042029380798
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.3628714680671692
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.359189510345459
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3478899598121643
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q072",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0031",
+        "sntI0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0001",
+          "score": 0.5673099160194397
+        },
+        {
+          "id": "sntI0032",
+          "score": 0.5643301606178284
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.37733420729637146
+        },
+        {
+          "id": "sntI0002",
+          "score": 0.3528377115726471
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.33391088247299194
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=1; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q073",
+      "type": "chain_descendant",
+      "gold": [
+        "sntE0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0028",
+          "score": 0.5839363932609558
+        },
+        {
+          "id": "sntE0027",
+          "score": 0.4765276908874512
+        },
+        {
+          "id": "sntA0025",
+          "score": 0.3794953227043152
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.3255610764026642
+        },
+        {
+          "id": "sntA0024",
+          "score": 0.318823903799057
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q074",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0026"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0025",
+          "score": 0.6167469024658203
+        },
+        {
+          "id": "sntF0024",
+          "score": 0.5426348447799683
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.4405304193496704
+        },
+        {
+          "id": "sntF0029",
+          "score": 0.34415435791015625
+        },
+        {
+          "id": "sntI0029",
+          "score": 0.33356088399887085
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q075",
+      "type": "chain_descendant",
+      "gold": [
+        "sntC0014",
+        "sntC0015"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0014",
+          "score": 0.5701245069503784
+        },
+        {
+          "id": "sntC0013",
+          "score": 0.4976604282855987
+        },
+        {
+          "id": "sntC0019",
+          "score": 0.44195911288261414
+        },
+        {
+          "id": "sntC0021",
+          "score": 0.3518604636192322
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.25805094838142395
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q076",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0010",
+        "sntG0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0011",
+          "score": 0.4945547878742218
+        },
+        {
+          "id": "sntG0009",
+          "score": 0.46053820848464966
+        },
+        {
+          "id": "sntG0021",
+          "score": 0.3665626049041748
+        },
+        {
+          "id": "sntG0004",
+          "score": 0.3058899939060211
+        },
+        {
+          "id": "sntG0022",
+          "score": 0.2782577574253082
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q077",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0016",
+          "score": 0.5982509851455688
+        },
+        {
+          "id": "sntA0015",
+          "score": 0.5056384801864624
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.3432765603065491
+        },
+        {
+          "id": "sntA0007",
+          "score": 0.3291787803173065
+        },
+        {
+          "id": "sntA0012",
+          "score": 0.2837406396865845
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q078",
+      "type": "chain_descendant",
+      "gold": [
+        "sntC0010",
+        "sntC0011",
+        "sntC0012",
+        "sntC0022",
+        "sntC0023",
+        "sntC0024"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0006",
+          "score": 0.561052680015564
+        },
+        {
+          "id": "sntD0005",
+          "score": 0.366953045129776
+        },
+        {
+          "id": "sntC0005",
+          "score": 0.34800606966018677
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.33388495445251465
+        },
+        {
+          "id": "sntI0005",
+          "score": 0.3233615756034851
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q079",
+      "type": "chain_descendant",
+      "gold": [
+        "sntC0006",
+        "sntC0010",
+        "sntC0011",
+        "sntC0012",
+        "sntC0013",
+        "sntC0014",
+        "sntC0015",
+        "sntC0022",
+        "sntC0023",
+        "sntC0024",
+        "sntC0025",
+        "sntC0026",
+        "sntC0027"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0005",
+          "score": 0.6214654445648193
+        },
+        {
+          "id": "sntE0004",
+          "score": 0.3245837986469269
+        },
+        {
+          "id": "sntC0004",
+          "score": 0.3155883550643921
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.313976526260376
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.2882116138935089
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 13; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q080",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0005",
+        "sntH0012",
+        "sntH0013",
+        "sntH0014",
+        "sntH0015",
+        "sntH0016",
+        "sntH0017",
+        "sntH0030",
+        "sntH0031",
+        "sntH0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0004",
+          "score": 0.4906037151813507
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.301408052444458
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.29126062989234924
+        },
+        {
+          "id": "sntH0005",
+          "score": 0.2797602117061615
+        },
+        {
+          "id": "sntC0025",
+          "score": 0.27837419509887695
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 3,
+        "coverage": 0.1
+      },
+      "reason": "gold 链长 10; top-5 内首个 gold rank=3; 覆盖率=0.100（召回全集对 gold）"
+    },
+    {
+      "qid": "q081",
+      "type": "chain_descendant",
+      "gold": [
+        "sntB0019",
+        "sntB0020"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0019",
+          "score": 0.5586777925491333
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.5562594532966614
+        },
+        {
+          "id": "sntB0012",
+          "score": 0.3832687139511109
+        },
+        {
+          "id": "sntB0014",
+          "score": 0.38132694363594055
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.3158070147037506
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q082",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0010",
+        "sntF0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0011",
+          "score": 0.5903728604316711
+        },
+        {
+          "id": "sntF0009",
+          "score": 0.5703904628753662
+        },
+        {
+          "id": "sntF0018",
+          "score": 0.4984974265098572
+        },
+        {
+          "id": "sntF0019",
+          "score": 0.4734148383140564
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.3442077338695526
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q083",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0013",
+          "score": 0.5809817314147949
+        },
+        {
+          "id": "sntD0012",
+          "score": 0.5234740376472473
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.46832776069641113
+        },
+        {
+          "id": "sntD0016",
+          "score": 0.43422383069992065
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.374548465013504
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q084",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0013",
+        "sntD0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0013",
+          "score": 0.5713196396827698
+        },
+        {
+          "id": "sntD0012",
+          "score": 0.5389999151229858
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.4917032122611999
+        },
+        {
+          "id": "sntD0016",
+          "score": 0.4242801368236542
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.41079527139663696
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q085",
+      "type": "chain_descendant",
+      "gold": [
+        "sntC0026",
+        "sntC0027"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0027",
+          "score": 0.5829228758811951
+        },
+        {
+          "id": "sntC0025",
+          "score": 0.5581315159797668
+        },
+        {
+          "id": "sntG0006",
+          "score": 0.3280903398990631
+        },
+        {
+          "id": "sntG0024",
+          "score": 0.3276433050632477
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.3171546161174774
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q086",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0008",
+          "score": 0.6050159931182861
+        },
+        {
+          "id": "sntD0006",
+          "score": 0.5120789408683777
+        },
+        {
+          "id": "sntD0021",
+          "score": 0.4658723175525666
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.3705981373786926
+        },
+        {
+          "id": "sntG0017",
+          "score": 0.3430035412311554
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q087",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0007",
+        "sntD0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0008",
+          "score": 0.5822029709815979
+        },
+        {
+          "id": "sntD0006",
+          "score": 0.5223829746246338
+        },
+        {
+          "id": "sntD0021",
+          "score": 0.47249042987823486
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.31668201088905334
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.2940686345100403
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q088",
+      "type": "chain_descendant",
+      "gold": [
+        "sntB0010",
+        "sntB0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0011",
+          "score": 0.5780717730522156
+        },
+        {
+          "id": "sntB0009",
+          "score": 0.5190470814704895
+        },
+        {
+          "id": "sntB0021",
+          "score": 0.4849123954772949
+        },
+        {
+          "id": "sntB0023",
+          "score": 0.4324749708175659
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.3102639615535736
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q089",
+      "type": "chain_descendant",
+      "gold": [
+        "sntJ0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0017",
+          "score": 0.6106692552566528
+        },
+        {
+          "id": "sntJ0015",
+          "score": 0.5320305824279785
+        },
+        {
+          "id": "sntJ0007",
+          "score": 0.4317178726196289
+        },
+        {
+          "id": "sntJ0006",
+          "score": 0.4206741452217102
+        },
+        {
+          "id": "sntJ0001",
+          "score": 0.34457167983055115
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q090",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0016",
+          "score": 0.5951766967773438
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.5250996947288513
+        },
+        {
+          "id": "sntD0013",
+          "score": 0.3883359730243683
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.33680960536003113
+        },
+        {
+          "id": "sntD0012",
+          "score": 0.3257806599140167
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q091",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0016",
+        "sntD0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0016",
+          "score": 0.5941818356513977
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.5454027652740479
+        },
+        {
+          "id": "sntD0013",
+          "score": 0.3762553334236145
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.3643490970134735
+        },
+        {
+          "id": "sntD0012",
+          "score": 0.32809680700302124
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q092",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0016",
+          "score": 0.580690324306488
+        },
+        {
+          "id": "sntG0015",
+          "score": 0.512961208820343
+        },
+        {
+          "id": "sntD0014",
+          "score": 0.338447630405426
+        },
+        {
+          "id": "sntG0006",
+          "score": 0.3335675597190857
+        },
+        {
+          "id": "sntD0008",
+          "score": 0.3272462785243988
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q093",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0016",
+        "sntG0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0016",
+          "score": 0.5768446922302246
+        },
+        {
+          "id": "sntG0015",
+          "score": 0.5369746088981628
+        },
+        {
+          "id": "sntG0006",
+          "score": 0.34290724992752075
+        },
+        {
+          "id": "sntD0014",
+          "score": 0.2935296893119812
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.27721405029296875
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q094",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0031",
+          "score": 0.5546315908432007
+        },
+        {
+          "id": "sntF0030",
+          "score": 0.47433269023895264
+        },
+        {
+          "id": "sntF0002",
+          "score": 0.381090372800827
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.37618446350097656
+        },
+        {
+          "id": "sntE0003",
+          "score": 0.32947641611099243
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q095",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0023"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0022",
+          "score": 0.641147792339325
+        },
+        {
+          "id": "sntI0021",
+          "score": 0.5424864888191223
+        },
+        {
+          "id": "sntI0014",
+          "score": 0.4862501323223114
+        },
+        {
+          "id": "sntI0012",
+          "score": 0.4576961696147918
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.4220930337905884
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q096",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0008",
+          "score": 0.5700638890266418
+        },
+        {
+          "id": "sntI0006",
+          "score": 0.5170721411705017
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.48220348358154297
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.3965390622615814
+        },
+        {
+          "id": "sntI0013",
+          "score": 0.3737317025661469
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q097",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0007",
+        "sntI0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0008",
+          "score": 0.5602313876152039
+        },
+        {
+          "id": "sntI0006",
+          "score": 0.5374778509140015
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.49688175320625305
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.37941813468933105
+        },
+        {
+          "id": "sntI0012",
+          "score": 0.35161536931991577
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q098",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0028",
+        "sntI0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0029",
+          "score": 0.5963995456695557
+        },
+        {
+          "id": "sntI0027",
+          "score": 0.557953953742981
+        },
+        {
+          "id": "sntI0004",
+          "score": 0.3914298117160797
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.34144875407218933
+        },
+        {
+          "id": "sntI0009",
+          "score": 0.2955745756626129
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q099",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0013",
+          "score": 0.5840710401535034
+        },
+        {
+          "id": "sntI0012",
+          "score": 0.5237399339675903
+        },
+        {
+          "id": "sntI0022",
+          "score": 0.4565315246582031
+        },
+        {
+          "id": "sntI0021",
+          "score": 0.4324333667755127
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.3953350782394409
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q100",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0020"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0020",
+          "score": 0.5900468826293945
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.5139271020889282
+        },
+        {
+          "id": "sntI0008",
+          "score": 0.3559706509113312
+        },
+        {
+          "id": "sntI0012",
+          "score": 0.3353234827518463
+        },
+        {
+          "id": "sntI0022",
+          "score": 0.32451847195625305
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q101",
+      "type": "chain_descendant",
+      "gold": [
+        "sntI0025",
+        "sntI0026"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0026",
+          "score": 0.5994169116020203
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.5820711851119995
+        },
+        {
+          "id": "sntI0002",
+          "score": 0.4731341302394867
+        },
+        {
+          "id": "sntI0029",
+          "score": 0.3791891038417816
+        },
+        {
+          "id": "sntI0032",
+          "score": 0.35705751180648804
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q102",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0007",
+          "score": 0.5547594428062439
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.4652438461780548
+        },
+        {
+          "id": "sntA0022",
+          "score": 0.4386804699897766
+        },
+        {
+          "id": "sntA0021",
+          "score": 0.39313650131225586
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.32419854402542114
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q103",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0028",
+        "sntA0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0028",
+          "score": 0.5469381213188171
+        },
+        {
+          "id": "sntA0027",
+          "score": 0.49851834774017334
+        },
+        {
+          "id": "sntA0025",
+          "score": 0.2590675950050354
+        },
+        {
+          "id": "sntI0001",
+          "score": 0.2497259676456451
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.2478813678026199
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q104",
+      "type": "chain_descendant",
+      "gold": [
+        "sntC0029",
+        "sntC0030"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0029",
+          "score": 0.5800056457519531
+        },
+        {
+          "id": "sntC0028",
+          "score": 0.5698992609977722
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.4604197144508362
+        },
+        {
+          "id": "sntC0004",
+          "score": 0.4175642430782318
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.30244848132133484
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q105",
+      "type": "chain_descendant",
+      "gold": [
+        "sntE0013",
+        "sntE0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0013",
+          "score": 0.5860133171081543
+        },
+        {
+          "id": "sntE0012",
+          "score": 0.5625190734863281
+        },
+        {
+          "id": "sntE0021",
+          "score": 0.46708425879478455
+        },
+        {
+          "id": "sntE0023",
+          "score": 0.3766458928585053
+        },
+        {
+          "id": "sntE0003",
+          "score": 0.31787198781967163
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q106",
+      "type": "chain_descendant",
+      "gold": [
+        "sntE0022",
+        "sntE0023"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0022",
+          "score": 0.5733408331871033
+        },
+        {
+          "id": "sntE0021",
+          "score": 0.5156179666519165
+        },
+        {
+          "id": "sntE0012",
+          "score": 0.3998714089393616
+        },
+        {
+          "id": "sntE0003",
+          "score": 0.3605853319168091
+        },
+        {
+          "id": "sntE0013",
+          "score": 0.34700801968574524
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q107",
+      "type": "chain_descendant",
+      "gold": [
+        "sntE0004",
+        "sntE0005",
+        "sntE0009",
+        "sntE0010",
+        "sntE0011",
+        "sntE0012",
+        "sntE0013",
+        "sntE0014",
+        "sntE0021",
+        "sntE0022",
+        "sntE0023",
+        "sntE0024",
+        "sntE0025",
+        "sntE0026"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0003",
+          "score": 0.5385622978210449
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.3523655831813812
+        },
+        {
+          "id": "sntI0011",
+          "score": 0.33113887906074524
+        },
+        {
+          "id": "sntG0004",
+          "score": 0.30442777276039124
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3001762330532074
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 14; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q108",
+      "type": "chain_descendant",
+      "gold": [
+        "sntJ0010",
+        "sntJ0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0010",
+          "score": 0.5812524557113647
+        },
+        {
+          "id": "sntJ0009",
+          "score": 0.536855161190033
+        },
+        {
+          "id": "sntJ0018",
+          "score": 0.3632598519325256
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.32396242022514343
+        },
+        {
+          "id": "sntE0013",
+          "score": 0.3076539635658264
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q109",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0005",
+        "sntA0006",
+        "sntA0007",
+        "sntA0008",
+        "sntA0018",
+        "sntA0019",
+        "sntA0020",
+        "sntA0030",
+        "sntA0031",
+        "sntA0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0004",
+          "score": 0.5588679313659668
+        },
+        {
+          "id": "sntA0024",
+          "score": 0.3302847146987915
+        },
+        {
+          "id": "sntA0027",
+          "score": 0.2942314147949219
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.28864455223083496
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.28713345527648926
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 10; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q110",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0013",
+          "score": 0.5678710341453552
+        },
+        {
+          "id": "sntA0012",
+          "score": 0.5094658136367798
+        },
+        {
+          "id": "sntA0019",
+          "score": 0.3987400233745575
+        },
+        {
+          "id": "sntA0018",
+          "score": 0.29292750358581543
+        },
+        {
+          "id": "sntG0031",
+          "score": 0.2789245843887329
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q111",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0013",
+          "score": 0.5231051445007324
+        },
+        {
+          "id": "sntG0012",
+          "score": 0.4736071527004242
+        },
+        {
+          "id": "sntG0018",
+          "score": 0.3567315936088562
+        },
+        {
+          "id": "sntE0028",
+          "score": 0.31237733364105225
+        },
+        {
+          "id": "sntI0011",
+          "score": 0.2915712296962738
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q112",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0013",
+        "sntG0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0012",
+          "score": 0.4910827577114105
+        },
+        {
+          "id": "sntG0013",
+          "score": 0.4875219166278839
+        },
+        {
+          "id": "sntG0018",
+          "score": 0.3633228838443756
+        },
+        {
+          "id": "sntG0030",
+          "score": 0.2800382375717163
+        },
+        {
+          "id": "sntB0030",
+          "score": 0.27422937750816345
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 1,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=1; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q113",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0019",
+        "sntG0020"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0020",
+          "score": 0.5791773200035095
+        },
+        {
+          "id": "sntG0018",
+          "score": 0.5282799005508423
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.32582172751426697
+        },
+        {
+          "id": "sntB0020",
+          "score": 0.3228505253791809
+        },
+        {
+          "id": "sntE0003",
+          "score": 0.29999715089797974
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q114",
+      "type": "chain_descendant",
+      "gold": [
+        "sntG0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0007",
+          "score": 0.6036376357078552
+        },
+        {
+          "id": "sntG0006",
+          "score": 0.53657466173172
+        },
+        {
+          "id": "sntG0031",
+          "score": 0.37971970438957214
+        },
+        {
+          "id": "sntH0012",
+          "score": 0.3785279393196106
+        },
+        {
+          "id": "sntG0002",
+          "score": 0.365001380443573
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q115",
+      "type": "chain_descendant",
+      "gold": [
+        "sntB0005",
+        "sntB0009",
+        "sntB0010",
+        "sntB0011",
+        "sntB0015",
+        "sntB0016",
+        "sntB0017",
+        "sntB0021",
+        "sntB0022",
+        "sntB0023",
+        "sntB0027",
+        "sntB0028",
+        "sntB0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0004",
+          "score": 0.6050071120262146
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.4961833655834198
+        },
+        {
+          "id": "sntB0008",
+          "score": 0.412715345621109
+        },
+        {
+          "id": "sntB0024",
+          "score": 0.3443027138710022
+        },
+        {
+          "id": "sntB0003",
+          "score": 0.32308143377304077
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 13; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q116",
+      "type": "chain_descendant",
+      "gold": [
+        "sntB0007",
+        "sntB0008"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0008",
+          "score": 0.5304121971130371
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.486452043056488
+        },
+        {
+          "id": "sntB0004",
+          "score": 0.3691132366657257
+        },
+        {
+          "id": "sntB0024",
+          "score": 0.3668059706687927
+        },
+        {
+          "id": "sntB0003",
+          "score": 0.3059723675251007
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q117",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0028",
+        "sntH0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0028",
+          "score": 0.6136646866798401
+        },
+        {
+          "id": "sntH0027",
+          "score": 0.5653697848320007
+        },
+        {
+          "id": "sntH0003",
+          "score": 0.349604994058609
+        },
+        {
+          "id": "sntH0005",
+          "score": 0.32345035672187805
+        },
+        {
+          "id": "sntH0004",
+          "score": 0.3153853118419647
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q118",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0016",
+        "sntF0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0017",
+          "score": 0.5178565382957458
+        },
+        {
+          "id": "sntF0015",
+          "score": 0.5066368579864502
+        },
+        {
+          "id": "sntF0014",
+          "score": 0.3916770219802856
+        },
+        {
+          "id": "sntF0012",
+          "score": 0.38552939891815186
+        },
+        {
+          "id": "sntH0033",
+          "score": 0.35006269812583923
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q119",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0013",
+          "score": 0.6351631283760071
+        },
+        {
+          "id": "sntF0012",
+          "score": 0.5837570428848267
+        },
+        {
+          "id": "sntF0015",
+          "score": 0.44649791717529297
+        },
+        {
+          "id": "sntF0017",
+          "score": 0.4392281472682953
+        },
+        {
+          "id": "sntF0002",
+          "score": 0.3562382757663727
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q120",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0013",
+        "sntF0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0013",
+          "score": 0.642463207244873
+        },
+        {
+          "id": "sntF0012",
+          "score": 0.6037382483482361
+        },
+        {
+          "id": "sntF0015",
+          "score": 0.4700641334056854
+        },
+        {
+          "id": "sntF0017",
+          "score": 0.44814160466194153
+        },
+        {
+          "id": "sntF0002",
+          "score": 0.3525462746620178
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q121",
+      "type": "chain_descendant",
+      "gold": [
+        "sntJ0004",
+        "sntJ0005",
+        "sntJ0009",
+        "sntJ0010",
+        "sntJ0011",
+        "sntJ0012",
+        "sntJ0013",
+        "sntJ0014",
+        "sntJ0015",
+        "sntJ0016",
+        "sntJ0017",
+        "sntJ0021",
+        "sntJ0022",
+        "sntJ0023",
+        "sntJ0024",
+        "sntJ0025",
+        "sntJ0026",
+        "sntJ0027",
+        "sntJ0028",
+        "sntJ0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0003",
+          "score": 0.5622727870941162
+        },
+        {
+          "id": "sntJ0031",
+          "score": 0.33152657747268677
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.31418484449386597
+        },
+        {
+          "id": "sntF0003",
+          "score": 0.29907408356666565
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.2985243499279022
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 20; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q122",
+      "type": "chain_descendant",
+      "gold": [
+        "sntE0016",
+        "sntE0017"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0017",
+          "score": 0.559806227684021
+        },
+        {
+          "id": "sntE0015",
+          "score": 0.5226882100105286
+        },
+        {
+          "id": "sntE0006",
+          "score": 0.3703087866306305
+        },
+        {
+          "id": "sntE0007",
+          "score": 0.33797168731689453
+        },
+        {
+          "id": "sntJ0031",
+          "score": 0.317668616771698
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q123",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0032",
+          "score": 0.5959226489067078
+        },
+        {
+          "id": "sntA0030",
+          "score": 0.5458072423934937
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.34310173988342285
+        },
+        {
+          "id": "sntA0024",
+          "score": 0.3412564694881439
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3394317626953125
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q124",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0004",
+        "sntF0005",
+        "sntF0006",
+        "sntF0007",
+        "sntF0008",
+        "sntF0009",
+        "sntF0010",
+        "sntF0011",
+        "sntF0012",
+        "sntF0013",
+        "sntF0014",
+        "sntF0018",
+        "sntF0019",
+        "sntF0020",
+        "sntF0021",
+        "sntF0022",
+        "sntF0023",
+        "sntF0024",
+        "sntF0025",
+        "sntF0026",
+        "sntF0030",
+        "sntF0031",
+        "sntF0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0003",
+          "score": 0.6086260676383972
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.31694599986076355
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.2994176745414734
+        },
+        {
+          "id": "sntH0013",
+          "score": 0.29200953245162964
+        },
+        {
+          "id": "sntH0033",
+          "score": 0.2906830608844757
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 23; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q125",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0025",
+        "sntH0026"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0025",
+          "score": 0.5998474359512329
+        },
+        {
+          "id": "sntH0024",
+          "score": 0.5951749086380005
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.4805266857147217
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.3786724507808686
+        },
+        {
+          "id": "sntH0018",
+          "score": 0.3695906102657318
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q126",
+      "type": "chain_descendant",
+      "gold": [
+        "sntJ0015",
+        "sntJ0016",
+        "sntJ0017",
+        "sntJ0027",
+        "sntJ0028",
+        "sntJ0029"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0005",
+          "score": 0.5013017654418945
+        },
+        {
+          "id": "sntJ0025",
+          "score": 0.25084906816482544
+        },
+        {
+          "id": "sntD0003",
+          "score": 0.2466658651828766
+        },
+        {
+          "id": "sntC0001",
+          "score": 0.23849190771579745
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.2281705737113953
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q127",
+      "type": "chain_descendant",
+      "gold": [
+        "sntF0009",
+        "sntF0010",
+        "sntF0011",
+        "sntF0021",
+        "sntF0022",
+        "sntF0023"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0005",
+          "score": 0.4761670231819153
+        },
+        {
+          "id": "sntF0002",
+          "score": 0.2697223126888275
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.25195351243019104
+        },
+        {
+          "id": "sntI0001",
+          "score": 0.2502618134021759
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.24514269828796387
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 6; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q128",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0011",
+          "score": 0.6096820831298828
+        },
+        {
+          "id": "sntH0009",
+          "score": 0.5861462354660034
+        },
+        {
+          "id": "sntH0021",
+          "score": 0.4429949820041657
+        },
+        {
+          "id": "sntH0022",
+          "score": 0.3674122393131256
+        },
+        {
+          "id": "sntC0022",
+          "score": 0.34243571758270264
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q129",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0010",
+        "sntH0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0011",
+          "score": 0.609618067741394
+        },
+        {
+          "id": "sntH0009",
+          "score": 0.6041942834854126
+        },
+        {
+          "id": "sntH0021",
+          "score": 0.4769555330276489
+        },
+        {
+          "id": "sntH0023",
+          "score": 0.35518211126327515
+        },
+        {
+          "id": "sntC0022",
+          "score": 0.34973132610321045
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q130",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0013",
+          "score": 0.5935053825378418
+        },
+        {
+          "id": "sntH0012",
+          "score": 0.561629593372345
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.4431965351104736
+        },
+        {
+          "id": "sntG0024",
+          "score": 0.3738975822925568
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.32411420345306396
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q131",
+      "type": "chain_descendant",
+      "gold": [
+        "sntH0013",
+        "sntH0014"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0013",
+          "score": 0.5762453079223633
+        },
+        {
+          "id": "sntH0012",
+          "score": 0.5683339834213257
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.4383907616138458
+        },
+        {
+          "id": "sntG0024",
+          "score": 0.3649804890155792
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.30209165811538696
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q132",
+      "type": "chain_descendant",
+      "gold": [
+        "sntA0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0010",
+          "score": 0.5762578248977661
+        },
+        {
+          "id": "sntA0009",
+          "score": 0.5107870697975159
+        },
+        {
+          "id": "sntB0023",
+          "score": 0.3505418598651886
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.33007511496543884
+        },
+        {
+          "id": "sntE0025",
+          "score": 0.3119046986103058
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q133",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0020"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0019",
+          "score": 0.5758110880851746
+        },
+        {
+          "id": "sntD0018",
+          "score": 0.5061075687408447
+        },
+        {
+          "id": "sntD0011",
+          "score": 0.3340848386287689
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.32854506373405457
+        },
+        {
+          "id": "sntH0028",
+          "score": 0.3279168903827667
+        }
+      ],
+      "verdict": {
+        "hit": false,
+        "rank": null,
+        "coverage": 0.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=None; 覆盖率=0.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q134",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0026"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0026",
+          "score": 0.6379950642585754
+        },
+        {
+          "id": "sntD0024",
+          "score": 0.579104483127594
+        },
+        {
+          "id": "sntH0028",
+          "score": 0.39408811926841736
+        },
+        {
+          "id": "sntD0018",
+          "score": 0.3798506259918213
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3776017427444458
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q135",
+      "type": "chain_descendant",
+      "gold": [
+        "sntD0011"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0011",
+          "score": 0.6049365997314453
+        },
+        {
+          "id": "sntD0009",
+          "score": 0.5111953020095825
+        },
+        {
+          "id": "sntH0028",
+          "score": 0.34774142503738403
+        },
+        {
+          "id": "sntH0016",
+          "score": 0.34717535972595215
+        },
+        {
+          "id": "sntD0020",
+          "score": 0.33138760924339294
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 1.0
+      },
+      "reason": "gold 链长 1; top-5 内首个 gold rank=0; 覆盖率=1.000（召回全集对 gold）"
+    },
+    {
+      "qid": "q136",
+      "type": "chain_descendant",
+      "gold": [
+        "sntB0031",
+        "sntB0032"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0031",
+          "score": 0.5546599626541138
+        },
+        {
+          "id": "sntB0030",
+          "score": 0.4895394742488861
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.4500252604484558
+        },
+        {
+          "id": "sntB0002",
+          "score": 0.4471235275268554
+        },
+        {
+          "id": "sntI0001",
+          "score": 0.31072044372558594
+        }
+      ],
+      "verdict": {
+        "hit": true,
+        "rank": 0,
+        "coverage": 0.5
+      },
+      "reason": "gold 链长 2; top-5 内首个 gold rank=0; 覆盖率=0.500（召回全集对 gold）"
+    },
+    {
+      "qid": "q137",
+      "type": "intervention",
+      "gold": [
+        "sntJ0027"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0027",
+          "score": 0.4001701772212982
+        },
+        {
+          "id": "sntD0033",
+          "score": 0.368669331073761
+        },
+        {
+          "id": "sntJ0018",
+          "score": 0.3091792166233063
+        },
+        {
+          "id": "sntJ0004",
+          "score": 0.30797308683395386
+        },
+        {
+          "id": "sntC0031",
+          "score": 0.28799641132354736
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q138",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntI0015",
+          "score": 0.42317259311676025
+        },
+        {
+          "id": "sntI0017",
+          "score": 0.3188495635986328
+        },
+        {
+          "id": "sntH0030",
+          "score": 0.2575232684612274
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.25421392917633057
+        },
+        {
+          "id": "sntE0018",
+          "score": 0.2493777871131897
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q139",
+      "type": "intervention",
+      "gold": [
+        "sntC0006"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntC0006",
+          "score": 0.30752959847450256
+        },
+        {
+          "id": "sntC0005",
+          "score": 0.29228851199150085
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.2852512300014496
+        },
+        {
+          "id": "sntC0024",
+          "score": 0.2694380581378937
+        },
+        {
+          "id": "sntI0015",
+          "score": 0.25757086277008057
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q140",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntD0002",
+          "score": 0.35798221826553345
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.32792598009109497
+        },
+        {
+          "id": "sntD0006",
+          "score": 0.3090859651565552
+        },
+        {
+          "id": "sntD0014",
+          "score": 0.30722808837890625
+        },
+        {
+          "id": "sntD0015",
+          "score": 0.30349403619766235
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q141",
+      "type": "intervention",
+      "gold": [
+        "sntF0003"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntF0003",
+          "score": 0.3865843117237091
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.2807258665561676
+        },
+        {
+          "id": "sntH0031",
+          "score": 0.27468961477279663
+        },
+        {
+          "id": "sntE0031",
+          "score": 0.2708168625831604
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2634139657020569
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q142",
+      "type": "intervention",
+      "gold": [
+        "sntH0003"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntH0003",
+          "score": 0.3346068561077118
+        },
+        {
+          "id": "sntH0028",
+          "score": 0.2983958423137665
+        },
+        {
+          "id": "sntA0023",
+          "score": 0.2893783450126648
+        },
+        {
+          "id": "sntF0026",
+          "score": 0.270614892244339
+        },
+        {
+          "id": "sntF0002",
+          "score": 0.2700963616371155
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q143",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntF0021",
+          "score": 0.5717015266418457
+        },
+        {
+          "id": "sntF0022",
+          "score": 0.5020767450332642
+        },
+        {
+          "id": "sntF0006",
+          "score": 0.3220154643058777
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.29616719484329224
+        },
+        {
+          "id": "sntF0027",
+          "score": 0.29267293214797974
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q144",
+      "type": "intervention",
+      "gold": [
+        "sntG0030"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntG0002",
+          "score": 0.4085003733634949
+        },
+        {
+          "id": "sntG0031",
+          "score": 0.2946867048740387
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.2711380422115326
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.22641080617904663
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.2163505107164383
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q145",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntA0015",
+          "score": 0.5057359933853149
+        },
+        {
+          "id": "sntA0017",
+          "score": 0.4231780171394348
+        },
+        {
+          "id": "sntA0005",
+          "score": 0.27491340041160583
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.24329519271850583
+        },
+        {
+          "id": "sntF0027",
+          "score": 0.2280272990465164
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q146",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntA0021",
+          "score": 0.4902414083480835
+        },
+        {
+          "id": "sntA0023",
+          "score": 0.43939438462257385
+        },
+        {
+          "id": "sntA0007",
+          "score": 0.3445917069911957
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.343371719121933
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.28453806042671204
+        }
+      ],
+      "verdict": {
+        "pred_label": "SAFE",
+        "correct": true,
+        "confusion": "TN"
+      },
+      "reason": "gold=SAFE pred=SAFE (TN); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q147",
+      "type": "intervention",
+      "gold": [
+        "sntA0019"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q148",
+      "type": "intervention",
+      "gold": [
+        "sntA0031"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q149",
+      "type": "intervention",
+      "gold": [
+        "sntE0007"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q150",
+      "type": "intervention",
+      "gold": [
+        "sntE0013"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q151",
+      "type": "intervention",
+      "gold": [
+        "sntH0016"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q152",
+      "type": "intervention",
+      "gold": [
+        "sntI0013"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q153",
+      "type": "intervention",
+      "gold": [
+        "sntJ0028"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q154",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q155",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q156",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q157",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntE0016",
+          "score": 0.3249785900115967
+        },
+        {
+          "id": "sntJ0023",
+          "score": 0.31371092796325684
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.3022672235965729
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.29825568199157715
+        },
+        {
+          "id": "sntD0022",
+          "score": 0.2977311909198761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q158",
+      "type": "intervention",
+      "gold": [
+        "sntD0020"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q159",
+      "type": "intervention",
+      "gold": [
+        "sntE0020"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q160",
+      "type": "intervention",
+      "gold": [
+        "sntH0023"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q161",
+      "type": "intervention",
+      "gold": [
+        "sntJ0011"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q162",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q163",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q164",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q165",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntJ0023",
+          "score": 0.3349047005176544
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.3309265971183777
+        },
+        {
+          "id": "sntJ0008",
+          "score": 0.3285287320613861
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.3165377974510193
+        },
+        {
+          "id": "sntH0017",
+          "score": 0.3157995939254761
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q166",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntD0015",
+          "score": 0.4493627846240998
+        },
+        {
+          "id": "sntD0016",
+          "score": 0.4045060575008392
+        },
+        {
+          "id": "sntD0013",
+          "score": 0.2837703227996826
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.26944324374198914
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.25042498111724854
+        }
+      ],
+      "verdict": {
+        "pred_label": "SAFE",
+        "correct": true,
+        "confusion": "TN"
+      },
+      "reason": "gold=SAFE pred=SAFE (TN); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q167",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntC0016",
+          "score": 0.5186845660209656
+        },
+        {
+          "id": "sntC0018",
+          "score": 0.4827098548412323
+        },
+        {
+          "id": "sntC0010",
+          "score": 0.3091934025287628
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.303337961435318
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.292214572429657
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q168",
+      "type": "intervention",
+      "gold": [
+        "sntB0027"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntB0027",
+          "score": 0.4833425283432007
+        },
+        {
+          "id": "sntB0029",
+          "score": 0.4017311930656433
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.30450645089149475
+        },
+        {
+          "id": "sntA0006",
+          "score": 0.29268762469291687
+        },
+        {
+          "id": "sntB0018",
+          "score": 0.27551767230033875
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q169",
+      "type": "intervention",
+      "gold": [
+        "sntJ0001"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntJ0001",
+          "score": 0.43579569458961487
+        },
+        {
+          "id": "sntJ0032",
+          "score": 0.4145376682281494
+        },
+        {
+          "id": "sntJ0030",
+          "score": 0.3898560106754303
+        },
+        {
+          "id": "sntJ0002",
+          "score": 0.34133270382881165
+        },
+        {
+          "id": "sntJ0004",
+          "score": 0.28960826992988586
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q170",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntG0018",
+          "score": 0.4124980866909027
+        },
+        {
+          "id": "sntG0019",
+          "score": 0.3185408413410187
+        },
+        {
+          "id": "sntI0021",
+          "score": 0.29721203446388245
+        },
+        {
+          "id": "sntA0018",
+          "score": 0.2829318642616272
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.27902477979660034
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q171",
+      "type": "intervention",
+      "gold": [
+        "sntB0024"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntB0024",
+          "score": 0.4013025462627411
+        },
+        {
+          "id": "sntB0003",
+          "score": 0.3893191516399383
+        },
+        {
+          "id": "sntB0006",
+          "score": 0.3553857207298279
+        },
+        {
+          "id": "sntB0004",
+          "score": 0.3178226053714752
+        },
+        {
+          "id": "sntB0008",
+          "score": 0.3117733597755432
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q172",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntF0015",
+          "score": 0.4223405718803406
+        },
+        {
+          "id": "sntF0016",
+          "score": 0.39776888489723206
+        },
+        {
+          "id": "sntD0033",
+          "score": 0.38634923100471497
+        },
+        {
+          "id": "sntF0012",
+          "score": 0.31339743733406067
+        },
+        {
+          "id": "sntF0014",
+          "score": 0.30091819167137146
+        }
+      ],
+      "verdict": {
+        "pred_label": "SAFE",
+        "correct": true,
+        "confusion": "TN"
+      },
+      "reason": "gold=SAFE pred=SAFE (TN); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q173",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntE0015",
+          "score": 0.463250070810318
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.4254574179649353
+        },
+        {
+          "id": "sntJ0022",
+          "score": 0.2795279324054718
+        },
+        {
+          "id": "sntJ0004",
+          "score": 0.2678294777870178
+        },
+        {
+          "id": "sntF0001",
+          "score": 0.260142982006073
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q174",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntF0018",
+          "score": 0.41148191690444946
+        },
+        {
+          "id": "sntF0009",
+          "score": 0.29801297187805176
+        },
+        {
+          "id": "sntF0019",
+          "score": 0.2885286509990692
+        },
+        {
+          "id": "sntF0010",
+          "score": 0.28349339962005615
+        },
+        {
+          "id": "sntD0027",
+          "score": 0.2303430140018463
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": false,
+        "confusion": "FP"
+      },
+      "reason": "gold=SAFE pred=WARNING (FP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q175",
+      "type": "intervention",
+      "gold": [
+        "sntH0024"
+      ],
+      "gold_label": "WARNING",
+      "top": [
+        {
+          "id": "sntH0024",
+          "score": 0.4740724265575409
+        },
+        {
+          "id": "sntH0025",
+          "score": 0.4028957486152649
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.3527300953865051
+        },
+        {
+          "id": "sntH0019",
+          "score": 0.3248295485973358
+        },
+        {
+          "id": "sntH0006",
+          "score": 0.31493043899536133
+        }
+      ],
+      "verdict": {
+        "pred_label": "WARNING",
+        "correct": true,
+        "confusion": "TP"
+      },
+      "reason": "gold=WARNING pred=WARNING (TP); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q176",
+      "type": "intervention",
+      "gold": [],
+      "gold_label": "SAFE",
+      "top": [
+        {
+          "id": "sntH0018",
+          "score": 0.42645761370658875
+        },
+        {
+          "id": "sntH0019",
+          "score": 0.30757802724838257
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.3005228638648987
+        },
+        {
+          "id": "sntH0007",
+          "score": 0.2913891673088074
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.274315744638443
+        }
+      ],
+      "verdict": {
+        "pred_label": "SAFE",
+        "correct": true,
+        "confusion": "TN"
+      },
+      "reason": "gold=SAFE pred=SAFE (TN); 判分依据：top-k 内是否有映射回本树且 outcome=pitfall 的召回 id"
+    },
+    {
+      "qid": "q177",
+      "type": "supersession",
+      "gold": [
+        "sntH0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0001",
+          "score": 0.47258633375167847
+        },
+        {
+          "id": "sntH0015",
+          "score": 0.33355435729026794
+        },
+        {
+          "id": "sntD0010",
+          "score": 0.30499812960624695
+        },
+        {
+          "id": "sntH0003",
+          "score": 0.3031245768070221
+        },
+        {
+          "id": "sntD0009",
+          "score": 0.2979130148887634
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntH0033 旧结论=sntH0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q178",
+      "type": "supersession",
+      "gold": [
+        "sntD0019"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0002",
+          "score": 0.5142403244972229
+        },
+        {
+          "id": "sntD0004",
+          "score": 0.347232460975647
+        },
+        {
+          "id": "sntG0005",
+          "score": 0.298150897026062
+        },
+        {
+          "id": "sntD0001",
+          "score": 0.29490819573402405
+        },
+        {
+          "id": "sntD0021",
+          "score": 0.2832629084587097
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntD0019 旧结论=sntD0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q179",
+      "type": "supersession",
+      "gold": [
+        "sntI0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0001",
+          "score": 0.4568028450012207
+        },
+        {
+          "id": "sntI0031",
+          "score": 0.3698955476284027
+        },
+        {
+          "id": "sntI0002",
+          "score": 0.28616729378700256
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.2680499851703644
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.2533688247203827
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntI0033 旧结论=sntI0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q180",
+      "type": "supersession",
+      "gold": [
+        "sntF0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0001",
+          "score": 0.46555644273757935
+        },
+        {
+          "id": "sntF0026",
+          "score": 0.24935713410377505
+        },
+        {
+          "id": "sntB0015",
+          "score": 0.24279029667377472
+        },
+        {
+          "id": "sntF0009",
+          "score": 0.2385132908821106
+        },
+        {
+          "id": "sntF0003",
+          "score": 0.228769913315773
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntF0033 旧结论=sntF0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q181",
+      "type": "supersession",
+      "gold": [
+        "sntD0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0001",
+          "score": 0.42926356196403503
+        },
+        {
+          "id": "sntD0004",
+          "score": 0.28441622853279114
+        },
+        {
+          "id": "sntD0002",
+          "score": 0.2504993677139282
+        },
+        {
+          "id": "sntG0005",
+          "score": 0.23909108340740204
+        },
+        {
+          "id": "sntD0003",
+          "score": 0.23155055940151217
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntD0033 旧结论=sntD0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q182",
+      "type": "supersession",
+      "gold": [
+        "sntA0034"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0001",
+          "score": 0.558087170124054
+        },
+        {
+          "id": "sntA0009",
+          "score": 0.29802405834198
+        },
+        {
+          "id": "sntA0003",
+          "score": 0.2591411769390106
+        },
+        {
+          "id": "sntE0001",
+          "score": 0.25160521268844604
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.24157093465328217
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntA0034 旧结论=sntA0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q183",
+      "type": "supersession",
+      "gold": [
+        "sntF0022"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0002",
+          "score": 0.4581014811992645
+        },
+        {
+          "id": "sntF0030",
+          "score": 0.335256963968277
+        },
+        {
+          "id": "sntF0031",
+          "score": 0.32569968700408936
+        },
+        {
+          "id": "sntF0014",
+          "score": 0.24744287133216855
+        },
+        {
+          "id": "sntJ0014",
+          "score": 0.2342168092727661
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntF0022 旧结论=sntF0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q184",
+      "type": "supersession",
+      "gold": [
+        "sntI0015"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntI0002",
+          "score": 0.4747572839260102
+        },
+        {
+          "id": "sntI0024",
+          "score": 0.3903214931488037
+        },
+        {
+          "id": "sntI0026",
+          "score": 0.37640026211738586
+        },
+        {
+          "id": "sntI0004",
+          "score": 0.25240159034729004
+        },
+        {
+          "id": "sntD0033",
+          "score": 0.2327735126018524
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntI0015 旧结论=sntI0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q185",
+      "type": "supersession",
+      "gold": [
+        "sntC0019"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0002",
+          "score": 0.638910710811615
+        },
+        {
+          "id": "sntC0033",
+          "score": 0.5553050637245178
+        },
+        {
+          "id": "sntC0001",
+          "score": 0.3815209865570069
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.33622029423713684
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.3084581792354584
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntC0019 旧结论=sntC0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q186",
+      "type": "supersession",
+      "gold": [
+        "sntJ0018"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0002",
+          "score": 0.3908344507217407
+        },
+        {
+          "id": "sntJ0032",
+          "score": 0.27134573459625244
+        },
+        {
+          "id": "sntJ0003",
+          "score": 0.26931172609329224
+        },
+        {
+          "id": "sntJ0017",
+          "score": 0.26781266927719116
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.25981858372688293
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntJ0018 旧结论=sntJ0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q187",
+      "type": "supersession",
+      "gold": [
+        "sntE0021"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0002",
+          "score": 0.6165237426757812
+        },
+        {
+          "id": "sntE0001",
+          "score": 0.4531132578849793
+        },
+        {
+          "id": "sntE0024",
+          "score": 0.3018476665019989
+        },
+        {
+          "id": "sntJ0003",
+          "score": 0.28382161259651184
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.27090540528297424
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntE0021 旧结论=sntE0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q188",
+      "type": "supersession",
+      "gold": [
+        "sntE0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0001",
+          "score": 0.6315420866012573
+        },
+        {
+          "id": "sntE0002",
+          "score": 0.4782108962535858
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.2900038957595825
+        },
+        {
+          "id": "sntJ0003",
+          "score": 0.2648352384567261
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.2607291042804718
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntE0033 旧结论=sntE0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q189",
+      "type": "supersession",
+      "gold": [
+        "sntJ0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0001",
+          "score": 0.4959842264652252
+        },
+        {
+          "id": "sntJ0030",
+          "score": 0.324134886264801
+        },
+        {
+          "id": "sntJ0003",
+          "score": 0.2901223599910736
+        },
+        {
+          "id": "sntJ0032",
+          "score": 0.28553420305252075
+        },
+        {
+          "id": "sntI0021",
+          "score": 0.22359153628349304
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntJ0033 旧结论=sntJ0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q190",
+      "type": "supersession",
+      "gold": [
+        "sntG0022"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0002",
+          "score": 0.49117299914360046
+        },
+        {
+          "id": "sntG0032",
+          "score": 0.33223429322242737
+        },
+        {
+          "id": "sntG0001",
+          "score": 0.25247690081596375
+        },
+        {
+          "id": "sntG0003",
+          "score": 0.25227323174476624
+        },
+        {
+          "id": "sntG0004",
+          "score": 0.21993395686149597
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntG0022 旧结论=sntG0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q191",
+      "type": "supersession",
+      "gold": [
+        "sntC0034"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntC0001",
+          "score": 0.48485225439071655
+        },
+        {
+          "id": "sntC0002",
+          "score": 0.3469933569431305
+        },
+        {
+          "id": "sntC0032",
+          "score": 0.30052217841148376
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.2676940858364105
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.26642608642578125
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntC0034 旧结论=sntC0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q192",
+      "type": "supersession",
+      "gold": [
+        "sntH0015"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0002",
+          "score": 0.4776856601238251
+        },
+        {
+          "id": "sntH0024",
+          "score": 0.26462703943252563
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.23847782611846924
+        },
+        {
+          "id": "sntA0001",
+          "score": 0.2058221846818924
+        },
+        {
+          "id": "sntB0002",
+          "score": 0.19993022084236145
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntH0015 旧结论=sntH0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q193",
+      "type": "supersession",
+      "gold": [
+        "sntA0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0002",
+          "score": 0.5414390563964844
+        },
+        {
+          "id": "sntA0016",
+          "score": 0.2958890199661255
+        },
+        {
+          "id": "sntA0015",
+          "score": 0.2830716669559479
+        },
+        {
+          "id": "sntC0005",
+          "score": 0.2778984010219574
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.26701030135154724
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntA0033 旧结论=sntA0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q194",
+      "type": "supersession",
+      "gold": [
+        "sntG0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntG0001",
+          "score": 0.4665859639644623
+        },
+        {
+          "id": "sntC0005",
+          "score": 0.2915533185005188
+        },
+        {
+          "id": "sntC0022",
+          "score": 0.258583664894104
+        },
+        {
+          "id": "sntH0001",
+          "score": 0.23078130185604095
+        },
+        {
+          "id": "sntA0026",
+          "score": 0.22211797535419464
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntG0033 旧结论=sntG0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q195",
+      "type": "supersession",
+      "gold": [
+        "sntB0018"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0002",
+          "score": 0.5455159544944763
+        },
+        {
+          "id": "sntB0030",
+          "score": 0.3856779932975769
+        },
+        {
+          "id": "sntB0001",
+          "score": 0.3457283675670624
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3346307575702667
+        },
+        {
+          "id": "sntI0003",
+          "score": 0.25912827253341675
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntB0018 旧结论=sntB0002; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q196",
+      "type": "supersession",
+      "gold": [
+        "sntB0033"
+      ],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0001",
+          "score": 0.5015491843223572
+        },
+        {
+          "id": "sntB0031",
+          "score": 0.3323270082473755
+        },
+        {
+          "id": "sntB0002",
+          "score": 0.2645327150821686
+        },
+        {
+          "id": "sntB0030",
+          "score": 0.25679823756217957
+        },
+        {
+          "id": "sntC0003",
+          "score": 0.2390851229429245
+        }
+      ],
+      "verdict": {
+        "correct": false,
+        "status": "stale"
+      },
+      "reason": "gold 当前结论=sntB0033 旧结论=sntB0001; status=stale；current 条件：召回含当前结论，或旧结论带 superseded_by 标记"
+    },
+    {
+      "qid": "q197",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q198",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntJ0017",
+          "score": 0.1551790088415146
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 1 条 → noisy=True"
+    },
+    {
+      "qid": "q199",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q200",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntH0004",
+          "score": 0.1519472748041153
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 1 条 → noisy=True"
+    },
+    {
+      "qid": "q201",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntF0005",
+          "score": 0.1701372116804123
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 1 条 → noisy=True"
+    },
+    {
+      "qid": "q202",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0021",
+          "score": 0.183699294924736
+        },
+        {
+          "id": "sntG0022",
+          "score": 0.16865374147891998
+        },
+        {
+          "id": "sntG0023",
+          "score": 0.16000109910964966
+        },
+        {
+          "id": "sntG0021",
+          "score": 0.15489667654037476
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 4 条 → noisy=True"
+    },
+    {
+      "qid": "q203",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q204",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q205",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q206",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q207",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q208",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0005",
+          "score": 0.1868065446615219
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.1754288524389267
+        },
+        {
+          "id": "sntI0006",
+          "score": 0.1730019450187683
+        },
+        {
+          "id": "sntA0015",
+          "score": 0.1707441359758377
+        },
+        {
+          "id": "sntE0021",
+          "score": 0.1692572385072708
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 5 条 → noisy=True"
+    },
+    {
+      "qid": "q209",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q210",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntD0018",
+          "score": 0.18816334009170532
+        },
+        {
+          "id": "sntD0019",
+          "score": 0.186184361577034
+        },
+        {
+          "id": "sntE0017",
+          "score": 0.1778726875782013
+        },
+        {
+          "id": "sntI0018",
+          "score": 0.15800227224826813
+        },
+        {
+          "id": "sntI0020",
+          "score": 0.1569381207227707
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 5 条 → noisy=True"
+    },
+    {
+      "qid": "q211",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q212",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q213",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0024",
+          "score": 0.16073250770568848
+        },
+        {
+          "id": "sntB0004",
+          "score": 0.15117114782333374
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 2 条 → noisy=True"
+    },
+    {
+      "qid": "q214",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q215",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q216",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q217",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q218",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q219",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0015",
+          "score": 0.17067000269889832
+        },
+        {
+          "id": "sntB0021",
+          "score": 0.16395661234855652
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 2 条 → noisy=True"
+    },
+    {
+      "qid": "q220",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q221",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q222",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0020",
+          "score": 0.19084741175174713
+        },
+        {
+          "id": "sntG0022",
+          "score": 0.1869233399629593
+        },
+        {
+          "id": "sntG0023",
+          "score": 0.1826515644788742
+        },
+        {
+          "id": "sntG0021",
+          "score": 0.17304670810699463
+        },
+        {
+          "id": "sntE0018",
+          "score": 0.16665253043174744
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 5 条 → noisy=True"
+    },
+    {
+      "qid": "q223",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q224",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q225",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q226",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntA0015",
+          "score": 0.17447717487812042
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 1 条 → noisy=True"
+    },
+    {
+      "qid": "q227",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q228",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q229",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q230",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0020",
+          "score": 0.18894581496715543
+        },
+        {
+          "id": "sntE0019",
+          "score": 0.186553493142128
+        },
+        {
+          "id": "sntI0017",
+          "score": 0.17992788553237915
+        },
+        {
+          "id": "sntI0016",
+          "score": 0.1768021583557129
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 4 条 → noisy=True"
+    },
+    {
+      "qid": "q231",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q232",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntE0004",
+          "score": 0.17301951348781586
+        },
+        {
+          "id": "sntG0004",
+          "score": 0.15371838212013245
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 2 条 → noisy=True"
+    },
+    {
+      "qid": "q233",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q234",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [
+        {
+          "id": "sntB0029",
+          "score": 0.1599559336900711
+        },
+        {
+          "id": "sntB0028",
+          "score": 0.1529412716627121
+        },
+        {
+          "id": "sntH0004",
+          "score": 0.15267163515090942
+        }
+      ],
+      "verdict": {
+        "noisy": true
+      },
+      "reason": "gold 恒空；召回 3 条 → noisy=True"
+    },
+    {
+      "qid": "q235",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    },
+    {
+      "qid": "q236",
+      "type": "negative",
+      "gold": [],
+      "gold_label": null,
+      "top": [],
+      "verdict": {
+        "noisy": false
+      },
+      "reason": "gold 恒空；召回 0 条 → noisy=False"
+    }
+  ]
+}

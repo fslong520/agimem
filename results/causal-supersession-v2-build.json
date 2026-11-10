@@ -1,0 +1,177 @@
+{
+  "schema": "agimem-causal-supersession-real/1",
+  "data_dir": "/tmp/agimem-supersede-v2/sup",
+  "port": 16350,
+  "n_pairs": 20,
+  "n_written_ok": 20,
+  "n_written_fail": 0,
+  "receipts": [
+    {
+      "old": "sntH0001",
+      "new": "sntH0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntD0002",
+      "new": "sntD0019",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntI0001",
+      "new": "sntI0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntF0001",
+      "new": "sntF0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntD0001",
+      "new": "sntD0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntA0001",
+      "new": "sntA0034",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntF0002",
+      "new": "sntF0022",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntI0002",
+      "new": "sntI0015",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntC0002",
+      "new": "sntC0019",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntJ0002",
+      "new": "sntJ0018",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntE0002",
+      "new": "sntE0021",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntE0001",
+      "new": "sntE0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntJ0001",
+      "new": "sntJ0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntG0002",
+      "new": "sntG0022",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntC0001",
+      "new": "sntC0034",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntH0002",
+      "new": "sntH0015",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntA0002",
+      "new": "sntA0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntG0001",
+      "new": "sntG0033",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntB0002",
+      "new": "sntB0018",
+      "rc": 0,
+      "new_uuid_present": true
+    },
+    {
+      "old": "sntB0001",
+      "new": "sntB0033",
+      "rc": 0,
+      "new_uuid_present": true
+    }
+  ],
+  "verify": [
+    {
+      "old": "sntH0001",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntH0033",
+      "top_ids": [
+        "sntH0001",
+        "sntH0015",
+        "sntD0009"
+      ]
+    },
+    {
+      "old": "sntD0002",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntD0019",
+      "top_ids": [
+        "sntD0002",
+        "sntG0005",
+        "sntD0001"
+      ]
+    },
+    {
+      "old": "sntI0001",
+      "superseded_by_present": true,
+      "superseded_by_sid": "sntI0033",
+      "top_ids": [
+        "sntI0001",
+        "sntI0031",
+        "sntA0024"
+      ]
+    }
+  ],
+  "constraint_trivial_supersedes": {
+    "rc": 1,
+    "out": "{\"command\":\"cli\",\"status\":\"fail\",\"summary\":{\"reason\":\"runtime_error\"},\"items\":[],\"actions\":[],\"errors\":[\"associations require important memory\"],\"details\":{\"error_type\":\"runtime\"},\"related\":[]}"
+  },
+  "index_after": {
+    "state": "ready",
+    "local_total": 332,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 1.9
+  },
+  "n_hits": 100,
+  "predictions": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-supersession-v2-predictions.jsonl",
+  "elapsed_s": 256.7
+}

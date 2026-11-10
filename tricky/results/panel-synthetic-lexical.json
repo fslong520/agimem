@@ -1,0 +1,3525 @@
+{
+  "schema": "agimem-tricky-summary/1",
+  "warning": "全合成题库；树未导入被测库时，数字是「题不在库」的检索结果，非能力分",
+  "summary": {
+    "n_dataset": 132,
+    "scored": 132,
+    "excluded_missing": 0,
+    "missing_predictions": [],
+    "params": {
+      "topk": 5
+    },
+    "distribution": {
+      "T1": 22,
+      "T2": 22,
+      "T3": 22,
+      "T4": 22,
+      "T5": 22,
+      "T6": 22
+    },
+    "scenario_distribution": {
+      "部署上线": 17,
+      "灰度发布": 17,
+      "接口对接": 17,
+      "同事交接": 17,
+      "开会定口径": 16,
+      "线上排障": 16,
+      "数据迁移": 16,
+      "权限审批": 16
+    },
+    "per_type": {
+      "T1": {
+        "name": "抗干扰",
+        "n": 22,
+        "hit_at_k": 1.0,
+        "hit_at_k_ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.9090909090909091,
+        "main_metric": "hit_at_k",
+        "main_score": 1.0,
+        "main_ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.15,
+        "distractor_rate": 0.0
+      },
+      "T2": {
+        "name": "同名异事",
+        "n": 22,
+        "hit_at_k": 1.0,
+        "hit_at_k_ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.045454545454545456,
+        "main_metric": "hit_at_1",
+        "main_score": 0.045454545454545456,
+        "main_ci": {
+          "point": 0.045454545454545456,
+          "lo": 0.00806942762126385,
+          "hi": 0.21798045838657332,
+          "n": 22,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.2
+      },
+      "T3": {
+        "name": "隐含约束",
+        "n": 22,
+        "hit_at_k": 0.8636363636363636,
+        "hit_at_k_ci": {
+          "point": 0.8636363636363636,
+          "lo": 0.6666501283342828,
+          "hi": 0.9525099628594474,
+          "n": 22,
+          "k": 19,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.09090909090909091,
+        "main_metric": "hit_at_1",
+        "main_score": 0.09090909090909091,
+        "main_ci": {
+          "point": 0.09090909090909091,
+          "lo": 0.025295428990995267,
+          "hi": 0.27814946841605814,
+          "n": 22,
+          "k": 2,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.2
+      },
+      "T4": {
+        "name": "旧结论失效",
+        "n": 22,
+        "hit_at_k": 0.9545454545454546,
+        "hit_at_k_ci": {
+          "point": 0.9545454545454546,
+          "lo": 0.7820195416134267,
+          "hi": 0.991930572378736,
+          "n": 22,
+          "k": 21,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.18181818181818182,
+        "main_metric": "hit_at_1",
+        "main_score": 0.18181818181818182,
+        "main_ci": {
+          "point": 0.18181818181818182,
+          "lo": 0.07306884583422052,
+          "hi": 0.38516607437126543,
+          "n": 22,
+          "k": 4,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.15
+      },
+      "T5": {
+        "name": "跨时间一致性",
+        "n": 22,
+        "hit_at_k": 0.5454545454545454,
+        "hit_at_k_ci": {
+          "point": 0.5454545454545454,
+          "lo": 0.3465979532073494,
+          "hi": 0.7307970581918668,
+          "n": 22,
+          "k": 12,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.0,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "main_ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.15
+      },
+      "T6": {
+        "name": "转述vs实测",
+        "n": 22,
+        "hit_at_k": 0.45454545454545453,
+        "hit_at_k_ci": {
+          "point": 0.45454545454545453,
+          "lo": 0.2692029418081331,
+          "hi": 0.6534020467926505,
+          "n": 22,
+          "k": 10,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "hit_at_1": 0.0,
+        "main_metric": "evidence_first_acc",
+        "main_score": 0.0,
+        "main_ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "weight": 0.15,
+        "hearsay_quotes_top1": 0.8636363636363636
+      }
+    },
+    "weights": {
+      "T1": 0.15,
+      "T2": 0.2,
+      "T3": 0.2,
+      "T4": 0.15,
+      "T5": 0.15,
+      "T6": 0.15
+    },
+    "humanlike_score": {
+      "point": 0.20454545454545453,
+      "lo": 0.17045454545454544,
+      "hi": 0.2431818181818182,
+      "method": "stratified-bootstrap",
+      "reps": 2000,
+      "seed": 20261109
+    }
+  },
+  "baselines": {
+    "perfect": {
+      "per_type": {
+        "T1": {
+          "name": "抗干扰",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "hit_at_k",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15,
+          "distractor_rate": 0.8
+        },
+        "T2": {
+          "name": "同名异事",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "hit_at_1",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.2
+        },
+        "T3": {
+          "name": "隐含约束",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "hit_at_1",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.2
+        },
+        "T4": {
+          "name": "旧结论失效",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "hit_at_1",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15
+        },
+        "T5": {
+          "name": "跨时间一致性",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "hit_at_1",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15
+        },
+        "T6": {
+          "name": "转述vs实测",
+          "n": 22,
+          "hit_at_k": 1.0,
+          "hit_at_k_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 1.0,
+          "main_metric": "evidence_first_acc",
+          "main_score": 1.0,
+          "main_ci": {
+            "point": 1.0,
+            "lo": 0.8513451253913791,
+            "hi": 1.0,
+            "n": 22,
+            "k": 22,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15,
+          "hearsay_quotes_top1": 0.0
+        }
+      },
+      "humanlike_score": 1.0
+    },
+    "adversarial": {
+      "per_type": {
+        "T1": {
+          "name": "抗干扰",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "hit_at_k",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15,
+          "distractor_rate": 1.0
+        },
+        "T2": {
+          "name": "同名异事",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "hit_at_1",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.2
+        },
+        "T3": {
+          "name": "隐含约束",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "hit_at_1",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.2
+        },
+        "T4": {
+          "name": "旧结论失效",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "hit_at_1",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15
+        },
+        "T5": {
+          "name": "跨时间一致性",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "hit_at_1",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15
+        },
+        "T6": {
+          "name": "转述vs实测",
+          "n": 22,
+          "hit_at_k": 0.0,
+          "hit_at_k_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "hit_at_1": 0.0,
+          "main_metric": "evidence_first_acc",
+          "main_score": 0.0,
+          "main_ci": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.14865487460862087,
+            "n": 22,
+            "k": 0,
+            "method": "wilson",
+            "z": 1.959963984540054
+          },
+          "weight": 0.15,
+          "hearsay_quotes_top1": 1.0
+        }
+      },
+      "humanlike_score": 0.0
+    }
+  },
+  "per_question": [
+    {
+      "qid": "t1-001",
+      "type": "T1",
+      "scenario": "deploy",
+      "query": "这次部署上线的发布单（#1）里又有人提议把 结算服务 的镜像 tag顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkA0001"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0001",
+        "trkA0015",
+        "trkA0009",
+        "trkA0081",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkA0001；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-002",
+      "type": "T1",
+      "scenario": "canary",
+      "query": "这次灰度发布的发布单（#2）里又有人提议把 风控服务 的放量档位顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkB0001"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0014",
+        "trkB0001",
+        "trkB0009",
+        "trkA0009",
+        "trkA0001"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkB0001；top-5 中同主题干扰记录 0/5；gold rank=1"
+    },
+    {
+      "qid": "t1-003",
+      "type": "T1",
+      "scenario": "api",
+      "query": "这次接口对接的发布单（#3）里又有人提议把 对账接口 的签名方式顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkC0003"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0003",
+        "trkC0006",
+        "trkC0010",
+        "trkA0009",
+        "trkG0008"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkC0003；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-004",
+      "type": "T1",
+      "scenario": "handoff",
+      "query": "这次同事交接的发布单（#4）里又有人提议把 定时任务 的告警接收人顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkD0001"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0001",
+        "trkD0007",
+        "trkD0013",
+        "trkD0077",
+        "trkD0087"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkD0001；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-005",
+      "type": "T1",
+      "scenario": "meeting",
+      "query": "这次开会定口径的发布单（#5）里又有人提议把 统计规范 的统计口径顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkE0006"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0006",
+        "trkE0011",
+        "trkE0015",
+        "trkE0094",
+        "trkD0013"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkE0006；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-006",
+      "type": "T1",
+      "scenario": "ops",
+      "query": "这次线上排障的发布单（#6）里又有人提议把 消息队列 的慢查询阈值顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkF0003"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0003",
+        "trkF0013",
+        "trkF0010",
+        "trkB0009",
+        "trkA0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkF0003；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-007",
+      "type": "T1",
+      "scenario": "migration",
+      "query": "这次数据迁移的发布单（#7）里又有人提议把 日志索引 的校验方式顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkG0008"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0008",
+        "trkG0015",
+        "trkF0010",
+        "trkC0003",
+        "trkC0006"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkG0008；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-008",
+      "type": "T1",
+      "scenario": "approval",
+      "query": "这次权限审批的发布单（#8）里又有人提议把 配置中心 的权限级别顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkH0006"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0006",
+        "trkH0012",
+        "trkA0009",
+        "trkB0009",
+        "trkB0014"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkH0006；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-009",
+      "type": "T1",
+      "scenario": "deploy",
+      "query": "这次部署上线的发布单（#9）里又有人提议把 订单服务 的端口顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkA0009"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0009",
+        "trkA0001",
+        "trkA0015",
+        "trkB0009",
+        "trkB0014"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkA0009；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-010",
+      "type": "T1",
+      "scenario": "canary",
+      "query": "这次灰度发布的发布单（#10）里又有人提议把 搜索服务 的灰度比例顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkB0009"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0009",
+        "trkB0014",
+        "trkB0001",
+        "trkA0009",
+        "trkB0096"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkB0009；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-011",
+      "type": "T1",
+      "scenario": "api",
+      "query": "这次接口对接的发布单（#11）里又有人提议把 回调接口 的签名方式顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkC0006"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0006",
+        "trkC0003",
+        "trkC0010",
+        "trkA0009",
+        "trkG0008"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkC0006；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-012",
+      "type": "T1",
+      "scenario": "handoff",
+      "query": "这次同事交接的发布单（#12）里又有人提议把 定时任务 的定时任务时间顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkD0007"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0007",
+        "trkD0001",
+        "trkD0013",
+        "trkE0006",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkD0007；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-013",
+      "type": "T1",
+      "scenario": "meeting",
+      "query": "这次开会定口径的发布单（#13）里又有人提议把 统计规范 的金额单位顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkE0011"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0011",
+        "trkE0015",
+        "trkE0006",
+        "trkE0086",
+        "trkE0091"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkE0011；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-014",
+      "type": "T1",
+      "scenario": "ops",
+      "query": "这次线上排障的发布单（#14）里又有人提议把 数据库主库 的积压告警线顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkF0010"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0010",
+        "trkF0003",
+        "trkF0013",
+        "trkG0015",
+        "trkG0008"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkF0010；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-015",
+      "type": "T1",
+      "scenario": "migration",
+      "query": "这次数据迁移的发布单（#15）里又有人提议把 历史订单表 的字符集顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkG0015"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0015",
+        "trkG0008",
+        "trkA0009",
+        "trkF0010",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkG0015；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-016",
+      "type": "T1",
+      "scenario": "approval",
+      "query": "这次权限审批的发布单（#16）里又有人提议把 配置中心 的有效期顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkH0012"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0012",
+        "trkH0006",
+        "trkA0009",
+        "trkH0090",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkH0012；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-017",
+      "type": "T1",
+      "scenario": "deploy",
+      "query": "这次部署上线的发布单（#17）里又有人提议把 结算服务 的启动参数顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkA0015"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0015",
+        "trkA0001",
+        "trkA0009",
+        "trkB0009",
+        "trkB0014"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkA0015；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-018",
+      "type": "T1",
+      "scenario": "canary",
+      "query": "这次灰度发布的发布单（#18）里又有人提议把 搜索服务 的放量档位顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkB0014"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0014",
+        "trkB0009",
+        "trkB0001",
+        "trkB0084",
+        "trkA0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkB0014；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-019",
+      "type": "T1",
+      "scenario": "api",
+      "query": "这次接口对接的发布单（#19）里又有人提议把 对账接口 的字段名顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkC0010"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0010",
+        "trkC0003",
+        "trkC0006",
+        "trkA0009",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkC0010；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-020",
+      "type": "T1",
+      "scenario": "handoff",
+      "query": "这次同事交接的发布单（#20）里又有人提议把 定时任务 的脚本路径顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkD0013"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0013",
+        "trkD0007",
+        "trkD0001",
+        "trkA0001",
+        "trkB0009"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkD0013；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t1-021",
+      "type": "T1",
+      "scenario": "meeting",
+      "query": "这次开会定口径的发布单（#21）里又有人提议把 统计规范 的金额单位顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkE0015"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0011",
+        "trkE0015",
+        "trkE0006",
+        "trkE0086",
+        "trkE0091"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkE0015；top-5 中同主题干扰记录 0/5；gold rank=1"
+    },
+    {
+      "qid": "t1-022",
+      "type": "T1",
+      "scenario": "ops",
+      "query": "这次线上排障的发布单（#22）里又有人提议把 支付回调 的慢查询阈值顺手改掉。到底能不能动？该按哪条约束来？",
+      "gold": [
+        "trkF0013"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0013",
+        "trkF0003",
+        "trkF0010",
+        "trkF0038",
+        "trkC0006"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "distractor_rate": 0.0,
+      "reason": "真约束 trkF0013；top-5 中同主题干扰记录 0/5；gold rank=0"
+    },
+    {
+      "qid": "t2-001",
+      "type": "T2",
+      "scenario": "migration",
+      "query": "上次 2026-07-06 在数据迁移里说的「那个接口」——这次要按它执行 日志索引 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkG0021"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0028",
+        "trkC0012",
+        "trkG0070",
+        "trkG0021",
+        "trkG0027"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "重名物「那个接口」在 migration 的定义 trkG0021；gold rank=3"
+    },
+    {
+      "qid": "t2-002",
+      "type": "T2",
+      "scenario": "approval",
+      "query": "上次 2026-06-04 在权限审批里说的「临时开关」——这次要按它执行 生产库账号 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkH0023"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0030",
+        "trkH0037",
+        "trkD0015",
+        "trkH0023",
+        "trkH0093"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "重名物「临时开关」在 approval 的定义 trkH0023；gold rank=3"
+    },
+    {
+      "qid": "t2-003",
+      "type": "T2",
+      "scenario": "deploy",
+      "query": "上次 2026-04-05 在部署上线里说的「第二套口径」——这次要按它执行 结算服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkA0021"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0017",
+        "trkA0036",
+        "trkA0021",
+        "trkA0028",
+        "trkA0032"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「第二套口径」在 deploy 的定义 trkA0021；gold rank=2"
+    },
+    {
+      "qid": "t2-004",
+      "type": "T2",
+      "scenario": "canary",
+      "query": "上次 2026-09-04 在灰度发布里说的「灰度第一批」——这次要按它执行 推荐服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkB0022"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0031",
+        "trkB0026",
+        "trkB0035",
+        "trkF0016",
+        "trkB0022"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "reason": "重名物「灰度第一批」在 canary 的定义 trkB0022；gold rank=4"
+    },
+    {
+      "qid": "t2-005",
+      "type": "T2",
+      "scenario": "api",
+      "query": "上次 2026-07-27 在接口对接里说的「回滚脚本」——这次要按它执行 查询接口 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkC0015"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0023",
+        "trkC0015",
+        "trkC0057",
+        "trkC0062",
+        "trkC0067"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「回滚脚本」在 api 的定义 trkC0015；gold rank=1"
+    },
+    {
+      "qid": "t2-006",
+      "type": "T2",
+      "scenario": "handoff",
+      "query": "上次 2026-01-24 在同事交接里说的「V2 方案（第二批）」——这次要按它执行 监控看板 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkD0018"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0027",
+        "trkD0018",
+        "trkD0057",
+        "trkD0062",
+        "trkD0026"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「V2 方案（第二批）」在 handoff 的定义 trkD0018；gold rank=1"
+    },
+    {
+      "qid": "t2-007",
+      "type": "T2",
+      "scenario": "meeting",
+      "query": "上次 2026-10-12 在开会定口径里说的「那个接口（第二批）」——这次要按它执行 命名规范 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkE0019"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0025",
+        "trkE0016",
+        "trkE0019",
+        "trkE0027",
+        "trkE0067"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「那个接口（第二批）」在 meeting 的定义 trkE0019；gold rank=2"
+    },
+    {
+      "qid": "t2-008",
+      "type": "T2",
+      "scenario": "ops",
+      "query": "上次 2026-04-27 在线上排障里说的「临时开关（第二批）」——这次要按它执行 数据库主库 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkF0018"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0023",
+        "trkF0014",
+        "trkF0018",
+        "trkF0026",
+        "trkF0077"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「临时开关（第二批）」在 ops 的定义 trkF0018；gold rank=2"
+    },
+    {
+      "qid": "t2-009",
+      "type": "T2",
+      "scenario": "migration",
+      "query": "上次 2026-06-02 在数据迁移里说的「第二套口径（第二批）」——这次要按它执行 日志索引 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkG0029"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0034",
+        "trkC0016",
+        "trkG0070",
+        "trkG0029",
+        "trkG0028"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "重名物「第二套口径（第二批）」在 migration 的定义 trkG0029；gold rank=3"
+    },
+    {
+      "qid": "t2-010",
+      "type": "T2",
+      "scenario": "approval",
+      "query": "上次 2026-10-27 在权限审批里说的「灰度第一批（第二批）」——这次要按它执行 发布平台 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkH0031"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0042",
+        "trkD0020",
+        "trkH0031",
+        "trkH0081",
+        "trkH0025"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「灰度第一批（第二批）」在 approval 的定义 trkH0031；gold rank=2"
+    },
+    {
+      "qid": "t2-011",
+      "type": "T2",
+      "scenario": "deploy",
+      "query": "上次 2026-08-15 在部署上线里说的「回滚脚本（第二批）」——这次要按它执行 网关服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkA0029"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0021",
+        "trkA0029",
+        "trkA0033",
+        "trkA0067",
+        "trkA0072"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「回滚脚本（第二批）」在 deploy 的定义 trkA0029；gold rank=1"
+    },
+    {
+      "qid": "t2-012",
+      "type": "T2",
+      "scenario": "canary",
+      "query": "上次 2026-03-08 在灰度发布里说的「V2 方案（第三批）」——这次要按它执行 搜索服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkB0027"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0020",
+        "trkB0027",
+        "trkB0029",
+        "trkB0074",
+        "trkB0079"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「V2 方案（第三批）」在 canary 的定义 trkB0027；gold rank=1"
+    },
+    {
+      "qid": "t2-013",
+      "type": "T2",
+      "scenario": "api",
+      "query": "上次 2026-03-17 在接口对接里说的「那个接口（第三批）」——这次要按它执行 对账接口 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkC0019"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0019",
+        "trkG0033",
+        "trkA0034",
+        "trkC0024",
+        "trkC0020"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "重名物「那个接口（第三批）」在 api 的定义 trkC0019；gold rank=0"
+    },
+    {
+      "qid": "t2-014",
+      "type": "T2",
+      "scenario": "handoff",
+      "query": "上次 2026-08-14 在同事交接里说的「临时开关（第三批）」——这次要按它执行 监控看板 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkD0022"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0036",
+        "trkD0022",
+        "trkD0057",
+        "trkD0062",
+        "trkD0024"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「临时开关（第三批）」在 handoff 的定义 trkD0022；gold rank=1"
+    },
+    {
+      "qid": "t2-015",
+      "type": "T2",
+      "scenario": "meeting",
+      "query": "上次 2026-07-05 在开会定口径里说的「第二套口径（第三批）」——这次要按它执行 指标口径 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkE0024"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0031",
+        "trkE0024",
+        "trkE0018",
+        "trkE0028",
+        "trkE0062"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「第二套口径（第三批）」在 meeting 的定义 trkE0024；gold rank=1"
+    },
+    {
+      "qid": "t2-016",
+      "type": "T2",
+      "scenario": "ops",
+      "query": "上次 2026-01-16 在线上排障里说的「灰度第一批（第三批）」——这次要按它执行 数据库主库 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkF0024"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0030",
+        "trkF0024",
+        "trkF0022",
+        "trkF0021",
+        "trkF0077"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「灰度第一批（第三批）」在 ops 的定义 trkF0024；gold rank=1"
+    },
+    {
+      "qid": "t2-017",
+      "type": "T2",
+      "scenario": "migration",
+      "query": "上次 2026-05-20 在数据迁移里说的「回滚脚本（第三批）」——这次要按它执行 日志索引 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkG0036"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0021",
+        "trkG0036",
+        "trkG0070",
+        "trkG0034",
+        "trkG0031"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「回滚脚本（第三批）」在 migration 的定义 trkG0036；gold rank=1"
+    },
+    {
+      "qid": "t2-018",
+      "type": "T2",
+      "scenario": "approval",
+      "query": "上次 2026-04-27 在权限审批里说的「V2 方案（第四批）」——这次要按它执行 发布平台 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkH0040"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0033",
+        "trkD0025",
+        "trkH0040",
+        "trkH0081",
+        "trkH0028"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「V2 方案（第四批）」在 approval 的定义 trkH0040；gold rank=2"
+    },
+    {
+      "qid": "t2-019",
+      "type": "T2",
+      "scenario": "deploy",
+      "query": "上次 2026-03-17 在部署上线里说的「那个接口（第四批）」——这次要按它执行 结算服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkA0034"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0026",
+        "trkA0030",
+        "trkA0062",
+        "trkA0034",
+        "trkA0026"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "重名物「那个接口（第四批）」在 deploy 的定义 trkA0034；gold rank=3"
+    },
+    {
+      "qid": "t2-020",
+      "type": "T2",
+      "scenario": "canary",
+      "query": "上次 2026-08-04 在灰度发布里说的「临时开关（第四批）」——这次要按它执行 风控服务 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkB0034"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0025",
+        "trkB0034",
+        "trkB0024",
+        "trkB0079",
+        "trkB0086"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「临时开关（第四批）」在 canary 的定义 trkB0034；gold rank=1"
+    },
+    {
+      "qid": "t2-021",
+      "type": "T2",
+      "scenario": "api",
+      "query": "上次 2026-03-23 在接口对接里说的「第二套口径（第四批）」——这次要按它执行 回调接口 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkC0026"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0039",
+        "trkC0017",
+        "trkC0026",
+        "trkC0018",
+        "trkC0024"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "重名物「第二套口径（第四批）」在 api 的定义 trkC0026；gold rank=2"
+    },
+    {
+      "qid": "t2-022",
+      "type": "T2",
+      "scenario": "handoff",
+      "query": "上次 2026-09-27 在同事交接里说的「灰度第一批（第四批）」——这次要按它执行 监控看板 的事。对应的到底是哪条记录？（同名还有别的场合用过）",
+      "gold": [
+        "trkD0030"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0041",
+        "trkD0030",
+        "trkD0021",
+        "trkD0062",
+        "trkD0057"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "重名物「灰度第一批（第四批）」在 handoff 的定义 trkD0030；gold rank=1"
+    },
+    {
+      "qid": "t3-001",
+      "type": "T3",
+      "scenario": "meeting",
+      "query": "开会定口径要改 指标口径 的时区口径（改造工单 #1）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkE0030"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0041",
+        "trkE0084",
+        "trkE0095",
+        "trkE0035",
+        "trkE0036"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkE0030；gold rank=None"
+    },
+    {
+      "qid": "t3-002",
+      "type": "T3",
+      "scenario": "ops",
+      "query": "线上排障要改 支付回调 的连接池上限（改造工单 #2）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkF0028"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0037",
+        "trkF0028",
+        "trkF0027",
+        "trkF0038",
+        "trkF0058"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkF0028；gold rank=1"
+    },
+    {
+      "qid": "t3-003",
+      "type": "T3",
+      "scenario": "migration",
+      "query": "数据迁移要改 日志索引 的字符集（改造工单 #3）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkG0042"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0048",
+        "trkG0050",
+        "trkG0042",
+        "trkG0040",
+        "trkG0043"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkG0042；gold rank=2"
+    },
+    {
+      "qid": "t3-004",
+      "type": "T3",
+      "scenario": "approval",
+      "query": "权限审批要改 配置中心 的令牌轮换（改造工单 #4）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkH0044"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0043",
+        "trkH0055",
+        "trkH0053",
+        "trkH0044",
+        "trkH0045"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkH0044；gold rank=3"
+    },
+    {
+      "qid": "t3-005",
+      "type": "T3",
+      "scenario": "deploy",
+      "query": "部署上线要改 会员服务 的健康检查路径（改造工单 #5）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkA0039"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0039",
+        "trkA0038",
+        "trkA0040",
+        "trkA0041",
+        "trkA0042"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "隐含规矩（implicit=true）trkA0039；gold rank=0"
+    },
+    {
+      "qid": "t3-006",
+      "type": "T3",
+      "scenario": "canary",
+      "query": "灰度发布要改 搜索服务 的观察窗口（改造工单 #6）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkB0037"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0049",
+        "trkB0050",
+        "trkB0042",
+        "trkB0037",
+        "trkB0097"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkB0037；gold rank=3"
+    },
+    {
+      "qid": "t3-007",
+      "type": "T3",
+      "scenario": "api",
+      "query": "接口对接要改 对账接口 的签名方式（改造工单 #7）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkC0027"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0083",
+        "trkC0040",
+        "trkC0027",
+        "trkC0076",
+        "trkC0087"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkC0027；gold rank=2"
+    },
+    {
+      "qid": "t3-008",
+      "type": "T3",
+      "scenario": "handoff",
+      "query": "同事交接要改 监控看板 的脚本路径（改造工单 #8）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkD0031"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0036",
+        "trkD0031",
+        "trkD0041",
+        "trkD0032",
+        "trkD0033"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkD0031；gold rank=1"
+    },
+    {
+      "qid": "t3-009",
+      "type": "T3",
+      "scenario": "meeting",
+      "query": "开会定口径要改 命名规范 的时区口径（改造工单 #9）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkE0037"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0042",
+        "trkE0036",
+        "trkE0043",
+        "trkE0092",
+        "trkE0044"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkE0037；gold rank=None"
+    },
+    {
+      "qid": "t3-010",
+      "type": "T3",
+      "scenario": "ops",
+      "query": "线上排障要改 支付回调 的积压告警线（改造工单 #10）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkF0032"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0088",
+        "trkF0037",
+        "trkF0032",
+        "trkF0027",
+        "trkF0036"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkF0032；gold rank=2"
+    },
+    {
+      "qid": "t3-011",
+      "type": "T3",
+      "scenario": "migration",
+      "query": "数据迁移要改 日志索引 的主键策略（改造工单 #11）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkG0051"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0048",
+        "trkG0050",
+        "trkG0051",
+        "trkG0047",
+        "trkG0052"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkG0051；gold rank=2"
+    },
+    {
+      "qid": "t3-012",
+      "type": "T3",
+      "scenario": "approval",
+      "query": "权限审批要改 生产库账号 的审计留痕（改造工单 #12）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkH0049"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0048",
+        "trkH0091",
+        "trkH0049",
+        "trkH0053",
+        "trkH0093"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkH0049；gold rank=2"
+    },
+    {
+      "qid": "t3-013",
+      "type": "T3",
+      "scenario": "deploy",
+      "query": "部署上线要改 会员服务 的时区变量（改造工单 #13）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkA0044"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0038",
+        "trkA0043",
+        "trkA0044",
+        "trkA0045",
+        "trkA0046"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkA0044；gold rank=2"
+    },
+    {
+      "qid": "t3-014",
+      "type": "T3",
+      "scenario": "canary",
+      "query": "灰度发布要改 风控服务 的对比指标（改造工单 #14）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkB0044"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0041",
+        "trkB0091",
+        "trkB0043",
+        "trkB0044",
+        "trkB0050"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkB0044；gold rank=3"
+    },
+    {
+      "qid": "t3-015",
+      "type": "T3",
+      "scenario": "api",
+      "query": "接口对接要改 对账接口 的字段名（改造工单 #15）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkC0031"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0077",
+        "trkC0038",
+        "trkC0039",
+        "trkC0031",
+        "trkC0036"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkC0031；gold rank=3"
+    },
+    {
+      "qid": "t3-016",
+      "type": "T3",
+      "scenario": "handoff",
+      "query": "同事交接要改 值班手册 的脚本路径（改造工单 #16）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkD0037"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0091",
+        "trkD0037",
+        "trkD0041",
+        "trkD0032",
+        "trkD0033"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkD0037；gold rank=1"
+    },
+    {
+      "qid": "t3-017",
+      "type": "T3",
+      "scenario": "meeting",
+      "query": "开会定口径要改 统计规范 的统计口径（改造工单 #17）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkE0045"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0049",
+        "trkE0036",
+        "trkE0044",
+        "trkE0094",
+        "trkE0041"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkE0045；gold rank=None"
+    },
+    {
+      "qid": "t3-018",
+      "type": "T3",
+      "scenario": "ops",
+      "query": "线上排障要改 支付回调 的重试退避（改造工单 #18）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkF0039"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0037",
+        "trkF0027",
+        "trkF0038",
+        "trkF0039",
+        "trkF0043"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkF0039；gold rank=3"
+    },
+    {
+      "qid": "t3-019",
+      "type": "T3",
+      "scenario": "migration",
+      "query": "数据迁移要改 用户档案 的校验方式（改造工单 #19）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkG0056"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0041",
+        "trkG0040",
+        "trkG0049",
+        "trkG0055",
+        "trkG0056"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkG0056；gold rank=4"
+    },
+    {
+      "qid": "t3-020",
+      "type": "T3",
+      "scenario": "approval",
+      "query": "权限审批要改 生产库账号 的令牌轮换（改造工单 #20）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkH0056"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0048",
+        "trkH0056",
+        "trkH0043",
+        "trkH0055",
+        "trkH0093"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkH0056；gold rank=1"
+    },
+    {
+      "qid": "t3-021",
+      "type": "T3",
+      "scenario": "deploy",
+      "query": "部署上线要改 网关服务 的镜像 tag（改造工单 #21）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkA0048"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0081",
+        "trkA0048",
+        "trkA0049",
+        "trkA0050",
+        "trkA0051"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "隐含规矩（implicit=true）trkA0048；gold rank=1"
+    },
+    {
+      "qid": "t3-022",
+      "type": "T3",
+      "scenario": "canary",
+      "query": "灰度发布要改 推荐服务 的灰度比例（改造工单 #22）。文档上只写了主配置、没说别的坑，实际上有什么隐含规矩必须先处理？",
+      "gold": [
+        "trkB0051"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0051",
+        "trkB0092",
+        "trkB0050",
+        "trkB0036",
+        "trkB0043"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "隐含规矩（implicit=true）trkB0051；gold rank=0"
+    },
+    {
+      "qid": "t4-001",
+      "type": "T4",
+      "scenario": "api",
+      "query": "接口对接这次要定 查询接口 的重试次数（评审第 1 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkC0041"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0051",
+        "trkC0041",
+        "trkC0042",
+        "trkC0035",
+        "trkC0078"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkC0042 → superseded_by trkC0041；gold rank=1"
+    },
+    {
+      "qid": "t4-002",
+      "type": "T4",
+      "scenario": "handoff",
+      "query": "同事交接这次要定 监控看板 的连接池上限（评审第 2 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkD0042"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0047",
+        "trkD0055",
+        "trkD0043",
+        "trkD0042",
+        "trkD0062"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "旧结论 trkD0043 → superseded_by trkD0042；gold rank=3"
+    },
+    {
+      "qid": "t4-003",
+      "type": "T4",
+      "scenario": "meeting",
+      "query": "开会定口径这次要定 指标口径 的灰度比例（评审第 3 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkE0051"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0059",
+        "trkE0060",
+        "trkE0052",
+        "trkE0051",
+        "trkE0020"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "旧结论 trkE0052 → superseded_by trkE0051；gold rank=3"
+    },
+    {
+      "qid": "t4-004",
+      "type": "T4",
+      "scenario": "ops",
+      "query": "线上排障这次要定 消息队列 的分批大小（评审第 4 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkF0045"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0046",
+        "trkF0045",
+        "trkF0083",
+        "trkF0076",
+        "trkF0087"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkF0046 → superseded_by trkF0045；gold rank=1"
+    },
+    {
+      "qid": "t4-005",
+      "type": "T4",
+      "scenario": "migration",
+      "query": "数据迁移这次要定 用户档案 的有效期限（评审第 5 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkG0060"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0061",
+        "trkG0067",
+        "trkG0068",
+        "trkG0060",
+        "trkG0016"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "旧结论 trkG0061 → superseded_by trkG0060；gold rank=3"
+    },
+    {
+      "qid": "t4-006",
+      "type": "T4",
+      "scenario": "approval",
+      "query": "权限审批这次要定 生产库账号 的观察窗口（评审第 6 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkH0062"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0071",
+        "trkH0062",
+        "trkH0063",
+        "trkH0069",
+        "trkH0068"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkH0063 → superseded_by trkH0062；gold rank=1"
+    },
+    {
+      "qid": "t4-007",
+      "type": "T4",
+      "scenario": "deploy",
+      "query": "部署上线这次要定 会员服务 的并发上限（评审第 7 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkA0054"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0055",
+        "trkA0054",
+        "trkA0057",
+        "trkA0059",
+        "trkA0058"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkA0055 → superseded_by trkA0054；gold rank=1"
+    },
+    {
+      "qid": "t4-008",
+      "type": "T4",
+      "scenario": "canary",
+      "query": "灰度发布这次要定 风控服务 的超时时间（评审第 8 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkB0059"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0056",
+        "trkB0060",
+        "trkB0059",
+        "trkB0063",
+        "trkB0064"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "旧结论 trkB0060 → superseded_by trkB0059；gold rank=2"
+    },
+    {
+      "qid": "t4-009",
+      "type": "T4",
+      "scenario": "api",
+      "query": "接口对接这次要定 回调接口 的重试次数（评审第 9 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkC0045"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0056",
+        "trkC0052",
+        "trkC0046",
+        "trkC0053",
+        "trkC0078"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "reason": "旧结论 trkC0046 → superseded_by trkC0045；gold rank=None"
+    },
+    {
+      "qid": "t4-010",
+      "type": "T4",
+      "scenario": "handoff",
+      "query": "同事交接这次要定 定时任务 的连接池上限（评审第 10 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkD0050"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0050",
+        "trkD0051",
+        "trkD0049",
+        "trkD0054",
+        "trkD0053"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "旧结论 trkD0051 → superseded_by trkD0050；gold rank=0"
+    },
+    {
+      "qid": "t4-011",
+      "type": "T4",
+      "scenario": "meeting",
+      "query": "开会定口径这次要定 统计规范 的灰度比例（评审第 11 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkE0056"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0055",
+        "trkE0057",
+        "trkE0056",
+        "trkE0025",
+        "trkE0094"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "旧结论 trkE0057 → superseded_by trkE0056；gold rank=2"
+    },
+    {
+      "qid": "t4-012",
+      "type": "T4",
+      "scenario": "ops",
+      "query": "线上排障这次要定 支付回调 的分批大小（评审第 12 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkF0053"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0055",
+        "trkF0054",
+        "trkF0060",
+        "trkF0053",
+        "trkF0059"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "reason": "旧结论 trkF0054 → superseded_by trkF0053；gold rank=3"
+    },
+    {
+      "qid": "t4-013",
+      "type": "T4",
+      "scenario": "migration",
+      "query": "数据迁移这次要定 历史订单表 的有效期限（评审第 13 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkG0062"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0062",
+        "trkG0063",
+        "trkG0089",
+        "trkG0046",
+        "trkG0047"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "旧结论 trkG0063 → superseded_by trkG0062；gold rank=0"
+    },
+    {
+      "qid": "t4-014",
+      "type": "T4",
+      "scenario": "approval",
+      "query": "权限审批这次要定 生产库账号 的观察窗口（评审第 14 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkH0068"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0071",
+        "trkH0062",
+        "trkH0063",
+        "trkH0069",
+        "trkH0068"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "reason": "旧结论 trkH0069 → superseded_by trkH0068；gold rank=4"
+    },
+    {
+      "qid": "t4-015",
+      "type": "T4",
+      "scenario": "deploy",
+      "query": "部署上线这次要定 网关服务 的并发上限（评审第 15 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkA0058"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0057",
+        "trkA0059",
+        "trkA0058",
+        "trkA0055",
+        "trkA0054"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "reason": "旧结论 trkA0059 → superseded_by trkA0058；gold rank=2"
+    },
+    {
+      "qid": "t4-016",
+      "type": "T4",
+      "scenario": "canary",
+      "query": "灰度发布这次要定 搜索服务 的超时时间（评审第 16 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkB0063"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0063",
+        "trkB0064",
+        "trkB0056",
+        "trkB0060",
+        "trkB0059"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "旧结论 trkB0064 → superseded_by trkB0063；gold rank=0"
+    },
+    {
+      "qid": "t4-017",
+      "type": "T4",
+      "scenario": "api",
+      "query": "接口对接这次要定 回调接口 的重试次数（评审第 17 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkC0052"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0056",
+        "trkC0052",
+        "trkC0046",
+        "trkC0053",
+        "trkC0078"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkC0053 → superseded_by trkC0052；gold rank=1"
+    },
+    {
+      "qid": "t4-018",
+      "type": "T4",
+      "scenario": "handoff",
+      "query": "同事交接这次要定 定时任务 的连接池上限（评审第 18 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkD0053"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0049",
+        "trkD0050",
+        "trkD0051",
+        "trkD0054",
+        "trkD0053"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "reason": "旧结论 trkD0054 → superseded_by trkD0053；gold rank=4"
+    },
+    {
+      "qid": "t4-019",
+      "type": "T4",
+      "scenario": "meeting",
+      "query": "开会定口径这次要定 指标口径 的灰度比例（评审第 19 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkE0059"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0059",
+        "trkE0060",
+        "trkE0052",
+        "trkE0051",
+        "trkE0020"
+      ],
+      "hit_at_k": true,
+      "rank": 0,
+      "hit_at_1": true,
+      "reason": "旧结论 trkE0060 → superseded_by trkE0059；gold rank=0"
+    },
+    {
+      "qid": "t4-020",
+      "type": "T4",
+      "scenario": "ops",
+      "query": "线上排障这次要定 支付回调 的分批大小（评审第 20 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkF0059"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0055",
+        "trkF0059",
+        "trkF0054",
+        "trkF0060",
+        "trkF0053"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkF0060 → superseded_by trkF0059；gold rank=1"
+    },
+    {
+      "qid": "t4-021",
+      "type": "T4",
+      "scenario": "migration",
+      "query": "数据迁移这次要定 用户档案 的有效期限（评审第 21 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkG0067"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0061",
+        "trkG0067",
+        "trkG0068",
+        "trkG0060",
+        "trkG0016"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkG0068 → superseded_by trkG0067；gold rank=1"
+    },
+    {
+      "qid": "t4-022",
+      "type": "T4",
+      "scenario": "approval",
+      "query": "权限审批这次要定 发布平台 的观察窗口（评审第 22 项）。以前有过相反的结论，现在按哪条生效？",
+      "gold": [
+        "trkH0074"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0075",
+        "trkH0074",
+        "trkH0081",
+        "trkH0092",
+        "trkH0098"
+      ],
+      "hit_at_k": true,
+      "rank": 1,
+      "hit_at_1": false,
+      "reason": "旧结论 trkH0075 → superseded_by trkH0074；gold rank=1"
+    },
+    {
+      "qid": "t5-001",
+      "type": "T5",
+      "scenario": "deploy",
+      "query": "半年前（2026-02-17，口径修订第 1 轮）在部署上线定的「结算服务 的分批大小」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkA0064"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0062",
+        "trkA0067",
+        "trkA0072",
+        "trkA0064",
+        "trkA0063"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "chain": [
+        "trkA0062",
+        "trkA0063",
+        "trkA0064"
+      ],
+      "reason": "三跳链 trkA0062→trkA0063→trkA0064，gold=链尾 trkA0064；gold rank=3"
+    },
+    {
+      "qid": "t5-002",
+      "type": "T5",
+      "scenario": "canary",
+      "query": "半年前（2026-01-25，口径修订第 2 轮）在灰度发布定的「推荐服务 的有效期限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkB0071"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0069",
+        "trkB0074",
+        "trkB0079",
+        "trkB0076",
+        "trkB0071"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkB0069",
+        "trkB0070",
+        "trkB0071"
+      ],
+      "reason": "三跳链 trkB0069→trkB0070→trkB0071，gold=链尾 trkB0071；gold rank=4"
+    },
+    {
+      "qid": "t5-003",
+      "type": "T5",
+      "scenario": "api",
+      "query": "半年前（2026-01-16，口径修订第 3 轮）在接口对接定的「查询接口 的观察窗口」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkC0059"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0057",
+        "trkC0062",
+        "trkC0067",
+        "trkC0060",
+        "trkC0058"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkC0057",
+        "trkC0058",
+        "trkC0059"
+      ],
+      "reason": "三跳链 trkC0057→trkC0058→trkC0059，gold=链尾 trkC0059；gold rank=None"
+    },
+    {
+      "qid": "t5-004",
+      "type": "T5",
+      "scenario": "handoff",
+      "query": "半年前（2026-02-24，口径修订第 4 轮）在同事交接定的「监控看板 的并发上限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkD0059"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0057",
+        "trkD0062",
+        "trkD0067",
+        "trkD0064",
+        "trkD0063"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkD0057",
+        "trkD0058",
+        "trkD0059"
+      ],
+      "reason": "三跳链 trkD0057→trkD0058→trkD0059，gold=链尾 trkD0059；gold rank=None"
+    },
+    {
+      "qid": "t5-005",
+      "type": "T5",
+      "scenario": "meeting",
+      "query": "半年前（2026-02-16，口径修订第 5 轮）在开会定口径定的「指标口径 的超时时间」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkE0064"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0062",
+        "trkE0072",
+        "trkE0067",
+        "trkE0063",
+        "trkE0064"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkE0062",
+        "trkE0063",
+        "trkE0064"
+      ],
+      "reason": "三跳链 trkE0062→trkE0063→trkE0064，gold=链尾 trkE0064；gold rank=4"
+    },
+    {
+      "qid": "t5-006",
+      "type": "T5",
+      "scenario": "ops",
+      "query": "半年前（2026-02-14，口径修订第 6 轮）在线上排障定的「消息队列 的重试次数」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkF0063"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0061",
+        "trkF0071",
+        "trkF0066",
+        "trkF0073",
+        "trkF0048"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkF0061",
+        "trkF0062",
+        "trkF0063"
+      ],
+      "reason": "三跳链 trkF0061→trkF0062→trkF0063，gold=链尾 trkF0063；gold rank=None"
+    },
+    {
+      "qid": "t5-007",
+      "type": "T5",
+      "scenario": "migration",
+      "query": "半年前（2026-01-18，口径修订第 7 轮）在数据迁移定的「日志索引 的连接池上限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkG0072"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0070",
+        "trkG0075",
+        "trkG0073",
+        "trkG0071",
+        "trkG0072"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkG0070",
+        "trkG0071",
+        "trkG0072"
+      ],
+      "reason": "三跳链 trkG0070→trkG0071→trkG0072，gold=链尾 trkG0072；gold rank=4"
+    },
+    {
+      "qid": "t5-008",
+      "type": "T5",
+      "scenario": "approval",
+      "query": "半年前（2026-01-05，口径修订第 8 轮）在权限审批定的「配置中心 的灰度比例」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkH0078"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0076",
+        "trkH0081",
+        "trkH0079",
+        "trkH0078",
+        "trkH0077"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "chain": [
+        "trkH0076",
+        "trkH0077",
+        "trkH0078"
+      ],
+      "reason": "三跳链 trkH0076→trkH0077→trkH0078，gold=链尾 trkH0078；gold rank=3"
+    },
+    {
+      "qid": "t5-009",
+      "type": "T5",
+      "scenario": "deploy",
+      "query": "半年前（2026-02-20，口径修订第 9 轮）在部署上线定的「网关服务 的分批大小」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkA0069"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0067",
+        "trkA0072",
+        "trkA0062",
+        "trkA0073",
+        "trkA0068"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkA0067",
+        "trkA0068",
+        "trkA0069"
+      ],
+      "reason": "三跳链 trkA0067→trkA0068→trkA0069，gold=链尾 trkA0069；gold rank=None"
+    },
+    {
+      "qid": "t5-010",
+      "type": "T5",
+      "scenario": "canary",
+      "query": "半年前（2026-01-18，口径修订第 10 轮）在灰度发布定的「推荐服务 的有效期限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkB0076"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0074",
+        "trkB0069",
+        "trkB0079",
+        "trkB0071",
+        "trkB0076"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkB0074",
+        "trkB0075",
+        "trkB0076"
+      ],
+      "reason": "三跳链 trkB0074→trkB0075→trkB0076，gold=链尾 trkB0076；gold rank=4"
+    },
+    {
+      "qid": "t5-011",
+      "type": "T5",
+      "scenario": "api",
+      "query": "半年前（2026-01-16，口径修订第 11 轮）在接口对接定的「查询接口 的观察窗口」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkC0064"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0057",
+        "trkC0062",
+        "trkC0067",
+        "trkC0060",
+        "trkC0058"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkC0062",
+        "trkC0063",
+        "trkC0064"
+      ],
+      "reason": "三跳链 trkC0062→trkC0063→trkC0064，gold=链尾 trkC0064；gold rank=None"
+    },
+    {
+      "qid": "t5-012",
+      "type": "T5",
+      "scenario": "handoff",
+      "query": "半年前（2026-01-06，口径修订第 12 轮）在同事交接定的「监控看板 的并发上限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkD0064"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0062",
+        "trkD0057",
+        "trkD0067",
+        "trkD0063",
+        "trkD0059"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkD0062",
+        "trkD0063",
+        "trkD0064"
+      ],
+      "reason": "三跳链 trkD0062→trkD0063→trkD0064，gold=链尾 trkD0064；gold rank=None"
+    },
+    {
+      "qid": "t5-013",
+      "type": "T5",
+      "scenario": "meeting",
+      "query": "半年前（2026-01-08，口径修订第 13 轮）在开会定口径定的「统计规范 的超时时间」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkE0069"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0067",
+        "trkE0062",
+        "trkE0072",
+        "trkE0069",
+        "trkE0068"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "chain": [
+        "trkE0067",
+        "trkE0068",
+        "trkE0069"
+      ],
+      "reason": "三跳链 trkE0067→trkE0068→trkE0069，gold=链尾 trkE0069；gold rank=3"
+    },
+    {
+      "qid": "t5-014",
+      "type": "T5",
+      "scenario": "ops",
+      "query": "半年前（2026-02-15，口径修订第 14 轮）在线上排障定的「支付回调 的重试次数」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkF0068"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0066",
+        "trkF0061",
+        "trkF0071",
+        "trkF0069",
+        "trkF0068"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkF0066",
+        "trkF0067",
+        "trkF0068"
+      ],
+      "reason": "三跳链 trkF0066→trkF0067→trkF0068，gold=链尾 trkF0068；gold rank=4"
+    },
+    {
+      "qid": "t5-015",
+      "type": "T5",
+      "scenario": "migration",
+      "query": "半年前（2026-03-18，口径修订第 15 轮）在数据迁移定的「用户档案 的连接池上限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkG0077"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0075",
+        "trkG0070",
+        "trkG0077",
+        "trkG0076",
+        "trkG0067"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "chain": [
+        "trkG0075",
+        "trkG0076",
+        "trkG0077"
+      ],
+      "reason": "三跳链 trkG0075→trkG0076→trkG0077，gold=链尾 trkG0077；gold rank=2"
+    },
+    {
+      "qid": "t5-016",
+      "type": "T5",
+      "scenario": "approval",
+      "query": "半年前（2026-03-22，口径修订第 16 轮）在权限审批定的「发布平台 的灰度比例」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkH0083"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0081",
+        "trkH0076",
+        "trkH0082",
+        "trkH0083",
+        "trkH0007"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "chain": [
+        "trkH0081",
+        "trkH0082",
+        "trkH0083"
+      ],
+      "reason": "三跳链 trkH0081→trkH0082→trkH0083，gold=链尾 trkH0083；gold rank=3"
+    },
+    {
+      "qid": "t5-017",
+      "type": "T5",
+      "scenario": "deploy",
+      "query": "半年前（2026-01-10，口径修订第 17 轮）在部署上线定的「网关服务 的分批大小」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkA0074"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0072",
+        "trkA0067",
+        "trkA0062",
+        "trkA0075",
+        "trkA0069"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkA0072",
+        "trkA0073",
+        "trkA0074"
+      ],
+      "reason": "三跳链 trkA0072→trkA0073→trkA0074，gold=链尾 trkA0074；gold rank=None"
+    },
+    {
+      "qid": "t5-018",
+      "type": "T5",
+      "scenario": "canary",
+      "query": "半年前（2026-02-02，口径修订第 18 轮）在灰度发布定的「风控服务 的有效期限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkB0081"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0079",
+        "trkB0074",
+        "trkB0069",
+        "trkB0080",
+        "trkB0081"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkB0079",
+        "trkB0080",
+        "trkB0081"
+      ],
+      "reason": "三跳链 trkB0079→trkB0080→trkB0081，gold=链尾 trkB0081；gold rank=4"
+    },
+    {
+      "qid": "t5-019",
+      "type": "T5",
+      "scenario": "api",
+      "query": "半年前（2026-02-25，口径修订第 19 轮）在接口对接定的「查询接口 的观察窗口」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkC0069"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0067",
+        "trkC0057",
+        "trkC0062",
+        "trkC0059",
+        "trkC0060"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkC0067",
+        "trkC0068",
+        "trkC0069"
+      ],
+      "reason": "三跳链 trkC0067→trkC0068→trkC0069，gold=链尾 trkC0069；gold rank=None"
+    },
+    {
+      "qid": "t5-020",
+      "type": "T5",
+      "scenario": "handoff",
+      "query": "半年前（2026-02-26，口径修订第 20 轮）在同事交接定的「定时任务 的并发上限」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkD0069"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0067",
+        "trkD0057",
+        "trkD0062",
+        "trkD0068",
+        "trkD0069"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "chain": [
+        "trkD0067",
+        "trkD0068",
+        "trkD0069"
+      ],
+      "reason": "三跳链 trkD0067→trkD0068→trkD0069，gold=链尾 trkD0069；gold rank=4"
+    },
+    {
+      "qid": "t5-021",
+      "type": "T5",
+      "scenario": "meeting",
+      "query": "半年前（2026-03-06，口径修订第 21 轮）在开会定口径定的「指标口径 的超时时间」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkE0074"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0072",
+        "trkE0062",
+        "trkE0067",
+        "trkE0063",
+        "trkE0064"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkE0072",
+        "trkE0073",
+        "trkE0074"
+      ],
+      "reason": "三跳链 trkE0072→trkE0073→trkE0074，gold=链尾 trkE0074；gold rank=None"
+    },
+    {
+      "qid": "t5-022",
+      "type": "T5",
+      "scenario": "ops",
+      "query": "半年前（2026-01-13，口径修订第 22 轮）在线上排障定的「消息队列 的重试次数」结论，现在还成立吗？当前有效的是哪条？",
+      "gold": [
+        "trkF0073"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0071",
+        "trkF0061",
+        "trkF0066",
+        "trkF0048",
+        "trkF0063"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "chain": [
+        "trkF0071",
+        "trkF0072",
+        "trkF0073"
+      ],
+      "reason": "三跳链 trkF0071→trkF0072→trkF0073，gold=链尾 trkF0073；gold rank=None"
+    },
+    {
+      "qid": "t6-001",
+      "type": "T6",
+      "scenario": "migration",
+      "query": "数据迁移前（联调记录 #1），同事说「用户档案 的分批大小用 5000 行 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkG0080"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0081",
+        "trkG0082",
+        "trkG0014",
+        "trkG0005",
+        "trkG0018"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkG0080', 'trkG0082', 'trkG0081']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-002",
+      "type": "T6",
+      "scenario": "approval",
+      "query": "权限审批前（联调记录 #2），同事说「发布平台 的权限级别用 只读 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkH0087"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0088",
+        "trkH0092",
+        "trkH0054",
+        "trkH0089",
+        "trkH0018"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkH0087', 'trkH0089', 'trkH0088']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-003",
+      "type": "T6",
+      "scenario": "deploy",
+      "query": "部署上线前（联调记录 #3），同事说「会员服务 的镜像 tag用 v2.3.1 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkA0077"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0078",
+        "trkA0079",
+        "trkA0081",
+        "trkA0077",
+        "trkA0017"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 3,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkA0077', 'trkA0079', 'trkA0078']；实测 rank=3，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-004",
+      "type": "T6",
+      "scenario": "canary",
+      "query": "灰度发布前（联调记录 #4），同事说「搜索服务 的对比指标用 P99 延迟 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkB0088"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0089",
+        "trkB0090",
+        "trkB0091",
+        "trkB0088",
+        "trkB0008"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 3,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkB0088', 'trkB0090', 'trkB0089']；实测 rank=3，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-005",
+      "type": "T6",
+      "scenario": "api",
+      "query": "接口对接前（联调记录 #5），同事说「对账接口 的编码用 UTF-8 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkC0073"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0074",
+        "trkC0072",
+        "trkC0075",
+        "trkC0073",
+        "trkC0079"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 3,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkC0073', 'trkC0075', 'trkC0074']；实测 rank=3，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-006",
+      "type": "T6",
+      "scenario": "handoff",
+      "query": "同事交接前（联调记录 #6），同事说「定时任务 的日志目录用 /var/log/app 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkD0073"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0074",
+        "trkD0085",
+        "trkD0093",
+        "trkD0075",
+        "trkD0086"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkD0073', 'trkD0075', 'trkD0074']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-007",
+      "type": "T6",
+      "scenario": "meeting",
+      "query": "开会定口径前（联调记录 #7），同事说「统计规范 的时区口径用 UTC 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkE0080"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0081",
+        "trkE0078",
+        "trkE0093",
+        "trkE0092",
+        "trkE0036"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkE0080', 'trkE0082', 'trkE0081']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-008",
+      "type": "T6",
+      "scenario": "ops",
+      "query": "线上排障前（联调记录 #8），同事说「支付回调 的线程池大小用 32 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkF0079"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0080",
+        "trkF0027",
+        "trkF0081",
+        "trkF0002",
+        "trkF0079"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 4,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkF0079', 'trkF0081', 'trkF0080']；实测 rank=4，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-009",
+      "type": "T6",
+      "scenario": "migration",
+      "query": "数据迁移前（联调记录 #9），同事说「用户档案 的主键策略用 雪花 id 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkG0083"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0084",
+        "trkG0085",
+        "trkG0019",
+        "trkG0083",
+        "trkG0023"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 3,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkG0083', 'trkG0085', 'trkG0084']；实测 rank=3，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-010",
+      "type": "T6",
+      "scenario": "approval",
+      "query": "权限审批前（联调记录 #10），同事说「生产库账号 的有效期用 7 天 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkH0094"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0095",
+        "trkH0093",
+        "trkH0099",
+        "trkH0103",
+        "trkH0097"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkH0094', 'trkH0096', 'trkH0095']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-011",
+      "type": "T6",
+      "scenario": "deploy",
+      "query": "部署上线前（联调记录 #11），同事说「网关服务 的端口用 8080 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkA0082"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0083",
+        "trkA0088",
+        "trkA0085",
+        "trkA0086",
+        "trkA0084"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkA0082', 'trkA0084', 'trkA0083']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-012",
+      "type": "T6",
+      "scenario": "canary",
+      "query": "灰度发布前（联调记录 #12），同事说「推荐服务 的观察窗口用 15 分钟 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkB0093"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0094",
+        "trkB0095",
+        "trkB0097",
+        "trkB0049",
+        "trkB0057"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkB0093', 'trkB0095', 'trkB0094']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-013",
+      "type": "T6",
+      "scenario": "api",
+      "query": "接口对接前（联调记录 #13），同事说「对账接口 的签名方式用 HMAC-SHA256 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkC0080"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0081",
+        "trkC0082",
+        "trkC0080",
+        "trkC0083",
+        "trkC0016"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 2,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkC0080', 'trkC0082', 'trkC0081']；实测 rank=2，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-014",
+      "type": "T6",
+      "scenario": "handoff",
+      "query": "同事交接前（联调记录 #14），同事说「定时任务 的日志目录用 /var/log/app 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkD0084"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0074",
+        "trkD0085",
+        "trkD0093",
+        "trkD0075",
+        "trkD0086"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 1,
+      "reason": "claim 组 ['trkD0084', 'trkD0086', 'trkD0085']；实测 rank=None，转述 rank=1；证据优先=False"
+    },
+    {
+      "qid": "t6-015",
+      "type": "T6",
+      "scenario": "meeting",
+      "query": "开会定口径前（联调记录 #15），同事说「命名规范 的命名规范用 snake_case 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkE0087"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkE0088",
+        "trkE0089",
+        "trkE0003",
+        "trkE0002",
+        "trkE0087"
+      ],
+      "hit_at_k": true,
+      "rank": 4,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 4,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkE0087', 'trkE0089', 'trkE0088']；实测 rank=4，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-016",
+      "type": "T6",
+      "scenario": "ops",
+      "query": "线上排障前（联调记录 #16），同事说「数据库主库 的积压告警线用 1 万条 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkF0084"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkF0085",
+        "trkF0086",
+        "trkF0084",
+        "trkF0087",
+        "trkF0088"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 2,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkF0084', 'trkF0086', 'trkF0085']；实测 rank=2，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-017",
+      "type": "T6",
+      "scenario": "migration",
+      "query": "数据迁移前（联调记录 #17），同事说「用户档案 的校验方式用 行数+校验和 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkG0086"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkG0087",
+        "trkG0088",
+        "trkG0041",
+        "trkG0002",
+        "trkG0011"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkG0086', 'trkG0088', 'trkG0087']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-018",
+      "type": "T6",
+      "scenario": "approval",
+      "query": "权限审批前（联调记录 #18），同事说「配置中心 的审批人用 值班主任 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkH0100"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkH0101",
+        "trkH0086",
+        "trkH0102",
+        "trkH0100",
+        "trkH0090"
+      ],
+      "hit_at_k": true,
+      "rank": 3,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 3,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkH0100', 'trkH0102', 'trkH0101']；实测 rank=3，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-019",
+      "type": "T6",
+      "scenario": "deploy",
+      "query": "部署上线前（联调记录 #19），同事说「网关服务 的端口用 8080 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkA0087"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkA0083",
+        "trkA0088",
+        "trkA0085",
+        "trkA0086",
+        "trkA0084"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 1,
+      "reason": "claim 组 ['trkA0087', 'trkA0089', 'trkA0088']；实测 rank=None，转述 rank=1；证据优先=False"
+    },
+    {
+      "qid": "t6-020",
+      "type": "T6",
+      "scenario": "canary",
+      "query": "灰度发布前（联调记录 #20），同事说「搜索服务 的灰度比例用 10% 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkB0098"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkB0099",
+        "trkB0096",
+        "trkB0092",
+        "trkB0050",
+        "trkB0100"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkB0098', 'trkB0100', 'trkB0099']；实测 rank=None，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-021",
+      "type": "T6",
+      "scenario": "api",
+      "query": "接口对接前（联调记录 #21），同事说「查询接口 的字段名用 order_no 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkC0084"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkC0085",
+        "trkC0086",
+        "trkC0084",
+        "trkC0012",
+        "trkC0008"
+      ],
+      "hit_at_k": true,
+      "rank": 2,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": 2,
+      "hearsay_rank": 0,
+      "reason": "claim 组 ['trkC0084', 'trkC0086', 'trkC0085']；实测 rank=2，转述 rank=0；证据优先=False"
+    },
+    {
+      "qid": "t6-022",
+      "type": "T6",
+      "scenario": "handoff",
+      "query": "同事交接前（联调记录 #22），同事说「定时任务 的日志目录用 /var/log/app 应该没事」，但我们这边实测过。该信哪条、按哪条处理？",
+      "gold": [
+        "trkD0092"
+      ],
+      "n_hits": 5,
+      "top": [
+        "trkD0074",
+        "trkD0085",
+        "trkD0093",
+        "trkD0075",
+        "trkD0086"
+      ],
+      "hit_at_k": false,
+      "rank": null,
+      "hit_at_1": false,
+      "evidence_first": false,
+      "measured_rank": null,
+      "hearsay_rank": 2,
+      "reason": "claim 组 ['trkD0092', 'trkD0094', 'trkD0093']；实测 rank=None，转述 rank=2；证据优先=False"
+    }
+  ]
+}

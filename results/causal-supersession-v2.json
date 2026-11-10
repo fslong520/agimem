@@ -1,0 +1,398 @@
+{
+ "schema": "agimem-causal-supersession-v2/1",
+ "arm_label": "v2 真写取代边 20 题（新树 tree_v2.json，隔离库 port 16350）",
+ "warning": "全合成树；判分走 score.py marked 分支（召回含当前结论 或 旧结论带 superseded_by → current）；语料合成，外推需另证",
+ "store": {
+  "data_dir": "/tmp/agimem-supersede-v2/sup",
+  "port": 16350,
+  "ablate": "hot",
+  "retrieval": "m3"
+ },
+ "write_side": {
+  "command": "rsrs remember <新结论> --importance important --supersedes <旧UUID> --force",
+  "n_pairs": 20,
+  "n_written_ok": 20,
+  "n_written_fail": 0,
+  "constraint_probe_trivial": {
+   "rc": 1,
+   "out": "{\"command\":\"cli\",\"status\":\"fail\",\"summary\":{\"reason\":\"runtime_error\"},\"items\":[],\"actions\":[],\"errors\":[\"associations require important memory\"],\"details\":{\"error_type\":\"runtime\"},\"related\":[]}"
+  },
+  "verify_samples": [
+   {
+    "old": "sntH0001",
+    "superseded_by_present": true,
+    "superseded_by_sid": "sntH0033",
+    "top_ids": [
+     "sntH0001",
+     "sntH0015",
+     "sntD0009"
+    ]
+   },
+   {
+    "old": "sntD0002",
+    "superseded_by_present": true,
+    "superseded_by_sid": "sntD0019",
+    "top_ids": [
+     "sntD0002",
+     "sntG0005",
+     "sntD0001"
+    ]
+   },
+   {
+    "old": "sntI0001",
+    "superseded_by_present": true,
+    "superseded_by_sid": "sntI0033",
+    "top_ids": [
+     "sntI0001",
+     "sntI0031",
+     "sntA0024"
+    ]
+   }
+  ],
+  "index_after": {
+   "state": "ready",
+   "local_total": 332,
+   "worker_active": true,
+   "error": null,
+   "embedding_model": "m3",
+   "waited_s": 1.9
+  }
+ },
+ "read_side": {
+  "n_supersession_questions": 20,
+  "status_current_stale_missing": [
+   20,
+   0,
+   0
+  ],
+  "supersession_acc": 1.0,
+  "supersession_acc_ci": {
+   "point": 1.0,
+   "lo": 0.8388748419471806,
+   "hi": 1.0,
+   "n": 20,
+   "k": 20,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "per_question": [
+   {
+    "qid": "q177",
+    "status": "current",
+    "gold": [
+     "sntH0033"
+    ],
+    "top": [
+     "sntH0001",
+     "sntH0015",
+     "sntD0010",
+     "sntH0003",
+     "sntD0009"
+    ]
+   },
+   {
+    "qid": "q178",
+    "status": "current",
+    "gold": [
+     "sntD0019"
+    ],
+    "top": [
+     "sntD0002",
+     "sntD0004",
+     "sntG0005",
+     "sntD0021",
+     "sntD0001"
+    ]
+   },
+   {
+    "qid": "q179",
+    "status": "current",
+    "gold": [
+     "sntI0033"
+    ],
+    "top": [
+     "sntI0001",
+     "sntI0031",
+     "sntI0002",
+     "sntI0024",
+     "sntI0026"
+    ]
+   },
+   {
+    "qid": "q180",
+    "status": "current",
+    "gold": [
+     "sntF0033"
+    ],
+    "top": [
+     "sntF0001",
+     "sntF0022",
+     "sntF0026",
+     "sntB0015",
+     "sntB0018"
+    ]
+   },
+   {
+    "qid": "q181",
+    "status": "current",
+    "gold": [
+     "sntD0033"
+    ],
+    "top": [
+     "sntD0001",
+     "sntD0004",
+     "sntD0002",
+     "sntG0005",
+     "sntD0003"
+    ]
+   },
+   {
+    "qid": "q182",
+    "status": "current",
+    "gold": [
+     "sntA0034"
+    ],
+    "top": [
+     "sntA0001",
+     "sntA0009",
+     "sntA0003",
+     "sntB0018",
+     "sntI0003"
+    ]
+   },
+   {
+    "qid": "q183",
+    "status": "current",
+    "gold": [
+     "sntF0022"
+    ],
+    "top": [
+     "sntF0002",
+     "sntF0030",
+     "sntF0031",
+     "sntF0014",
+     "sntJ0014"
+    ]
+   },
+   {
+    "qid": "q184",
+    "status": "current",
+    "gold": [
+     "sntI0015"
+    ],
+    "top": [
+     "sntI0002",
+     "sntI0024",
+     "sntI0026",
+     "sntI0004",
+     "sntA0033"
+    ]
+   },
+   {
+    "qid": "q185",
+    "status": "current",
+    "gold": [
+     "sntC0019"
+    ],
+    "top": [
+     "sntC0002",
+     "sntC0033",
+     "sntC0001",
+     "sntC0003",
+     "sntB0001"
+    ]
+   },
+   {
+    "qid": "q186",
+    "status": "current",
+    "gold": [
+     "sntJ0018"
+    ],
+    "top": [
+     "sntJ0002",
+     "sntJ0032",
+     "sntJ0003",
+     "sntJ0017",
+     "sntE0017"
+    ]
+   },
+   {
+    "qid": "q187",
+    "status": "current",
+    "gold": [
+     "sntE0021"
+    ],
+    "top": [
+     "sntE0002",
+     "sntE0001",
+     "sntE0024",
+     "sntJ0003",
+     "sntI0003"
+    ]
+   },
+   {
+    "qid": "q188",
+    "status": "current",
+    "gold": [
+     "sntE0033"
+    ],
+    "top": [
+     "sntE0001",
+     "sntE0002",
+     "sntC0003",
+     "sntJ0003",
+     "sntE0003"
+    ]
+   },
+   {
+    "qid": "q189",
+    "status": "current",
+    "gold": [
+     "sntJ0033"
+    ],
+    "top": [
+     "sntJ0001",
+     "sntJ0030",
+     "sntJ0003",
+     "sntJ0032",
+     "sntI0021"
+    ]
+   },
+   {
+    "qid": "q190",
+    "status": "current",
+    "gold": [
+     "sntG0022"
+    ],
+    "top": [
+     "sntG0002",
+     "sntG0032",
+     "sntG0003",
+     "sntG0001",
+     "sntG0004"
+    ]
+   },
+   {
+    "qid": "q191",
+    "status": "current",
+    "gold": [
+     "sntC0034"
+    ],
+    "top": [
+     "sntC0001",
+     "sntC0002",
+     "sntC0032",
+     "sntC0003",
+     "sntC0029"
+    ]
+   },
+   {
+    "qid": "q192",
+    "status": "current",
+    "gold": [
+     "sntH0015"
+    ],
+    "top": [
+     "sntH0002",
+     "sntH0024",
+     "sntC0003",
+     "sntC0025",
+     "sntH0003"
+    ]
+   },
+   {
+    "qid": "q193",
+    "status": "current",
+    "gold": [
+     "sntA0033"
+    ],
+    "top": [
+     "sntA0002",
+     "sntA0016",
+     "sntC0005",
+     "sntA0015",
+     "sntI0003"
+    ]
+   },
+   {
+    "qid": "q194",
+    "status": "current",
+    "gold": [
+     "sntG0033"
+    ],
+    "top": [
+     "sntG0001",
+     "sntC0005",
+     "sntC0022",
+     "sntC0007",
+     "sntA0026"
+    ]
+   },
+   {
+    "qid": "q195",
+    "status": "current",
+    "gold": [
+     "sntB0018"
+    ],
+    "top": [
+     "sntB0002",
+     "sntB0030",
+     "sntB0031",
+     "sntB0001",
+     "sntI0003"
+    ]
+   },
+   {
+    "qid": "q196",
+    "status": "current",
+    "gold": [
+     "sntB0033"
+    ],
+    "top": [
+     "sntB0001",
+     "sntB0031",
+     "sntB0030",
+     "sntB0002",
+     "sntC0003"
+    ]
+   }
+  ]
+ },
+ "compare_t22": {
+  "t22_10": {
+   "acc": 1.0,
+   "ci": {
+    "point": 1.0,
+    "lo": 0.7224672001371107,
+    "hi": 0.9999999999999999,
+    "n": 10,
+    "k": 10,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "n": 10,
+   "tree": "data/tree.json (10 取代对)"
+  },
+  "v2_20": {
+   "acc": 1.0,
+   "ci": {
+    "point": 1.0,
+    "lo": 0.8388748419471806,
+    "hi": 1.0,
+    "n": 20,
+    "k": 20,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "n": 20,
+   "tree": "data/tree_v2.json (20 取代对)"
+  },
+  "note": "不同 n，不并表，只并列；两者均 1.000，CI 下界随 n 上升而收紧（0.722→0.839）",
+  "verdict": "T22 取代感知在扩集（10→20 取代对）后稳定：20/20 current = 1.000 [0.839, 1.000]"
+ },
+ "provenance": {
+  "build": "results/causal-supersession-v2-build.json",
+  "predictions": "results/causal-supersession-v2-predictions.jsonl",
+  "score_tool": "score.py marked 分支"
+ }
+}

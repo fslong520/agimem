@@ -1,0 +1,80 @@
+{
+  "cli": "rsrs 1.0.19",
+  "embedder": "BGE-M3 1024 dims CPU",
+  "retrieval": "bge (RSRS_RETRIEVAL env, isolated only)",
+  "isolation": {
+    "data_dir": "/tmp/agimem-i18n/stores/<name>",
+    "rpc_ports": {
+      "d1": 17101,
+      "d2_zh": 17102,
+      "d2_en": 17103,
+      "d2_ja": 17104,
+      "d2_es": 17105,
+      "d3": 17106
+    }
+  },
+  "stores": {
+    "d1": {
+      "entries": 24,
+      "actions": {
+        "created": 24
+      },
+      "query_n": 96,
+      "empty": 0,
+      "activated_dims": 1024,
+      "seconds": 173.6
+    },
+    "d2_zh": {
+      "entries": 24,
+      "actions": {
+        "created": 24
+      },
+      "query_n": 96,
+      "empty": 0,
+      "activated_dims": 1024,
+      "seconds": 190.9
+    },
+    "d2_ja": {
+      "entries": 24,
+      "actions": {
+        "created": 24
+      },
+      "query_n": 96,
+      "empty": 0,
+      "activated_dims": 1024,
+      "seconds": 190.9
+    },
+    "d2_en": {
+      "entries": 24,
+      "actions": {
+        "created": 24
+      },
+      "query_n": 96,
+      "empty": 1,
+      "activated_dims": 1024,
+      "seconds": 180.3
+    },
+    "d2_es": {
+      "entries": 24,
+      "actions": {
+        "created": 24
+      },
+      "query_n": 96,
+      "empty": 1,
+      "activated_dims": 1024,
+      "seconds": 128.2
+    },
+    "d3": {
+      "entries": 96,
+      "actions": {
+        "created": 96
+      },
+      "query_n": 96,
+      "empty": 0,
+      "activated_dims": 1024,
+      "seconds": 321.1
+    }
+  },
+  "predictions": 576,
+  "note": "d2_en/ d2_es 的首轮在 status=skip 被判为错误后重跑；d2_es 第二轮为 --query-only（复用已有 24 条）"
+}

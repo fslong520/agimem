@@ -1,0 +1,170 @@
+{
+  "n_questions": 26,
+  "limit": 5,
+  "n_hits": 130,
+  "n_empty_questions": 0,
+  "n_id_prefix_match_tree": 0,
+  "n_details_with_superseded_by": 0,
+  "score_min": 2.910566568374634,
+  "score_max": 4.479183197021484,
+  "per_question": [
+    {
+      "qid": "q01",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.479183197021484
+    },
+    {
+      "qid": "q02",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.894394636154175
+    },
+    {
+      "qid": "q03",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.3240647315979
+    },
+    {
+      "qid": "q04",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 3.811547040939331
+    },
+    {
+      "qid": "q05",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.036072254180908
+    },
+    {
+      "qid": "q06",
+      "type": "chain_ancestor",
+      "n_hits": 5,
+      "score_max": 4.08528995513916
+    },
+    {
+      "qid": "q07",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.180538177490234
+    },
+    {
+      "qid": "q08",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.935760259628296
+    },
+    {
+      "qid": "q09",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.231071472167969
+    },
+    {
+      "qid": "q10",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.680022954940796
+    },
+    {
+      "qid": "q11",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 4.300095081329346
+    },
+    {
+      "qid": "q12",
+      "type": "chain_descendant",
+      "n_hits": 5,
+      "score_max": 3.771570205688477
+    },
+    {
+      "qid": "q13",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.800032138824463
+    },
+    {
+      "qid": "q14",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.849926710128784
+    },
+    {
+      "qid": "q15",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.9544332027435303
+    },
+    {
+      "qid": "q16",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.98328161239624
+    },
+    {
+      "qid": "q17",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.9459497928619385
+    },
+    {
+      "qid": "q18",
+      "type": "intervention",
+      "n_hits": 5,
+      "score_max": 3.967207908630371
+    },
+    {
+      "qid": "q19",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.209814071655273
+    },
+    {
+      "qid": "q20",
+      "type": "supersession",
+      "n_hits": 5,
+      "score_max": 4.096714496612549
+    },
+    {
+      "qid": "q21",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.664318799972534
+    },
+    {
+      "qid": "q22",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.772622346878052
+    },
+    {
+      "qid": "q23",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.840503454208374
+    },
+    {
+      "qid": "q24",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 4.333159446716309
+    },
+    {
+      "qid": "q25",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.879338502883911
+    },
+    {
+      "qid": "q26",
+      "type": "negative",
+      "n_hits": 5,
+      "score_max": 3.4929749965667725
+    }
+  ],
+  "redaction": "real ids replaced by e+7digits before write; titles dropped",
+  "command": "rsrs --client-only recall <query> --json --titles --limit 5"
+}

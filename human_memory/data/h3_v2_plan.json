@@ -1,0 +1,2478 @@
+{
+  "schema": "agimem-h3-v2-plan/1",
+  "seed": 20261109,
+  "n_per_arm": 20,
+  "old_created_at": "2025-03-01T09:00:00Z",
+  "new_created_at": "now",
+  "design": {
+    "byte_identical_body": true,
+    "neutral_titles": "标题只用 -a/-b/-k1..k3/-z 中性码，不含 旧/新/版本/废弃/纠正 等标签词",
+    "counterbalanced": "a/b 与 旧/新 的对应按主题序号反平衡（奇数 a=旧，偶数 a=新）",
+    "separate_stores": [
+      "recency",
+      "correction",
+      "repeat"
+    ],
+    "import_dedupe_workaround": "import 会吞正文相同条目 → 旧条目走 import（显式 2025-03-01）＋新条目走 remember --force（created_at=now），从而正文逐字节相同且时间有差"
+  },
+  "arms": {
+    "recency": {
+      "entries": [
+        {
+          "title": "HM-C2-01-a",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C2-01-b",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C2-02-b",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C2-02-a",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C2-03-a",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C2-03-b",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C2-04-b",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C2-04-a",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C2-05-a",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C2-05-b",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C2-06-b",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C2-06-a",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C2-07-a",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C2-07-b",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C2-08-b",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C2-08-a",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C2-09-a",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C2-09-b",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C2-10-b",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C2-10-a",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C2-11-a",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C2-11-b",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C2-12-b",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C2-12-a",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C2-13-a",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C2-13-b",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C2-14-b",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C2-14-a",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C2-15-a",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C2-15-b",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C2-16-b",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C2-16-a",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C2-17-a",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C2-17-b",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C2-18-b",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C2-18-a",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C2-19-a",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C2-19-b",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C2-20-b",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "old",
+          "topic": "异地副本同步"
+        },
+        {
+          "title": "HM-C2-20-a",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "new",
+          "topic": "异地副本同步"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "c2-12",
+          "arm": "recency",
+          "topic": "缓存预热范围",
+          "query": "「缓存预热范围」现在按哪条执行？",
+          "pair": [
+            "HM-C2-12-b",
+            "HM-C2-12-a"
+          ],
+          "gold_title": "HM-C2-12-a",
+          "other_title": "HM-C2-12-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-12-b",
+            "b": "HM-C2-12-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-18",
+          "arm": "recency",
+          "topic": "监控采集间隔",
+          "query": "「监控采集间隔」现在按哪条执行？",
+          "pair": [
+            "HM-C2-18-b",
+            "HM-C2-18-a"
+          ],
+          "gold_title": "HM-C2-18-a",
+          "other_title": "HM-C2-18-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-18-b",
+            "b": "HM-C2-18-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-09",
+          "arm": "recency",
+          "topic": "日志留存级别",
+          "query": "「日志留存级别」现在按哪条执行？",
+          "pair": [
+            "HM-C2-09-a",
+            "HM-C2-09-b"
+          ],
+          "gold_title": "HM-C2-09-b",
+          "other_title": "HM-C2-09-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-09-a",
+            "b": "HM-C2-09-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-14",
+          "arm": "recency",
+          "topic": "密钥轮换周期",
+          "query": "「密钥轮换周期」现在按哪条执行？",
+          "pair": [
+            "HM-C2-14-b",
+            "HM-C2-14-a"
+          ],
+          "gold_title": "HM-C2-14-a",
+          "other_title": "HM-C2-14-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-14-b",
+            "b": "HM-C2-14-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-15",
+          "arm": "recency",
+          "topic": "压测基线并发",
+          "query": "「压测基线并发」现在按哪条执行？",
+          "pair": [
+            "HM-C2-15-a",
+            "HM-C2-15-b"
+          ],
+          "gold_title": "HM-C2-15-b",
+          "other_title": "HM-C2-15-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-15-a",
+            "b": "HM-C2-15-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-13",
+          "arm": "recency",
+          "topic": "数据库连接池",
+          "query": "「数据库连接池」现在按哪条执行？",
+          "pair": [
+            "HM-C2-13-a",
+            "HM-C2-13-b"
+          ],
+          "gold_title": "HM-C2-13-b",
+          "other_title": "HM-C2-13-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-13-a",
+            "b": "HM-C2-13-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-17",
+          "arm": "recency",
+          "topic": "月度演练内容",
+          "query": "「月度演练内容」现在按哪条执行？",
+          "pair": [
+            "HM-C2-17-a",
+            "HM-C2-17-b"
+          ],
+          "gold_title": "HM-C2-17-b",
+          "other_title": "HM-C2-17-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-17-a",
+            "b": "HM-C2-17-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-11",
+          "arm": "recency",
+          "topic": "熔断重试次数",
+          "query": "「熔断重试次数」现在按哪条执行？",
+          "pair": [
+            "HM-C2-11-a",
+            "HM-C2-11-b"
+          ],
+          "gold_title": "HM-C2-11-b",
+          "other_title": "HM-C2-11-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-11-a",
+            "b": "HM-C2-11-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-04",
+          "arm": "recency",
+          "topic": "灰度比例",
+          "query": "「灰度比例」现在按哪条执行？",
+          "pair": [
+            "HM-C2-04-b",
+            "HM-C2-04-a"
+          ],
+          "gold_title": "HM-C2-04-a",
+          "other_title": "HM-C2-04-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-04-b",
+            "b": "HM-C2-04-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-19",
+          "arm": "recency",
+          "topic": "变更窗口长度",
+          "query": "「变更窗口长度」现在按哪条执行？",
+          "pair": [
+            "HM-C2-19-a",
+            "HM-C2-19-b"
+          ],
+          "gold_title": "HM-C2-19-b",
+          "other_title": "HM-C2-19-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-19-a",
+            "b": "HM-C2-19-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-08",
+          "arm": "recency",
+          "topic": "发布审批人",
+          "query": "「发布审批人」现在按哪条执行？",
+          "pair": [
+            "HM-C2-08-b",
+            "HM-C2-08-a"
+          ],
+          "gold_title": "HM-C2-08-a",
+          "other_title": "HM-C2-08-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-08-b",
+            "b": "HM-C2-08-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-01",
+          "arm": "recency",
+          "topic": "夜间发布窗口",
+          "query": "「夜间发布窗口」现在按哪条执行？",
+          "pair": [
+            "HM-C2-01-a",
+            "HM-C2-01-b"
+          ],
+          "gold_title": "HM-C2-01-b",
+          "other_title": "HM-C2-01-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-01-a",
+            "b": "HM-C2-01-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-03",
+          "arm": "recency",
+          "topic": "备份保留期",
+          "query": "「备份保留期」现在按哪条执行？",
+          "pair": [
+            "HM-C2-03-a",
+            "HM-C2-03-b"
+          ],
+          "gold_title": "HM-C2-03-b",
+          "other_title": "HM-C2-03-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-03-a",
+            "b": "HM-C2-03-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-20",
+          "arm": "recency",
+          "topic": "异地副本同步",
+          "query": "「异地副本同步」现在按哪条执行？",
+          "pair": [
+            "HM-C2-20-b",
+            "HM-C2-20-a"
+          ],
+          "gold_title": "HM-C2-20-a",
+          "other_title": "HM-C2-20-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-20-b",
+            "b": "HM-C2-20-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-07",
+          "arm": "recency",
+          "topic": "慢查询阈值",
+          "query": "「慢查询阈值」现在按哪条执行？",
+          "pair": [
+            "HM-C2-07-a",
+            "HM-C2-07-b"
+          ],
+          "gold_title": "HM-C2-07-b",
+          "other_title": "HM-C2-07-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-07-a",
+            "b": "HM-C2-07-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-05",
+          "arm": "recency",
+          "topic": "值班交接方式",
+          "query": "「值班交接方式」现在按哪条执行？",
+          "pair": [
+            "HM-C2-05-a",
+            "HM-C2-05-b"
+          ],
+          "gold_title": "HM-C2-05-b",
+          "other_title": "HM-C2-05-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-05-a",
+            "b": "HM-C2-05-b"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-10",
+          "arm": "recency",
+          "topic": "容量预警水位",
+          "query": "「容量预警水位」现在按哪条执行？",
+          "pair": [
+            "HM-C2-10-b",
+            "HM-C2-10-a"
+          ],
+          "gold_title": "HM-C2-10-a",
+          "other_title": "HM-C2-10-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-10-b",
+            "b": "HM-C2-10-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-16",
+          "arm": "recency",
+          "topic": "故障分级标准",
+          "query": "「故障分级标准」现在按哪条执行？",
+          "pair": [
+            "HM-C2-16-b",
+            "HM-C2-16-a"
+          ],
+          "gold_title": "HM-C2-16-a",
+          "other_title": "HM-C2-16-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-16-b",
+            "b": "HM-C2-16-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-02",
+          "arm": "recency",
+          "topic": "告警收敛阈值",
+          "query": "「告警收敛阈值」现在按哪条执行？",
+          "pair": [
+            "HM-C2-02-b",
+            "HM-C2-02-a"
+          ],
+          "gold_title": "HM-C2-02-a",
+          "other_title": "HM-C2-02-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-02-b",
+            "b": "HM-C2-02-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        },
+        {
+          "qid": "c2-06",
+          "arm": "recency",
+          "topic": "索引重建时间",
+          "query": "「索引重建时间」现在按哪条执行？",
+          "pair": [
+            "HM-C2-06-b",
+            "HM-C2-06-a"
+          ],
+          "gold_title": "HM-C2-06-a",
+          "other_title": "HM-C2-06-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C2-06-b",
+            "b": "HM-C2-06-a"
+          },
+          "note": "同主题成对；正文逐字节相同；gold=后写条目（created_at 更晚）"
+        }
+      ]
+    },
+    "correction": {
+      "entries": [
+        {
+          "title": "HM-C3-01-a",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C3-01-b",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C3-02-b",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C3-02-a",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C3-03-a",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C3-03-b",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C3-04-b",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C3-04-a",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C3-05-a",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C3-05-b",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C3-06-b",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C3-06-a",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C3-07-a",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C3-07-b",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C3-08-b",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C3-08-a",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C3-09-a",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C3-09-b",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C3-10-b",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C3-10-a",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C3-11-a",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C3-11-b",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C3-12-b",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C3-12-a",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C3-13-a",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C3-13-b",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C3-14-b",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C3-14-a",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C3-15-a",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C3-15-b",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C3-16-b",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C3-16-a",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C3-17-a",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C3-17-b",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C3-18-b",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C3-18-a",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C3-19-a",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C3-19-b",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C3-20-b",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "2025-03-01T09:00:00Z",
+          "write_via": "import",
+          "role": "before",
+          "topic": "异地副本同步"
+        },
+        {
+          "title": "HM-C3-20-a",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "after",
+          "topic": "异地副本同步"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "c3-01",
+          "arm": "correction",
+          "topic": "夜间发布窗口",
+          "query": "「夜间发布窗口」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-01-a",
+            "HM-C3-01-b"
+          ],
+          "gold_title": "HM-C3-01-b",
+          "other_title": "HM-C3-01-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-01-a",
+            "b": "HM-C3-01-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-02",
+          "arm": "correction",
+          "topic": "告警收敛阈值",
+          "query": "「告警收敛阈值」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-02-b",
+            "HM-C3-02-a"
+          ],
+          "gold_title": "HM-C3-02-a",
+          "other_title": "HM-C3-02-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-02-b",
+            "b": "HM-C3-02-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-03",
+          "arm": "correction",
+          "topic": "备份保留期",
+          "query": "「备份保留期」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-03-a",
+            "HM-C3-03-b"
+          ],
+          "gold_title": "HM-C3-03-b",
+          "other_title": "HM-C3-03-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-03-a",
+            "b": "HM-C3-03-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-04",
+          "arm": "correction",
+          "topic": "灰度比例",
+          "query": "「灰度比例」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-04-b",
+            "HM-C3-04-a"
+          ],
+          "gold_title": "HM-C3-04-a",
+          "other_title": "HM-C3-04-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-04-b",
+            "b": "HM-C3-04-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-05",
+          "arm": "correction",
+          "topic": "值班交接方式",
+          "query": "「值班交接方式」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-05-a",
+            "HM-C3-05-b"
+          ],
+          "gold_title": "HM-C3-05-b",
+          "other_title": "HM-C3-05-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-05-a",
+            "b": "HM-C3-05-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-06",
+          "arm": "correction",
+          "topic": "索引重建时间",
+          "query": "「索引重建时间」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-06-b",
+            "HM-C3-06-a"
+          ],
+          "gold_title": "HM-C3-06-a",
+          "other_title": "HM-C3-06-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-06-b",
+            "b": "HM-C3-06-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-07",
+          "arm": "correction",
+          "topic": "慢查询阈值",
+          "query": "「慢查询阈值」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-07-a",
+            "HM-C3-07-b"
+          ],
+          "gold_title": "HM-C3-07-b",
+          "other_title": "HM-C3-07-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-07-a",
+            "b": "HM-C3-07-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-08",
+          "arm": "correction",
+          "topic": "发布审批人",
+          "query": "「发布审批人」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-08-b",
+            "HM-C3-08-a"
+          ],
+          "gold_title": "HM-C3-08-a",
+          "other_title": "HM-C3-08-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-08-b",
+            "b": "HM-C3-08-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-09",
+          "arm": "correction",
+          "topic": "日志留存级别",
+          "query": "「日志留存级别」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-09-a",
+            "HM-C3-09-b"
+          ],
+          "gold_title": "HM-C3-09-b",
+          "other_title": "HM-C3-09-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-09-a",
+            "b": "HM-C3-09-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-10",
+          "arm": "correction",
+          "topic": "容量预警水位",
+          "query": "「容量预警水位」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-10-b",
+            "HM-C3-10-a"
+          ],
+          "gold_title": "HM-C3-10-a",
+          "other_title": "HM-C3-10-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-10-b",
+            "b": "HM-C3-10-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-11",
+          "arm": "correction",
+          "topic": "熔断重试次数",
+          "query": "「熔断重试次数」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-11-a",
+            "HM-C3-11-b"
+          ],
+          "gold_title": "HM-C3-11-b",
+          "other_title": "HM-C3-11-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-11-a",
+            "b": "HM-C3-11-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-12",
+          "arm": "correction",
+          "topic": "缓存预热范围",
+          "query": "「缓存预热范围」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-12-b",
+            "HM-C3-12-a"
+          ],
+          "gold_title": "HM-C3-12-a",
+          "other_title": "HM-C3-12-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-12-b",
+            "b": "HM-C3-12-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-13",
+          "arm": "correction",
+          "topic": "数据库连接池",
+          "query": "「数据库连接池」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-13-a",
+            "HM-C3-13-b"
+          ],
+          "gold_title": "HM-C3-13-b",
+          "other_title": "HM-C3-13-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-13-a",
+            "b": "HM-C3-13-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-14",
+          "arm": "correction",
+          "topic": "密钥轮换周期",
+          "query": "「密钥轮换周期」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-14-b",
+            "HM-C3-14-a"
+          ],
+          "gold_title": "HM-C3-14-a",
+          "other_title": "HM-C3-14-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-14-b",
+            "b": "HM-C3-14-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-15",
+          "arm": "correction",
+          "topic": "压测基线并发",
+          "query": "「压测基线并发」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-15-a",
+            "HM-C3-15-b"
+          ],
+          "gold_title": "HM-C3-15-b",
+          "other_title": "HM-C3-15-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-15-a",
+            "b": "HM-C3-15-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-16",
+          "arm": "correction",
+          "topic": "故障分级标准",
+          "query": "「故障分级标准」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-16-b",
+            "HM-C3-16-a"
+          ],
+          "gold_title": "HM-C3-16-a",
+          "other_title": "HM-C3-16-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-16-b",
+            "b": "HM-C3-16-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-17",
+          "arm": "correction",
+          "topic": "月度演练内容",
+          "query": "「月度演练内容」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-17-a",
+            "HM-C3-17-b"
+          ],
+          "gold_title": "HM-C3-17-b",
+          "other_title": "HM-C3-17-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-17-a",
+            "b": "HM-C3-17-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-18",
+          "arm": "correction",
+          "topic": "监控采集间隔",
+          "query": "「监控采集间隔」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-18-b",
+            "HM-C3-18-a"
+          ],
+          "gold_title": "HM-C3-18-a",
+          "other_title": "HM-C3-18-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-18-b",
+            "b": "HM-C3-18-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-19",
+          "arm": "correction",
+          "topic": "变更窗口长度",
+          "query": "「变更窗口长度」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-19-a",
+            "HM-C3-19-b"
+          ],
+          "gold_title": "HM-C3-19-b",
+          "other_title": "HM-C3-19-a",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-19-a",
+            "b": "HM-C3-19-b"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        },
+        {
+          "qid": "c3-20",
+          "arm": "correction",
+          "topic": "异地副本同步",
+          "query": "「异地副本同步」现在应当按哪条结论执行？",
+          "pair": [
+            "HM-C3-20-b",
+            "HM-C3-20-a"
+          ],
+          "gold_title": "HM-C3-20-a",
+          "other_title": "HM-C3-20-b",
+          "gold_expr": {
+            "kind": "later_written",
+            "a": "HM-C3-20-b",
+            "b": "HM-C3-20-a"
+          },
+          "note": "同主题成对；正文逐字节相同；独立库；gold=后写（纠正后）条目"
+        }
+      ]
+    },
+    "repeat": {
+      "entries": [
+        {
+          "title": "HM-C1-01-k1",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C1-01-k2",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C1-01-k3",
+          "content": "夜间发布窗口定在每周三 23:30 执行，发布前十分钟冻结变更单，窗口结束后十五分钟解除冻结。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C1-01-z",
+          "content": "夜间发布窗口的变更单模板里，回滚步骤要写清楚谁执行、谁复核。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "夜间发布窗口"
+        },
+        {
+          "title": "HM-C1-02-k1",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C1-02-k2",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C1-02-k3",
+          "content": "告警收敛阈值按五分钟内同类事件只报一次执行，重复事件合并进首条。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C1-02-z",
+          "content": "告警收敛之后，值班仍要在早会上过一遍被合并的告警标题。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "告警收敛阈值"
+        },
+        {
+          "title": "HM-C1-03-k1",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C1-03-k2",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C1-03-k3",
+          "content": "备份保留期按三十天执行，到期自动清理并留一份月度快照。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C1-03-z",
+          "content": "备份恢复演练每季度做一次，演练记录进当月复盘。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "备份保留期"
+        },
+        {
+          "title": "HM-C1-04-k1",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C1-04-k2",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C1-04-k3",
+          "content": "灰度发布比例按百分之五起步、每十分钟翻倍执行，直到全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C1-04-z",
+          "content": "灰度期间新旧两版要同时看错误率和延迟两条曲线。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "灰度比例"
+        },
+        {
+          "title": "HM-C1-05-k1",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C1-05-k2",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C1-05-k3",
+          "content": "值班交接按每日九点半站会对齐未决事项执行，交接单当日归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C1-05-z",
+          "content": "交接站会由前一班主持，后一班记录，散会前对齐未决项负责人。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "值班交接方式"
+        },
+        {
+          "title": "HM-C1-06-k1",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C1-06-k2",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C1-06-k3",
+          "content": "索引重建安排在执行日周日凌晨两点，避开报表作业。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C1-06-z",
+          "content": "索引重建前先核对分片数量与副本数，避免重建后写入倾斜。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "索引重建时间"
+        },
+        {
+          "title": "HM-C1-07-k1",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C1-07-k2",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C1-07-k3",
+          "content": "慢查询阈值按八百毫秒执行，超过记入慢日志并打标。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C1-07-z",
+          "content": "慢查询日志按天切分，排查时先看当天再回看上周同日。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "慢查询阈值"
+        },
+        {
+          "title": "HM-C1-08-k1",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C1-08-k2",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C1-08-k3",
+          "content": "发布审批人固定为当周值班负责人加一名架构组成员，双签后放行。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C1-08-z",
+          "content": "审批人休假时由同组另一名架构组成员代签，代签要注明原因。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "发布审批人"
+        },
+        {
+          "title": "HM-C1-09-k1",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C1-09-k2",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C1-09-k3",
+          "content": "日志留存按核心链路九十天、其余十四天执行，过期自动归档。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C1-09-z",
+          "content": "日志级别调整属于变更，需走变更单并通知下游消费方。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "日志留存级别"
+        },
+        {
+          "title": "HM-C1-10-k1",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C1-10-k2",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C1-10-k3",
+          "content": "容量预警水位按磁盘使用率百分之七十八执行，触发即申请扩容。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C1-10-z",
+          "content": "容量预警触发后先看增长斜率，再判断是扩容还是清理。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "容量预警水位"
+        },
+        {
+          "title": "HM-C1-11-k1",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C1-11-k2",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C1-11-k3",
+          "content": "熔断后重试次数按两次执行，退避从两秒起。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C1-11-z",
+          "content": "重试要带幂等键，否则重试等于制造重复写。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "熔断重试次数"
+        },
+        {
+          "title": "HM-C1-12-k1",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C1-12-k2",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C1-12-k3",
+          "content": "缓存预热范围按首页与搜索联想接口执行，其余按需加载。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C1-12-z",
+          "content": "预热失败不应阻塞启动，降级为按需加载并告警。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "缓存预热范围"
+        },
+        {
+          "title": "HM-C1-13-k1",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C1-13-k2",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C1-13-k3",
+          "content": "数据库连接池上限按一百二十执行，等待超时三秒。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C1-13-z",
+          "content": "连接池指标要一起看等待队列长度，只看上限会误判。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "数据库连接池"
+        },
+        {
+          "title": "HM-C1-14-k1",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C1-14-k2",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C1-14-k3",
+          "content": "密钥轮换周期按四十五天执行，轮换窗口排在周二。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C1-14-z",
+          "content": "轮换前确认所有调用方都支持双密钥并行验证。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "密钥轮换周期"
+        },
+        {
+          "title": "HM-C1-15-k1",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C1-15-k2",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C1-15-k3",
+          "content": "压测基线并发按八百执行，单轮持续三十分钟。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C1-15-z",
+          "content": "压测数据要脱敏，压测库与生产库物理隔离。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "压测基线并发"
+        },
+        {
+          "title": "HM-C1-16-k1",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C1-16-k2",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C1-16-k3",
+          "content": "故障分级按影响下单为一级、影响浏览为二级执行，一级十分钟内上报。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C1-16-z",
+          "content": "分级之后还要定通报范围，一级故障同步给业务负责人。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "故障分级标准"
+        },
+        {
+          "title": "HM-C1-17-k1",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C1-17-k2",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C1-17-k3",
+          "content": "月度演练内容按机房单点断电切换执行，演练后出复盘。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C1-17-z",
+          "content": "演练脚本要预先评审，避免演练本身造成二次故障。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "月度演练内容"
+        },
+        {
+          "title": "HM-C1-18-k1",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C1-18-k2",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C1-18-k3",
+          "content": "监控采集间隔按二十秒执行，采样率保持全量。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C1-18-z",
+          "content": "采集间隔缩短会抬高存储成本，需同步评估保留期。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "监控采集间隔"
+        },
+        {
+          "title": "HM-C1-19-k1",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C1-19-k2",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C1-19-k3",
+          "content": "常规变更窗口长度按九十分钟执行，超时须重新申请。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C1-19-z",
+          "content": "变更窗口内不允许叠加发布，一次只做一件事。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "变更窗口长度"
+        },
+        {
+          "title": "HM-C1-20-k1",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "now",
+          "write_via": "import",
+          "role": "repeat",
+          "topic": "异地副本同步"
+        },
+        {
+          "title": "HM-C1-20-k2",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "异地副本同步"
+        },
+        {
+          "title": "HM-C1-20-k3",
+          "content": "异地副本按异步同步执行，允许十五分钟滞后。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "repeat",
+          "topic": "异地副本同步"
+        },
+        {
+          "title": "HM-C1-20-z",
+          "content": "异步副本读取前要判断滞后水位，超阈值拒绝读。",
+          "created_at": "now",
+          "write_via": "remember",
+          "role": "distractor",
+          "topic": "异地副本同步"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "c1-01",
+          "arm": "repeat",
+          "topic": "夜间发布窗口",
+          "query": "「夜间发布窗口」的做法是什么？",
+          "family": [
+            "HM-C1-01-k1",
+            "HM-C1-01-k2",
+            "HM-C1-01-k3"
+          ],
+          "distractor": "HM-C1-01-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-01-k1",
+              "HM-C1-01-k2",
+              "HM-C1-01-k3"
+            ],
+            "distractor": "HM-C1-01-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-02",
+          "arm": "repeat",
+          "topic": "告警收敛阈值",
+          "query": "「告警收敛阈值」的做法是什么？",
+          "family": [
+            "HM-C1-02-k1",
+            "HM-C1-02-k2",
+            "HM-C1-02-k3"
+          ],
+          "distractor": "HM-C1-02-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-02-k1",
+              "HM-C1-02-k2",
+              "HM-C1-02-k3"
+            ],
+            "distractor": "HM-C1-02-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-03",
+          "arm": "repeat",
+          "topic": "备份保留期",
+          "query": "「备份保留期」的做法是什么？",
+          "family": [
+            "HM-C1-03-k1",
+            "HM-C1-03-k2",
+            "HM-C1-03-k3"
+          ],
+          "distractor": "HM-C1-03-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-03-k1",
+              "HM-C1-03-k2",
+              "HM-C1-03-k3"
+            ],
+            "distractor": "HM-C1-03-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-04",
+          "arm": "repeat",
+          "topic": "灰度比例",
+          "query": "「灰度比例」的做法是什么？",
+          "family": [
+            "HM-C1-04-k1",
+            "HM-C1-04-k2",
+            "HM-C1-04-k3"
+          ],
+          "distractor": "HM-C1-04-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-04-k1",
+              "HM-C1-04-k2",
+              "HM-C1-04-k3"
+            ],
+            "distractor": "HM-C1-04-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-05",
+          "arm": "repeat",
+          "topic": "值班交接方式",
+          "query": "「值班交接方式」的做法是什么？",
+          "family": [
+            "HM-C1-05-k1",
+            "HM-C1-05-k2",
+            "HM-C1-05-k3"
+          ],
+          "distractor": "HM-C1-05-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-05-k1",
+              "HM-C1-05-k2",
+              "HM-C1-05-k3"
+            ],
+            "distractor": "HM-C1-05-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-06",
+          "arm": "repeat",
+          "topic": "索引重建时间",
+          "query": "「索引重建时间」的做法是什么？",
+          "family": [
+            "HM-C1-06-k1",
+            "HM-C1-06-k2",
+            "HM-C1-06-k3"
+          ],
+          "distractor": "HM-C1-06-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-06-k1",
+              "HM-C1-06-k2",
+              "HM-C1-06-k3"
+            ],
+            "distractor": "HM-C1-06-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-07",
+          "arm": "repeat",
+          "topic": "慢查询阈值",
+          "query": "「慢查询阈值」的做法是什么？",
+          "family": [
+            "HM-C1-07-k1",
+            "HM-C1-07-k2",
+            "HM-C1-07-k3"
+          ],
+          "distractor": "HM-C1-07-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-07-k1",
+              "HM-C1-07-k2",
+              "HM-C1-07-k3"
+            ],
+            "distractor": "HM-C1-07-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-08",
+          "arm": "repeat",
+          "topic": "发布审批人",
+          "query": "「发布审批人」的做法是什么？",
+          "family": [
+            "HM-C1-08-k1",
+            "HM-C1-08-k2",
+            "HM-C1-08-k3"
+          ],
+          "distractor": "HM-C1-08-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-08-k1",
+              "HM-C1-08-k2",
+              "HM-C1-08-k3"
+            ],
+            "distractor": "HM-C1-08-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-09",
+          "arm": "repeat",
+          "topic": "日志留存级别",
+          "query": "「日志留存级别」的做法是什么？",
+          "family": [
+            "HM-C1-09-k1",
+            "HM-C1-09-k2",
+            "HM-C1-09-k3"
+          ],
+          "distractor": "HM-C1-09-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-09-k1",
+              "HM-C1-09-k2",
+              "HM-C1-09-k3"
+            ],
+            "distractor": "HM-C1-09-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-10",
+          "arm": "repeat",
+          "topic": "容量预警水位",
+          "query": "「容量预警水位」的做法是什么？",
+          "family": [
+            "HM-C1-10-k1",
+            "HM-C1-10-k2",
+            "HM-C1-10-k3"
+          ],
+          "distractor": "HM-C1-10-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-10-k1",
+              "HM-C1-10-k2",
+              "HM-C1-10-k3"
+            ],
+            "distractor": "HM-C1-10-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-11",
+          "arm": "repeat",
+          "topic": "熔断重试次数",
+          "query": "「熔断重试次数」的做法是什么？",
+          "family": [
+            "HM-C1-11-k1",
+            "HM-C1-11-k2",
+            "HM-C1-11-k3"
+          ],
+          "distractor": "HM-C1-11-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-11-k1",
+              "HM-C1-11-k2",
+              "HM-C1-11-k3"
+            ],
+            "distractor": "HM-C1-11-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-12",
+          "arm": "repeat",
+          "topic": "缓存预热范围",
+          "query": "「缓存预热范围」的做法是什么？",
+          "family": [
+            "HM-C1-12-k1",
+            "HM-C1-12-k2",
+            "HM-C1-12-k3"
+          ],
+          "distractor": "HM-C1-12-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-12-k1",
+              "HM-C1-12-k2",
+              "HM-C1-12-k3"
+            ],
+            "distractor": "HM-C1-12-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-13",
+          "arm": "repeat",
+          "topic": "数据库连接池",
+          "query": "「数据库连接池」的做法是什么？",
+          "family": [
+            "HM-C1-13-k1",
+            "HM-C1-13-k2",
+            "HM-C1-13-k3"
+          ],
+          "distractor": "HM-C1-13-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-13-k1",
+              "HM-C1-13-k2",
+              "HM-C1-13-k3"
+            ],
+            "distractor": "HM-C1-13-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-14",
+          "arm": "repeat",
+          "topic": "密钥轮换周期",
+          "query": "「密钥轮换周期」的做法是什么？",
+          "family": [
+            "HM-C1-14-k1",
+            "HM-C1-14-k2",
+            "HM-C1-14-k3"
+          ],
+          "distractor": "HM-C1-14-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-14-k1",
+              "HM-C1-14-k2",
+              "HM-C1-14-k3"
+            ],
+            "distractor": "HM-C1-14-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-15",
+          "arm": "repeat",
+          "topic": "压测基线并发",
+          "query": "「压测基线并发」的做法是什么？",
+          "family": [
+            "HM-C1-15-k1",
+            "HM-C1-15-k2",
+            "HM-C1-15-k3"
+          ],
+          "distractor": "HM-C1-15-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-15-k1",
+              "HM-C1-15-k2",
+              "HM-C1-15-k3"
+            ],
+            "distractor": "HM-C1-15-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-16",
+          "arm": "repeat",
+          "topic": "故障分级标准",
+          "query": "「故障分级标准」的做法是什么？",
+          "family": [
+            "HM-C1-16-k1",
+            "HM-C1-16-k2",
+            "HM-C1-16-k3"
+          ],
+          "distractor": "HM-C1-16-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-16-k1",
+              "HM-C1-16-k2",
+              "HM-C1-16-k3"
+            ],
+            "distractor": "HM-C1-16-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-17",
+          "arm": "repeat",
+          "topic": "月度演练内容",
+          "query": "「月度演练内容」的做法是什么？",
+          "family": [
+            "HM-C1-17-k1",
+            "HM-C1-17-k2",
+            "HM-C1-17-k3"
+          ],
+          "distractor": "HM-C1-17-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-17-k1",
+              "HM-C1-17-k2",
+              "HM-C1-17-k3"
+            ],
+            "distractor": "HM-C1-17-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-18",
+          "arm": "repeat",
+          "topic": "监控采集间隔",
+          "query": "「监控采集间隔」的做法是什么？",
+          "family": [
+            "HM-C1-18-k1",
+            "HM-C1-18-k2",
+            "HM-C1-18-k3"
+          ],
+          "distractor": "HM-C1-18-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-18-k1",
+              "HM-C1-18-k2",
+              "HM-C1-18-k3"
+            ],
+            "distractor": "HM-C1-18-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-19",
+          "arm": "repeat",
+          "topic": "变更窗口长度",
+          "query": "「变更窗口长度」的做法是什么？",
+          "family": [
+            "HM-C1-19-k1",
+            "HM-C1-19-k2",
+            "HM-C1-19-k3"
+          ],
+          "distractor": "HM-C1-19-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-19-k1",
+              "HM-C1-19-k2",
+              "HM-C1-19-k3"
+            ],
+            "distractor": "HM-C1-19-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        },
+        {
+          "qid": "c1-20",
+          "arm": "repeat",
+          "topic": "异地副本同步",
+          "query": "「异地副本同步」的做法是什么？",
+          "family": [
+            "HM-C1-20-k1",
+            "HM-C1-20-k2",
+            "HM-C1-20-k3"
+          ],
+          "distractor": "HM-C1-20-z",
+          "gold_expr": {
+            "kind": "repeated_over_single",
+            "family": [
+              "HM-C1-20-k1",
+              "HM-C1-20-k2",
+              "HM-C1-20-k3"
+            ],
+            "distractor": "HM-C1-20-z"
+          },
+          "note": "竞赛口径：重复写 3 条 vs 同等相关单次干扰 1 条；gold=重复族任一"
+        }
+      ]
+    }
+  }
+}

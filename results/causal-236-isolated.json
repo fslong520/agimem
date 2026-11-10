@@ -1,0 +1,292 @@
+{
+ "schema": "agimem-causal-236-isolated/1",
+ "arm_label": "236题新树attach边",
+ "warning": "本臂为隔离库真跑：合成因果树已入库，数字属检索层真能力分；语料全合成、gold 由树结构机械推导，外推需另证",
+ "store": {
+  "data_dir": "/tmp/agimem-causal236/tree",
+  "port": 16331,
+  "tree": "data/tree_v2.json",
+  "dataset": "dataset/causal_evalset_v2.jsonl",
+  "ablate": "hot",
+  "retrieval": "m3"
+ },
+ "import": {
+  "n_nodes": 332,
+  "imported": 322,
+  "remembered": 10,
+  "import_summary": {
+   "duplicates": 0,
+   "imported": 322,
+   "orphaned": 0,
+   "reattached": 0,
+   "skipped": 0
+  }
+ },
+ "attach": {
+  "n_edges_planned": 322,
+  "n_edges_ok": 322,
+  "n_edges_fail": 0,
+  "verify": {
+   "deep_nodes": [
+    {
+     "sid": "sntC0012",
+     "tree_depth": 8,
+     "ancestors_len": 8,
+     "ancestors_is_list": true,
+     "query": "增量同步全量拉取拖慢首屏·后续2"
+    },
+    {
+     "sid": "sntC0024",
+     "tree_depth": 8,
+     "ancestors_len": 8,
+     "ancestors_is_list": true,
+     "query": "离线队列设上限并按优先级出队·后续2"
+    },
+    {
+     "sid": "sntB0017",
+     "tree_depth": 7,
+     "ancestors_len": 7,
+     "ancestors_is_list": true,
+     "query": "配置变更走变更单与双人复核·后续2"
+    }
+   ],
+   "chain": {
+    "rc": 0,
+    "sid": "sntC0012",
+    "ancestors_n": 8,
+    "descendants_n": 0,
+    "keys": [
+     "ancestors",
+     "descendants",
+     "entry"
+    ]
+   },
+   "edges_verified": true
+  },
+  "index_after_attach": {
+   "state": "ready",
+   "local_total": 332,
+   "worker_active": true,
+   "error": null,
+   "embedding_model": "m3",
+   "waited_s": 2.7
+  }
+ },
+ "run": {
+  "n_questions": 236,
+  "n_hits": 1016,
+  "elapsed_s": 1200.8,
+  "index_waited_s": 2.7
+ },
+ "score": {
+  "n_dataset": 236,
+  "scored": 236,
+  "distribution": {
+   "chain_ancestor": 68,
+   "chain_descendant": 68,
+   "intervention": 40,
+   "supersession": 20,
+   "negative": 40
+  },
+  "metrics": {
+   "chain_hit_at_k": 0.7352941176470589,
+   "chain_cov": 0.2968574929971989,
+   "intervention_acc": 0.6,
+   "false_alarm_rate": 0.8,
+   "supersession_acc": 0.0,
+   "negative_noise_rate": 0.325
+  },
+  "cis": {
+   "chain_hit_at_k": {
+    "point": 0.7352941176470589,
+    "lo": 0.655424390111397,
+    "hi": 0.8022367394257408,
+    "n": 136,
+    "k": 100,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "chain_hit_at_1": {
+    "point": 0.29411764705882354,
+    "lo": 0.22404267545649473,
+    "hi": 0.3755038361985098,
+    "n": 136,
+    "k": 40,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "chain_cov": {
+    "point": 0.2968574929971989,
+    "lo": 0.2517879140372723,
+    "hi": 0.34192707195712546,
+    "n": 136,
+    "method": "normal-approx",
+    "z": 1.959963984540054
+   },
+   "intervention_acc": {
+    "point": 0.6,
+    "lo": 0.44595893660346186,
+    "hi": 0.7365167431570808,
+    "n": 40,
+    "k": 24,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "false_alarm_rate": {
+    "point": 0.8,
+    "lo": 0.5839825677481064,
+    "hi": 0.919342337420202,
+    "n": 20,
+    "k": 16,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "supersession_acc": {
+    "point": 0.0,
+    "lo": 0.0,
+    "hi": 0.16112515805281938,
+    "n": 20,
+    "k": 0,
+    "method": "wilson",
+    "z": 1.959963984540054
+   },
+   "negative_noise_rate": {
+    "point": 0.325,
+    "lo": 0.200845022317827,
+    "hi": 0.47982253810122333,
+    "n": 40,
+    "k": 13,
+    "method": "wilson",
+    "z": 1.959963984540054
+   }
+  },
+  "chain": {
+   "n": 136,
+   "hit_at_k": 0.7352941176470589,
+   "hit_at_1": 0.29411764705882354,
+   "coverage_at_k": 0.2968574929971989,
+   "by_type": {
+    "chain_ancestor": {
+     "n": 68,
+     "hit_at_k": 0.8676470588235294,
+     "hit_at_k_ci": {
+      "point": 0.8676470588235294,
+      "lo": 0.7671994025434227,
+      "hi": 0.928777555897702,
+      "n": 68,
+      "k": 59,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    },
+    "chain_descendant": {
+     "n": 68,
+     "hit_at_k": 0.6029411764705882,
+     "hit_at_k_ci": {
+      "point": 0.6029411764705882,
+      "lo": 0.48416055016632126,
+      "hi": 0.7107129981971936,
+      "n": 68,
+      "k": 41,
+      "method": "wilson",
+      "z": 1.959963984540054
+     }
+    }
+   }
+  },
+  "intervention": {
+   "n": 40,
+   "n_warning": 20,
+   "n_safe": 20,
+   "accuracy": 0.6,
+   "confusion": {
+    "TP": 20,
+    "FP": 16,
+    "FN": 0,
+    "TN": 4
+   },
+   "false_alarm_rate": 0.8
+  },
+  "supersession": {
+   "n": 20,
+   "accuracy": 0.0,
+   "current": 0,
+   "stale": 20,
+   "missing": 0
+  },
+  "negative": {
+   "n": 40,
+   "noise_rate": 0.325,
+   "noisy": 13
+  }
+ },
+ "supersession_note": "本轮 import 通道：import_json 硬编码 supersedes/superseded_by 为空（app-core/service.rs:1739-1740），故旧条目召回时不带 superseded_by 标记，20 题全 stale → 0.000。T22 的 1.000 来自 remember --supersedes 真写边的臂，两口径不并表。",
+ "comparison_old_122": {
+  "source": "results/causal-edged.json（122 题 attach 臂）",
+  "chain_hit_at_k": 0.5,
+  "intervention_acc": 0.8,
+  "supersession_acc": 0.1,
+  "negative_noise_rate": 0.25
+ },
+ "selfhit": {
+  "n_chain_questions": 136,
+  "self_excluded_hit_at_1": 0.6470588235294118,
+  "self_excluded_hit_at_5": 0.7352941176470589,
+  "self_excluded_hit_at_1_k": 88,
+  "self_excluded_hit_at_5_k": 100,
+  "self_excluded_hit_at_1_ci": {
+   "point": 0.6470588235294118,
+   "lo": 0.5637110471210781,
+   "hi": 0.722327158839633,
+   "n": 136,
+   "k": 88,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "self_excluded_hit_at_5_ci": {
+   "point": 0.7352941176470589,
+   "lo": 0.655424390111397,
+   "hi": 0.8022367394257408,
+   "n": 136,
+   "k": 100,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "top1_is_subject_ci": {
+   "point": 0.6029411764705882,
+   "lo": 0.5189689089302262,
+   "hi": 0.6812578352422715,
+   "n": 136,
+   "k": 82,
+   "method": "wilson",
+   "z": 1.959963984540054
+  },
+  "top1_is_subject": 82,
+  "top1_is_subject_rate": 0.6029411764705882,
+  "subject_in_top5_rate": 0.9044117647058824,
+  "subject_mean_rank": 0.3333333333333333,
+  "examples": [
+   {
+    "qid": "q001",
+    "subject": "sntA0021",
+    "top1": "sntA0023",
+    "hit": null,
+    "gold_first_rank": null
+   },
+   {
+    "qid": "q002",
+    "subject": "sntI0032",
+    "top1": "sntI0032",
+    "hit": null,
+    "gold_first_rank": null
+   },
+   {
+    "qid": "q003",
+    "subject": "sntF0004",
+    "top1": "sntF0004",
+    "hit": null,
+    "gold_first_rank": null
+   }
+  ]
+ }
+}

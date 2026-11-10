@@ -1,0 +1,47 @@
+{
+ "arm": "isolated-rsrs-tricky-264",
+ "data_dir": "/tmp/agimem-tricky264-smoke/iso",
+ "port": 16330,
+ "ablate": "hot",
+ "retrieval": "m3",
+ "tree_paths": [
+  "data/tricky_tree.json",
+  "data/tricky_tree_v2.json"
+ ],
+ "dataset_paths": [
+  "dataset/tricky_evalset.jsonl",
+  "dataset/tricky_evalset_v2.jsonl"
+ ],
+ "n_nodes_imported": 1496,
+ "import_summary": {
+  "duplicates": 0,
+  "imported": 1496,
+  "orphaned": 0,
+  "reattached": 0,
+  "skipped": 0
+ },
+ "index_ready": {
+  "state": "ready",
+  "local_total": 1496,
+  "worker_active": true,
+  "error": null,
+  "embedding_model": "m3",
+  "waited_s": 1439.0
+ },
+ "index_waited_s": 1439.0,
+ "n_questions": 264,
+ "n_questions_expected": 264,
+ "n_questions_old": 132,
+ "n_questions_new": 132,
+ "missing_questions": [],
+ "limit": 5,
+ "n_hits": 1320,
+ "n_empty_questions": 0,
+ "score_min": 0.39264193177223206,
+ "score_max": 0.6947165727615356,
+ "recall_modes": [
+  "json+titles"
+ ],
+ "notes": "隔离库（/tmp 独立 data dir + 端口 16330 + 独立 super，RSRS_ABLATE=hot）；未触碰 ~/.rsrs；命中标题｜trk条目号 映射回合成 id，UUID 不落盘；--resume 复用已建库，跳过导入",
+ "elapsed_s": null
+}

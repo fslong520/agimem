@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "marks": {
+    "A": {
+      "supersedes_present": false,
+      "superseded_by_present": true
+    },
+    "B": {
+      "supersedes_present": true,
+      "superseded_by_present": true
+    },
+    "C": {
+      "supersedes_present": true,
+      "superseded_by_present": false
+    }
+  },
+  "ranks": [
+    {
+      "title": "链式取代探针A",
+      "superseded_by": "C",
+      "has_supersedes": false
+    },
+    {
+      "title": "链式取代探针C",
+      "superseded_by": null,
+      "has_supersedes": true
+    },
+    {
+      "title": "链式取代探针B",
+      "superseded_by": "C",
+      "has_supersedes": true
+    }
+  ],
+  "steps": [
+    {
+      "label": "A",
+      "rc": 0,
+      "uuid_present": true
+    },
+    {
+      "label": "B(supersedes A)",
+      "rc": 0,
+      "uuid_present": true,
+      "out": "ok"
+    },
+    {
+      "label": "C(supersedes B)",
+      "rc": 0,
+      "uuid_present": true,
+      "out": "ok"
+    }
+  ],
+  "top1_body": "unknown",
+  "shows": {
+    "A": {
+      "supersedes_to": null,
+      "superseded_by": "B",
+      "content": "发布窗口按 15 分钟执行。"
+    },
+    "B": {
+      "supersedes_to": "A",
+      "superseded_by": "C",
+      "content": "发布窗口按 30 分钟执行。"
+    },
+    "C": {
+      "supersedes_to": "B",
+      "superseded_by": null,
+      "content": "发布窗口按 45 分钟执行。"
+    }
+  },
+  "top1_label": "链式取代探针A"
+}

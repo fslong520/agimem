@@ -1,0 +1,538 @@
+{
+  "schema": "agimem-causal-degraded/1",
+  "purpose": "结构/节点集退化对照：full(143 节点) vs leaves(95 叶子) vs half(随机 72)；同 122 题、同判分器、同 topk=5；Δ=full−退化臂，配对 bootstrap 95%CI。",
+  "why_no_noparent_arm": "import 无法给已存在条目补父子边：两遍导入第二遍 duplicates 2 / reattached 0，recall 载荷 ancestors 恒为空（实测探针）；且 T15 的完整树臂本来就没有任何边——所以「有结构 vs 无结构」在库层定义性地等于 0，本层只能做节点集退化。",
+  "arms": {
+    "full": {
+      "path": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-arms/full-predictions.jsonl",
+      "metrics": {
+        "chain_hit_at_k": 0.47058823529411764,
+        "chain_cov": 0.11523827479709832,
+        "intervention_acc": 0.8,
+        "false_alarm_rate": 0.4,
+        "supersession_acc": 0.1,
+        "negative_noise_rate": 0.25
+      },
+      "cis": {
+        "chain_hit_at_k": {
+          "point": 0.47058823529411764,
+          "lo": 0.35673106421198947,
+          "hi": 0.5875907791127207,
+          "n": 68,
+          "k": 32,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_hit_at_1": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.053471336520070537,
+          "n": 68,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_cov": {
+          "point": 0.11523827479709832,
+          "lo": 0.08011351919950438,
+          "hi": 0.15036303039469226,
+          "n": 68,
+          "method": "normal-approx",
+          "z": 1.959963984540054
+        },
+        "intervention_acc": {
+          "point": 0.8,
+          "lo": 0.5839825677481064,
+          "hi": 0.919342337420202,
+          "n": 20,
+          "k": 16,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "false_alarm_rate": {
+          "point": 0.4,
+          "lo": 0.16818032970623614,
+          "hi": 0.6873262302663417,
+          "n": 10,
+          "k": 4,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "supersession_acc": {
+          "point": 0.1,
+          "lo": 0.017876213095072896,
+          "hi": 0.4041500267952385,
+          "n": 10,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "negative_noise_rate": {
+          "point": 0.25,
+          "lo": 0.11999366228595004,
+          "hi": 0.44899444005154004,
+          "n": 24,
+          "k": 6,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "distribution": {
+        "chain_ancestor": 34,
+        "chain_descendant": 34,
+        "intervention": 20,
+        "supersession": 10,
+        "negative": 24
+      }
+    },
+    "leaves": {
+      "path": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-arms/leaves-predictions.jsonl",
+      "metrics": {
+        "chain_hit_at_k": 0.3382352941176471,
+        "chain_cov": 0.08308599080657904,
+        "intervention_acc": 0.75,
+        "false_alarm_rate": 0.5,
+        "supersession_acc": 0.3,
+        "negative_noise_rate": 0.25
+      },
+      "cis": {
+        "chain_hit_at_k": {
+          "point": 0.3382352941176471,
+          "lo": 0.23714253215255424,
+          "hi": 0.45662760613335107,
+          "n": 68,
+          "k": 23,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_hit_at_1": {
+          "point": 0.25,
+          "lo": 0.16235013970552148,
+          "hi": 0.3643855285545139,
+          "n": 68,
+          "k": 17,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_cov": {
+          "point": 0.08308599080657904,
+          "lo": 0.05137792082143971,
+          "hi": 0.11479406079171836,
+          "n": 68,
+          "method": "normal-approx",
+          "z": 1.959963984540054
+        },
+        "intervention_acc": {
+          "point": 0.75,
+          "lo": 0.531299122381256,
+          "hi": 0.8881382985923343,
+          "n": 20,
+          "k": 15,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "false_alarm_rate": {
+          "point": 0.5,
+          "lo": 0.236593090512564,
+          "hi": 0.7634069094874361,
+          "n": 10,
+          "k": 5,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "supersession_acc": {
+          "point": 0.3,
+          "lo": 0.10779126740630099,
+          "hi": 0.6032218525388546,
+          "n": 10,
+          "k": 3,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "negative_noise_rate": {
+          "point": 0.25,
+          "lo": 0.11999366228595004,
+          "hi": 0.44899444005154004,
+          "n": 24,
+          "k": 6,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "distribution": {
+        "chain_ancestor": 34,
+        "chain_descendant": 34,
+        "intervention": 20,
+        "supersession": 10,
+        "negative": 24
+      }
+    },
+    "half": {
+      "path": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-arms/half-predictions.jsonl",
+      "metrics": {
+        "chain_hit_at_k": 0.39705882352941174,
+        "chain_cov": 0.08712292609351434,
+        "intervention_acc": 0.7,
+        "false_alarm_rate": 0.5,
+        "supersession_acc": 0.0,
+        "negative_noise_rate": 0.125
+      },
+      "cis": {
+        "chain_hit_at_k": {
+          "point": 0.39705882352941174,
+          "lo": 0.28928700180280637,
+          "hi": 0.5158394498336787,
+          "n": 68,
+          "k": 27,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_hit_at_1": {
+          "point": 0.10294117647058823,
+          "lo": 0.05076577178992908,
+          "hi": 0.19757911309365633,
+          "n": 68,
+          "k": 7,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_cov": {
+          "point": 0.08712292609351434,
+          "lo": 0.05752053735531855,
+          "hi": 0.11672531483171013,
+          "n": 68,
+          "method": "normal-approx",
+          "z": 1.959963984540054
+        },
+        "intervention_acc": {
+          "point": 0.7,
+          "lo": 0.4810271816464765,
+          "hi": 0.8545227551323956,
+          "n": 20,
+          "k": 14,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "false_alarm_rate": {
+          "point": 0.5,
+          "lo": 0.236593090512564,
+          "hi": 0.7634069094874361,
+          "n": 10,
+          "k": 5,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "supersession_acc": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.2775327998628892,
+          "n": 10,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "negative_noise_rate": {
+          "point": 0.125,
+          "lo": 0.04344334080123444,
+          "hi": 0.31003881270500067,
+          "n": 24,
+          "k": 3,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "distribution": {
+        "chain_ancestor": 34,
+        "chain_descendant": 34,
+        "intervention": 20,
+        "supersession": 10,
+        "negative": 24
+      }
+    },
+    "full_anon": {
+      "path": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-arms/full-anon-predictions.jsonl",
+      "metrics": {
+        "chain_hit_at_k": 0.14705882352941177,
+        "chain_cov": 0.03407670760611937,
+        "intervention_acc": 0.8,
+        "false_alarm_rate": 0.4,
+        "supersession_acc": 0.1,
+        "negative_noise_rate": 0.25
+      },
+      "cis": {
+        "chain_hit_at_k": {
+          "point": 0.14705882352941177,
+          "lo": 0.08188817736343271,
+          "hi": 0.24997394253308772,
+          "n": 68,
+          "k": 10,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_hit_at_1": {
+          "point": 0.014705882352941176,
+          "lo": 0.0026006835761068076,
+          "hi": 0.07870973128160871,
+          "n": 68,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_cov": {
+          "point": 0.03407670760611937,
+          "lo": 0.011320461579764029,
+          "hi": 0.0568329536324747,
+          "n": 68,
+          "method": "normal-approx",
+          "z": 1.959963984540054
+        },
+        "intervention_acc": {
+          "point": 0.8,
+          "lo": 0.5839825677481064,
+          "hi": 0.919342337420202,
+          "n": 20,
+          "k": 16,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "false_alarm_rate": {
+          "point": 0.4,
+          "lo": 0.16818032970623614,
+          "hi": 0.6873262302663417,
+          "n": 10,
+          "k": 4,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "supersession_acc": {
+          "point": 0.1,
+          "lo": 0.017876213095072896,
+          "hi": 0.4041500267952385,
+          "n": 10,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "negative_noise_rate": {
+          "point": 0.25,
+          "lo": 0.11999366228595004,
+          "hi": 0.44899444005154004,
+          "n": 24,
+          "k": 6,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "distribution": {
+        "chain_ancestor": 34,
+        "chain_descendant": 34,
+        "intervention": 20,
+        "supersession": 10,
+        "negative": 24
+      }
+    },
+    "full_t15": {
+      "path": "/home/fslong/Documents/respire/respire-benchmark/agimem/results/causal-isolated-predictions.jsonl",
+      "metrics": {
+        "chain_hit_at_k": 0.47058823529411764,
+        "chain_cov": 0.11523827479709832,
+        "intervention_acc": 0.8,
+        "false_alarm_rate": 0.4,
+        "supersession_acc": 0.1,
+        "negative_noise_rate": 0.25
+      },
+      "cis": {
+        "chain_hit_at_k": {
+          "point": 0.47058823529411764,
+          "lo": 0.35673106421198947,
+          "hi": 0.5875907791127207,
+          "n": 68,
+          "k": 32,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_hit_at_1": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.053471336520070537,
+          "n": 68,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "chain_cov": {
+          "point": 0.11523827479709832,
+          "lo": 0.08011351919950438,
+          "hi": 0.15036303039469226,
+          "n": 68,
+          "method": "normal-approx",
+          "z": 1.959963984540054
+        },
+        "intervention_acc": {
+          "point": 0.8,
+          "lo": 0.5839825677481064,
+          "hi": 0.919342337420202,
+          "n": 20,
+          "k": 16,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "false_alarm_rate": {
+          "point": 0.4,
+          "lo": 0.16818032970623614,
+          "hi": 0.6873262302663417,
+          "n": 10,
+          "k": 4,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "supersession_acc": {
+          "point": 0.1,
+          "lo": 0.017876213095072896,
+          "hi": 0.4041500267952385,
+          "n": 10,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "negative_noise_rate": {
+          "point": 0.25,
+          "lo": 0.11999366228595004,
+          "hi": 0.44899444005154004,
+          "n": 24,
+          "k": 6,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "distribution": {
+        "chain_ancestor": 34,
+        "chain_descendant": 34,
+        "intervention": 20,
+        "supersession": 10,
+        "negative": 24
+      }
+    }
+  },
+  "deltas": {
+    "full_minus_leaves": {
+      "chain_hit": {
+        "point": 0.1323529411764706,
+        "lo": 0.014705882352941176,
+        "hi": 0.2647058823529412,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.47058823529411764,
+        "mean_b": 0.3382352941176471
+      },
+      "chain_cov": {
+        "point": 0.03215228399051928,
+        "lo": -0.00502854988149106,
+        "hi": 0.07008591898297781,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.11523827479709832,
+        "mean_b": 0.08308599080657904
+      },
+      "interv": {
+        "point": 0.05,
+        "lo": 0.0,
+        "hi": 0.15,
+        "n": 20,
+        "reps": 2000,
+        "mean_a": 0.8,
+        "mean_b": 0.75
+      },
+      "noise": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 24,
+        "reps": 2000,
+        "mean_a": 0.25,
+        "mean_b": 0.25
+      }
+    },
+    "full_minus_half": {
+      "chain_hit": {
+        "point": 0.07352941176470588,
+        "lo": -0.058823529411764705,
+        "hi": 0.19117647058823528,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.47058823529411764,
+        "mean_b": 0.39705882352941174
+      },
+      "chain_cov": {
+        "point": 0.028115348703583995,
+        "lo": -0.01072057027939381,
+        "hi": 0.06816688213747037,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.11523827479709832,
+        "mean_b": 0.08712292609351434
+      },
+      "interv": {
+        "point": 0.1,
+        "lo": -0.1,
+        "hi": 0.3,
+        "n": 20,
+        "reps": 2000,
+        "mean_a": 0.8,
+        "mean_b": 0.7
+      },
+      "noise": {
+        "point": 0.125,
+        "lo": 0.0,
+        "hi": 0.25,
+        "n": 24,
+        "reps": 2000,
+        "mean_a": 0.25,
+        "mean_b": 0.125
+      }
+    },
+    "replication_full_vs_t15": {
+      "chain_hit": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.47058823529411764,
+        "mean_b": 0.47058823529411764
+      },
+      "chain_cov": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 68,
+        "reps": 2000,
+        "mean_a": 0.11523827479709832,
+        "mean_b": 0.11523827479709832
+      },
+      "interv": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 20,
+        "reps": 2000,
+        "mean_a": 0.8,
+        "mean_b": 0.8
+      },
+      "noise": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 24,
+        "reps": 2000,
+        "mean_a": 0.25,
+        "mean_b": 0.25
+      }
+    }
+  },
+  "bootstrap": {
+    "reps": 2000,
+    "seed": 20261109,
+    "stratify": "按题型分别配对重抽"
+  }
+}

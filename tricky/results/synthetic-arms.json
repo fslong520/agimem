@@ -1,0 +1,294 @@
+{
+  "warning": "合成臂（确定性 bigram 词面检索），非真库、非 Respire 能力分",
+  "dataset": "dataset/tricky_evalset.jsonl",
+  "tree": "data/tricky_tree.json",
+  "n_questions": 132,
+  "lexical": {
+    "humanlike_score": {
+      "point": 0.20454545454545453,
+      "lo": 0.17045454545454544,
+      "hi": 0.2431818181818182,
+      "method": "stratified-bootstrap",
+      "reps": 2000,
+      "seed": 20261109
+    },
+    "per_type": {
+      "T1": {
+        "n": 22,
+        "main_metric": "hit_at_k",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T2": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.045454545454545456,
+        "ci": {
+          "point": 0.045454545454545456,
+          "lo": 0.00806942762126385,
+          "hi": 0.21798045838657332,
+          "n": 22,
+          "k": 1,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T3": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.09090909090909091,
+        "ci": {
+          "point": 0.09090909090909091,
+          "lo": 0.025295428990995267,
+          "hi": 0.27814946841605814,
+          "n": 22,
+          "k": 2,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T4": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.18181818181818182,
+        "ci": {
+          "point": 0.18181818181818182,
+          "lo": 0.07306884583422052,
+          "hi": 0.38516607437126543,
+          "n": 22,
+          "k": 4,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T5": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T6": {
+        "n": 22,
+        "main_metric": "evidence_first_acc",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      }
+    }
+  },
+  "perfect": {
+    "humanlike_score": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "method": "stratified-bootstrap",
+      "reps": 2000,
+      "seed": 20261109
+    },
+    "per_type": {
+      "T1": {
+        "n": 22,
+        "main_metric": "hit_at_k",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T2": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T3": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T4": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T5": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T6": {
+        "n": 22,
+        "main_metric": "evidence_first_acc",
+        "main_score": 1.0,
+        "ci": {
+          "point": 1.0,
+          "lo": 0.8513451253913791,
+          "hi": 1.0,
+          "n": 22,
+          "k": 22,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      }
+    }
+  },
+  "adversarial": {
+    "humanlike_score": {
+      "point": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "method": "stratified-bootstrap",
+      "reps": 2000,
+      "seed": 20261109
+    },
+    "per_type": {
+      "T1": {
+        "n": 22,
+        "main_metric": "hit_at_k",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T2": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T3": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T4": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T5": {
+        "n": 22,
+        "main_metric": "hit_at_1",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      },
+      "T6": {
+        "n": 22,
+        "main_metric": "evidence_first_acc",
+        "main_score": 0.0,
+        "ci": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.14865487460862087,
+          "n": 22,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        }
+      }
+    }
+  }
+}

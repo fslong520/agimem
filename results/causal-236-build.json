@@ -1,0 +1,69 @@
+{
+  "schema": "agimem-causal-edge-build/1",
+  "data_dir": "/tmp/agimem-causal236/tree",
+  "port": 16331,
+  "tree_path": "data/tree_v2.json",
+  "dataset_path": "dataset/causal_evalset_v2.jsonl",
+  "n_nodes": 332,
+  "imported": 322,
+  "remembered": 10,
+  "import_summary": {
+    "duplicates": 0,
+    "imported": 322,
+    "orphaned": 0,
+    "reattached": 0,
+    "skipped": 0
+  },
+  "n_edges_planned": 322,
+  "n_edges_ok": 322,
+  "n_edges_fail": 0,
+  "attach_errors": [],
+  "verify": {
+    "deep_nodes": [
+      {
+        "sid": "sntC0012",
+        "tree_depth": 8,
+        "ancestors_len": 8,
+        "ancestors_is_list": true,
+        "query": "增量同步全量拉取拖慢首屏·后续2"
+      },
+      {
+        "sid": "sntC0024",
+        "tree_depth": 8,
+        "ancestors_len": 8,
+        "ancestors_is_list": true,
+        "query": "离线队列设上限并按优先级出队·后续2"
+      },
+      {
+        "sid": "sntB0017",
+        "tree_depth": 7,
+        "ancestors_len": 7,
+        "ancestors_is_list": true,
+        "query": "配置变更走变更单与双人复核·后续2"
+      }
+    ],
+    "chain": {
+      "rc": 0,
+      "sid": "sntC0012",
+      "ancestors_n": 8,
+      "descendants_n": 0,
+      "keys": [
+        "ancestors",
+        "descendants",
+        "entry"
+      ]
+    },
+    "edges_verified": true
+  },
+  "index_after_attach": {
+    "state": "ready",
+    "local_total": 332,
+    "worker_active": true,
+    "error": null,
+    "embedding_model": "m3",
+    "waited_s": 2.7
+  },
+  "elapsed_s": 1200.8,
+  "n_questions": 236,
+  "n_hits": 1016
+}

@@ -1,0 +1,2624 @@
+{
+  "n_total": 141,
+  "topk": 5,
+  "types": {
+    "P1": {
+      "name": "前瞻记忆",
+      "n": 24,
+      "intent_hit@1": {
+        "point": 1.0,
+        "lo": 0.8620237953250198,
+        "hi": 1.0,
+        "n": 24,
+        "k": 24,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "intent_hit@5": {
+        "point": 1.0,
+        "lo": 0.8620237953250198,
+        "hi": 1.0,
+        "n": 24,
+        "k": 24,
+        "method": "wilson",
+        "z": 1.959963984540054
+      }
+    },
+    "P2": {
+      "name": "错误记忆（诱饵）",
+      "n": 24,
+      "n_lure": 12,
+      "n_recorded": 12,
+      "lure_false_hit": {
+        "point": 0.0,
+        "lo": 2.7755575615628914e-17,
+        "hi": 0.24249400665524085,
+        "n": 12,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "lure_hard_code_rate": {
+        "point": 1.0,
+        "lo": 0.7575059933447592,
+        "hi": 1.0,
+        "n": 12,
+        "k": 12,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "recorded_hit@1": {
+        "point": 1.0,
+        "lo": 0.7575059933447592,
+        "hi": 1.0,
+        "n": 12,
+        "k": 12,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "know_auc": {
+        "point": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pos": 12,
+        "n_neg": 12,
+        "method": "mann-whitney",
+        "ci_method": "bootstrap-2000-seed20261109",
+        "note": "0.5=不可分；>0.5=能区分知道/不知道"
+      }
+    },
+    "P3": {
+      "name": "主动遗忘",
+      "n": 24,
+      "pre_hit": {
+        "point": 0.0,
+        "lo": 2.7755575615628914e-17,
+        "hi": 0.24249400665524085,
+        "n": 12,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "forgotten_hit": {
+        "point": 0.0,
+        "lo": 2.7755575615628914e-17,
+        "hi": 0.24249400665524085,
+        "n": 12,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "target_gone_rate": {
+        "point": 1.0,
+        "lo": 0.7575059933447592,
+        "hi": 1.0,
+        "n": 12,
+        "k": 12,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "collateral_hit": {
+        "point": 0.5,
+        "lo": 0.3142742581957335,
+        "hi": 0.6857257418042665,
+        "n": 24,
+        "k": 12,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "note": "forgotten_hit=遗忘后目标仍被召回的比例（应 0）；collateral_hit=邻居仍可召回（应 1）",
+      "forget_probe": {
+        "n_groups": 12,
+        "n_forget_ok": 0,
+        "n_target_gone": 12,
+        "n_post": 12,
+        "n_neighbor_show_ok": 24,
+        "groups": [
+          {
+            "topic": "p3-api-11",
+            "target_synthetic": "hl2C0016",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2C0015",
+                "show_ok": true
+              },
+              {
+                "id": "hl2C0017",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-api-3",
+            "target_synthetic": "hl2C0013",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2C0012",
+                "show_ok": true
+              },
+              {
+                "id": "hl2C0014",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-approval-8",
+            "target_synthetic": "hl2H0012",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2H0011",
+                "show_ok": true
+              },
+              {
+                "id": "hl2H0013",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-canary-10",
+            "target_synthetic": "hl2B0016",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2B0015",
+                "show_ok": true
+              },
+              {
+                "id": "hl2B0017",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-canary-2",
+            "target_synthetic": "hl2B0013",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2B0012",
+                "show_ok": true
+              },
+              {
+                "id": "hl2B0014",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-deploy-1",
+            "target_synthetic": "hl2A0013",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2A0012",
+                "show_ok": true
+              },
+              {
+                "id": "hl2A0014",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-deploy-9",
+            "target_synthetic": "hl2A0016",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2A0015",
+                "show_ok": true
+              },
+              {
+                "id": "hl2A0017",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-handoff-12",
+            "target_synthetic": "hl2D0016",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2D0015",
+                "show_ok": true
+              },
+              {
+                "id": "hl2D0017",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-handoff-4",
+            "target_synthetic": "hl2D0013",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2D0012",
+                "show_ok": true
+              },
+              {
+                "id": "hl2D0014",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-meeting-5",
+            "target_synthetic": "hl2E0012",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2E0011",
+                "show_ok": true
+              },
+              {
+                "id": "hl2E0013",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-migration-7",
+            "target_synthetic": "hl2G0012",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2G0011",
+                "show_ok": true
+              },
+              {
+                "id": "hl2G0013",
+                "show_ok": true
+              }
+            ]
+          },
+          {
+            "topic": "p3-ops-6",
+            "target_synthetic": "hl2F0012",
+            "pre_target_in": false,
+            "forget_rc": 2,
+            "forget_status": "fail",
+            "forget_summary": {
+              "deleted": false
+            },
+            "post_target_in": false,
+            "neighbors": [
+              {
+                "id": "hl2F0011",
+                "show_ok": true
+              },
+              {
+                "id": "hl2F0013",
+                "show_ok": true
+              }
+            ]
+          }
+        ],
+        "neighbor_total": 24
+      }
+    },
+    "P4": {
+      "name": "来源监控",
+      "n": 24,
+      "source_attribution_hit@1": {
+        "point": 0.875,
+        "lo": 0.6899611872949993,
+        "hi": 0.9565566591987655,
+        "n": 24,
+        "k": 21,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "misattributed_rate": {
+        "point": 0.041666666666666664,
+        "lo": 0.0073934561655057685,
+        "hi": 0.20241806478655938,
+        "n": 24,
+        "k": 1,
+        "method": "wilson",
+        "z": 1.959963984540054
+      }
+    },
+    "P5": {
+      "name": "时间线重建",
+      "n": 24,
+      "order_correct@1": {
+        "point": 0.041666666666666664,
+        "lo": 0.0073934561655057685,
+        "hi": 0.20241806478655938,
+        "n": 24,
+        "k": 1,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "earliest_hit@1": {
+        "point": 0.08333333333333333,
+        "lo": 0.014865094404917095,
+        "hi": 0.35387991114111694,
+        "n": 12,
+        "k": 1,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "before_hit@1": {
+        "point": 0.0,
+        "lo": 2.7755575615628914e-17,
+        "hi": 0.24249400665524085,
+        "n": 12,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "created_at_effect": {
+        "n_before": 12,
+        "top1_follows_created_at": {
+          "point": 0.0,
+          "lo": 2.7755575615628914e-17,
+          "hi": 0.24249400665524085,
+          "n": 12,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "top1_follows_insert": {
+          "point": 0.0,
+          "lo": 2.7755575615628914e-17,
+          "hi": 0.24249400665524085,
+          "n": 12,
+          "k": 0,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "top1_neither": {
+          "point": 1.0,
+          "lo": 0.7575059933447592,
+          "hi": 1.0,
+          "n": 12,
+          "k": 12,
+          "method": "wilson",
+          "z": 1.959963984540054
+        },
+        "neither_quadrant_dist": {
+          "IV": 7,
+          "?": 5
+        },
+        "neither_is_anchor_quadrant_iv": 7,
+        "verdict": "neither",
+        "verdict_why": "top-1 落 III 与 II 的格数相同（或都不落）",
+        "note": "before 题的 gold=象限 III（早 created、晚插入），other=象限 II（晚 created、早插入）；三选一：use_created_at / use_insert_order / neither；neither 里 top1_quadrant_dist 区分锚点 IV 复述与组内其它步"
+      }
+    },
+    "P6": {
+      "name": "重构性",
+      "n": 21,
+      "gist_hit@1": {
+        "point": 0.0,
+        "lo": 5.551115123125783e-17,
+        "hi": 0.35433043506668743,
+        "n": 7,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "action_hit@1": {
+        "point": 0.0,
+        "lo": 5.551115123125783e-17,
+        "hi": 0.35433043506668743,
+        "n": 7,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "value_hit@1": {
+        "point": 0.0,
+        "lo": 5.551115123125783e-17,
+        "hi": 0.35433043506668743,
+        "n": 7,
+        "k": 0,
+        "method": "wilson",
+        "z": 1.959963984540054
+      },
+      "note": "三档都应能答；若 value 强而 gist 弱，说明只是字面检索"
+    }
+  },
+  "composite_equal_weight": 0.48611111111111105,
+  "per_question": [
+    {
+      "qid": "p1-001",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0001",
+        "rank": 0
+      },
+      "top1_score": 0.5448859930038452,
+      "top1_id": "hl2A0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-002",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0001",
+        "rank": 0
+      },
+      "top1_score": 0.5406710505485535,
+      "top1_id": "hl2B0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-003",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0001",
+        "rank": 0
+      },
+      "top1_score": 0.5343244075775146,
+      "top1_id": "hl2C0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-004",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0001",
+        "rank": 0
+      },
+      "top1_score": 0.5492720603942871,
+      "top1_id": "hl2D0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-005",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0001",
+        "rank": 0
+      },
+      "top1_score": 0.5465781688690186,
+      "top1_id": "hl2E0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-006",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0001",
+        "rank": 0
+      },
+      "top1_score": 0.5514223575592041,
+      "top1_id": "hl2F0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-007",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0001",
+        "rank": 0
+      },
+      "top1_score": 0.5660420060157776,
+      "top1_id": "hl2G0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-008",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0001",
+        "rank": 0
+      },
+      "top1_score": 0.5252305269241333,
+      "top1_id": "hl2H0001",
+      "rank": 0
+    },
+    {
+      "qid": "p1-009",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0004",
+        "rank": 0
+      },
+      "top1_score": 0.5431824922561646,
+      "top1_id": "hl2A0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-010",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0004",
+        "rank": 0
+      },
+      "top1_score": 0.5636602640151978,
+      "top1_id": "hl2B0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-011",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0004",
+        "rank": 0
+      },
+      "top1_score": 0.5498334169387817,
+      "top1_id": "hl2C0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-012",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0004",
+        "rank": 0
+      },
+      "top1_score": 0.5155162215232849,
+      "top1_id": "hl2D0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-013",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0004",
+        "rank": 0
+      },
+      "top1_score": 0.5375766754150391,
+      "top1_id": "hl2E0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-014",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0004",
+        "rank": 0
+      },
+      "top1_score": 0.5288107991218567,
+      "top1_id": "hl2F0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-015",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0004",
+        "rank": 0
+      },
+      "top1_score": 0.55314040184021,
+      "top1_id": "hl2G0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-016",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0004",
+        "rank": 0
+      },
+      "top1_score": 0.5659003257751465,
+      "top1_id": "hl2H0004",
+      "rank": 0
+    },
+    {
+      "qid": "p1-017",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0007",
+        "rank": 0
+      },
+      "top1_score": 0.5522280335426331,
+      "top1_id": "hl2A0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-018",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0007",
+        "rank": 0
+      },
+      "top1_score": 0.5315384864807129,
+      "top1_id": "hl2B0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-019",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0007",
+        "rank": 0
+      },
+      "top1_score": 0.560619592666626,
+      "top1_id": "hl2C0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-020",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0007",
+        "rank": 0
+      },
+      "top1_score": 0.5633292198181152,
+      "top1_id": "hl2D0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-021",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0007",
+        "rank": 0
+      },
+      "top1_score": 0.5646443367004395,
+      "top1_id": "hl2E0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-022",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0007",
+        "rank": 0
+      },
+      "top1_score": 0.5683247447013855,
+      "top1_id": "hl2F0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-023",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0007",
+        "rank": 0
+      },
+      "top1_score": 0.5651395320892334,
+      "top1_id": "hl2G0007",
+      "rank": 0
+    },
+    {
+      "qid": "p1-024",
+      "type": "P1",
+      "subtype": "",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0007",
+        "rank": 0
+      },
+      "top1_score": 0.5465325713157654,
+      "top1_id": "hl2H0007",
+      "rank": 0
+    },
+    {
+      "qid": "p2-001",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2A0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.43322306871414185,
+      "top1_id": "hl2A0011",
+      "rank": null
+    },
+    {
+      "qid": "p2-002",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0010",
+        "rank": 0
+      },
+      "top1_score": 0.6180632710456848,
+      "top1_id": "hl2A0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-003",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2B0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.4420320689678192,
+      "top1_id": "hl2B0033",
+      "rank": null
+    },
+    {
+      "qid": "p2-004",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0010",
+        "rank": 0
+      },
+      "top1_score": 0.6735482811927795,
+      "top1_id": "hl2B0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-005",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2C0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.48369184136390686,
+      "top1_id": "hl2C0010",
+      "rank": null
+    },
+    {
+      "qid": "p2-006",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0010",
+        "rank": 0
+      },
+      "top1_score": 0.6592013835906982,
+      "top1_id": "hl2C0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-007",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2D0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.3961683213710785,
+      "top1_id": "hl2D0010",
+      "rank": null
+    },
+    {
+      "qid": "p2-008",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0010",
+        "rank": 0
+      },
+      "top1_score": 0.5803027749061584,
+      "top1_id": "hl2D0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-009",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2E0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.41288286447525024,
+      "top1_id": "hl2E0029",
+      "rank": null
+    },
+    {
+      "qid": "p2-010",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0010",
+        "rank": 0
+      },
+      "top1_score": 0.6526570320129395,
+      "top1_id": "hl2E0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-011",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2F0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.497258573770523,
+      "top1_id": "hl2F0010",
+      "rank": null
+    },
+    {
+      "qid": "p2-012",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0010",
+        "rank": 0
+      },
+      "top1_score": 0.6749687194824219,
+      "top1_id": "hl2F0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-013",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2G0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.4177402853965759,
+      "top1_id": "hl2G0029",
+      "rank": null
+    },
+    {
+      "qid": "p2-014",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0010",
+        "rank": 0
+      },
+      "top1_score": 0.615015983581543,
+      "top1_id": "hl2G0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-015",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2H0010"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.41428765654563904,
+      "top1_id": "hl2H0029",
+      "rank": null
+    },
+    {
+      "qid": "p2-016",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0010",
+        "rank": 0
+      },
+      "top1_score": 0.6392241716384888,
+      "top1_id": "hl2H0010",
+      "rank": 0
+    },
+    {
+      "qid": "p2-017",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2A0011"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.458339124917984,
+      "top1_id": "hl2A0011",
+      "rank": null
+    },
+    {
+      "qid": "p2-018",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0011",
+        "rank": 0
+      },
+      "top1_score": 0.6467268466949463,
+      "top1_id": "hl2A0011",
+      "rank": 0
+    },
+    {
+      "qid": "p2-019",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2B0011"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.4526609480381012,
+      "top1_id": "hl2B0011",
+      "rank": null
+    },
+    {
+      "qid": "p2-020",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0011",
+        "rank": 0
+      },
+      "top1_score": 0.6408864855766296,
+      "top1_id": "hl2B0011",
+      "rank": 0
+    },
+    {
+      "qid": "p2-021",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2C0011"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.45198696851730347,
+      "top1_id": "hl2C0037",
+      "rank": null
+    },
+    {
+      "qid": "p2-022",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0011",
+        "rank": 0
+      },
+      "top1_score": 0.6753882765769958,
+      "top1_id": "hl2C0011",
+      "rank": 0
+    },
+    {
+      "qid": "p2-023",
+      "type": "P2",
+      "subtype": "lure",
+      "correct": false,
+      "detail": {
+        "entity_hits": [
+          "hl2D0011"
+        ],
+        "attr_hits": [],
+        "false_hit": true
+      },
+      "top1_score": 0.4913253784179687,
+      "top1_id": "hl2D0011",
+      "rank": null
+    },
+    {
+      "qid": "p2-024",
+      "type": "P2",
+      "subtype": "recorded",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0011",
+        "rank": 0
+      },
+      "top1_score": 0.6554208993911743,
+      "top1_id": "hl2D0011",
+      "rank": 0
+    },
+    {
+      "qid": "p3-001",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0013",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.4873841404914856,
+      "top1_id": "hl2A0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-002",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0013",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.4873841404914856,
+      "top1_id": "hl2A0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-003",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0013",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.520067036151886,
+      "top1_id": "hl2B0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-004",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0013",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.520067036151886,
+      "top1_id": "hl2B0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-005",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0013",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.5321063995361328,
+      "top1_id": "hl2C0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-006",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0013",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.5321063995361328,
+      "top1_id": "hl2C0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-007",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0013",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.5029160380363464,
+      "top1_id": "hl2D0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-008",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0013",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.5029160380363464,
+      "top1_id": "hl2D0012",
+      "rank": null
+    },
+    {
+      "qid": "p3-009",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0012",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.515699028968811,
+      "top1_id": "hl2E0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-010",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0012",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.515699028968811,
+      "top1_id": "hl2E0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-011",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0012",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.4988461136817932,
+      "top1_id": "hl2F0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-012",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0012",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.4988461136817932,
+      "top1_id": "hl2F0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-013",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0012",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.5265043377876282,
+      "top1_id": "hl2G0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-014",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0012",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.5265043377876282,
+      "top1_id": "hl2G0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-015",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2H0012",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.47328251600265503,
+      "top1_id": "hl2H0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-016",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0012",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.47328251600265503,
+      "top1_id": "hl2H0011",
+      "rank": null
+    },
+    {
+      "qid": "p3-017",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0016",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.462007075548172,
+      "top1_id": "hl2A0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-018",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0016",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.462007075548172,
+      "top1_id": "hl2A0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-019",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0016",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.4693329334259033,
+      "top1_id": "hl2B0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-020",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0016",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.4693329334259033,
+      "top1_id": "hl2B0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-021",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0016",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.4991045892238617,
+      "top1_id": "hl2C0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-022",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0016",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.4991045892238617,
+      "top1_id": "hl2C0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-023",
+      "type": "P3",
+      "subtype": "pre",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0016",
+        "rank": null,
+        "phase": "pre",
+        "present": false
+      },
+      "top1_score": 0.5107729434967041,
+      "top1_id": "hl2D0015",
+      "rank": null
+    },
+    {
+      "qid": "p3-024",
+      "type": "P3",
+      "subtype": "post",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0016",
+        "rank": null,
+        "phase": "post",
+        "present": false
+      },
+      "top1_score": 0.5107729434967041,
+      "top1_id": "hl2D0015",
+      "rank": null
+    },
+    {
+      "qid": "p4-001",
+      "type": "P4",
+      "subtype": "what",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0019",
+        "rank": null,
+        "misattributed": false,
+        "top1": "hl2A0023"
+      },
+      "top1_score": 0.6457741856575012,
+      "top1_id": "hl2A0023",
+      "rank": null
+    },
+    {
+      "qid": "p4-002",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0020",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2B0020"
+      },
+      "top1_score": 0.6778392791748047,
+      "top1_id": "hl2B0020",
+      "rank": 0
+    },
+    {
+      "qid": "p4-003",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0021",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2C0021"
+      },
+      "top1_score": 0.6308296322822571,
+      "top1_id": "hl2C0021",
+      "rank": 0
+    },
+    {
+      "qid": "p4-004",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0018",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2D0018"
+      },
+      "top1_score": 0.6453030109405518,
+      "top1_id": "hl2D0018",
+      "rank": 0
+    },
+    {
+      "qid": "p4-005",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0015",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2E0015"
+      },
+      "top1_score": 0.6483036279678345,
+      "top1_id": "hl2E0015",
+      "rank": 0
+    },
+    {
+      "qid": "p4-006",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0016",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2F0016"
+      },
+      "top1_score": 0.6843793988227844,
+      "top1_id": "hl2F0016",
+      "rank": 0
+    },
+    {
+      "qid": "p4-007",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0017",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2G0017"
+      },
+      "top1_score": 0.6180278658866882,
+      "top1_id": "hl2G0017",
+      "rank": 0
+    },
+    {
+      "qid": "p4-008",
+      "type": "P4",
+      "subtype": "who",
+      "correct": false,
+      "detail": {
+        "gold": "hl2H0014",
+        "rank": null,
+        "misattributed": true,
+        "top1": "hl2H0016"
+      },
+      "top1_score": 0.6397466659545898,
+      "top1_id": "hl2H0016",
+      "rank": null
+    },
+    {
+      "qid": "p4-009",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0023",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2A0023"
+      },
+      "top1_score": 0.6341874599456787,
+      "top1_id": "hl2A0023",
+      "rank": 0
+    },
+    {
+      "qid": "p4-010",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0024",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2B0024"
+      },
+      "top1_score": 0.6069884896278381,
+      "top1_id": "hl2B0024",
+      "rank": 0
+    },
+    {
+      "qid": "p4-011",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0025",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2C0025"
+      },
+      "top1_score": 0.5898262858390808,
+      "top1_id": "hl2C0025",
+      "rank": 0
+    },
+    {
+      "qid": "p4-012",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0022",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2D0022"
+      },
+      "top1_score": 0.6610806584358215,
+      "top1_id": "hl2D0022",
+      "rank": 0
+    },
+    {
+      "qid": "p4-013",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0019",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2E0019"
+      },
+      "top1_score": 0.6446961760520935,
+      "top1_id": "hl2E0019",
+      "rank": 0
+    },
+    {
+      "qid": "p4-014",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0020",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2F0020"
+      },
+      "top1_score": 0.6300252676010132,
+      "top1_id": "hl2F0020",
+      "rank": 0
+    },
+    {
+      "qid": "p4-015",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0021",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2G0021"
+      },
+      "top1_score": 0.6226734519004822,
+      "top1_id": "hl2G0021",
+      "rank": 0
+    },
+    {
+      "qid": "p4-016",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0018",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2H0018"
+      },
+      "top1_score": 0.5843915939331055,
+      "top1_id": "hl2H0018",
+      "rank": 0
+    },
+    {
+      "qid": "p4-017",
+      "type": "P4",
+      "subtype": "what",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0027",
+        "rank": null,
+        "misattributed": false,
+        "top1": "hl2A0023"
+      },
+      "top1_score": 0.6253576874732971,
+      "top1_id": "hl2A0023",
+      "rank": null
+    },
+    {
+      "qid": "p4-018",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2B0028",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2B0028"
+      },
+      "top1_score": 0.619796097278595,
+      "top1_id": "hl2B0028",
+      "rank": 0
+    },
+    {
+      "qid": "p4-019",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2C0029",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2C0029"
+      },
+      "top1_score": 0.6220621466636658,
+      "top1_id": "hl2C0029",
+      "rank": 0
+    },
+    {
+      "qid": "p4-020",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2D0026",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2D0026"
+      },
+      "top1_score": 0.6171324253082275,
+      "top1_id": "hl2D0026",
+      "rank": 0
+    },
+    {
+      "qid": "p4-021",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2E0023",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2E0023"
+      },
+      "top1_score": 0.6484769582748413,
+      "top1_id": "hl2E0023",
+      "rank": 0
+    },
+    {
+      "qid": "p4-022",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2F0024",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2F0024"
+      },
+      "top1_score": 0.6087949872016907,
+      "top1_id": "hl2F0024",
+      "rank": 0
+    },
+    {
+      "qid": "p4-023",
+      "type": "P4",
+      "subtype": "what",
+      "correct": true,
+      "detail": {
+        "gold": "hl2G0025",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2G0025"
+      },
+      "top1_score": 0.6051584482192993,
+      "top1_id": "hl2G0025",
+      "rank": 0
+    },
+    {
+      "qid": "p4-024",
+      "type": "P4",
+      "subtype": "who",
+      "correct": true,
+      "detail": {
+        "gold": "hl2H0022",
+        "rank": 0,
+        "misattributed": false,
+        "top1": "hl2H0022"
+      },
+      "top1_score": 0.6833050847053528,
+      "top1_id": "hl2H0022",
+      "rank": 0
+    },
+    {
+      "qid": "p5-001",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": true,
+      "detail": {
+        "gold": "hl2A0030",
+        "rank": 0,
+        "top1": "hl2A0030",
+        "top1_is_insert_first": true,
+        "top1_is_created_first": true,
+        "top1_quadrant": "I"
+      },
+      "top1_score": 0.5508766770362854,
+      "top1_id": "hl2A0030",
+      "rank": 0
+    },
+    {
+      "qid": "p5-002",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0031",
+        "rank": 1,
+        "top1": "hl2A0033",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.56033855676651,
+      "top1_id": "hl2A0033",
+      "rank": 1
+    },
+    {
+      "qid": "p5-003",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0030",
+        "rank": 1,
+        "top1": "hl2B0032",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "III"
+      },
+      "top1_score": 0.58182692527771,
+      "top1_id": "hl2B0032",
+      "rank": 1
+    },
+    {
+      "qid": "p5-004",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0031",
+        "rank": 2,
+        "top1": "hl2B0033",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5725347399711609,
+      "top1_id": "hl2B0033",
+      "rank": 2
+    },
+    {
+      "qid": "p5-005",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0030",
+        "rank": 3,
+        "top1": "hl2C0033",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5617477893829346,
+      "top1_id": "hl2C0033",
+      "rank": 3
+    },
+    {
+      "qid": "p5-006",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0031",
+        "rank": null,
+        "top1": "hl2C0033",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5904882550239563,
+      "top1_id": "hl2C0033",
+      "rank": null
+    },
+    {
+      "qid": "p5-007",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0030",
+        "rank": 3,
+        "top1": "hl2D0032",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "III"
+      },
+      "top1_score": 0.5209144949913025,
+      "top1_id": "hl2D0032",
+      "rank": 3
+    },
+    {
+      "qid": "p5-008",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0031",
+        "rank": 2,
+        "top1": "hl2D0033",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5365481376647949,
+      "top1_id": "hl2D0033",
+      "rank": 2
+    },
+    {
+      "qid": "p5-009",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0026",
+        "rank": 1,
+        "top1": "hl2E0028",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "III"
+      },
+      "top1_score": 0.5418283343315125,
+      "top1_id": "hl2E0028",
+      "rank": 1
+    },
+    {
+      "qid": "p5-010",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0027",
+        "rank": 2,
+        "top1": "hl2E0029",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5329951047897339,
+      "top1_id": "hl2E0029",
+      "rank": 2
+    },
+    {
+      "qid": "p5-011",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0026",
+        "rank": 1,
+        "top1": "hl2F0028",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "III"
+      },
+      "top1_score": 0.596589207649231,
+      "top1_id": "hl2F0028",
+      "rank": 1
+    },
+    {
+      "qid": "p5-012",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0027",
+        "rank": 1,
+        "top1": "hl2F0029",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.6022248268127441,
+      "top1_id": "hl2F0029",
+      "rank": 1
+    },
+    {
+      "qid": "p5-013",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0026",
+        "rank": 1,
+        "top1": "hl2G0028",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "III"
+      },
+      "top1_score": 0.5472203493118286,
+      "top1_id": "hl2G0028",
+      "rank": 1
+    },
+    {
+      "qid": "p5-014",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0027",
+        "rank": 1,
+        "top1": "hl2G0029",
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": "IV"
+      },
+      "top1_score": 0.5544281005859375,
+      "top1_id": "hl2G0029",
+      "rank": 1
+    },
+    {
+      "qid": "p5-015",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2H0026",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-016",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2H0027",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-017",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0034",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-018",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0035",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-019",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0034",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-020",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0035",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-021",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0034",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-022",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0035",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-023",
+      "type": "P5",
+      "subtype": "earliest",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0034",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p5-024",
+      "type": "P5",
+      "subtype": "before",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0035",
+        "rank": null,
+        "top1": null,
+        "top1_is_insert_first": false,
+        "top1_is_created_first": false,
+        "top1_quadrant": null
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-001",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0038",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-002",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0038",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-003",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2A0038",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-004",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0038",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-005",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0038",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-006",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2B0038",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-007",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0038",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-008",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0038",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-009",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2C0038",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-010",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0038",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-011",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0038",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-012",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2D0038",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-013",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0030",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-014",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0030",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-015",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2E0030",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-016",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0030",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-017",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0030",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-018",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2F0030",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-019",
+      "type": "P6",
+      "subtype": "gist",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0030",
+        "rank": null,
+        "subtype": "gist"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-020",
+      "type": "P6",
+      "subtype": "action",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0030",
+        "rank": null,
+        "subtype": "action"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    },
+    {
+      "qid": "p6-021",
+      "type": "P6",
+      "subtype": "value",
+      "correct": false,
+      "detail": {
+        "gold": "hl2G0030",
+        "rank": null,
+        "subtype": "value"
+      },
+      "top1_score": null,
+      "top1_id": null,
+      "rank": null
+    }
+  ],
+  "provenance": {
+    "port": 16343,
+    "root": "/tmp/agimem-h6-iso",
+    "import": {
+      "rc": 0,
+      "imported": 278,
+      "duplicates": 0,
+      "local_total": null,
+      "elapsed_s": 1.1
+    },
+    "index": {
+      "state": "ready",
+      "local_total": 278,
+      "worker_active": true,
+      "error": null,
+      "embedding_model": "m3",
+      "waited_s": 83.6,
+      "wait_s": 83.6
+    },
+    "created_at_probe": {
+      "ok": true,
+      "n": 24,
+      "n_match": 24,
+      "unmapped": 0
+    },
+    "forget": {
+      "n_groups": 12,
+      "n_forget_ok": 0,
+      "n_target_gone": 12,
+      "n_post": 12,
+      "n_neighbor_show_ok": 24
+    },
+    "recall": {
+      "n": 141,
+      "unmapped": 0,
+      "elapsed_s": 130.3
+    },
+    "generator": "gen_h6.py",
+    "seed": 20261109,
+    "collect": "collect_h6.py --run --port 16343",
+    "defect_fix": "T28: P5 before 去引号 + P3 全量 forget"
+  }
+}

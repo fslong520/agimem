@@ -1,0 +1,576 @@
+{"qid": "d1-mlf0001-en", "class": "d1", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": null, "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d1-mlf0001-es", "class": "d1", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": null, "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d1-mlf0001-ja", "class": "d1", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d1-mlf0001-zh", "class": "d1", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d1-mlf0002-en", "class": "d1", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": null, "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d1-mlf0002-es", "class": "d1", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d1-mlf0002-ja", "class": "d1", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d1-mlf0002-zh", "class": "d1", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d1-mlf0003-en", "class": "d1", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": null, "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d1-mlf0003-es", "class": "d1", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d1-mlf0003-ja", "class": "d1", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d1-mlf0003-zh", "class": "d1", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d1-mlf0004-en", "class": "d1", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": null, "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d1-mlf0004-es", "class": "d1", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": null, "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d1-mlf0004-ja", "class": "d1", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d1-mlf0004-zh", "class": "d1", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d1-mlf0005-en", "class": "d1", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": null, "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d1-mlf0005-es", "class": "d1", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d1-mlf0005-ja", "class": "d1", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d1-mlf0005-zh", "class": "d1", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d1-mlf0006-en", "class": "d1", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": null, "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d1-mlf0006-es", "class": "d1", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": null, "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d1-mlf0006-ja", "class": "d1", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d1-mlf0006-zh", "class": "d1", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d1-mlf0007-en", "class": "d1", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": null, "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d1-mlf0007-es", "class": "d1", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": null, "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d1-mlf0007-ja", "class": "d1", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": null, "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d1-mlf0007-zh", "class": "d1", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": null, "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d1-mlf0008-en", "class": "d1", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": null, "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d1-mlf0008-es", "class": "d1", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": null, "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d1-mlf0008-ja", "class": "d1", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": null, "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d1-mlf0008-zh", "class": "d1", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": null, "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d1-mlf0009-en", "class": "d1", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": null, "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d1-mlf0009-es", "class": "d1", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": null, "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d1-mlf0009-ja", "class": "d1", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": null, "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d1-mlf0009-zh", "class": "d1", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": null, "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d1-mlf0010-en", "class": "d1", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": null, "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d1-mlf0010-es", "class": "d1", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": null, "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d1-mlf0010-ja", "class": "d1", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": null, "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d1-mlf0010-zh", "class": "d1", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": null, "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d1-mlf0011-en", "class": "d1", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": null, "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d1-mlf0011-es", "class": "d1", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": null, "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d1-mlf0011-ja", "class": "d1", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": null, "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d1-mlf0011-zh", "class": "d1", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": null, "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d1-mlf0012-en", "class": "d1", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": null, "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d1-mlf0012-es", "class": "d1", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": null, "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d1-mlf0012-ja", "class": "d1", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": null, "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d1-mlf0012-zh", "class": "d1", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": null, "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d1-mlf0013-en", "class": "d1", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": null, "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d1-mlf0013-es", "class": "d1", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d1-mlf0013-ja", "class": "d1", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": null, "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d1-mlf0013-zh", "class": "d1", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": null, "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d1-mlf0014-en", "class": "d1", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": null, "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d1-mlf0014-es", "class": "d1", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": null, "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d1-mlf0014-ja", "class": "d1", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": null, "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d1-mlf0014-zh", "class": "d1", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": null, "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d1-mlf0015-en", "class": "d1", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": null, "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d1-mlf0015-es", "class": "d1", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d1-mlf0015-ja", "class": "d1", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": null, "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d1-mlf0015-zh", "class": "d1", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": null, "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d1-mlf0016-en", "class": "d1", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": null, "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d1-mlf0016-es", "class": "d1", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d1-mlf0016-ja", "class": "d1", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": null, "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d1-mlf0016-zh", "class": "d1", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": null, "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d1-mlf0017-en", "class": "d1", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": null, "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d1-mlf0017-es", "class": "d1", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d1-mlf0017-ja", "class": "d1", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": null, "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d1-mlf0017-zh", "class": "d1", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": null, "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d1-mlf0018-en", "class": "d1", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": null, "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d1-mlf0018-es", "class": "d1", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": null, "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d1-mlf0018-ja", "class": "d1", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": null, "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d1-mlf0018-zh", "class": "d1", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": null, "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d1-mlf0019-en", "class": "d1", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d1-mlf0019-es", "class": "d1", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d1-mlf0019-ja", "class": "d1", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d1-mlf0019-zh", "class": "d1", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d1-mlf0020-en", "class": "d1", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d1-mlf0020-es", "class": "d1", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d1-mlf0020-ja", "class": "d1", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d1-mlf0020-zh", "class": "d1", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d1-mlf0021-en", "class": "d1", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d1-mlf0021-es", "class": "d1", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d1-mlf0021-ja", "class": "d1", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d1-mlf0021-zh", "class": "d1", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d1-mlf0022-en", "class": "d1", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d1-mlf0022-es", "class": "d1", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d1-mlf0022-ja", "class": "d1", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d1-mlf0022-zh", "class": "d1", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d1-mlf0023-en", "class": "d1", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d1-mlf0023-es", "class": "d1", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d1-mlf0023-ja", "class": "d1", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d1-mlf0023-zh", "class": "d1", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d1-mlf0024-en", "class": "d1", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d1-mlf0024-es", "class": "d1", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d1-mlf0024-ja", "class": "d1", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d1-mlf0024-zh", "class": "d1", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0001-es-en", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-ja-en", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-zh-en", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-en-es", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-ja-es", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-zh-es", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-en-ja", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-es-ja", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-zh-ja", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-en-zh", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-es-zh", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0001-ja-zh", "class": "d2", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d2-mlf0002-es-en", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-ja-en", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-zh-en", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-en-es", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-ja-es", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-zh-es", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-en-ja", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-es-ja", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-zh-ja", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-en-zh", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-es-zh", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0002-ja-zh", "class": "d2", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d2-mlf0003-es-en", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-ja-en", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-zh-en", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-en-es", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-ja-es", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-zh-es", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-en-ja", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-es-ja", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-zh-ja", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-en-zh", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-es-zh", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0003-ja-zh", "class": "d2", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d2-mlf0004-es-en", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-ja-en", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-zh-en", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-en-es", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-ja-es", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-zh-es", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-en-ja", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-es-ja", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-zh-ja", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-en-zh", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-es-zh", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0004-ja-zh", "class": "d2", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d2-mlf0005-es-en", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-ja-en", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-zh-en", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-en-es", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-ja-es", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-zh-es", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-en-ja", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-es-ja", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-zh-ja", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-en-zh", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-es-zh", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0005-ja-zh", "class": "d2", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d2-mlf0006-es-en", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": "es", "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-ja-en", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": "ja", "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-zh-en", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": "zh", "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-en-es", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": "en", "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-ja-es", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": "ja", "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-zh-es", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": "zh", "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-en-ja", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": "en", "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-es-ja", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": "es", "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-zh-ja", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": "zh", "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-en-zh", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": "en", "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-es-zh", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": "es", "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0006-ja-zh", "class": "d2", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": "ja", "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d2-mlf0007-es-en", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": "es", "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-ja-en", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-zh-en", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-en-es", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": "en", "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-ja-es", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-zh-es", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-en-ja", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-es-ja", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-zh-ja", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-en-zh", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-es-zh", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0007-ja-zh", "class": "d2", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d2-mlf0008-es-en", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": "es", "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-ja-en", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-zh-en", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-en-es", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": "en", "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-ja-es", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-zh-es", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-en-ja", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-es-ja", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-zh-ja", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-en-zh", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-es-zh", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0008-ja-zh", "class": "d2", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d2-mlf0009-es-en", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": "es", "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-ja-en", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-zh-en", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-en-es", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": "en", "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-ja-es", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-zh-es", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-en-ja", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-es-ja", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-zh-ja", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-en-zh", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-es-zh", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0009-ja-zh", "class": "d2", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d2-mlf0010-es-en", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": "es", "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-ja-en", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-zh-en", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-en-es", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": "en", "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-ja-es", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-zh-es", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-en-ja", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-es-ja", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-zh-ja", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-en-zh", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-es-zh", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0010-ja-zh", "class": "d2", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d2-mlf0011-es-en", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": "es", "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-ja-en", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-zh-en", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-en-es", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": "en", "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-ja-es", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-zh-es", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-en-ja", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-es-ja", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-zh-ja", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-en-zh", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-es-zh", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0011-ja-zh", "class": "d2", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d2-mlf0012-es-en", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": "es", "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-ja-en", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": "ja", "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-zh-en", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": "zh", "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-en-es", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": "en", "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-ja-es", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": "ja", "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-zh-es", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": "zh", "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-en-ja", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": "en", "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-es-ja", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": "es", "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-zh-ja", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": "zh", "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-en-zh", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": "en", "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-es-zh", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": "es", "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0012-ja-zh", "class": "d2", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": "ja", "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d2-mlf0013-es-en", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": "es", "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-ja-en", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-zh-en", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-en-es", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": "en", "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-ja-es", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-zh-es", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-en-ja", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-es-ja", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-zh-ja", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-en-zh", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-es-zh", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0013-ja-zh", "class": "d2", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d2-mlf0014-es-en", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": "es", "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-ja-en", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-zh-en", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-en-es", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": "en", "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-ja-es", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-zh-es", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-en-ja", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-es-ja", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-zh-ja", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-en-zh", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-es-zh", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0014-ja-zh", "class": "d2", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d2-mlf0015-es-en", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": "es", "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-ja-en", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-zh-en", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-en-es", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": "en", "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-ja-es", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-zh-es", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-en-ja", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-es-ja", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-zh-ja", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-en-zh", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-es-zh", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0015-ja-zh", "class": "d2", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d2-mlf0016-es-en", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": "es", "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-ja-en", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-zh-en", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-en-es", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": "en", "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-ja-es", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-zh-es", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-en-ja", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-es-ja", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-zh-ja", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-en-zh", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-es-zh", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0016-ja-zh", "class": "d2", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d2-mlf0017-es-en", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": "es", "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-ja-en", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-zh-en", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-en-es", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": "en", "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-ja-es", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-zh-es", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-en-ja", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-es-ja", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-zh-ja", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-en-zh", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-es-zh", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0017-ja-zh", "class": "d2", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d2-mlf0018-es-en", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": "es", "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-ja-en", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": "ja", "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-zh-en", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": "zh", "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-en-es", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": "en", "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-ja-es", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": "ja", "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-zh-es", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": "zh", "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-en-ja", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": "en", "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-es-ja", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": "es", "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-zh-ja", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": "zh", "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-en-zh", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": "en", "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-es-zh", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": "es", "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0018-ja-zh", "class": "d2", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": "ja", "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d2-mlf0019-es-en", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-ja-en", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-zh-en", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-en-es", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-ja-es", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-zh-es", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-en-ja", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-es-ja", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-zh-ja", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-en-zh", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-es-zh", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0019-ja-zh", "class": "d2", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d2-mlf0020-es-en", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-ja-en", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-zh-en", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-en-es", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-ja-es", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-zh-es", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-en-ja", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-es-ja", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-zh-ja", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-en-zh", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-es-zh", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0020-ja-zh", "class": "d2", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d2-mlf0021-es-en", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-ja-en", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-zh-en", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-en-es", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-ja-es", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-zh-es", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-en-ja", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-es-ja", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-zh-ja", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-en-zh", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-es-zh", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0021-ja-zh", "class": "d2", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d2-mlf0022-es-en", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-ja-en", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-zh-en", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-en-es", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-ja-es", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-zh-es", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-en-ja", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-es-ja", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-zh-ja", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-en-zh", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-es-zh", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0022-ja-zh", "class": "d2", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d2-mlf0023-es-en", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-ja-en", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-zh-en", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-en-es", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-ja-es", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-zh-es", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-en-ja", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-es-ja", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-zh-ja", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-en-zh", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-es-zh", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0023-ja-zh", "class": "d2", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d2-mlf0024-es-en", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": "es", "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-ja-en", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": "ja", "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-zh-en", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": "zh", "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-en-es", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": "en", "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-ja-es", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": "ja", "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-zh-es", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": "zh", "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-en-ja", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": "en", "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-es-ja", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": "es", "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-zh-ja", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": "zh", "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-en-zh", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": "en", "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-es-zh", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": "es", "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}
+{"qid": "d2-mlf0024-ja-zh", "class": "d2", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": "ja", "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}
+{"qid": "d2c-mlf0001-en", "class": "d2c", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d2c-mlf0001-es", "class": "d2c", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d2c-mlf0001-ja", "class": "d2c", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d2c-mlf0001-zh", "class": "d2c", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d2c-mlf0002-en", "class": "d2c", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d2c-mlf0002-es", "class": "d2c", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d2c-mlf0002-ja", "class": "d2c", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d2c-mlf0002-zh", "class": "d2c", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d2c-mlf0003-en", "class": "d2c", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d2c-mlf0003-es", "class": "d2c", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d2c-mlf0003-ja", "class": "d2c", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d2c-mlf0003-zh", "class": "d2c", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d2c-mlf0004-en", "class": "d2c", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d2c-mlf0004-es", "class": "d2c", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d2c-mlf0004-ja", "class": "d2c", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d2c-mlf0004-zh", "class": "d2c", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d2c-mlf0005-en", "class": "d2c", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d2c-mlf0005-es", "class": "d2c", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d2c-mlf0005-ja", "class": "d2c", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d2c-mlf0005-zh", "class": "d2c", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d2c-mlf0006-en", "class": "d2c", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": "en", "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d2c-mlf0006-es", "class": "d2c", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": "es", "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d2c-mlf0006-ja", "class": "d2c", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": "ja", "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d2c-mlf0006-zh", "class": "d2c", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": "zh", "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d2c-mlf0007-en", "class": "d2c", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": "en", "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d2c-mlf0007-es", "class": "d2c", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": "es", "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d2c-mlf0007-ja", "class": "d2c", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d2c-mlf0007-zh", "class": "d2c", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d2c-mlf0008-en", "class": "d2c", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": "en", "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d2c-mlf0008-es", "class": "d2c", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": "es", "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d2c-mlf0008-ja", "class": "d2c", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d2c-mlf0008-zh", "class": "d2c", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d2c-mlf0009-en", "class": "d2c", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": "en", "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d2c-mlf0009-es", "class": "d2c", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": "es", "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d2c-mlf0009-ja", "class": "d2c", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d2c-mlf0009-zh", "class": "d2c", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d2c-mlf0010-en", "class": "d2c", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": "en", "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d2c-mlf0010-es", "class": "d2c", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": "es", "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d2c-mlf0010-ja", "class": "d2c", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d2c-mlf0010-zh", "class": "d2c", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d2c-mlf0011-en", "class": "d2c", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": "en", "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d2c-mlf0011-es", "class": "d2c", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": "es", "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d2c-mlf0011-ja", "class": "d2c", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d2c-mlf0011-zh", "class": "d2c", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d2c-mlf0012-en", "class": "d2c", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": "en", "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d2c-mlf0012-es", "class": "d2c", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": "es", "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d2c-mlf0012-ja", "class": "d2c", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": "ja", "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d2c-mlf0012-zh", "class": "d2c", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": "zh", "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d2c-mlf0013-en", "class": "d2c", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": "en", "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d2c-mlf0013-es", "class": "d2c", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": "es", "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d2c-mlf0013-ja", "class": "d2c", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d2c-mlf0013-zh", "class": "d2c", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d2c-mlf0014-en", "class": "d2c", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": "en", "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d2c-mlf0014-es", "class": "d2c", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": "es", "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d2c-mlf0014-ja", "class": "d2c", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d2c-mlf0014-zh", "class": "d2c", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d2c-mlf0015-en", "class": "d2c", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": "en", "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d2c-mlf0015-es", "class": "d2c", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": "es", "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d2c-mlf0015-ja", "class": "d2c", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d2c-mlf0015-zh", "class": "d2c", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d2c-mlf0016-en", "class": "d2c", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": "en", "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d2c-mlf0016-es", "class": "d2c", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": "es", "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d2c-mlf0016-ja", "class": "d2c", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d2c-mlf0016-zh", "class": "d2c", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d2c-mlf0017-en", "class": "d2c", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": "en", "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d2c-mlf0017-es", "class": "d2c", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": "es", "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d2c-mlf0017-ja", "class": "d2c", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d2c-mlf0017-zh", "class": "d2c", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d2c-mlf0018-en", "class": "d2c", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": "en", "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d2c-mlf0018-es", "class": "d2c", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": "es", "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d2c-mlf0018-ja", "class": "d2c", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": "ja", "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d2c-mlf0018-zh", "class": "d2c", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": "zh", "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d2c-mlf0019-en", "class": "d2c", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d2c-mlf0019-es", "class": "d2c", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d2c-mlf0019-ja", "class": "d2c", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d2c-mlf0019-zh", "class": "d2c", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d2c-mlf0020-en", "class": "d2c", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d2c-mlf0020-es", "class": "d2c", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d2c-mlf0020-ja", "class": "d2c", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d2c-mlf0020-zh", "class": "d2c", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d2c-mlf0021-en", "class": "d2c", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d2c-mlf0021-es", "class": "d2c", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d2c-mlf0021-ja", "class": "d2c", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d2c-mlf0021-zh", "class": "d2c", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d2c-mlf0022-en", "class": "d2c", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d2c-mlf0022-es", "class": "d2c", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d2c-mlf0022-ja", "class": "d2c", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d2c-mlf0022-zh", "class": "d2c", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d2c-mlf0023-en", "class": "d2c", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d2c-mlf0023-es", "class": "d2c", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d2c-mlf0023-ja", "class": "d2c", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d2c-mlf0023-zh", "class": "d2c", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d2c-mlf0024-en", "class": "d2c", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": "en", "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d2c-mlf0024-es", "class": "d2c", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": "es", "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d2c-mlf0024-ja", "class": "d2c", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": "ja", "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d2c-mlf0024-zh", "class": "d2c", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": "zh", "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}
+{"qid": "d3-mlf0001-en", "class": "d3", "fid": "mlf0001", "domain": "deploy", "lang": "en", "write_lang": null, "query": "We sent 5% of traffic to the canary and the 500 rate jumped; what is the first step?", "gold": ["mlf0001"]}
+{"qid": "d3-mlf0001-es", "class": "d3", "fid": "mlf0001", "domain": "deploy", "lang": "es", "write_lang": null, "query": "Enviamos el 5% del tráfico al canario y la tasa de 500 subió; ¿cuál es el primer paso?", "gold": ["mlf0001"]}
+{"qid": "d3-mlf0001-ja", "class": "d3", "fid": "mlf0001", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "カナリアに5%流したら500率が急上昇しました。最初に何をすべきですか？", "gold": ["mlf0001"]}
+{"qid": "d3-mlf0001-zh", "class": "d3", "fid": "mlf0001", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "灰度发布切了 5% 流量，500 率突然升高，第一步该做什么？", "gold": ["mlf0001"]}
+{"qid": "d3-mlf0002-en", "class": "d3", "fid": "mlf0002", "domain": "deploy", "lang": "en", "write_lang": null, "query": "How should a rolling deployment be staged so a single failure cannot take everything down?", "gold": ["mlf0002"]}
+{"qid": "d3-mlf0002-es", "class": "d3", "fid": "mlf0002", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Cómo se debe escalonar un despliegue gradual para que un fallo no tumbe todo?", "gold": ["mlf0002"]}
+{"qid": "d3-mlf0002-ja", "class": "d3", "fid": "mlf0002", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "ローリング更新で全台同時に落ちないようにするにはどう段階化しますか？", "gold": ["mlf0002"]}
+{"qid": "d3-mlf0002-zh", "class": "d3", "fid": "mlf0002", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "滚动发布怎么配置才能避免一次性全挂？", "gold": ["mlf0002"]}
+{"qid": "d3-mlf0003-en", "class": "d3", "fid": "mlf0003", "domain": "deploy", "lang": "en", "write_lang": null, "query": "How do we add a column to a large table without locking it for a long time?", "gold": ["mlf0003"]}
+{"qid": "d3-mlf0003-es", "class": "d3", "fid": "mlf0003", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Cómo añadimos una columna a una tabla grande sin bloquearla mucho tiempo?", "gold": ["mlf0003"]}
+{"qid": "d3-mlf0003-ja", "class": "d3", "fid": "mlf0003", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "大きな表に列を追加するとき、長時間のロックを避けるには？", "gold": ["mlf0003"]}
+{"qid": "d3-mlf0003-zh", "class": "d3", "fid": "mlf0003", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "给大表加字段怎样避免长时间锁表？", "gold": ["mlf0003"]}
+{"qid": "d3-mlf0004-en", "class": "d3", "fid": "mlf0004", "domain": "deploy", "lang": "en", "write_lang": null, "query": "After rolling back the image the service will not start; what is the likely cause?", "gold": ["mlf0004"]}
+{"qid": "d3-mlf0004-es", "class": "d3", "fid": "mlf0004", "domain": "deploy", "lang": "es", "write_lang": null, "query": "Tras revertir la imagen el servicio no arranca; ¿cuál es la causa probable?", "gold": ["mlf0004"]}
+{"qid": "d3-mlf0004-ja", "class": "d3", "fid": "mlf0004", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "イメージを戻したらサービスが起動しなくなりました。原因は何でしょう？", "gold": ["mlf0004"]}
+{"qid": "d3-mlf0004-zh", "class": "d3", "fid": "mlf0004", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "回滚镜像后服务反而起不来，可能是什么原因？", "gold": ["mlf0004"]}
+{"qid": "d3-mlf0005-en", "class": "d3", "fid": "mlf0005", "domain": "deploy", "lang": "en", "write_lang": null, "query": "What preparation is needed before a blue-green cutover?", "gold": ["mlf0005"]}
+{"qid": "d3-mlf0005-es", "class": "d3", "fid": "mlf0005", "domain": "deploy", "lang": "es", "write_lang": null, "query": "¿Qué preparación hace falta antes de un cambio azul-verde?", "gold": ["mlf0005"]}
+{"qid": "d3-mlf0005-ja", "class": "d3", "fid": "mlf0005", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "ブルーグリーン切替の前に何を準備すべきですか？", "gold": ["mlf0005"]}
+{"qid": "d3-mlf0005-zh", "class": "d3", "fid": "mlf0005", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "蓝绿发布切换前需要做哪些准备？", "gold": ["mlf0005"]}
+{"qid": "d3-mlf0006-en", "class": "d3", "fid": "mlf0006", "domain": "deploy", "lang": "en", "write_lang": null, "query": "The service disappears after a reboot; how should it be managed?", "gold": ["mlf0006"]}
+{"qid": "d3-mlf0006-es", "class": "d3", "fid": "mlf0006", "domain": "deploy", "lang": "es", "write_lang": null, "query": "El servicio desaparece tras reiniciar; ¿cómo debe gestionarse?", "gold": ["mlf0006"]}
+{"qid": "d3-mlf0006-ja", "class": "d3", "fid": "mlf0006", "domain": "deploy", "lang": "ja", "write_lang": null, "query": "再起動するとサービスが消えます。どう管理すべきですか？", "gold": ["mlf0006"]}
+{"qid": "d3-mlf0006-zh", "class": "d3", "fid": "mlf0006", "domain": "deploy", "lang": "zh", "write_lang": null, "query": "机器重启后服务就没了，该怎么托管？", "gold": ["mlf0006"]}
+{"qid": "d3-mlf0007-en", "class": "d3", "fid": "mlf0007", "domain": "integration", "lang": "en", "write_lang": null, "query": "Payment callbacks keep failing signature verification; what do we check first?", "gold": ["mlf0007"]}
+{"qid": "d3-mlf0007-es", "class": "d3", "fid": "mlf0007", "domain": "integration", "lang": "es", "write_lang": null, "query": "Los callbacks de pago no pasan la verificación de firma; ¿qué revisamos primero?", "gold": ["mlf0007"]}
+{"qid": "d3-mlf0007-ja", "class": "d3", "fid": "mlf0007", "domain": "integration", "lang": "ja", "write_lang": null, "query": "決済コールバックの署名検証が通りません。まず何を確認しますか？", "gold": ["mlf0007"]}
+{"qid": "d3-mlf0007-zh", "class": "d3", "fid": "mlf0007", "domain": "integration", "lang": "zh", "write_lang": null, "query": "第三方支付回调一直验签失败，先查什么？", "gold": ["mlf0007"]}
+{"qid": "d3-mlf0008-en", "class": "d3", "fid": "mlf0008", "domain": "integration", "lang": "en", "write_lang": null, "query": "The SMS API returns 400; what is the usual cause?", "gold": ["mlf0008"]}
+{"qid": "d3-mlf0008-es", "class": "d3", "fid": "mlf0008", "domain": "integration", "lang": "es", "write_lang": null, "query": "La API de SMS devuelve 400; ¿cuál es la causa habitual?", "gold": ["mlf0008"]}
+{"qid": "d3-mlf0008-ja", "class": "d3", "fid": "mlf0008", "domain": "integration", "lang": "ja", "write_lang": null, "query": "SMS APIが400を返します。よくある原因は？", "gold": ["mlf0008"]}
+{"qid": "d3-mlf0008-zh", "class": "d3", "fid": "mlf0008", "domain": "integration", "lang": "zh", "write_lang": null, "query": "短信接口返回 400，常见原因是什么？", "gold": ["mlf0008"]}
+{"qid": "d3-mlf0009-en", "class": "d3", "fid": "mlf0009", "domain": "integration", "lang": "en", "write_lang": null, "query": "After OAuth authorization the redirect fails; where do we look?", "gold": ["mlf0009"]}
+{"qid": "d3-mlf0009-es", "class": "d3", "fid": "mlf0009", "domain": "integration", "lang": "es", "write_lang": null, "query": "Tras autorizar OAuth la redirección falla; ¿dónde miramos?", "gold": ["mlf0009"]}
+{"qid": "d3-mlf0009-ja", "class": "d3", "fid": "mlf0009", "domain": "integration", "lang": "ja", "write_lang": null, "query": "OAuth認可後のリダイレクトが失敗します。どこを確認しますか？", "gold": ["mlf0009"]}
+{"qid": "d3-mlf0009-zh", "class": "d3", "fid": "mlf0009", "domain": "integration", "lang": "zh", "write_lang": null, "query": "OAuth 授权后跳转失败，该检查哪里？", "gold": ["mlf0009"]}
+{"qid": "d3-mlf0010-en", "class": "d3", "fid": "mlf0010", "domain": "integration", "lang": "en", "write_lang": null, "query": "How do we stop duplicate webhook deliveries from being processed twice?", "gold": ["mlf0010"]}
+{"qid": "d3-mlf0010-es", "class": "d3", "fid": "mlf0010", "domain": "integration", "lang": "es", "write_lang": null, "query": "¿Cómo evitamos procesar dos veces entregas duplicadas de webhook?", "gold": ["mlf0010"]}
+{"qid": "d3-mlf0010-ja", "class": "d3", "fid": "mlf0010", "domain": "integration", "lang": "ja", "write_lang": null, "query": "Webhookの重複配信を二重処理しないようにするには？", "gold": ["mlf0010"]}
+{"qid": "d3-mlf0010-zh", "class": "d3", "fid": "mlf0010", "domain": "integration", "lang": "zh", "write_lang": null, "query": "Webhook 重复推送怎样防止重复处理？", "gold": ["mlf0010"]}
+{"qid": "d3-mlf0011-en", "class": "d3", "fid": "mlf0011", "domain": "integration", "lang": "en", "write_lang": null, "query": "Direct browser uploads to object storage hit a CORS error; how should CORS be configured?", "gold": ["mlf0011"]}
+{"qid": "d3-mlf0011-es", "class": "d3", "fid": "mlf0011", "domain": "integration", "lang": "es", "write_lang": null, "query": "Las subidas directas del navegador dan error CORS; ¿cómo se configura?", "gold": ["mlf0011"]}
+{"qid": "d3-mlf0011-ja", "class": "d3", "fid": "mlf0011", "domain": "integration", "lang": "ja", "write_lang": null, "query": "ブラウザから直接アップロードするとCORSエラーになります。どう設定しますか？", "gold": ["mlf0011"]}
+{"qid": "d3-mlf0011-zh", "class": "d3", "fid": "mlf0011", "domain": "integration", "lang": "zh", "write_lang": null, "query": "前端直传对象存储报跨域错误，CORS 怎么配？", "gold": ["mlf0011"]}
+{"qid": "d3-mlf0012-en", "class": "d3", "fid": "mlf0012", "domain": "integration", "lang": "en", "write_lang": null, "query": "The message queue consumer occasionally loses messages; what could cause that?", "gold": ["mlf0012"]}
+{"qid": "d3-mlf0012-es", "class": "d3", "fid": "mlf0012", "domain": "integration", "lang": "es", "write_lang": null, "query": "El consumidor de la cola pierde mensajes de vez en cuando; ¿a qué se debe?", "gold": ["mlf0012"]}
+{"qid": "d3-mlf0012-ja", "class": "d3", "fid": "mlf0012", "domain": "integration", "lang": "ja", "write_lang": null, "query": "メッセージキューの消費でときどきメッセージを失います。原因は？", "gold": ["mlf0012"]}
+{"qid": "d3-mlf0012-zh", "class": "d3", "fid": "mlf0012", "domain": "integration", "lang": "zh", "write_lang": null, "query": "消息队列消费偶尔丢消息，可能是什么原因？", "gold": ["mlf0012"]}
+{"qid": "d3-mlf0013-en", "class": "d3", "fid": "mlf0013", "domain": "handover", "lang": "en", "write_lang": null, "query": "What key information belongs on an on-call handover sheet?", "gold": ["mlf0013"]}
+{"qid": "d3-mlf0013-es", "class": "d3", "fid": "mlf0013", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿Qué información clave debe llevar un traspaso de guardia?", "gold": ["mlf0013"]}
+{"qid": "d3-mlf0013-ja", "class": "d3", "fid": "mlf0013", "domain": "handover", "lang": "ja", "write_lang": null, "query": "当番の引き継ぎ書には何を書くべきですか？", "gold": ["mlf0013"]}
+{"qid": "d3-mlf0013-zh", "class": "d3", "fid": "mlf0013", "domain": "handover", "lang": "zh", "write_lang": null, "query": "值班交接单要写明哪些关键信息？", "gold": ["mlf0013"]}
+{"qid": "d3-mlf0014-en", "class": "d3", "fid": "mlf0014", "domain": "handover", "lang": "en", "write_lang": null, "query": "A certificate is about to expire; what must the handover cover?", "gold": ["mlf0014"]}
+{"qid": "d3-mlf0014-es", "class": "d3", "fid": "mlf0014", "domain": "handover", "lang": "es", "write_lang": null, "query": "Un certificado está por caducar; ¿qué debe cubrir el traspaso?", "gold": ["mlf0014"]}
+{"qid": "d3-mlf0014-ja", "class": "d3", "fid": "mlf0014", "domain": "handover", "lang": "ja", "write_lang": null, "query": "証明書の期限が近いです。引き継ぎで何を伝えますか？", "gold": ["mlf0014"]}
+{"qid": "d3-mlf0014-zh", "class": "d3", "fid": "mlf0014", "domain": "handover", "lang": "zh", "write_lang": null, "query": "证书快到期了，交接时要交代什么？", "gold": ["mlf0014"]}
+{"qid": "d3-mlf0015-en", "class": "d3", "fid": "mlf0015", "domain": "handover", "lang": "en", "write_lang": null, "query": "Where is the canary switch changed, and how should the handover describe it?", "gold": ["mlf0015"]}
+{"qid": "d3-mlf0015-es", "class": "d3", "fid": "mlf0015", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿Dónde se cambia el interruptor canario y cómo se describe en el traspaso?", "gold": ["mlf0015"]}
+{"qid": "d3-mlf0015-ja", "class": "d3", "fid": "mlf0015", "domain": "handover", "lang": "ja", "write_lang": null, "query": "カナリアスイッチはどこで変更しますか。引き継ぎにはどう書きますか？", "gold": ["mlf0015"]}
+{"qid": "d3-mlf0015-zh", "class": "d3", "fid": "mlf0015", "domain": "handover", "lang": "zh", "write_lang": null, "query": "灰度开关在哪里改，交接怎么写？", "gold": ["mlf0015"]}
+{"qid": "d3-mlf0016-en", "class": "d3", "fid": "mlf0016", "domain": "handover", "lang": "en", "write_lang": null, "query": "Who do we call for a night alert, and how is that written in the handover?", "gold": ["mlf0016"]}
+{"qid": "d3-mlf0016-es", "class": "d3", "fid": "mlf0016", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿A quién llamamos ante una alerta nocturna y cómo se recoge en el traspaso?", "gold": ["mlf0016"]}
+{"qid": "d3-mlf0016-ja", "class": "d3", "fid": "mlf0016", "domain": "handover", "lang": "ja", "write_lang": null, "query": "夜間のアラートは誰に連絡しますか。引き継ぎ書にはどう書きますか？", "gold": ["mlf0016"]}
+{"qid": "d3-mlf0016-zh", "class": "d3", "fid": "mlf0016", "domain": "handover", "lang": "zh", "write_lang": null, "query": "夜间告警该找谁，交接单怎么写？", "gold": ["mlf0016"]}
+{"qid": "d3-mlf0017-en", "class": "d3", "fid": "mlf0017", "domain": "handover", "lang": "en", "write_lang": null, "query": "During what time window must services not be restarted?", "gold": ["mlf0017"]}
+{"qid": "d3-mlf0017-es", "class": "d3", "fid": "mlf0017", "domain": "handover", "lang": "es", "write_lang": null, "query": "¿En qué franja horaria no se deben reiniciar los servicios?", "gold": ["mlf0017"]}
+{"qid": "d3-mlf0017-ja", "class": "d3", "fid": "mlf0017", "domain": "handover", "lang": "ja", "write_lang": null, "query": "どの時間帯にサービスを再起動してはいけませんか？", "gold": ["mlf0017"]}
+{"qid": "d3-mlf0017-zh", "class": "d3", "fid": "mlf0017", "domain": "handover", "lang": "zh", "write_lang": null, "query": "什么时间段不能重启服务？", "gold": ["mlf0017"]}
+{"qid": "d3-mlf0018-en", "class": "d3", "fid": "mlf0018", "domain": "handover", "lang": "en", "write_lang": null, "query": "Alerts went silent on Wednesday; is monitoring broken?", "gold": ["mlf0018"]}
+{"qid": "d3-mlf0018-es", "class": "d3", "fid": "mlf0018", "domain": "handover", "lang": "es", "write_lang": null, "query": "El miércoles las alertas dejaron de sonar; ¿está roto el monitoreo?", "gold": ["mlf0018"]}
+{"qid": "d3-mlf0018-ja", "class": "d3", "fid": "mlf0018", "domain": "handover", "lang": "ja", "write_lang": null, "query": "水曜にアラートが急に鳴らなくなりました。監視障害ですか？", "gold": ["mlf0018"]}
+{"qid": "d3-mlf0018-zh", "class": "d3", "fid": "mlf0018", "domain": "handover", "lang": "zh", "write_lang": null, "query": "周三告警突然不响了，是监控坏了吗？", "gold": ["mlf0018"]}
+{"qid": "d3-mlf0019-en", "class": "d3", "fid": "mlf0019", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "A mass cache expiry took the database down; how do we fix it?", "gold": ["mlf0019"]}
+{"qid": "d3-mlf0019-es", "class": "d3", "fid": "mlf0019", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Una caducidad masiva de caché tumbó la base de datos; ¿cómo lo arreglamos?", "gold": ["mlf0019"]}
+{"qid": "d3-mlf0019-ja", "class": "d3", "fid": "mlf0019", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "大量のキャッシュが同時に期限切れになりDBが落ちました。どう直しますか？", "gold": ["mlf0019"]}
+{"qid": "d3-mlf0019-zh", "class": "d3", "fid": "mlf0019", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "大量缓存同时过期把数据库打挂了，怎么改？", "gold": ["mlf0019"]}
+{"qid": "d3-mlf0020-en", "class": "d3", "fid": "mlf0020", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "APIs time out and the connection pool is full; where is the root cause?", "gold": ["mlf0020"]}
+{"qid": "d3-mlf0020-es", "class": "d3", "fid": "mlf0020", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Las API dan timeout y el pool está lleno; ¿dónde está la causa raíz?", "gold": ["mlf0020"]}
+{"qid": "d3-mlf0020-ja", "class": "d3", "fid": "mlf0020", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "APIがタイムアウトし接続プールも満杯です。根本原因はどこですか？", "gold": ["mlf0020"]}
+{"qid": "d3-mlf0020-zh", "class": "d3", "fid": "mlf0020", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "接口超时而且连接池满了，根因在哪？", "gold": ["mlf0020"]}
+{"qid": "d3-mlf0021-en", "class": "d3", "fid": "mlf0021", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "The disk has free space but writes fail; what do we check?", "gold": ["mlf0021"]}
+{"qid": "d3-mlf0021-es", "class": "d3", "fid": "mlf0021", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "El disco tiene espacio libre pero falla la escritura; ¿qué revisamos?", "gold": ["mlf0021"]}
+{"qid": "d3-mlf0021-ja", "class": "d3", "fid": "mlf0021", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "ディスクに空きはあるのに書き込めません。何を調べますか？", "gold": ["mlf0021"]}
+{"qid": "d3-mlf0021-zh", "class": "d3", "fid": "mlf0021", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "磁盘还有空间但写不进文件，查什么？", "gold": ["mlf0021"]}
+{"qid": "d3-mlf0022-en", "class": "d3", "fid": "mlf0022", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "Nginx returns 502; where do we look first?", "gold": ["mlf0022"]}
+{"qid": "d3-mlf0022-es", "class": "d3", "fid": "mlf0022", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Nginx devuelve 502; ¿dónde miramos primero?", "gold": ["mlf0022"]}
+{"qid": "d3-mlf0022-ja", "class": "d3", "fid": "mlf0022", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "Nginxが502を返します。まずどこを見ますか？", "gold": ["mlf0022"]}
+{"qid": "d3-mlf0022-zh", "class": "d3", "fid": "mlf0022", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "Nginx 返回 502，先查哪里？", "gold": ["mlf0022"]}
+{"qid": "d3-mlf0023-en", "class": "d3", "fid": "mlf0023", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "The container keeps OOM-restarting; how do we diagnose it?", "gold": ["mlf0023"]}
+{"qid": "d3-mlf0023-es", "class": "d3", "fid": "mlf0023", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "El contenedor se reinicia por OOM una y otra vez; ¿cómo lo diagnosticamos?", "gold": ["mlf0023"]}
+{"qid": "d3-mlf0023-ja", "class": "d3", "fid": "mlf0023", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "コンテナがOOMで再起動を繰り返します。どう切り分けますか？", "gold": ["mlf0023"]}
+{"qid": "d3-mlf0023-zh", "class": "d3", "fid": "mlf0023", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "容器反复 OOM 重启，怎么定位？", "gold": ["mlf0023"]}
+{"qid": "d3-mlf0024-en", "class": "d3", "fid": "mlf0024", "domain": "troubleshooting", "lang": "en", "write_lang": null, "query": "After the cutover the old host still receives requests; why?", "gold": ["mlf0024"]}
+{"qid": "d3-mlf0024-es", "class": "d3", "fid": "mlf0024", "domain": "troubleshooting", "lang": "es", "write_lang": null, "query": "Tras el cambio el host viejo sigue recibiendo peticiones; ¿por qué?", "gold": ["mlf0024"]}
+{"qid": "d3-mlf0024-ja", "class": "d3", "fid": "mlf0024", "domain": "troubleshooting", "lang": "ja", "write_lang": null, "query": "切替後も旧ホストに要求が来ます。なぜですか？", "gold": ["mlf0024"]}
+{"qid": "d3-mlf0024-zh", "class": "d3", "fid": "mlf0024", "domain": "troubleshooting", "lang": "zh", "write_lang": null, "query": "切流后旧机器还在收请求，为什么？", "gold": ["mlf0024"]}

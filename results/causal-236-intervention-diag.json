@@ -1,0 +1,305 @@
+{
+ "schema": "agimem-causal-236-intervention-diag/1",
+ "question": "干预误报 0.400→0.800（T26 报告）的原因定位",
+ "old_122": {
+  "n_pitfall": 42,
+  "n_normal": 37,
+  "separability": {
+   "normal_vs_nearest_pit_jaccard_mean": 0.0599,
+   "normal_vs_nearest_pit_jaccard_max": 0.2,
+   "normal_over_0.3": 0,
+   "n_normal": 37,
+   "pct_over_0.3": 0.0
+  },
+  "confusion": {
+   "TP": 10,
+   "FP": 4,
+   "FN": 0,
+   "TN": 6
+  },
+  "acc": 0.8,
+  "fpr": 0.4,
+  "safe_top5_pit_slots": 6,
+  "slots_really_matching_desc": 0,
+  "pct_slots_really_matching": 0.0,
+  "fp_cases": [
+   {
+    "qid": "q076",
+    "desc": "把键拆成路径加工具链哈希两层",
+    "pit_recs": [
+     {
+      "id": "sntF0013",
+      "title": "权限批量放开图省事",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q077",
+    "desc": "按任务隔离临时目录并清理",
+    "pit_recs": [
+     {
+      "id": "sntA0014",
+      "title": "缓存命中异常直接清空全部",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q085",
+    "desc": "错误全量采、调试按一成",
+    "pit_recs": [
+     {
+      "id": "sntG0014",
+      "title": "重试策略过激放大故障",
+      "sim_to_desc": 0.0
+     },
+     {
+      "id": "sntH0013",
+      "title": "超时收口过短误杀慢查询",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q088",
+    "desc": "顶层定总超时并向下分层",
+    "pit_recs": [
+     {
+      "id": "sntH0012",
+      "title": "调用不设超时被慢下游拖死",
+      "sim_to_desc": 0.05
+     },
+     {
+      "id": "sntH0013",
+      "title": "超时收口过短误杀慢查询",
+      "sim_to_desc": 0.0526
+     }
+    ]
+   }
+  ]
+ },
+ "new_236": {
+  "n_pitfall": 81,
+  "n_normal": 73,
+  "separability": {
+   "normal_vs_nearest_pit_jaccard_mean": 0.3843,
+   "normal_vs_nearest_pit_jaccard_max": 1.0,
+   "normal_over_0.3": 26,
+   "n_normal": 73,
+   "pct_over_0.3": 35.6
+  },
+  "confusion": {
+   "TP": 20,
+   "FP": 16,
+   "FN": 0,
+   "TN": 4
+  },
+  "acc": 0.6,
+  "fpr": 0.8,
+  "safe_top5_pit_slots": 17,
+  "slots_really_matching_desc": 0,
+  "pct_slots_really_matching": 0.0,
+  "fp_cases": [
+   {
+    "qid": "q138",
+    "desc": "分片流式写并配额检查",
+    "pit_recs": [
+     {
+      "id": "sntH0030",
+      "title": "超时收口过短误杀慢查询",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q140",
+    "desc": "告警太多看不过来",
+    "pit_recs": [
+     {
+      "id": "sntD0001",
+      "title": "告警风暴淹没值班群",
+      "sim_to_desc": 0.0714
+     },
+     {
+      "id": "sntD0014",
+      "title": "同一故障多系统重复告警·后续2",
+      "sim_to_desc": 0.0625
+     }
+    ]
+   },
+   {
+    "qid": "q143",
+    "desc": "工单审批后自动同步权限",
+    "pit_recs": [
+     {
+      "id": "sntF0027",
+      "title": "权限批量放开图省事",
+      "sim_to_desc": 0.0588
+     }
+    ]
+   },
+   {
+    "qid": "q145",
+    "desc": "把键拆成路径加工具链哈希两层",
+    "pit_recs": [
+     {
+      "id": "sntF0027",
+      "title": "权限批量放开图省事",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q154",
+    "desc": "按同一口径做第 1 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q155",
+    "desc": "按同一口径做第 1 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q156",
+    "desc": "按同一口径做第 1 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q157",
+    "desc": "按同一口径做第 1 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q162",
+    "desc": "按同一口径做第 2 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q163",
+    "desc": "按同一口径做第 2 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q164",
+    "desc": "按同一口径做第 2 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q165",
+    "desc": "按同一口径做第 2 步跟进",
+    "pit_recs": [
+     {
+      "id": "sntJ0023",
+      "title": "周起始日全局统一配置·后续2",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q167",
+    "desc": "改成按变更游标增量拉取",
+    "pit_recs": [
+     {
+      "id": "sntG0001",
+      "title": "队列积压拖垮下游",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q170",
+    "desc": "消息只带引用与校验和",
+    "pit_recs": [
+     {
+      "id": "sntI0024",
+      "title": "导出走从库仍带写事务",
+      "sim_to_desc": 0.0
+     }
+    ]
+   },
+   {
+    "qid": "q173",
+    "desc": "统一 NTP 校准并加单调序号",
+    "pit_recs": [
+     {
+      "id": "sntJ0022",
+      "title": "周起始日全局统一配置·后续1",
+      "sim_to_desc": 0.0588
+     }
+    ]
+   },
+   {
+    "qid": "q174",
+    "desc": "网关层强制只读路由",
+    "pit_recs": [
+     {
+      "id": "sntD0027",
+      "title": "只推 P0 丢掉前置信号",
+      "sim_to_desc": 0.0
+     }
+    ]
+   }
+  ]
+ },
+ "verdict": {
+  "conclusion": "确认是「动作池 79→154 扩容后，正常/坑动作词面可分性下降 + 坑噪声占位」导致，非库变大干扰、非题面-动作池不匹配",
+  "evidence": [
+   "动作池 normal 37→73、pitfall 42→81（约翻倍）",
+   "正常动作与最像坑动作的 bigram Jaccard 均值 0.0599→0.3843（去·后续后缀，6.4×），max 0.2000→1.0000",
+   "Jaccard>0.3 的高危正常动作 0/37 (0%) → 26/73 (35.6%)",
+   "标题长度几乎不变（旧 坑11.3/正常11.5，新 坑13.0/正常12.8）→ 排除标题变长伪效应",
+   "SAFE 误报题 top5 里平均坑槽位 0.60→0.85/题；坑总量 42→81 让无关坑更易挤进 top-5",
+   "两臂题面动作都不在动作池里（新0/20、旧0/10 SAFE题）→ 排除「题面与动作池不匹配」",
+   "误报召回的坑 vs 题面词面相似度两臂都极低（0.0132 vs 0.0118），且真沾题面(>0.25)占比 0.0% → 误报坑全是无关噪声坑"
+  ],
+  "mechanism": "判分口径为「top5 内出现 pitfall 即 WARNING」（score.py 干预分支）；坑噪声挤进 top-5 就会触发误报。动作池扩容后无关坑更容易占位，故 FPR 0.400→0.800。",
+  "not_cause": [
+   "库变大干扰多（题面-动作池匹配度两臂一致，均为泛化描述）",
+   "题面口径变化（新旧干预题模板相同）"
+  ]
+ },
+ "caveat": "两臂是不同隔离库，检索分数不可逐分比对；相似度为 bigram Jaccard 词面代理度量，非语义嵌入距离（未验证语义相近度）"
+}
