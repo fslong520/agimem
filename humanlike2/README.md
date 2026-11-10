@@ -1,6 +1,6 @@
 # humanlike2 — H6「人 vs 数据库」六道分水岭层
 
-与 H4（`agimem/tricky/`）的区别：H4 测「回顾过去准不准」，H6 测**数据库天然做不到、人类天然做得到**的六件事。
+与 H4（`tricky/`）的区别：H4 测「回顾过去准不准」，H6 测**数据库天然做不到、人类天然做得到**的六件事。
 判据来自记忆 `28f2ee02`：凡存/查/精确匹配这类数据库也能做的，不算类人度。
 
 ## 目录
@@ -22,7 +22,7 @@
 ## 快速跑
 
 ```bash
-cd agimem/humanlike2
+cd humanlike2
 python3 gen_h6.py            # 生成
 python3 gen_h6.py --verify   # 确定性重生成字节一致
 python3 selftest_h6.py       # 全链路自检（应全绿）

@@ -6,7 +6,7 @@
   且它把结果写进 `scripts/locomo/results/`（本任务只读该目录）。
 - 提示词与判分**不复制**：直接 import `scripts/locomo/common_llm.py` 的
   ANSWER_SYS / answer_prompt / judge_prompt / parse_score，保持与 tests/01、tests/23 同口径。
-- 只换两处：①检索走 rsrs 隔离库（复用 `agimem/isolated_lib.py` 的 profile 三件套纪律）；
+- 只换两处：①检索走 rsrs 隔离库（复用 `isolated_lib.py` 的 profile 三件套纪律）；
   ②LLM 走本机 magpie 网关（b.ai 直连本机不可达，见 results 里 llm 环境快照）。
 
 口径（对齐 tests/01 的 1memory 侧）：

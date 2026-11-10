@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """isolated_lib.py（H3 记忆动力学专用）— 隔离 rsrs 库的最小封装。
 
-复制自 `agimem/tricky/isolated_lib.py` 的 profile 思路（不 import 它、不改它），
+复制自 `tricky/isolated_lib.py` 的 profile 思路（不 import 它、不改它），
 只保留 H3 需要的能力：建库 / 批量 import（可指定 created_at）/ 单条 remember --force /
 recall --titles / 索引就绪等待 / 收尾。
 

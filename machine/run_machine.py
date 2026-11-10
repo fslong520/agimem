@@ -14,7 +14,7 @@
 - 隔离库写 `/tmp`；真库 `~/.rsrs` 除只读调用外不写。导出文件含真库正文，只落 `/tmp`，跑完删除。
 
 用法（在 respire-benchmark/ 下）：
-    python3 agimem/machine/run_machine.py --out-dir agimem/machine/results
+    python3 machine/run_machine.py --out-dir machine/results
 """
 from __future__ import annotations
 

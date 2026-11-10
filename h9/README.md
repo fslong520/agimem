@@ -1,6 +1,6 @@
 # H9 推理与元认知层（AGI 分水岭④⑤）
 
-与 H4（`agimem/tricky/`，回顾准不准）、H6（`agimem/humanlike2/`，数据库做不到的六件事）同套八场景白名单，
+与 H4（`tricky/`，回顾准不准）、H6（`humanlike2/`，数据库做不到的六件事）同套八场景白名单，
 H9 测**推理与元认知**：R1 因果归因→处方 / R2 反事实 / R3 动态更新 / R4 压缩摘要 / R5 元认知 / R6 跨来源置信。
 零 LLM、gold 机械、铁律三道断言；详见 `tests/42-reasoning-metacog.md`。
 
@@ -21,7 +21,7 @@ H9 测**推理与元认知**：R1 因果归因→处方 / R2 反事实 / R3 动�
 ## 快速跑
 
 ```bash
-cd agimem/h9
+cd h9
 python3 gen_h9.py            # 生成（232 节点 / 96 题，seed=20261110）
 python3 gen_h9.py --verify   # 确定性重生成字节一致
 python3 score_h9.py --verify-only   # 只验 gold 机械可复算

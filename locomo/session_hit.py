@@ -30,7 +30,7 @@ EVIDENCE_RE = re.compile(r"D(\d+):")
 
 
 def wilson_ci(k: int, n: int, z: float = 1.959963984540054):
-    """与 agimem/score.py:wilson_ci 同式（95%）。"""
+    """与 score.py:wilson_ci 同式（95%）。"""
     if n <= 0:
         return {"point": None, "lo": None, "hi": None, "n": 0, "k": k, "method": "wilson"}
     p = k / n

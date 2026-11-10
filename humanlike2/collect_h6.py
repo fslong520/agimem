@@ -28,7 +28,7 @@ from typing import Any, Dict, List, Optional
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
-import isolated_lib as il  # noqa: E402  agimem/isolated_lib.py（H2 同源，不改它）
+import isolated_lib as il  # noqa: E402  isolated_lib.py（H2 同源，不改它）
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TREE = os.path.join(HERE, "data", "h6_tree.json")

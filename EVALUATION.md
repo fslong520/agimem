@@ -40,7 +40,7 @@ agimem 是给 respire / rsrs 这类**本地记忆系统**打分的自研评测�
 
 ## 三、层目录
 
-产物路径均相对 `respire-benchmark/agimem/`。题量/语料量取自各层产物文件，非估计。
+产物路径均相对**本仓根**。题量/语料量取自各层产物文件，非估计。
 
 ### M 机器向（真库只读）
 
@@ -81,7 +81,7 @@ agimem 是给 respire / rsrs 这类**本地记忆系统**打分的自研评测�
 通用约定：
 
 - **hit@k**：「排名第 0..k−1 位里出现 gold」记 1，否则 0；对 n 题取平均。id 匹配一律**前缀双向匹配**（合成 id 与真库 UUID 的映射见 §五）。
-- **Wilson**：`wilson_ci(k, n, z=1.959963984540054)`，各 `score_*.py` 内各有一份同名实现（`agimem/score.py:43`、`tricky/score_tricky.py:62`、`humanlike2/score_h6.py:45`、`h7/score_h7.py:42`、`h8/score_h8.py:40`、`h9/score_h9.py:36`、`machine/run_machine.py:123`）。**唯一例外是 H4**：它用分层 bootstrap（`tricky/score_tricky.py:80 bootstrap_ci()`，reps=2000、seed=20261109），产物里 `method` 字段写的是 `stratified-bootstrap`，不是 Wilson。
+- **Wilson**：`wilson_ci(k, n, z=1.959963984540054)`，各 `score_*.py` 内各有一份同名实现（`score.py:43`、`tricky/score_tricky.py:62`、`humanlike2/score_h6.py:45`、`h7/score_h7.py:42`、`h8/score_h8.py:40`、`h9/score_h9.py:36`、`machine/run_machine.py:123`）。**唯一例外是 H4**：它用分层 bootstrap（`tricky/score_tricky.py:80 bootstrap_ci()`，reps=2000、seed=20261109），产物里 `method` 字段写的是 `stratified-bootstrap`，不是 Wilson。
 - 「能读成」= 该数字支持下的事实；「不能读成」= 常见误读。
 
 ### M1 召回（`machine/run_machine.py:171 m1_from_raw()`）
@@ -140,7 +140,7 @@ agimem 是给 respire / rsrs 这类**本地记忆系统**打分的自研评测�
 
 出处：`results/locomo-e2e.json`（`.env` 段记录了网关与判次）。
 
-### H2 因果（`agimem/score.py:196 score()`）
+### H2 因果（`score.py:196 score()`）
 
 | 指标 | 定义 / 算法（函数行号） | n | 实测 | 能读成 | 不能读成 |
 |---|---|---|---|---|---|
@@ -258,7 +258,7 @@ RSRS_SUPER=<独立 super>                   # 独立超级用户占位
 
 **三者必须同设**：只设 `RSRS_DATA_DIR` 而不设 `RSRS_RPC_PORT` 时，新起的 runtime 会去抢**默认 15169**，于是 `rsrs --client-only` 打到的是**别人/真库**——本项目已踩过两次（本项目在 respire 仓内 `tests/33-multilingual.md:147`、`tests/37-causal-isolated.md:28` 有完整记录，本仓不随附）。
 
-实现见 `agimem/isolated_lib.py:9-13`（先过滤掉所有 `RSRS_/ONEMEMORY_/RESPIRE_` 前缀变量，再显式 set），机器层见 `machine/run_machine.py:200`（`Store.open()` 同时设 `RSRS_DATA_DIR` / `RSRS_RPC_PORT` / `RSRS_SUPER`）。
+实现见 `isolated_lib.py:9-13`（先过滤掉所有 `RSRS_/ONEMEMORY_/RESPIRE_` 前缀变量，再显式 set），机器层见 `machine/run_machine.py:200`（`Store.open()` 同时设 `RSRS_DATA_DIR` / `RSRS_RPC_PORT` / `RSRS_SUPER`）。
 
 ### 5.2 其它必须遵守的复现纪律
 

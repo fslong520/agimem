@@ -74,7 +74,7 @@ env.update(RSRS_DATA_DIR="/tmp/<arm>", RSRS_RPC_PORT="16221", RSRS_SUPER="A3-000
 ## 五、跑法
 
 ```bash
-cd agimem/human_memory
+cd human_memory
 python3 gen_h3_v2.py                 # 生成 data/h3_v2_plan.json + data/h3_v2_dataset.jsonl（20×3 题）
 python3 gen_h3_v2.py --verify        # 确定性重生成比对
 python3 run_h3_v2.py --root /tmp/agimem-h3v2 --base-port 16221   # 三臂隔离库实跑（约 3 分钟）

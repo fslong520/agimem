@@ -1,6 +1,6 @@
 # H7 跨跳与诚实层（AGI 分水岭①②：多跳传递 + 缺证据认「不知道」）
 
-`agimem/h7/` —— H7 四子类：L1 多跳链、L2 混跳辨析、L3 缺证据拒答、L4 增广认同。
+`h7/` —— H7 四子类：L1 多跳链、L2 混跳辨析、L3 缺证据拒答、L4 增广认同。
 本轮**只建数据与判分链，不跑分**（不调真库 recall、不产出分数），交付确定性 seed 的
 评测集 + 机械 gold + 判分脚本 + 自检，供后续层跑分时直接接入。
 
@@ -46,7 +46,7 @@
 ## 用法
 
 ```bash
-cd agimem/h7
+cd h7
 python3 gen_h7.py              # 写 data/h7_tree.json + dataset/h7_evalset.jsonl
 python3 gen_h7.py --verify     # 确定性证明（重生成与落盘比对）
 python3 score_h7.py --verify-only   # 只验 gold 复算（本轮不跑分）
@@ -72,6 +72,6 @@ python3 score_h7.py --dataset dataset/h7_evalset.jsonl \
 
 ## 与其它层的关系
 
-场景白名单刻意沿用 H6（`agimem/humanlike2/`）同一套八场景，使 H6/H7 两层数字在**同一题材
+场景白名单刻意沿用 H6（`humanlike2/`）同一套八场景，使 H6/H7 两层数字在**同一题材
 约束**下可比；但题目形态、gold 与判分完全不同。H6 测「数据库做不到的六件事」，H7 测
 「跨跳传递 + 缺证据认不知道」。详见 `tests/40-crosshop-honest.md`。

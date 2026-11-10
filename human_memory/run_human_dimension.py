@@ -4,7 +4,7 @@
 口径（与 tests/32 一致，勿改而不记）：
 - 语料全合成，无真人数据、无真库 id；标题形如 `HM-RP-07-r2`。
 - 判分**机械、零 LLM**：按召回标题 token 命中判定，不调任何模型。
-- 每题型 n≥20；比例类指标用 Wilson 95% CI（与 agimem/score.py:wilson_ci 同式）。
+- 每题型 n≥20；比例类指标用 Wilson 95% CI（与 score.py:wilson_ci 同式）。
 - **只写隔离库**：每臂一个独立 profile 目录 + 独立 RSRS_RPC_PORT + 独立 super，
   绝不碰 `~/.rsrs`；RSRS_ABLATE=hot（tests/27 纪律：不消融则热轴写回污染同库复跑）。
 

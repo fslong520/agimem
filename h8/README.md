@@ -1,6 +1,6 @@
 # H8 记忆动力学层（AGI 分水岭③⑥：边干边学 + 长程衰减）
 
-`agimem/h8/` —— H8 四子类：C1 一次观察泛化、C2 跨间隔召回、C3 远期检索、C4 增量编辑。
+`h8/` —— H8 四子类：C1 一次观察泛化、C2 跨间隔召回、C3 远期检索、C4 增量编辑。
 本轮**只建数据与判分链，不跑分**（不调真库 recall、不产出分数），交付确定性 seed 的
 评测集 + 机械 gold + 判分脚本 + 自检，供后续跑分直接接入。
 
@@ -67,7 +67,7 @@
 ## 用法
 
 ```bash
-cd agimem/h8
+cd h8
 python3 gen_h8.py                 # 写 data/h8_tree.json + dataset/h8_evalset.jsonl
 python3 gen_h8.py --verify        # 确定性证明
 python3 score_h8.py --verify-only # 只验 gold

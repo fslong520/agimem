@@ -3,9 +3,9 @@
 - 名称：**agimem**（昨日 pilot 名 RespireCausalBench，2026-11-09 正式命名）
 - 版本：0.1 → **0.2（v1 扩集：122 题，见 tests/30-agimem-expanded.md）**。§7 的 26 题输出是 v0/pilot 记录；v1 的树由 `gen_tree.py`（seed=20261109）确定性生成，10 树 143 节点
 - 日期：设计 2026-11-08/09；正式目录 2026-11-09；扩集 2026-11-09
-- 来源：工部尚书 task-2 落地的 `bench-causal/`；本文件由翰林院编修（hanlin-bianxiu-2，task-4）迁入 `respire-benchmark/agimem/`
+- 来源：工部尚书 task-2 落地的 `bench-causal/`；本文件由翰林院编修（hanlin-bianxiu-2，task-4）迁入本仓根
 - 双源：`bench-causal/` 为 pilot **冻结存档**，保持原貌不再改；**agimem 为唯一活跃版**。两边脚本目前同源复制，后续只改 agimem，禁止双边同时演进
-- 落点：`respire-benchmark/agimem/`（跑法见本目录 README）。首评报告（v0 26 题）见 `tests/29-agimem-firsteval.md`；扩集与面板（v1 122 题）见 `tests/30-agimem-expanded.md`
+- 落点：**本仓根**（跑法见 README）。首评报告（v0 26 题）与扩集面板（v1 122 题）原文在 respire-benchmark 仓内 `tests/29-agimem-firsteval.md`、`tests/30-agimem-expanded.md`，本仓不随附
 - 原落点说明（pilot）：任务板写入范围当时限定 `respire-benchmark/bench-causal/`，与 `bench-semantic/`、`demo-bench-20261101/` 同属 README「归拢的独立 bench」惯例
 - 依据：对比文档 `causal-memory-vs-respire-memlite-20261108.md` P0 第一条
   「自研 CausalEval 类基准：用 parent_id 树生成 DAG → 叙述成对话 → 从树结构推导 gold answer」

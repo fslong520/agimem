@@ -117,7 +117,7 @@ python3 score_tricky.py --predictions results/tricky-isolated-predictions.jsonl 
 ## 六、跑法
 
 ```bash
-cd agimem/tricky
+cd tricky
 python3 gen_tricky.py                 # 生成树 + 132 题（含铁律守门、gold 机械复算、脱敏自检）
 python3 gen_tricky.py --verify        # 确定性证明：重生成与落盘一致
 python3 score_tricky.py --verify-only # gold 机械复现对账
