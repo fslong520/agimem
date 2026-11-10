@@ -64,7 +64,9 @@ env -u RSRS_DATA_DIR ... \
 
 1. **就绪判据用 `embedding_model=m3` 且 `state=ready`**，不要用 `retrieval_index.worker_active`——
    后者只表示常驻 worker 进程还活着，恒为 true，拿它判就绪会白等到超时。
-2. **建索引约 8 分钟**（200 节点量级、CPU 引擎）。import 立即返回，不等于可召回。
+2. **import 立即返回，不等于可召回**。索引实测三档（CPU 引擎）：**83.6s（278 节点）/ 112.7s（144 节点）/ 140.8s（192 节点）**。
+   注意 278 节点反而最快——耗时更多取决于机器负载而非节点数，别按节点数外推。
+   等多久以**实际到达 `state=ready`** 为准，各层产物都记了 `waited_s` 可对照。
 3. **`import` 不写父子边**，要 `rsrs attach <child> --parent <parent>` 逐条补；
    不补的话所有依赖树结构的题（多跳、取代、增量编辑）都会失真。
 
